@@ -1,7 +1,7 @@
 # Table of Contents
 
-* [Index]('#')
-* [What's a cluster?]('/cluster/')
+* [Index](#)
+* [What's a cluster?](/cluster/)
 
 
 
