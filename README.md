@@ -13,4 +13,5 @@ There are also some useful links here for your use.
 
 ## About Makefile
 I update the documentation directory using a Makefile to sync src/ and docs/, with
-the 'Dinky' theme because its seemed apropros of Princeton.
+the 'Dinky' theme because its seemed apropros of Princeton. To run it, just run
+`make` from the repo root.
