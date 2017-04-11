@@ -1,8 +1,8 @@
 # What's an HPC cluster?
 
-[![Beowulf Cluster](beowulf.png)](beowulf.png)
+![Beowulf Cluster](beowulf.png)
 [*By Mukarramahmad (Own work) [Public domain], via Wikimedia Commons*](https://commons.wikimedia.org/wiki/File:Beowulf.png)
-
+[Zoom](beowulf.png)
 ## Terminology
 
 * Head Node
