@@ -1,4 +1,4 @@
 
 .PHONY: all
 all:
-	rsync -rupE src/ docs/
+	@rsync -av --delete src/ docs/
