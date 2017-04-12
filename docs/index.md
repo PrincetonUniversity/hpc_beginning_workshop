@@ -2,8 +2,5 @@
 
 * [Index](#)
 * [What's a cluster?](cluster/)
-
-
-
-
-(c) 2017 Trustees of Princeton University
+* [Files and Basic Bash](files/)
+* [Permissions and $PATH](permissions/)
