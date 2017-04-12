@@ -51,7 +51,7 @@ The syntax is roughly: `chmod <ugo><+-><rwx> path/to/file.txt`
 
 You can also specify the permissions using 'Octal' permissions like `chmod 777` which are shorthand ways to specify permissions. (`777` is to be feared as it gives everyone full access to the file!)
 
-## chown
+## `chown`
 But what if you want to change a file's owner or group? **First, do this with care!** You can render yourself unable to change a file.
 
 The syntax is: `chown user:group path/to/file.txt`
@@ -66,4 +66,34 @@ If I were to `chown` another user, they or someone with root access would have t
 
 To run an executable script or file in a folder, it has to be `+x` for you and you have to specify its path (relative or absolute, even if same folder hence `./myscript.sh`)
 
-So how do utilities and system binaries just run?
+So how do utilities and system binaries just run? Type `echo $PATH`.
+
+You'll see something like:
+```
+/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/puppetlabs/bin:/opt/dell/srvadmin/bin:/home/bhicks/bin
+```
+
+It is a list of directories separated by colons. Whenever you type a command,
+the shell looks in those dirs, in order, to determine what executable to run.
+`which commandnamehere` tells you the precise path of the executable that is being used.
+
+You can append folders to your $PATH (and will often need ot do so). Say you have a python script
+you want to be able to call without `./` in a `bin/` dir off of home.
+
+```
+export PATH=$HOME/bin/:$PATH
+```
+For your current shell only, $PATH now has your home dir (the variable `$HOME` is
+a Bash environment variable like `$PATH` also is!) appended to the front.
+
+If you want this to persist between logins, edit your remote `.bash_profile` and add something like:
+```
+PATH=$HOME/bin/:$PATH
+export PATH
+```
+
+Then when you either `source ~/.bash_profile` or relogin, the change will take effect.
+
+### **Make sure not to just set $PATH without prepending or appending!**
+
+### **Also note: `module load` commands help set the `$PATH` for common optional packages.
