@@ -2,6 +2,7 @@
 
 * [Index](#)
 * [What's a cluster?](cluster/)
+* [Connecting to a cluster](connecting/)
 * [Files and Basic Bash](files/)
 * [Editors](editors/)
 * [Permissions and $PATH](permissions/)
@@ -21,3 +22,7 @@
 * [Linux Shell scripting with Bash](https://pulsearch.princeton.edu/catalog/7360952)
 
 * [Research Computing Tutorials](https://www.princeton.edu/researchcomputing/education/online-tutorials/)
+
+* [Research Computing Software for Clusters](https://www.princeton.edu/researchcomputing/software/)
+
+* [Researh Computing Service](https://www.princeton.edu/researchcomputing/services/)
