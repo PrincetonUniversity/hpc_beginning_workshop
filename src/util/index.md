@@ -76,7 +76,7 @@ This creates the file or overwrites it if it does exist.
 
 ### `COMMAND  < file `
 
-This takes a file and pushes it to a command. Many commands take file arguments and shorthand this, but yo can always do it expressly.
+This takes a file and pushes it to a command. Many commands take file arguments and shorthand this, but you can always do it expressly.
 
 
 ### Complex redirects
@@ -90,9 +90,9 @@ or silencing a command you'd just as soon not see the output of.
 
 `2>&1` redirects `stderr` to `stdout` and you can then dump the whole shebang. You'll usually append this modifier after the command.
 
-`blah > output_log 2>&1` will produce a file named `output_log` that will gripe about there not being a blah command.
+`blah > output_log 2>&1` will produce a file named `output_log` that will gripe about there not being a `blah` command.
 
-If you want to silence output entirely, ` blah > /dev/null 2>&1 ` will send the output to the null device,
+If you want to silence output entirely, `blah > /dev/null 2>&1` will send the output to the null device,
 a round-about way of saying 'toss the whole thing, I don't care'.
 
 
@@ -114,7 +114,7 @@ I'd `cd ~`, then run `find . | grep pliny`. By default, grep returns any line wh
 
 Now, if I wanted to keep this list: `find . | grep pliny > search.txt`. You could also do this with `find` without `grep`, but sometimes you can't be bothered with the syntax.
 
-# Utiliites for working with files
+# Utilities for working with files
 
 Listed below are an entirely non-comprehensive list of utilities you can use to do useful things with files. Many rely on a concept discussed below called a 'regular expression'. If you aren't familiar with these, I have linked some explanations of different regex flavors and implementations.
 
