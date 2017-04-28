@@ -131,7 +131,9 @@ Many programming languages have their versions of the regex, all of which tend t
 The two BASH tools I'll discuss that use regexes to great benefit are `grep` and `sed`.
 
 The less than newbie friendly guide to regexes for the two programs are linked here:
+
 [`sed` regexes](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html)
+
 [`grep` regexes](https://www.cyberciti.biz/faq/grep-regular-expressions/)
 	Note: This site also explain the difference in `grep -E` and `grep -F`, which are on old systems sometimes different commands.
 
