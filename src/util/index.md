@@ -135,7 +135,7 @@ The less than newbie friendly guide to regexes for the two programs are linked h
 [`sed` regexes](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html)
 
 [`grep` regexes](https://www.cyberciti.biz/faq/grep-regular-expressions/)
-	Note: This site also explain the difference in `grep -E` and `grep -F`, which are on old systems sometimes different commands.
+	Note: This site also explain the difference in `grep -E` and `grep -F`, which on old systems are sometimes different commands.
 
 [`grep` regex checker](https://www.online-utility.org/text/grep.jsp)
 
@@ -163,11 +163,11 @@ Here are some options:
 
 ### `less` isn't `more`
 
-The history of this commandline utility is somewhre beyond confusing. It postdates `more`, which was a less flexible version of the pgining utility (i.e. utilities that take text and paginate it for display), but it predates the less common utility `most`. To quote the [Slackware Linux Essentials Guide](http://www.slackbook.org/html/file-commands-pagers.html): 'If `less` is more than `more`, `most` is more than `less`.
+The history of this commandline utility is somewhat beyond confusing. It postdates `more`, which was a less flexible version of the pageing utility (i.e. utilities that take text and paginate it for display), but it predates the less common utility `most`. To quote the [Slackware Linux Essentials Guide](http://www.slackbook.org/html/file-commands-pagers.html): 'If `less` is more than `more`, `most` is more than `less`.
 
 If your platform has `most` installed, it's worth looking through the `man` page and learning about it. It lets you open multiple file buffers at once, among other niceties.
 
-`less` is the goto butter-knife here.
+`less` is the goto pocket-knife here.
 
 The syntax is simply `less <filename>`, i.e. `less myfile.html`
 
@@ -224,7 +224,7 @@ Regular expressions are an art. They also often have the same problems to solve,
 
 The `-E` flag lets you do even more complex things like grouping regexes, providing alternate matches, etc.
 
-`grep -E "(foo|bar)" file` would match "foo" OR "bar". Note that the parenthesis are special characters when `-E` is invoked.
+`grep -E "(foo|bar)" file` would match "foo" OR "bar". Note that the parentheses are special characters when `-E` is invoked.
 
 As noted above, python, perl, PHP, etc. all have versions of the regex, and they often linclude much more functionality and more online support for checkers.
 
@@ -254,6 +254,6 @@ An easier example:
 `sed -e "1,11d" file` deletes the first 11 lines of a text.
 
 If you want to edit a file inline:
-`sed -i.bak -e "s/foo/bar/g" file` actually writes changes to the file and backups up the original to file.bak.
+`sed -i.bak -e "s/foo/bar/g" file` actually writes changes to the file and backs up the original to file.bak.
 
 Again, very powerful, not utterly user friendly.
