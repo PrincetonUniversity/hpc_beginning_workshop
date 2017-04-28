@@ -25,4 +25,4 @@
 
 * [Research Computing Software for Clusters](https://www.princeton.edu/researchcomputing/software/)
 
-* [Researh Computing Service](https://www.princeton.edu/researchcomputing/services/)
+* [Research Computing Services](https://www.princeton.edu/researchcomputing/services/)
