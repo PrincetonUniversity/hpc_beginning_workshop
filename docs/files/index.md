@@ -2,13 +2,11 @@
 
 Bash is one of the most common shells in the POSIX (i.e. Unix standard) world.
 Its name stands for Bourne Again SHell, named after the original Bourne
-shell (`/bin/sh`, which is also almost always present).
+shell (`/bin/sh`).
 
 A shell is just a common interface for interacting with an operating system
 and carrying out commands. Windows computers use DOS shell prompts to interact
-with the system to this day, even though DOS is long gone. (In fairness, there
-  is now also Powershell, which has commandlets that give you access to funciontality
-  equivalent to the Bash.)
+with the system to this day, even though DOS is long gone.
 
 The notes for this are taken from one of my own repos [here](https://github.com/bwhicks/bash-notes)
 
@@ -23,7 +21,7 @@ to the file system attaches to root in some way.
 
 There are two ways to express a location. One is the absolute way. That defines
 a path all the way down from root. For example `/home/bhicks` on Adroit is my
-home directory. Read it right to left: `home` is a subdirectory of root, `bhicks` is
+home directory. Read it right to left: home is a subdirectory of root, bhicks is
 a subdirectory of home.
 
 The other is called a relative path. This is a short hand way for working with
@@ -72,8 +70,7 @@ So from that, we learn that `ls` lists the contents of a directory.
 ## Getting around the file system
 
 When you first open a terminal, you will probably be dropped off in your home directoy,
-often abbreviated by a `~` (this abbreviation has to do with the keyboard layout on old
-  server consoles). POSIX systems all use forward slashes to mark directory
+often abbreviated by a ~. POSIX systems all use forward slashes to mark directory
 structure. (Directories are like the folders you see in a graphical interface.)
 
 For example:
@@ -83,7 +80,7 @@ For example:
 /home/user marks a directory under /home
 ```
 
-The prompt for my home directory on a server called della is something like this:
+Prompt for my home directory on a server called della is something like this:
 ```
 [bhicks@della4 ~]$
 ```
