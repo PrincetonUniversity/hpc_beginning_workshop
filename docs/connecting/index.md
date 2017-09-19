@@ -3,11 +3,11 @@
 ## A few caveats
 These instructions assume you are:
   1. Princeton University faculty, student, or staff
-  2. Are connecting from the campus wireless or
-  3. Are connecting from the campus VPN
+  2. Are connecting from the campus wireless for Adroit (or through Nobel)
+  3. Are connecting from the campus VPN or a wired connection for Tigress systems
+  (or through Nobel).
   4. Are connecting with Duo Authentication for Nobel
   5. Have an account on the system you're looking to connect to. You can register for
-
   [Nobel](https://www.princeton.edu/researchcomputing/computational-hardware/nobel/usage-guidelines/)
   and [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/registration/)
   here. (Note: You will need to login using your university credentials).
@@ -19,8 +19,7 @@ In order to connect to the university computing clusters, you will need an SSH
 On MacOS and Linux, the default terminal application has such a client built-in.
 No download is necessary!
 
-On Windows machines, you'll need a client. One option is [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and another is [Mobaxterm](http://mobaxterm.mobatek.net/), which includes an X Windows server for
-interactive windowed applications on a cluster like Nobel.
+On Windows machines, you'll need a client. One option is [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and another is [Mobaxterm](http://mobaxterm.mobatek.net/).
 
 Regardless, you'll need to know a few things:
 
@@ -37,8 +36,7 @@ machine* that looks something like this:
 ```
 benjaminhicks ~/hpc_beginning_workshop $
 ```
-The `$` is an indication that you're ready to enter a command (and not using
-  a root account, which you would only be on your workstation ever, most likely)
+The `$` is an indication that you're ready to enter a command.
 
 To connect to adroit, I'd type something like this and hit enter:
 ```
@@ -57,7 +55,7 @@ March 2017 -- Gaussian v16 has been installed
 [bhicks@adroit3 ~]$
 ```
 
-I'm now remotely connected to `adroit3`, which is the head node of the cluster! The
+I'm now remotely connected to adroit3, which is the head node of the cluster! The
 shell I used in both cases is one called [Bash](https://www.gnu.org/software/bash/).
 It's a particular command line interface that is common across Unix-alike machines.
 
@@ -65,14 +63,12 @@ It's a particular command line interface that is common across Unix-alike machin
 ## Getting files to Adroit
 
 One of the most frequently asked questions is how to get files to Adroit or a cluster.
-Again, Linux/MacOS has an answer out of the box, but on Windows you'll need to use
-clients like PuTTY and Mobaxterm
-OR SFTP-capable clients like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client) (paid, sadly) or [Filezilla](https://filezilla-project.org/). In both cases,
+Again, Linux/MacOS has an answer out of the box, but clients like PuTTY and Mobaxterm
+OR FTP clients like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client) (paid, sadly) or [Filezilla](https://filezilla-project.org/). In both cases,
 make sure you're using interactive logon. Filezilla especially can be a pain
 with Duo Authentication for Nobel. If you're transferring a lot of files, consider
 zipping them.
 
-The default client to transfer files is `scp` on POSIX systems.
-This is a copy command that uses
+The default client to transfer files is `scp`. This is a copy command that uses
 SSH to copy files. I'll discuss its use at greater length when [talking about the
 command line utils](/hpc_beginning_workshop/utilities/).
