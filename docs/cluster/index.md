@@ -25,11 +25,13 @@ For more detail, see:
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
   Also available generally to members of the university community. 8 node Beowulf
   cluster. 2.5 Ghz Dell Ivybridge on 8 nodes with 20 cores. Scheduled job system.
+  Adroit now includes GPUs and should be your first choice for production GPU work.
 
 ### [McMillan](https://www.princeton.edu/researchcomputing/computational-hardware/experimental-systems/mcmillan/)
   Experimental cluster with access to GPUs. No data backups are made, and it is
   not connected to any of the major network storages. Intended for beginning
-  or testing of new code for GPU applications.
+  or testing of new code for GPU applications, but for most users Adroit will be
+  an optimal choice.
 
 ### Other Clusters
   These other clusters such as Perseus, Hecate, Tiger, and Della are research
