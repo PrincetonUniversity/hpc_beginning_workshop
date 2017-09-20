@@ -9,7 +9,7 @@ These instructions assume you are:
   4. Are connecting with Duo Authentication for Nobel
   5. Have an account on the system you're looking to connect to. You can register for
   [Nobel](https://www.princeton.edu/researchcomputing/computational-hardware/nobel/usage-guidelines/)
-  and [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/registration/)
+  and [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
   here. (Note: You will need to login using your university credentials).
 
 ## SSH
