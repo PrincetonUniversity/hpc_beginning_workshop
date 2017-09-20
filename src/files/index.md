@@ -84,7 +84,7 @@ Prompt for my home directory on a server called della is something like this:
 ```
 [bhicks@della4 ~]$
 ```
-The $ is just shell speak for 'Ready to start a new command'
+The `$`` is just shell speak for 'Ready to start a new command sequence, and you're not root' (Root gets `#` usually)
 
 Let's look around, shall we? If you see a command here, run its 'man' to get a
 full listing. It's habit building. In a good way.
