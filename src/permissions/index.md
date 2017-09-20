@@ -51,17 +51,6 @@ The syntax is roughly: `chmod <ugo><+-><rwx> path/to/file.txt`
 
 You can also specify the permissions using 'Octal' permissions like `chmod 777` which are shorthand ways to specify permissions. (`777` is to be feared as it gives everyone full access to the file!)
 
-## `chown`
-But what if you want to change a file's owner or group? **First, do this with care!** You can render yourself unable to change a file.
-
-The syntax is: `chown user:group path/to/file.txt`
-
-If I wanted to change the group from `cses` to `bhicks`, I could do:
-
-`chown :bhicks test.txt`, but it would fail because the group doesn't exist.
-
-If I were to `chown` another user, they or someone with root access would have to fix it (so I won't show that).
-
 ## The `$PATH` variable
 
 To run an executable script or file in a folder, it has to be `+x` for you and you have to specify its path (relative or absolute, even if same folder hence `./myscript.sh`)

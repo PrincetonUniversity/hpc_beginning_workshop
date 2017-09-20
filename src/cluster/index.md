@@ -24,7 +24,7 @@ For more detail, see:
 
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
   Also available generally to members of the university community. 8 node Beowulf
-  cluster. 2.5 Ghz Dell Ivybridge on 8 nodes with 20 cores. Scheduled job system.
+  cluster. 2.5 Ghz Dell Ivybridge on 8 nodes with 20 cores. Scheduled job system, now with 16 Nvidia k20 GPUs.
 
 ### [McMillan](https://www.princeton.edu/researchcomputing/computational-hardware/experimental-systems/mcmillan/)
   Experimental cluster with access to GPUs. No data backups are made, and it is
