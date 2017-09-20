@@ -37,7 +37,7 @@ We'll be following a recipe for a serial job.
 # when it ends. Make sure you define your email
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
-#SBATCH --mail-user= yourNetID@princeton.edu
+#SBATCH --mail-user=yourNetID@princeton.edu
 
 echo 'Hello world!'
 
