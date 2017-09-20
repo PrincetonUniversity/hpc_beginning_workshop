@@ -88,7 +88,7 @@ or silencing a command you'd just as soon not see the output of.
 `1>filename` redirects `stdout` to `filename`
 `2>filename` does the same thing for `stderr`
 
-`2>&1` redirects `stderr` to `stdout` and you can then dump the whole shebang. You'll usually append this modifier after the command.
+`2>&1` at the end of the line redirects `stderr` to `stdout` and you can then dump the whole shebang.
 
 `blah > output_log 2>&1` will produce a file named `output_log` that will gripe about there not being a `blah` command.
 
