@@ -72,3 +72,43 @@ zipping them.
 The default client to transfer files is `scp`. This is a copy command that uses
 SSH to copy files. I'll discuss its use at greater length when [talking about the
 command line utils](/hpc_beginning_workshop/utilities/).
+
+
+## Staying connected (tmux)
+
+This comes up very frequently when you're connected to Nobel, where tasks are
+run directly from the command line rather than the SLURM scheduler. If your
+shell is disconnected, the command you're running terminates. This is bad.
+A built in solution to most Unix-alike OSes is `nohup` but it's of limited utility.
+
+Hence we bring in something like [tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/).
+It comes installed on all university clusters, and it lets you start a shell
+session that rather than being remote via SSH, lives on the server.
+
+A simple use case would be
+
+```
+tmux
+(hit ctrl-b + d to detach the session)
+tmux attach
+```
+
+You would then be attached back to the session you created by default when you called tmux.
+To close a session,
+just `exit` or `ctrl+d`. These sessions will remain until the server is rebooted or you
+close them. Anything you run while attached to the session runs in that session,
+and therefore it is safe from a disconnect.
+
+On Nobel, you'll want to look in the lower left. Nobel has two hosts, `compton`
+and `davisson`, and the session will live on one or the other. To find it again after
+a disconnect, you'll need to login directly to them rather than just `nobel`, i.e.
+`ssh compton.princeton.edu`. Otherwise you'll do `tmux attach` and not find your
+session.
+
+`tmux` is a powerful and complex tool. In addition to the simple guide linked above,
+you might see the following:
+
+- [tmux - a very simple beginner's guide](https://www.ocf.berkeley.edu/~ckuehl/tmux/)
+- [Beginner’s Guide to Tmux ](https://www.codementor.io/bruno/beginner-s-guide-to-tmux-recommended-configuration-plugins-and-navigation-demo-aih7o7ktw) (Feel free to ignore the installation as it's already on
+the clusters, unless you want to run this on your Mac!)
+- [A tmux primer](https://danielmiessler.com/study/tmux/)
