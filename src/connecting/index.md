@@ -74,7 +74,7 @@ SSH to copy files. I'll discuss its use at greater length when [talking about th
 command line utils](/hpc_beginning_workshop/utilities/).
 
 
-## Staying connected (tmux)
+## <a name="tmux">Staying connected (tmux)</a>
 
 This comes up very frequently when you're connected to Nobel, where tasks are
 run directly from the command line rather than the SLURM scheduler. If your

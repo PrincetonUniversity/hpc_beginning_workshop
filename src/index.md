@@ -3,6 +3,7 @@
 * [Index](#)
 * [What's a cluster?](cluster/)
 * [Connecting to a cluster](connecting/)
+  - [Staying connected: tmux](connecting/#tmux)
 * [Files and Basic Bash](files/)
 * [Editors](editors/)
 * [Permissions and $PATH](permissions/)
