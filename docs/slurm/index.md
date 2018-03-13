@@ -136,6 +136,8 @@ Interface) to use multiple cores, potentially even over multiple nodes.
 # serial job using 2 nodes and 20 processors,
 # and runs for 1 hour (max).
 #SBATCH -N 2   # node count
+#SBATCH --output=arrayJob_%A_%a.out
+#SBATCH --error=arrayJob_%A_%a.err
 #SBATCH --ntasks-per-node=20
 #SBATCH -t 01:00:00
 # sends mail when process begins, and
@@ -147,3 +149,43 @@ srun ./a.out
 ```
 
 This would request 20 x 2 nodes for 40 total processes for an hour.
+
+## Array Jobs
+
+Array jobs are a different way to parallelize your computations. These use a
+set of variables that Slurm will set for you in the job.
+
+```bash
+#!/bin/bash
+# array job using 1 nodes and 1 processor,
+# and runs for five minutes max per task.
+#SBATCH -J array_example
+#SBATCH --output=array_example%A_%a.out
+#SBATCH -N 1   # node count
+#SBATCH --ntasks-per-node=1
+#SBATCH -t 00:05:00
+#SBATCH --array=0-5
+# sends mail when process begins, and
+# when it ends. Make sure you define your email
+
+# A few special parameters are set in this case that we echo below:
+
+echo "My SLURM_ARRAY_JOB_ID is $SLURM_ARRAY_JOB_ID."
+echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
+
+```
+
+This will produce output's with the job id and the individual task id that
+echo their subtask number. You can set the array numbers to any arbitrary set
+of numbers, so that you can subset processing a larger list by grabbing the
+value of `$SLURM_ARRAY_TASK_ID`. For example:
+
+```bash
+#SBATCH --array=0,100,200,300,400,500
+./myprogram $SLURM_ARRAY_TASK_ID
+```
+
+This snippet shows a six task array, that will pass increments of 100 to the
+program in question. It can then start processing a data frame, for example,
+at rows 0, 100, 200, 300, 400, etc. and stop iterating after 99 rows. Thus if these
+arrays run in parallel, you would complete 600 rows.
