@@ -108,8 +108,8 @@ will not let me use more than one node--for that you need MPI!)
 
 ```bash
 #!/bin/bash
-# serial job using 1 node and 1 processor,
-# and runs for 1 minute (max).
+# serial job using 1 node and 3 processor,
+# and runs for 15 minutes (max).
 #SBATCH -N 1   # node count
 #SBATCH --ntasks-per-node=1
 #SBATCH -c 3  # core count
@@ -133,8 +133,8 @@ Interface) to use multiple cores, potentially even over multiple nodes.
 
 ```bash
 #!/bin/bash
-# serial job using 1 node and 1 processor,
-# and runs for 1 minute (max).
+# serial job using 2 nodes and 20 processors,
+# and runs for 1 hour (max).
 #SBATCH -N 2   # node count
 #SBATCH --ntasks-per-node=20
 #SBATCH -t 01:00:00
