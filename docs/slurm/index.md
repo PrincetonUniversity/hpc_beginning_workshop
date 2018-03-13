@@ -14,7 +14,7 @@ scheduling software.
 ## SLURM basics
 
 To run SLURM you need:
-  * A job to run (python script, R script, Matlab job, compiled exectuable)
+  * A job to run (python script, R script, Matlab job, compiled executable)
   * A SLURM script (often suffixed `.cmd` by convention but not necessarily)
 
 *You should never run code directly on the head/login node except for ~ 5 - 10
@@ -26,7 +26,7 @@ We'll be following a recipe for a serial job.
 
 
 ## A sample script
-```
+```bash
 #!/bin/bash
 # serial job using 1 node and 1 processor,
 # and runs for 1 minute (max).
@@ -91,4 +91,59 @@ Some things to think about:
   * If you call the executable directly and not via an interpreter like `mpirun` or `python` or `Rscript`, etc., make sure you have `+x` permissions on it!
   * Think about file systems! Different ones are useful for different things, have different sizes, and they don't tall talk to each other. (i.e. `/scratch` is local to a specific node, `/network/scratch/username` is networked to the entire cluster. This has implication for temporarily files and data).
   * `/home` has a default 1 GB quota and should be used mostly for small results, code, and packages needed to run tasks. On the Tigress clusters there is a shared gpfs file system and Adroit has scratch storage. You can request an increase up to 10 GB for your `/home` dir if necessary for larger packages. The form is [here](https://forms.rc.princeton.edu/quota/).
-  
+
+## Multicore Jobs
+
+Sometimes you might want to run jobs using technologies like OpenMP or MPI. These
+are both ways of using more than one core. (There are certainly others, including
+array jobs.)
+
+For these, you'll be adjusting two parameters in your SLURM script, but you
+will need to be aware of two factors--whether you want more tasks or more cores
+per task.
+
+Let's say I want to run R substituting the Intel MKL BLAS for the built-in. MKL
+is mulithreading and will let me use more than one core on a node. (Though it
+will not let me use more than one node--for that you need MPI!)
+
+```bash
+#!/bin/bash
+# serial job using 1 node and 1 processor,
+# and runs for 1 minute (max).
+#SBATCH -N 1   # node count
+#SBATCH --ntasks-per-node=1
+#SBATCH -c 3  # core count
+#SBATCH -t 00:15:00
+# sends mail when process begins, and
+# when it ends. Make sure you define your email
+
+module load intel intel-mkl
+LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
+```
+
+Here I adjust the `-c` parameter to tell SLURM that I want my single task to
+be able to use three cores (since MKL will happily use the CPU power that way).
+
+(Unless you're an R user, don't worry too much about the `LD_PRELOAD`, that's
+just me forcing R to use the BLAS library that I would like, i.e. MKL)
+
+
+In another situation, you might have executable that uses MPI (Message Passing
+Interface) to use multiple cores, potentially even over multiple nodes.
+
+```bash
+#!/bin/bash
+# serial job using 1 node and 1 processor,
+# and runs for 1 minute (max).
+#SBATCH -N 2   # node count
+#SBATCH --ntasks-per-node=20
+#SBATCH -t 01:00:00
+# sends mail when process begins, and
+# when it ends. Make sure you define your email
+
+
+module load intel intel-mpi
+srun ./a.out
+```
+
+This would request 20 x 2 nodes for 40 total processes for an hour. 
