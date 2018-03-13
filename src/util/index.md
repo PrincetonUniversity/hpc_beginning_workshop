@@ -2,7 +2,7 @@
 
 ## Getting files places with `scp`
 
-(Windows users can user their local system's FTP or PuTTY comes with pscp with similar syntax, just using Windows `\` notation for directories from drive letter).
+(Windows users can use their local system's FTP or PuTTY comes with pscp with similar syntax, just using Windows `\` notation for directories from drive letter).
 
 Say you have a Linux/Mac system and need to get a file or folder to the cluster. `scp` uses SSH to move a file.
 
@@ -15,7 +15,7 @@ ls -al test_dir/
 
 scp -r test_dir bhicks@adroit:.
 ```
-This copies test_dir (as one unit, with the files undernearth pulled in too) to adroit. The syntax is the '-r' flag to move the folder recursively (i.e. folder and sub-files and folders) the path to copy from and the path to copy to, prepended with my user and login. `.` says "Wherever your shell start on login", which happens to be home.
+This copies test_dir (as one unit, with the files underneath pulled in too) to adroit. The syntax is the '-r' flag to move the folder recursively (i.e. folder and sub-files and folders) the path to copy from and the path to copy to, prepended with my user and login. `.` says "Wherever your shell start on login", which happens to be home.
 
 You can reverse that to get the file back to your local machine. For many, many files, you may want to zip or tar them using the utility of your choice and move them that way.
 
@@ -36,7 +36,13 @@ pip install --user django
 ```
 This will install the web framework kit 'Django' to your local environment and you can use it anytime you module load `anaconda`. Anaconda also comes with many pre-built scientific packages, so you may not need to install anything.
 
-`module load` also lets you access math libraries (like OpenBLAS and Mkl), different versions of compilers for parallel processing (Intel and OpenMPI for example), and different versions of `gcc`.
+Anaconda is also itself a full-fledged Python environment, with the capacity to
+create virtual environments using the `conda` command, but that is outside the
+scope of a this introductory course. See instead the [conda getting started](https://conda.io/docs/user-guide/getting-started.html), especially
+the sections on managing environments, as that is what you might primarily use
+on the Princeton clusters.
+
+`module load` also lets you access math libraries (like OpenBLAS and MKL), different versions of compilers for parallel processing (Intel and OpenMPI for example), and different versions of `gcc`.
 
 ## Basic Linux utils
 The terminal window, running BASH or another shell, is essentially a stream of text. It sends input and output to two basic 'pipes', `stdin` and `stdout`. `stdout` is what you see when you run a command.
