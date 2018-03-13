@@ -128,7 +128,7 @@ be able to use three cores (since MKL will happily use the CPU power that way).
 just me forcing R to use the BLAS library that I would like, i.e. MKL)
 
 
-In another situation, you might have executable that uses MPI (Message Passing
+In another situation, you might have an executable that uses MPI (Message Passing
 Interface) to use multiple cores, potentially even over multiple nodes.
 
 ```bash
@@ -146,4 +146,4 @@ module load intel intel-mpi
 srun ./a.out
 ```
 
-This would request 20 x 2 nodes for 40 total processes for an hour. 
+This would request 20 x 2 nodes for 40 total processes for an hour.
