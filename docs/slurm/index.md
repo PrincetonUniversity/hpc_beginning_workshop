@@ -175,7 +175,7 @@ echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
 
 ```
 
-This will produce output's with the job id and the individual task id that
+This will produce outputs with the job id and the individual task id that
 echo their subtask number. You can set the array numbers to any arbitrary set
 of numbers, so that you can subset processing a larger list by grabbing the
 value of `$SLURM_ARRAY_TASK_ID`. For example:

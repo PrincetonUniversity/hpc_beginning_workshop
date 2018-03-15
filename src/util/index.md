@@ -1,6 +1,6 @@
 # Utilities you can use
 
-## Getting files places with `scp`
+## Getting files places
 
 (Windows users can use their local system's FTP or PuTTY comes with pscp with similar syntax, just using Windows `\` notation for directories from drive letter).
 
@@ -18,6 +18,11 @@ scp -r test_dir bhicks@adroit:.
 This copies test_dir (as one unit, with the files underneath pulled in too) to adroit. The syntax is the '-r' flag to move the folder recursively (i.e. folder and sub-files and folders) the path to copy from and the path to copy to, prepended with my user and login. `.` says "Wherever your shell start on login", which happens to be home.
 
 You can reverse that to get the file back to your local machine. For many, many files, you may want to zip or tar them using the utility of your choice and move them that way.
+
+For more advanced use cases, you should look into `rsync` (a powerful utility
+for transferring many files with the potential to resume a broken connect) or
+for very large sets that can be access through Globus, the university provides
+[such as service](https://www.princeton.edu/researchcomputing/services/globus_description/).
 
 ## Princeton specific `modules`
 All of the clusters run Springdale, a build of Linux that tracks along with the releases of Redhat (currently either 6 or 7).

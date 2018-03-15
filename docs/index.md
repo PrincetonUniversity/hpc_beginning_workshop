@@ -9,6 +9,7 @@
 * [Permissions and $PATH](permissions/)
 * [SLURM and scheduling](slurm/)
 * [Utilities](util/)
+  - [Getting files places with scp, etc.](util/#getting-files-places)
 * [Planning](plan/)
 
 ## Outside Resources
