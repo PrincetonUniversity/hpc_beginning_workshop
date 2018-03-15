@@ -135,7 +135,7 @@ Others are just useful for watching processes and files.
 
 Regular expressions are a shorthand way of telling a scripting language (or really any language) or utility 'look for this match'.
 
-This can be very useful for finding a line that matches and deleting it, finding and replacing text (your word processor's find and rreplace is a much more use friendly but often less powerful version of this), etc.
+This can be very useful for finding a line that matches and deleting it, finding and replacing text (your word processor's find and replace is a much more use friendly but often less powerful version of this), etc.
 
 Many programming languages have their versions of the regex, all of which tend to look similar but have different features. If you need highly complex regex, you're probably better moving to a scripting language like Python, PHP, or Javascript--or even a data science tool like R.
 
