@@ -6,7 +6,7 @@ These instructions assume you are:
   2. Are connecting from the campus wireless for Adroit (or through Nobel)
   3. Are connecting from the campus VPN or a wired connection for Tigress systems
   (or through Nobel).
-  4. Are connecting with Duo Authentication for Nobel
+  4. Are connecting with Duo Authentication
   5. Have an account on the system you're looking to connect to. You can register for
   [Nobel](https://www.princeton.edu/researchcomputing/computational-hardware/nobel/usage-guidelines/)
   and [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
@@ -40,19 +40,25 @@ The `$` is an indication that you're ready to enter a command.
 
 To connect to adroit, I'd type something like this and hit enter:
 ```
-ssh bhicks@adroit
-The authenticity of host 'adroit (128.112.129.186)' can't be established.
-RSA key fingerprint is SHA256:1hlQZZlWTt4DDR3Ym8lejWmZDyeXtT0HU9E+b3fp1a0.
+nat-oitwireless-inside-vapornet100-c-14666:hpc_beginning_workshop bhicks$ ssh bhicks@adroit.princeton.edu
+Warning: the ECDSA host key for 'adroit.princeton.edu' differs from the key for the IP address '128.112.128.32'
+Offending key for IP in /Users/bhicks/.ssh/known_hosts:88
+Matching host key in /Users/bhicks/.ssh/known_hosts:115
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'adroit,128.112.129.186' (RSA) to the list of known hosts.
-bhicks@adroit's password:
-Last login: Tue Apr 11 10:08:15 2017 from nat-oitwireless-outside-vapornet3-j-8.princeton.edu
-The adroit cluster has access to 20 cores per node.
+Password:
+Duo two-factor login for bhicks
 
-March 2017 -- Gaussian v16 has been installed
+Enter a passcode or select one of the following options:
 
+ 1. Duo Push to XXX-XXX-3224
+ 2. Phone call to XXX-XXX-3224
+ 3. Phone call to XXX-XXX-8335
+ 4. SMS passcodes to XXX-XXX-3224 (next code starts with: 1)
 
-[bhicks@adroit3 ~]$
+Passcode or option (1-4): 493203
+Success. Logging you in...
+Last login: Wed Oct 10 09:12:28 2018 from nat-oitwireless-outside-vapornet3-l-14.princeton.edu
+[bhicks@adroit4 ~]$
 ```
 
 I'm now remotely connected to adroit3, which is the head node of the cluster! The
@@ -60,18 +66,36 @@ shell I used in both cases is one called [Bash](https://www.gnu.org/software/bas
 It's a particular command line interface that is common across Unix-alike machines.
 
 
+## Duo Authentication
+
+All of the clusters from both on campus and off campus now require two factor
+authentication via Duo. If you need help getting this set up, contacting the
+[OIT Support and Operations Center](http://www.princeton.edu/oit/)
+will be your best course of action. You can also see OIT's resoures for using
+Duo [here](https://princeton.service-now.com/snap/?id=kb_article&sys_id=692a27064f9ca20018ddd48e5210c72b).
+
+Upon connecting, you can request a push to a cell phone application, a text with
+a passcode, or you can enter a generate pass code with a soft key created by the
+Duo application on your cell phone.
+
+If you use a system that respects a standard `~/.ssh/config`, you can use the
+[solution outlined on AskRC](https://askrc.princeton.edu/question/331/how-do-i-avoid-having-to-authenticate-with-duo-every-time/)
+ to setup SSH Multiplexing.
+
 ## Getting files to Adroit
 
 One of the most frequently asked questions is how to get files to Adroit or a cluster.
 Again, Linux/MacOS has an answer out of the box, but clients like PuTTY and Mobaxterm
 OR FTP clients like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client) (paid, sadly) or [Filezilla](https://filezilla-project.org/). In both cases,
 make sure you're using interactive logon. Filezilla especially can be a pain
-with Duo Authentication for Nobel. If you're transferring a lot of files, consider
+with Duo Authentication for Nobel, but we have some tips [here](https://askrc.princeton.edu/question/343/how-do-i-get-filezilla-to-work-around-duo/)
+
+If you're transferring a lot of files, consider
 zipping them.
 
 The default client to transfer files is `scp`. This is a copy command that uses
 SSH to copy files. I'll discuss its use at greater length when [talking about the
-command line utils](/hpc_beginning_workshop/utilities/).
+command line utils](/hpc_beginning_workshop/util/).
 
 
 ## <a name="tmux">Staying connected (tmux)</a>

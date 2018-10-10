@@ -23,6 +23,8 @@
 
 * [Linux Shell scripting with Bash](https://pulsearch.princeton.edu/catalog/7360952)
 
+* [Linux BASH Programming Cookbook](https://makeuseof.tradepub.com/free/w_syst05/)
+
 * [Research Computing Tutorials](https://www.princeton.edu/researchcomputing/education/online-tutorials/)
 
 * [Research Computing Software for Clusters](https://www.princeton.edu/researchcomputing/software/)
