@@ -27,13 +27,14 @@ For more detail, see:
   cluster. 2.5 Ghz Dell Ivybridge on 8 nodes with 20 cores. Scheduled job system, now with 16 Nvidia k20 GPUs.
 
 ### [McMillan](https://www.princeton.edu/researchcomputing/computational-hardware/experimental-systems/mcmillan/)
-  Experimental cluster with access to GPUs. No data backups are made, and it is
-  not connected to any of the major network storages. Intended for beginning
-  or testing of new code for GPU applications.
+  Experimental cluster, No data backups are made, and it is
+  not connected to any of the major network storages. Unless you know a bit of
+  hardware you want happens to be on McMillan, you probably do not want this
+  option.
 
 ### Other Clusters
-  These other clusters such as Perseus, Hecate, Tiger, and Della are research
-  clusters with many more nodes and networked storage between clusters.
+  These other clusters such as Perseus, Tiger, and Della are research
+  clusters with many more nodes and GPFS networked storage between clusters.
 
   See [https://www.princeton.edu/researchcomputing/access/](https://www.princeton.edu/researchcomputing/access/)
   for details:
