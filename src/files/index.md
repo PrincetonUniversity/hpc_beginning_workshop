@@ -63,14 +63,14 @@ DESCRIPTION
 ```
 
 Most entries describe the command's basic function, give a listing of its operands
-(usually prefixed by -- or -) and then what it takes as an input.
+(usually prefixed by `--` or `-`) and then what it takes as an input.
 
 So from that, we learn that `ls` lists the contents of a directory.
 
 ## Getting around the file system
 
 When you first open a terminal, you will probably be dropped off in your home directoy,
-often abbreviated by a ~. POSIX systems all use forward slashes to mark directory
+often abbreviated by a `~`. POSIX systems all use forward slashes to mark directory
 structure. (Directories are like the folders you see in a graphical interface.)
 
 For example:
@@ -137,7 +137,7 @@ drwxr-xr-x   2 bhicks cses     31 Oct 27 11:17 .vim
 ```
 
 This looks like a lot of obtuse information, but it tells me 1) all the files, including
-'hidden' dotted files like my .bashrc that helps set initial variables for a Bash session 2) shows size in B (add -alh to get a more useful set of values there) and 3) the
+'hidden' dotted files like my .bashrc that helps set initial variables for a Bash session 2) shows size in B (add `-alh` to get a more useful set of values there) and 3) the
 permissions of each file, but that's a topic for later.
 
 I still don't know what the absolute file path for the directory is. In this case,
@@ -148,7 +148,7 @@ I still don't know what the absolute file path for the directory is. In this cas
 /home/bhicks
 ```
 
-Now I know that ~ is a shorthand way of writing /home/bhicks.
+Now I know that `~` is a shorthand way of writing `/home/bhicks`.
 
 ## You are now free to move about the file system - `cd`
 
@@ -180,7 +180,7 @@ Let's say I'm in my home directory and want to make a folder and a folder beneat
 
 Great! The folders `~/work` and `~/work/Mon` now both exist.
 
-So, you might think, 'I bet I can just do `mkdir work/Mon`!` to save a step. But you'll get this if you'restarting from scratch.
+So, you might think, 'I bet I can just do `mkdir work/Mon` to save a step.' But you'll get this if you're starting from scratch.
 
 ```
 ~ $mkdir work/Mon
@@ -376,4 +376,4 @@ I moved up one directory using `cd ..` and then `rm -r junkdrawer/` removed the 
 
 Some useful flags:
 
-`rm -f` (and combinable as `rm -rf`) - These delete a file (or files/directories with `-r`) and also override any prompts for confirmation, which will still be offered based on the files permissions. This is a bulldozer. Aim carefully.
+`rm -f` (and combinable as `rm -rf`) - These delete a file (or files/directories with `-r`) and also override any prompts for confirmation. This is a bulldozer. Aim carefully.
