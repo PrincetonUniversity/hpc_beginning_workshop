@@ -1,5 +1,5 @@
 # A pandas example using SLURM
-This is an example of using a trivial Pandas example in the Princeton RC
+This is a trivial Pandas example using the Princeton RC
 cluster environment through SLURM. You'll want to create two files: a python
 script in your home directory named `pandas_example.py` and a SLURM script
 called `pandas_example.cmd`
