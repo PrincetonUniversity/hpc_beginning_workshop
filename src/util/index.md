@@ -258,7 +258,7 @@ This will perform the commands you request on the filename and w/o flags specify
 
 `sed -e s/foo/bar/g file` would output `file` with all instances of `foo` with `bar`.
 
-`s/` invokes substition with a regex (here the literal `foo`), and then `g` makes the replacement global throughout the line (otherwise only the first instance is replaced!).
+`s/` invokes substitution with a regex (here the literal `foo`), and then `g` makes the replacement global throughout the line (otherwise only the first instance is replaced!).
 
 An easier example:
 
