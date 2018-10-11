@@ -8,6 +8,7 @@
 * [Editors](editors/)
 * [Permissions and $PATH](permissions/)
 * [SLURM and scheduling](slurm/)
+  - [An example in Pandas](slurm/pandas_example.md)
 * [Utilities](util/)
   - [Getting files places with scp, etc.](util/#getting-files-places)
 * [Planning](plan/)
