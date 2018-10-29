@@ -1,6 +1,6 @@
 # Introduction to Job Scheduling and SLURM
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 ## What's a scheduler?
 

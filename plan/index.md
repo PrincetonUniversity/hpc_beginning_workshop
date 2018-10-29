@@ -1,6 +1,6 @@
 # Planning your jobs
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 Ask yourself:
   1. What are my needs?

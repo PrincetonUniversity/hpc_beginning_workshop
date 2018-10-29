@@ -1,6 +1,6 @@
 # Utilities you can use
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 ## Getting files places
 

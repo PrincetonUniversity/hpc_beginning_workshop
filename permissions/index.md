@@ -1,6 +1,6 @@
 # Permissions and $PATH
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 
 These are two of the most common stumbling blocks to new users of Linux. (And,

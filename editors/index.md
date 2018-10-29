@@ -1,6 +1,6 @@
 # Editors
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 
 While you should use a version control system (like Git) for your codes, and you may want to use your own favorite graphical editor, on the server your best bet for spot changes is a text-based editor.

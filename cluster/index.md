@@ -1,6 +1,6 @@
 # What's an HPC cluster?
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 
 [![Beowulf Cluster](beowulf.png)](beowulf.png)

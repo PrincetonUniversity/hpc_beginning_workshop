@@ -380,3 +380,17 @@ I moved up one directory using `cd ..` and then `rm -r junkdrawer/` removed the 
 Some useful flags:
 
 `rm -f` (and combinable as `rm -rf`) - These delete a file (or files/directories with `-r`) and also override any prompts for confirmation. This is a bulldozer. Aim carefully.
+
+## `history` (and the up arrow) and tab completion
+
+A handy trick that you may find yourself using is the `history` command. It lists
+Your most recent commands, can be searched (`history | grep searchterm`) and
+you can invoke a command in it by typing its number with a `!` in front: `!150`
+ (for example).
+
+You can also scroll through this one by one in many terminal programs by pressing
+up.
+
+Another time saving trick is tab completion. In many terminal clients, pressing
+`tab` while writing out a file path will try to complete as much as of it as
+possible and can save some precious seconds (and typos).
