@@ -35,6 +35,7 @@ We'll be following a recipe for a serial job.
 #SBATCH -N 1   # node count
 #SBATCH --ntasks-per-node=1  # core count
 #SBATCH -t 00:01:00
+#SBATCH --reservation=bootcamp
 # sends mail when process begins, and
 # when it ends. Make sure you define your email
 #SBATCH --mail-type=begin
@@ -114,6 +115,7 @@ will not let me use more than one node--for that you need MPI!)
 # and runs for 15 minutes (max).
 #SBATCH -N 1   # node count
 #SBATCH --ntasks-per-node=1
+#SBATCH --reservation=bootcamp
 #SBATCH -c 3  # core count
 #SBATCH -t 00:15:00
 
@@ -161,6 +163,7 @@ set of variables that Slurm will set for you in the job.
 # and runs for five minutes max per task.
 #SBATCH -J array_example
 #SBATCH --output=array_example%A_%a.out
+#SBATCH --reservation=bootcamp
 #SBATCH -N 1   # node count
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 00:05:00

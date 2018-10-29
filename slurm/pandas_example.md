@@ -28,6 +28,7 @@ print(df)
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -t 0:01:00
+#SBATCH --reservation=bootcamp
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
 #SBATCH --mail-user=bhicks@princeton.edu
