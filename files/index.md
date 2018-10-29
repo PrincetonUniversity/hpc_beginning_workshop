@@ -1,6 +1,6 @@
 # The Bash Command Line
 
-[Table of Contents](/)
+[Table of Contents](/hpc_beginning_workshop/)
 
 
 Bash is one of the most common shells in the POSIX (i.e. Unix standard) world.
