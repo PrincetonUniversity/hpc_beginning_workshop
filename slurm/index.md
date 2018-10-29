@@ -1,5 +1,7 @@
 # Introduction to Job Scheduling and SLURM
 
+[Table of Contents](/)
+
 ## What's a scheduler?
 
 Schedulers help divide up the resources of a cluster fairly, give or take, and

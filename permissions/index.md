@@ -1,5 +1,8 @@
 # Permissions and $PATH
 
+[Table of Contents](/)
+
+
 These are two of the most common stumbling blocks to new users of Linux. (And,
 for that matter, veteran users.)
 

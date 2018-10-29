@@ -1,5 +1,8 @@
 # The Bash Command Line
 
+[Table of Contents](/)
+
+
 Bash is one of the most common shells in the POSIX (i.e. Unix standard) world.
 Its name stands for Bourne Again SHell, named after the original Bourne
 shell (`/bin/sh`).

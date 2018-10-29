@@ -1,4 +1,7 @@
 # Planning your jobs
+
+[Table of Contents](/)
+
 Ask yourself:
   1. What are my needs?
   2. Do I need to do many single core jobs or their equivalent?

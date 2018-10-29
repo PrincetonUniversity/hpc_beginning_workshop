@@ -1,5 +1,7 @@
 # Connecting to a cluster
 
+[Table of Contents](/)
+
 ## A few caveats
 These instructions assume you are:
   1. Princeton University faculty, student, or staff
