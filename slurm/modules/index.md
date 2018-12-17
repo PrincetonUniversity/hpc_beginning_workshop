@@ -1,7 +1,7 @@
 # Modules
 
 **NOTE: This brief explanation assumes you understand how SLURM works, if you
-don't go back to the [introduction to Slurm](../slurm/)**
+don't go back to the [introduction to Slurm](../)**
 
 Enterprise Linux configurations like those used on Adroit often have very
 out of date system packages. This provides great stability, but is often not
