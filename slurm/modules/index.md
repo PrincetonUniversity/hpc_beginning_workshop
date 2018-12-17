@@ -1,5 +1,8 @@
 # Modules
 
+[Table of Contents](/hpc_beginning_workshop/)
+
+
 **NOTE: This brief explanation assumes you understand how SLURM works, if you
 don't go back to the [introduction to Slurm](../)**
 
