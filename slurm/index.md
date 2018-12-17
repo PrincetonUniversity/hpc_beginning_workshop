@@ -187,3 +187,9 @@ This snippet shows a six task array, that will pass increments of 100 to the
 program in question. It can then start processing a data frame, for example,
 at rows 0, 100, 200, 300, 400, etc. and stop iterating after 99 rows. Thus if these
 arrays run in parallel, you would complete 600 rows.
+
+## module load?
+
+You may have seen the `module load` commands in the previous scripts. Now that
+you've looked at some Slurm scripts the [tutorial on `modules`s](/slurm/modules/) will make much more
+sense.
