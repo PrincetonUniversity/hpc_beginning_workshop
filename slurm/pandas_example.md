@@ -28,10 +28,9 @@ print(df)
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -t 0:01:00
-#SBATCH --reservation=bootcamp
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
-#SBATCH --mail-user=bhicks@princeton.edu
+#SBATCH --mail-user=yourNetID@princeton.edu
 
 # Load anaconda for python 3 (which has a version of pandas already installed)
 module load anaconda3
