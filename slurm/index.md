@@ -191,5 +191,5 @@ arrays run in parallel, you would complete 600 rows.
 ## module load?
 
 You may have seen the `module load` commands in the previous scripts. Now that
-you've looked at some Slurm scripts the [tutorial on `modules`s](/slurm/modules/) will make much more
+you've looked at some Slurm scripts the [tutorial on `modules`s](modules/) will make much more
 sense.
