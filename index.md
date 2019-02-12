@@ -1,5 +1,10 @@
 # Table of Contents
 
+## Google Survey
+
+[Click here](
+https://goo.gl/forms/y1Yh4decrLAsFU1D2)
+
 * [Index](#)
 * [What's a cluster?](cluster/)
 * [Connecting to a cluster](connecting/)
