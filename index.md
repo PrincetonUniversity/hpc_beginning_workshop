@@ -10,6 +10,7 @@
 * [SLURM and scheduling](slurm/)
   - [modules](slurm/modules/)
   - [An example in Pandas](slurm/pandas_example.md)
+  - [An example repo for Tensorflow-GPU](https://github.com/PrincetonUniversity/slurm_mnist)
 * [Utilities](util/)
   - [Getting files places with scp, etc.](util/#getting-files-places)
 * [Planning](plan/)
@@ -31,4 +32,4 @@
 
 * [Research Computing Software for Clusters](https://www.princeton.edu/researchcomputing/software/)
 
-* [Research Computing Services](https://www.princeton.edu/researchcomputing/services/)
+* [Research Computing Services](https://researchcomputing.princeton.edu/systems-and-services)

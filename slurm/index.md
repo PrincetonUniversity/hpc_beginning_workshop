@@ -22,7 +22,7 @@ To run SLURM you need:
 *You should never run code directly on the head/login node except for ~ 5 - 10
 minute test runs.*
 
-For detailed examples of these scripts, you can look at: [Getting Started](https://www.princeton.edu/researchcomputing/education/online-tutorials/getting-started/)
+For detailed examples of these scripts, you can look at: [Introduction Slurm](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started/introducing-slurm)
 
 We'll be following a recipe for a serial job.
 
@@ -39,7 +39,8 @@ We'll be following a recipe for a serial job.
 # when it ends. Make sure you define your email
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=end
-#SBATCH --mail-user=yourNetID@princeton.edu
+# remove the space in this line and change it to your NetID or email.
+#SBATCH --mail-user= yourNetID@princeton.edu
 
 echo 'Hello world!'
 
@@ -187,6 +188,35 @@ This snippet shows a six task array, that will pass increments of 100 to the
 program in question. It can then start processing a data frame, for example,
 at rows 0, 100, 200, 300, 400, etc. and stop iterating after 99 rows. Thus if these
 arrays run in parallel, you would complete 600 rows.
+
+## GPUs
+
+If your code can use a GPU, you might want to request one, as does the
+following script that wraps a Python job in tensorflow-gpu.
+
+```bash
+#!/bin/bash
+# serial job using 1 GPU and 3 processors,
+# and runs for 1 minute (max).
+#SBATCH -N 1   # node count
+#SBATCH --ntasks-per-node=3  # core count
+#SBATCH --gres=gpu:1
+#SBATCH -t 00:30:00
+# sends mail when process begins, and
+# when it ends. Make sure you define your email
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+# remove the space in this line!
+#SBATCH --mail-user= yourNetID@princeton.edu
+
+module load anaconda3
+conda activate tf-gpu
+python my-tf-script.py
+```
+
+This asks for a single GPU (of any type) via `--gres=gpu:1` You can specify
+more granularly too, `--gres=gpu:tesla_v100:2` would ask for two Tesla v100s.
+
 
 ## module load?
 

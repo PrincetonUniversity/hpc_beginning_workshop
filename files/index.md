@@ -244,7 +244,7 @@ it matches ANY character. To avoid this (and also some potentially hilarious rec
 say directories are OK using `-r`), you can be more targeted.
 
 In this instance `cp file* bar/` would work very well. You could also use `cp {file1,file2,file3} bar/`
-since `{}` with commas and no spaces as separators gets expanded into running `cp file1 bar/ cp file2 bar/`, etc.  
+since `{}` with commas and no spaces as separators gets expanded into running `cp file1 bar/ cp file2 bar/`, etc.
 
 
 A few important flags:
@@ -262,7 +262,8 @@ The basic syntax is `mv <source> <destination>`, in any format, relative or abso
 `mv` is incredibly powerful and if you're moving around a lot of files will let you pull out some
 really annoying problems. Once you're used to it, it's also much quicker than lassoing files with a mouse.
 
-It can also end up sending files willy-nilly. Most operating system files are protected and require superuser privileges to edit or move, so unless you use `sudo`, you're unlikely to bring down your system. You
+It can also end up sending files willy-nilly. Most operating system files are protected and require superuser privileges to edit or move files in certain protected directories,
+so unless you use `sudo`, you're unlikely to bring down your system. You
 just might move some files somewhere annoying, however, so be careful.
 
 The wildcard selector `*` and braces `{}` are both supported, too, huzzah!
@@ -336,7 +337,12 @@ The `rm` command does NOT come with an undo. If you delete and don't have a back
 involving deleting the subdirectories of the system root. Many modern Linux distros will prevent this,
 as will MacOS, but just don't.
 
-`rm`, as the caution above indicates, deletes files. Without flags, it will only delete files not directories, but it does accept the standard `*` and `{}` operators.
+On systems supported by OIT or Research Computing, your `/home` directory (and
+certain other directories on the `/tigress` file system) will be backed up
+and you can request restores by emailing `cses@princeton.edu` for RC systems.
+
+`rm`, as the caution above indicates, deletes files. Without flags, it will on
+ly delete files not directories, but it does accept the standard `*` and `{}` operators.
 
 The syntax is `rm <file or list of files>`
 

@@ -19,21 +19,15 @@
 
 ## Some Clusters At Princeton
 For more detail, see:
-[Computation Hardware @ Princeton](https://www.princeton.edu/researchcomputing/computational-hardware/)
+[Computational Hardware @ Princeton](https://researchcomputing.princeton.edu/systems-and-services/available-systems)
 
-### [Nobel](https://www.princeton.edu/researchcomputing/computational-hardware/nobel/)
+### [Nobel](https://researchcomputing.princeton.edu/systems-and-services/available-systems/nobel)
   This cluster is most appropriate for interactive work. Any member of the
   university community can request access for their work. Two nodes (Davisson and Compton), no distinction between login/compute.
 
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
-  Also available generally to members of the university community. 8 node Beowulf
-  cluster. 2.5 Ghz Dell Ivybridge on 8 nodes with 20 cores. Scheduled job system, now with 16 Nvidia k20 GPUs.
-
-### [McMillan](https://www.princeton.edu/researchcomputing/computational-hardware/experimental-systems/mcmillan/)
-  Experimental cluster, No data backups are made, and it is
-  not connected to any of the major network storages. Unless you know a bit of
-  hardware you want happens to be on McMillan, you probably do not want this
-  option.
+  Also available generally to members of the university community. 9 Skylake nodes with a mix of
+  Tesla k20m, k40c and v100 GPUs available.
 
 ### Other Clusters
   These other clusters such as Perseus, Tiger, and Della are research
@@ -42,4 +36,5 @@ For more detail, see:
   See [https://www.princeton.edu/researchcomputing/access/](https://www.princeton.edu/researchcomputing/access/)
   for details:
 
-  >Access to the large clusters (Tiger, Della, Perseus and Hecate) is granted on the basis of proposals from faculty members directing the related research projects. After a proposal has been accepted, the faculty member need only send e-mail to cses@princeton.edu in order to add individual users.
+  > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
+
