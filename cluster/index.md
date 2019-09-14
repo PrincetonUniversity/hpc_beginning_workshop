@@ -48,7 +48,7 @@ whoami                    # get username of the account
 date                      # get the current date and time
 cat /etc/os-release       # info about operating system
 lscpu                     # info about the CPUs on head node
-snodes -N                 # info about the compute nodes
+snodes                    # info about the compute nodes
 squeue                    # which jobs are running or waiting to run
 who                       # list users on the head node
 ```
