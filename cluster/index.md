@@ -30,7 +30,7 @@ For more detail, see:
   Tesla k20m, k40c and v100 GPUs available.
 
 ### Other Clusters
-  These other clusters such as Perseus, Tiger, and Della are research
+  These other clusters such as Perseus, Tiger, Della and Traverse are research
   clusters with many more nodes and GPFS networked storage between clusters.
 
   See [https://www.princeton.edu/researchcomputing/access/](https://www.princeton.edu/researchcomputing/access/)
@@ -38,44 +38,22 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
-### Learn more about Adroit by running commands
+### Learn More About Adroit by Running Commands
+
+Type each command below and examine the output:
 
 ```
-hostname                  &#35; get the name of the machine you are on
-whoami                    &#35; get username of the account
-date                      &#35; get the current date and time
-cat /etc/os-release       &#35; info about operating system
-lscpu                     &#35; info about the CPUs on head node
-snodes -N                 &#35; info about the compute nodes
-squeue                    &#35; which jobs are running or waiting to run
-who                       &#35; list users on the head node
+hostname                  # get the name of the machine you are on
+whoami                    # get username of the account
+date                      # get the current date and time
+cat /etc/os-release       # info about operating system
+lscpu                     # info about the CPUs on head node
+snodes -N                 # info about the compute nodes
+squeue                    # which jobs are running or waiting to run
+who                       # list users on the head node
 ```
 
-&#35; get the name of the machine  
-hostname
-
-&#35; get your username  
-whoami
-
-&#35; get the current date and time  
-date
-
-&#35; info about operating system  
-cat /etc/os-release
-
-&#35; info about the CPUs on head node
-lscpu 
-
-&#35; info about the compute nodes
-snodes -N
-
-&#35; which jobs are running or waiting to run
-squeue
-
-&#35; list users on the head node
-who
-
-Here is a typical session:
+Here is example output from the commands above:
 
 ```
 [jdh4@adroit4 ~]$ hostname
