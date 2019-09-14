@@ -16,6 +16,8 @@
   * A shorthand way to refer to the number of
   processor cores (usually physical) of a CPU
   in a node.
+  
+IMPORTANT: *You may run test jobs on the head node that run for up 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
 
 ## Some Clusters At Princeton
 For more detail, see:
