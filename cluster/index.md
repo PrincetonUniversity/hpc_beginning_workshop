@@ -40,6 +40,17 @@ For more detail, see:
 
 ### Learn more about Adroit by running commands
 
+```
+hostname                  &#35; get the name of the machine you are on
+whoami                    &#35; get username of the account
+date                      &#35; get the current date and time
+cat /etc/os-release       &#35; info about operating system
+lscpu                     &#35; info about the CPUs on head node
+snodes -N                 &#35; info about the compute nodes
+squeue                    &#35; which jobs are running or waiting to run
+who                       &#35; list users on the head node
+```
+
 &#35; get the name of the machine  
 hostname
 
