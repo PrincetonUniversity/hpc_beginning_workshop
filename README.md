@@ -9,9 +9,16 @@ You can find the page, presentation and examples either in the [src/](src/) fold
 or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginning_workshop/](https://princetonuniversity.github.io/hpc_beginning_workshop/)
 
 ## Useful links
-There are also some useful links here for your use.
+[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)
+[OnComputingWell blog](https://oncomputingwell.princeton.edu)
+[AskRC](https://researchcomputing.princeton.edu/about/contact/ask-research-computing)
+[Research Computing FAQ](https://researchcomputing.princeton.edu/faq)
 
 ## About Makefile
 I update the documentation directory using a Makefile to sync src/ and docs/, with
 the 'Dinky' theme because its seemed apropros of Princeton. To run it, just run
 `make` from the repo root.
+
+## Authorship
+
+This guide was prepared by Ben Hicks with contributions and modifications by Jonathan Halverson.
