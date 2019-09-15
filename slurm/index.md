@@ -26,24 +26,25 @@ For detailed examples of these scripts, you can look at: [Introduction Slurm](ht
 
 We'll be following a recipe for a serial job.
 
-
-## A sample script
-```bash
-#!/bin/bash
 # serial job using 1 node and 1 processor,
 # and runs for 1 minute (max).
-#SBATCH -N 1   # node count
-#SBATCH --ntasks-per-node=1  # core count
-#SBATCH -t 00:01:00
-# sends mail when process begins, and
-# when it ends. Make sure you define your email
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-# remove the space in this line and change it to your NetID or email.
-#SBATCH --mail-user= yourNetID@princeton.edu
+
+## A sample script
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=slurm-test    # assign a short name to your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks-per-node=1      # cpu-cores per node
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 echo 'Hello world!'
-
 ```
 
 SLURM scripts are more or less Bash scripts (using the scripting syntax built into Bash) with some extra parameters to help out slurm.
@@ -109,14 +110,20 @@ Let's say I want to run R substituting the Intel MKL BLAS for the built-in. MKL
 is mulithreading and will let me use more than one core on a node. (Though it
 will not let me use more than one node--for that you need MPI!)
 
-```bash
-#!/bin/bash
 # serial job using 1 node and 3 processor,
 # and runs for 15 minutes (max).
-#SBATCH -N 1   # node count
-#SBATCH --ntasks-per-node=1
-#SBATCH -c 3  # core count
-#SBATCH -t 00:15:00
+```bash
+#!/bin/bash
+#SBATCH --job-name=multicore     # assign a short name to your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks-per-node=1      # cpu-cores per node
+#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --time=00:15:00          # maximum time needed
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load intel intel-mkl
 LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
@@ -128,28 +135,61 @@ be able to use three cores (since MKL will happily use the CPU power that way).
 (Unless you're an R user, don't worry too much about the `LD_PRELOAD`, that's
 just me forcing R to use the BLAS library that I would like, i.e. MKL)
 
-
 In another situation, you might have an executable that uses MPI (Message Passing
 Interface) to use multiple cores, potentially even over multiple nodes.
 
-```bash
-#!/bin/bash
 # serial job using 2 nodes and 20 processors,
 # and runs for 1 hour (max).
+```bash
+#!/bin/bash
 #SBATCH -N 2   # node count
-#SBATCH --output=arrayJob_%A_%a.out
-#SBATCH --error=arrayJob_%A_%a.err
 #SBATCH --ntasks-per-node=20
 #SBATCH -t 01:00:00
-# sends mail when process begins, and
-# when it ends. Make sure you define your email
-
 
 module load intel intel-mpi
 srun ./a.out
 ```
 
+The script below uses 32 cpu-cores over two nodes.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=multinode     # name of your job
+#SBATCH --nodes=2                # node count
+#SBATCH --ntasks-per-node=16     # cpu-cores per node
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=2G         # memory per cpu-core
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+
+module load intel intel-mkl
+LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
+```
+
 This would request 20 x 2 nodes for 40 total processes for an hour.
+
+
+## Hybrid OpenMP/MPI
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=hybrid        # assign a short name to your job
+#SBATCH --nodes=2                # node count
+#SBATCH --ntasks-per-node=8      # cpu-cores per node
+#SBATCH --cpus-per-task=2        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+
+module load intel intel-mkl
+LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
+```
 
 ## Array Jobs
 
@@ -158,20 +198,27 @@ set of variables that Slurm will set for you in the job.
 
 ```bash
 #!/bin/bash
-# array job using 1 nodes and 1 processor,
-# and runs for five minutes max per task.
-#SBATCH -J array_example
-#SBATCH --output=array_example%A_%a.out
-#SBATCH -N 1   # node count
-#SBATCH --ntasks-per-node=1
-#SBATCH -t 00:05:00
-#SBATCH --array=0-5
-
+#SBATCH --job-name=array-job     # create a short name for your job
+#SBATCH --output=slurm-%N.%j.out # STDOUT file
+#SBATCH --error=slurm-%N.%j.err  # STDERR file
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks-per-node=1      # cpu-cores per node
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --t=00:01:00             # total run time limit (HH:MM:SS)
+#SBATCH --array=0-4              # array job will submit 5 jobs (0, 1, 2, 3, 4)
+#SBATCH --mail-type=all          # send email on job start, end and fault
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 # A few special parameters are set in this case that we echo below:
 
 echo "My SLURM_ARRAY_JOB_ID is $SLURM_ARRAY_JOB_ID."
 echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
 
+echo  -n "Executing on the machine: " 
+hostname
+echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
+echo " Random number : " $RANDOM
+
+srun python mice.py
 ```
 
 This will produce outputs with the job id and the individual task id that
@@ -196,22 +243,21 @@ following script that wraps a Python job in tensorflow-gpu.
 
 ```bash
 #!/bin/bash
-# serial job using 1 GPU and 3 processors,
-# and runs for 1 minute (max).
-#SBATCH -N 1   # node count
-#SBATCH --ntasks-per-node=3  # core count
-#SBATCH --gres=gpu:1
-#SBATCH -t 00:30:00
-# sends mail when process begins, and
-# when it ends. Make sure you define your email
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-# remove the space in this line!
-#SBATCH --mail-user= yourNetID@princeton.edu
+#SBATCH --job-name=hybrid        # assign a short name to your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks-per-node=1      # cpu-cores per node
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --gpus-per-node=1        # number of gpus per node
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load anaconda3
 conda activate tf-gpu
-python my-tf-script.py
+srun python my-tf-script.py
 ```
 
 This asks for a single GPU (of any type) via `--gres=gpu:1` You can specify
