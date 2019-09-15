@@ -61,7 +61,7 @@ Return to your original session on Adroit:
 
 ```
 wget https://tigress-web.princeton.edu/~jdh4/job.slurm
-# use a text editor to modify job.slurm (e.g., vim job.slurm)
+# use a text editor to modify job.slurm as follows
 
 #!/bin/bash
 #SBATCH --job-name=py-test       # create a short name for your job
@@ -79,8 +79,45 @@ module load anaconda3
 srun python matrix_inverse.py 
 ```
 
-Submit the job with `sbatch job.slurm`. After the jobs runs you can view the output with `cat slurm-XXXXXX.out`.
+Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
 
+A similar procedure can be used to run an R script. To do this, first make a directory on Adroit for the job:
+
+```
+cd ~
+mkdir r_test
+cd r_test
+pwd
+```
+
+Use a second shell to transfer the files:
+
+```
+scp data_analysis.R jdh4@adroit.princeton.edu:/home/jdh4/r_test
+scp cdc.csv jdh4@adroit.princeton.edu:/home/jdh4/r_test
+```
+
+Return to your session on Adroit:
+
+```
+wget https://tigress-web.princeton.edu/~jdh4/job.slurm
+# use a text editor to modify job.slurm as follows
+
+#!/bin/bash
+#SBATCH --job-name=r-test        # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=jdh4@princeton.edu
+#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+
+srun Rscript data_analysis.R
+```
+Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
 
 ### Learn More About Adroit by Running Commands
 
