@@ -10,4 +10,5 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
+module load anaconda3
 srun python matrix_inverse.py
