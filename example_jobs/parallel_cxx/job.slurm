@@ -11,4 +11,4 @@
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load intel intel-mpi
-srun ./hw_mpi
+srun ./hello_world_mpi

@@ -16,7 +16,7 @@ Compile the program with:
 
 ```
 module load intel
-icpc -Wall -o hello_world hello_world.cpp
+icpc -o hello_world hello_world.cpp
 ```
 
 Here is the Slurm script:
@@ -46,4 +46,10 @@ To submit the job to the cluster:
 sbatch job.slurm
 ```
 
-The program prints out "Hello, world."
+After the job completes, view the output with `cat slurm-*`:
+
+```
+Hello, world.
+```
+
+Use `squeue -u $USER` to monitor queued jobs.

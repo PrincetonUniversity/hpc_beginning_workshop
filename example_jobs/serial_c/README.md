@@ -1,33 +1,46 @@
-# Serial Julia Script
+# Serial C Program
 
-Here is a simple Julia script:
+Follow the directions below to compile and run a simple C program on the Princeton HPC clusters.
+Here is the source code:
 
 ```
-println("Hello, world.")
+#include <stdio.h>
+
+int main() {
+  printf("Hello, world.\n");
+  return 0;
+}
 ```
 
-Below is the Slurm script:
+Compile the program with:
+
+```
+module load intel
+icc -o hello_world hello_world.c
+```
+
+Here is the Slurm script:
 
 ```
 #!/bin/bash
-#SBATCH --job-name=serial_jl     # create a short name for your job
+#SBATCH --job-name=serial_c      # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
 #SBATCH --mem-per-cpu=1G         # memory per cpu-core (4G is default)
-#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
-module load julia
+module load intel
 
-srun julia hello_world.jl
+srun ./hello_world
 ```
 
-To run the Julia script, simply submit the job to the cluster:
+To submit the job to the cluster:
 
 ```
 sbatch job.slurm

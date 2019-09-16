@@ -11,4 +11,4 @@
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load intel
-srun ./hw_omp
+srun ./hello_world_omp
