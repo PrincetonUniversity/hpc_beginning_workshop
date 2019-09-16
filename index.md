@@ -1,10 +1,5 @@
 # Table of Contents
 
-## Google Survey
-
-[Click here](
-https://goo.gl/forms/y1Yh4decrLAsFU1D2)
-
 * [Index](#)
 * [What's a cluster?](cluster/)
 * [Connecting to a cluster](connecting/)
@@ -19,6 +14,9 @@ https://goo.gl/forms/y1Yh4decrLAsFU1D2)
 * [Utilities](util/)
   - [Getting files places with scp, etc.](util/#getting-files-places)
 * [Planning](plan/)
+
+## Google Survey
+[Click here](https://docs.google.com/forms/d/1xWeAUHi9Ni6HUEWyaswA88R_zTovzpTaRuMTPLL_uk4/edit?ts=5d7fa81f)
 
 ## Outside Resources
 (Taken gratuitously from my own repos.)
