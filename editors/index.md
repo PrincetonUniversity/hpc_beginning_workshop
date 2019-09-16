@@ -13,7 +13,7 @@ Here are some popular options, all of which are installed on the university rese
 A simple text editor that allows users to move the cursor by clicking with the mouse.
 
 ### [myadroit](https://myadroit.princeton.edu)
-The MyAdroit web portal allows users to edit and create files. One can also run interactive sessions using RStudio or Jupyter notebooks. You must be on the campus network or connected by VPN in order to use MyAdroit.
+The MyAdroit web portal allows users to edit and create files. One can also run interactive sessions using RStudio or Jupyter notebooks. You must be on the campus network or connected by VPN in order to use MyAdroit. To get started choose "Files" from the menu at the top of the page and then "Home Directory".
 
 ## Intermediate
 
