@@ -10,6 +10,4 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
-cd /scratch/network/<YourNetID>
-
-srun Rscript ~/hpc_beginning_workshop/example_jobs/serial_R/data_analysis.R
+srun Rscript data_analysis.R
