@@ -54,7 +54,7 @@ pwd
 On your local machine, in a new shell, run the following scp (secure copy) command in the directory containing your script:
 
 ```
-scp matrix_inverse.py jdh4@adroit.princeton.edu:/home/jdh4/python_test
+scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
 ```
 
 Return to your original session on Adroit:
@@ -72,14 +72,14 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-user=jdh4@princeton.edu
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load anaconda3
 srun python matrix_inverse.py 
 ```
 
-Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
+Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished. You can also run use this command: `squeue -u <YourNetID>`. If this command doesn't list the job then it has finished.
 
 A similar procedure can be used to run an R script. To do this, first make a directory on Adroit for the job:
 
@@ -90,11 +90,11 @@ cd r_test
 pwd
 ```
 
-Use a second shell to transfer the files:
+Use a second shell to transfer the files from your local machine to Adroit:
 
 ```
-scp data_analysis.R jdh4@adroit.princeton.edu:/home/jdh4/r_test
-scp cdc.csv jdh4@adroit.princeton.edu:/home/jdh4/r_test
+scp data_analysis.R <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
+scp cdc.csv <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
 ```
 
 Return to your session on Adroit:
@@ -117,7 +117,8 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 
 srun Rscript data_analysis.R
 ```
-Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
+
+Submit the job with `sbatch job.slurm`. You will receive an email when the job is finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
 
 ### Learn More About Adroit by Running Commands
 
@@ -127,6 +128,7 @@ Type each command below and examine the output:
 hostname                  # get the name of the machine you are on
 whoami                    # get username of the account
 date                      # get the current date and time
+pwd                       # print working directory
 cat /etc/os-release       # info about operating system
 lscpu                     # info about the CPUs on head node
 snodes                    # info about the compute nodes
@@ -149,6 +151,10 @@ jdh4
 
 [jdh4@adroit4 ~]$ date
 Sat Sep 14 15:15:11 EDT 2019
+
+
+[jdh4@adroit4 ~]$ pwd
+/home/jdh4
 
 
 
