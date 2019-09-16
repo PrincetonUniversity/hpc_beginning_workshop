@@ -9,7 +9,7 @@ or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginni
 -->
 
 ## Google Survey
-[Click here](https://docs.google.com/forms/d/1xWeAUHi9Ni6HUEWyaswA88R_zTovzpTaRuMTPLL_uk4/edit?ts=5d7fa81f)
+[Click here](https://forms.gle/aP9UaX7iuTuLCHrs7)
 
 ## Useful links
 [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)  
