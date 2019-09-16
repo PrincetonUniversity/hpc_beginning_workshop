@@ -2,6 +2,131 @@
 
 [Table of Contents](/hpc_beginning_workshop/)
 
+## Quick Start
+
+```
+mkdir <path/name>              # make directory
+cd <path/name>                 # change directory
+pwd                            # print working directory
+ls                             # list contents of current working directory
+ls -l                          # same as "ls" but with long format
+cd ..                          # change directory to the parent directory
+rm -rf <path/name>             # remove the directory and all its contents
+cp -r <path/name> .            # copy <path/name> to the current directory
+mv <path/name> <path2/name2>   # move <path/name> to <path2/name2>
+touch <name>                   # make an empty file called <name>
+```
+
+Below is an example session using the commands above:
+
+```
+ssh <YourNetID>@adroit.princeton.edu
+
+[jdh4@adroit4 ~]$ mkdir research
+
+[jdh4@adroit4 ~]$ ls
+research
+
+[jdh4@adroit4 ~]$ cd research
+
+[jdh4@adroit4 research]$ pwd
+/home/jdh4/research
+
+[jdh4@adroit4 research]$ cd ..
+
+[jdh4@adroit4 ~]$ pwd
+/home/jdh4
+
+[jdh4@adroit4 ~]$ cd research
+
+[jdh4@adroit4 research]$ ls -l
+total 0
+
+[jdh4@adroit4 research]$ touch file1
+
+[jdh4@adroit4 research]$ ls
+file1
+
+[jdh4@adroit4 research]$ cd ..
+
+[jdh4@adroit4 ~]$ pwd
+/home/jdh4
+
+[jdh4@adroit4 ~]$ mkdir software
+
+[jdh4@adroit4 ~]$ cd software
+
+[jdh4@adroit4 software]$ pwd
+/home/jdh4/software
+
+[jdh4@adroit4 software]$ mkdir mycode
+
+[jdh4@adroit4 software]$ mkdir scripts
+
+[jdh4@adroit4 software]$ ls -l
+total 0
+drwxr-xr-x. 2 jdh4 pustaff 10 Sep 16 09:56 mycode
+drwxr-xr-x. 2 jdh4 pustaff 10 Sep 16 09:56 scripts
+
+[jdh4@adroit4 software]$ cd mycode
+
+[jdh4@adroit4 mycode]$ ls -l
+total 0
+
+[jdh4@adroit4 mycode]$ touch myprogram
+
+[jdh4@adroit4 mycode]$ ls -l
+total 0
+-rw-r--r--. 1 jdh4 pustaff 0 Sep 16 09:57 myprogram
+
+[jdh4@adroit4 mycode]$ pwd
+/home/jdh4/software/mycode
+
+[jdh4@adroit4 mycode]$ cd ..
+
+[jdh4@adroit4 software]$ pwd
+/home/jdh4/software
+
+[jdh4@adroit4 software]$ ls -l
+total 0
+drwxr-xr-x. 2 jdh4 pustaff 31 Sep 16 09:57 mycode
+drwxr-xr-x. 2 jdh4 pustaff 10 Sep 16 09:56 scripts
+
+[jdh4@adroit4 software]$ rm -rf scripts
+
+[jdh4@adroit4 software]$ ls -l
+total 0
+drwxr-xr-x. 2 jdh4 pustaff 31 Sep 16 09:57 mycode
+
+[jdh4@adroit4 software]$ cd ~
+
+[jdh4@adroit4 ~]$ pwd
+/home/jdh4
+
+[jdh4@adroit4 ~]$ ls -R
+.:
+research  software
+
+./research:
+
+./software:
+mycode
+
+./software/mycode:
+myprogram
+```
+
+Here are some more advanced commands to try:
+
+```
+cat <file>              # output contents to terminal
+which <command>         # show path of command (e.g., which gcc)
+env                     # list all environment variables/settings
+echo $USER              # print contents of shell variable USER
+ehco $PATH              # print contests of shell variable PATH
+wget <url>              # download file from the internet
+history                 # see a list of recent commands
+```
 
 Bash is one of the most common shells in the POSIX (i.e. Unix standard) world.
 Its name stands for Bourne Again SHell, named after the original Bourne
