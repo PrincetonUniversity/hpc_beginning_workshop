@@ -3,8 +3,10 @@
 ## About
 This is the Github Repo for the PiCSciE workshop 'Getting Started with the HPC Clusters'. This workshop builds on the lessons presented in the 'Intro to the Linux Command-Line' workshop.
 
+<!--
 You can find the page, presentation and examples either in the [src/](src/) folder
 or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginning_workshop/](https://princetonuniversity.github.io/hpc_beginning_workshop/)
+-->
 
 ## Google Survey
 [Click here](https://docs.google.com/forms/d/1xWeAUHi9Ni6HUEWyaswA88R_zTovzpTaRuMTPLL_uk4/edit?ts=5d7fa81f)
@@ -15,10 +17,16 @@ or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginni
 [Research Computing FAQ](https://researchcomputing.princeton.edu/faq)  
 [AskRC](https://researchcomputing.princeton.edu/about/contact/ask-research-computing)
 
+## Getting Help
+
+If you encounter any difficulties with getting started on our HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+
+<!--
 ## About Makefile
 I update the documentation directory using a Makefile to sync src/ and docs/, with
 the 'Dinky' theme because its seemed apropros of Princeton. To run it, just run
 `make` from the repo root.
+-->
 
 ## Authorship
 
