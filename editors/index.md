@@ -9,9 +9,11 @@ Here are some popular options, all of which are installed on the university rese
 
 ## Beginners
 
-### [micro](https://micro-editor.github.io/) A simple text editor that allows users to move the cursor by clicking with the mouse.
+### [micro](https://micro-editor.github.io/)
+A simple text editor that allows users to move the cursor by clicking with the mouse.
 
-### [myadroit](https://myadroit.princeton.edu) The MyAdroit web portal allows users to edit and create files. One can also run interactive sessions in RStudio and Jupyter notebooks. You must be on the campus network or connected by VPN in order to use this.
+### [myadroit](https://myadroit.princeton.edu)
+The MyAdroit web portal allows users to edit and create files. One can also run interactive sessions using RStudio or Jupyter notebooks. You must be on the campus network or connected by VPN in order to use MyAdroit.
 
 ## Intermediate
 
