@@ -1,7 +1,7 @@
 # Connecting to a cluster
 
-[Table of Contents](/hpc_beginning_workshop/)
-
+<!--[Table of Contents](/hpc_beginning_workshop/)
+-->
 
 ## A few caveats
 These instructions assume you are:

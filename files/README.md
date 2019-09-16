@@ -12,7 +12,8 @@ ls                             # list contents of current working directory
 ls -l                          # same as "ls" but with long format
 cd ..                          # change directory to the parent directory
 rm -rf <path/name>             # remove the directory and all its contents
-cp -r <path/name> .            # copy <path/name> to the current directory
+cp file1 file2                 # create a copy of a file
+cp -r <path/dir> .             # copy <path/dir> to the current directory
 mv <path/name> <path2/name2>   # move <path/name> to <path2/name2>
 touch <name>                   # make an empty file called <name>
 ```
