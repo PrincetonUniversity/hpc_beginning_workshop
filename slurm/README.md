@@ -152,6 +152,15 @@ module load intel intel-mpi
 srun ./a.out
 ```
 
+**IMPORTANT**: *Only codes that have been explicitly written to run in parallel can take advantage of multiple cores on multiple nodes. Using a
+value of ntasks greater than 1 for a code that has not been parallelized will not improve its performance but you will be charged for
+the extra CPUs.*
+
+**IMPORTANT**: *The optimal value of `--nodes` and `--ntasks` for a parallel code must be determined empirically. As these quantities increase
+the parallel efficiency tends to decrease and queue wait times increase. The parallel efficiency is the serial execution time divided by the
+product of the parallel execution time and the number of tasks.*
+
+
 ## Combined Multinode, Multithreading Jobs
 
 In this case we combined multithreading with multinode parallelism:
@@ -243,6 +252,8 @@ conda activate tf-gpu
 
 srun python my-tf-script.py
 ```
+
+**IMPORTANT**: *Only code that has been explicitly written to run on GPUs can take advantage of GPUs. Adding the `--gres` option to your Slurm script for a CPU code will have not speed-up the execution time but you will be charged for requesting the GPU.*
 
 This asks for a single GPU (of any type) via `--gres=gpu:1` You can specify
 more granularly too, `--gres=gpu:tesla_v100:2` would ask for two Tesla v100s.
