@@ -1,7 +1,7 @@
 # Getting Started with the HPC Clusters
 
 ## About
-This is the Github Repo for the PiCSciE workshop *Getting Started with the HPC Clusters*. This workshop builds on the lessons presented in the *Intro to the Linux Command Line* workshop.
+This is the Github Repo for the PiCSciE workshop **Getting Started with the HPC Clusters** at Princeton. This workshop builds on the lessons presented in the **Intro to the Linux Command Line** workshop.
 
 <!--
 You can find the page, presentation and examples either in the [src/](src/) folder

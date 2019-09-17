@@ -40,7 +40,7 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
-### HPC Quick Start Overview
+## HPC Quick Start Overview
 
 Connect to Adroit and make a new directory:
 
@@ -61,7 +61,7 @@ print("X =\n", X)
 print("Inverse(X) =\n", np.linalg.inv(X))
 ```
 
-On your local machine, in a new shell, run the following scp (secure copy) command in the directory containing `matrix_inverse.py`:
+On your local machine, **in a new shell**, run the following scp (secure copy) command in the directory containing `matrix_inverse.py`:
 
 ```
 scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
@@ -109,7 +109,7 @@ health = read.csv("cdc.csv")
 print(summary(health))
 ```
 
-And a second file called `cdc.csv`:
+And create a second file on your **local machine** called `cdc.csv`:
 
 ```
 genhlth,exerany,hlthplan,smoke100,height,weight,wtdesire,age,gender
@@ -155,7 +155,7 @@ srun Rscript data_analysis.R
 
 Submit the job with `sbatch job.slurm`. You will receive an email when the job is finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
 
-### Learn More About Adroit by Running Commands
+## Learn More About Adroit by Running Commands
 
 Type each command below and examine the output:
 
@@ -303,7 +303,6 @@ lclingan pts/11       2019-09-14 14:33 (myadroit)
 lclingan pts/12       2019-09-14 14:34 (myadroit)
 jdh4     pts/14       2019-09-14 15:02 (vpn10-client-128-112-70-165.princeton.edu)
 tcyr     pts/15       2019-09-14 15:05 (nat-oitwireless-inside-vapornet100-10-9-77-247.princeton.edu)
-```
 
 
 [jdh4@adroit4 ~]$ checkquota
@@ -322,3 +321,4 @@ Adroit scratch network   /scratch/network         1       0       0
 For quota increase requests please use this website:
 
          https://forms.rc.princeton.edu/quota
+```
