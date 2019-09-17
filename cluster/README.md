@@ -174,24 +174,24 @@ checkquota                # view your quota and request more space
 
 Here is example output from the commands above:
 
-```
-[jdh4@adroit4 ~]$ **hostname**
+<pre>
+[jdh4@adroit4 ~]$ <b>hostname</b>
 adroit4
 
 
-[jdh4@adroit4 ~]$ **whoami**
+[jdh4@adroit4 ~]$ <b>whoami</b>
 jdh4
 
 
-[jdh4@adroit4 ~]$ **date**
+[jdh4@adroit4 ~]$ <b>date</b>
 Sat Sep 14 15:15:11 EDT 2019
 
 
-[jdh4@adroit4 ~]$ **pwd**
+[jdh4@adroit4 ~]$ <b>pwd</b>
 /home/jdh4
 
 
-[jdh4@adroit4 ~]$ **cat /etc/os-release** 
+[jdh4@adroit4 ~]$ <b>cat /etc/os-release</b> 
 NAME="Springdale Linux"
 VERSION="7.7 (Verona)"
 ID="rhel"
@@ -210,7 +210,7 @@ REDHAT_SUPPORT_PRODUCT_VERSION=7.7
 
 
 
-[jdh4@adroit4 ~]$ **lscpu**
+[jdh4@adroit4 ~]$ <b>lscpu</b>
 Architecture:          x86_64
 CPU op-mode(s):        32-bit, 64-bit
 Byte Order:            Little Endian
@@ -240,7 +240,7 @@ Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
 
 
 
-[jdh4@adroit4 ~]$ **snodes**
+[jdh4@adroit4 ~]$ <b>snodes</b>
 HOSTNAMES     STATE    CPUS S:C:T    CPUS(A/I/O/T)   CPU_LOAD MEMORY   GRES     PARTITION          AVAIL_FEATURES
 adroit-01     idle     20   2:10:1   0/20/0/20       0.01     128000   (null)   class              ivy
 adroit-02     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
@@ -263,7 +263,7 @@ adroit-h11g4  idle     16   2:8:1    0/16/0/16       0.61     64000    gpu:tesl 
 
 
 
-[jdh4@adroit4 ~]$ **squeue**
+[jdh4@adroit4 ~]$ <b>squeue</b>
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             660090       all run_05_0    fanid PD       0:00      1 (QOSMaxJobsPerUserLimit)
             661432       all       KL   mlenel PD       0:00      1 (Dependency)
@@ -290,7 +290,7 @@ adroit-h11g4  idle     16   2:8:1    0/16/0/16       0.61     64000    gpu:tesl 
  
  
  
-[jdh4@adroit4 ~]$ **who**
+[jdh4@adroit4 ~]$ <b>who</b>
 mlenel   pts/0        2019-09-14 10:15 (vpn10-client-128-112-69-121.princeton.edu)
 root     pts/1        2019-09-03 12:45 (delta.princeton.edu)
 mlenel   pts/2        2019-09-14 10:16 (adroit4.princeton.edu)
@@ -303,7 +303,7 @@ tcyr     pts/15       2019-09-14 15:05 (nat-oitwireless-inside-vapornet100-10-9-
 
 
 
-[jdh4@adroit4 ~]$ **checkquota**
+[jdh4@adroit4 ~]$ <b>checkquota</b>
           Storage/size quota filesystem report for user: jdh4
 Filesystem               Mount                 Used   Limit  MaxLim Comment
 Adroit home              /home                2.8GB   9.3GB    10GB 
@@ -319,4 +319,4 @@ Adroit scratch network   /scratch/network         1       0       0
 For quota increase requests please use this website:
 
          https://forms.rc.princeton.edu/quota
-```
+</pre>
