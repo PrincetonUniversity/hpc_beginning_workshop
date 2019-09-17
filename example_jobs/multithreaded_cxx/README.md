@@ -53,7 +53,7 @@ Submit the job to the cluster:
 sbatch job.slurm
 ```
 
-The output of the code should be:
+The output of the code should resemble the following:
 
 ```
 Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread 3 of 826 of 0584 of 8

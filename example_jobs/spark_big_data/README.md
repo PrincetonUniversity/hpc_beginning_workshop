@@ -1,9 +1,9 @@
 # Using Spark
 
-First obtain a simple Python script that use Spark:
+First obtain a simple Python script that uses Spark by running the following command:
 
 ```
-https://raw.githubusercontent.com/apache/spark/master/examples/src/main/python/pi.py
+wget https://raw.githubusercontent.com/apache/spark/master/examples/src/main/python/pi.py
 ```
 
 Below is the Slurm script:
@@ -21,6 +21,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
+module purge
 module load anaconda3 spark
 spark-start
 spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
@@ -40,5 +41,5 @@ Pi is roughly 3.141376
 ...
 ```
 
-Here is a getting started guide with Spark at Princeton:
+Here is a getting started guide with Spark at Princeton:  
 [https://researchcomputing.princeton.edu/faq/spark-via-slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
