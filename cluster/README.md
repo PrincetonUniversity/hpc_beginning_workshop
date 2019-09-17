@@ -40,7 +40,7 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
-### Quick Start
+### HPC Quick Start Overview
 
 Connect to Adroit and make a new directory:
 
@@ -51,7 +51,17 @@ cd python_test
 pwd
 ```
 
-On your local machine, in a new shell, run the following scp (secure copy) command in the directory containing your script:
+Create a file called `matrix_inverse.py` with the following contents on your **local machine**:
+
+```
+import numpy as np
+N = 3
+X = np.random.randn(N, N)
+print("X =\n", X)
+print("Inverse(X) =\n", np.linalg.inv(X))
+```
+
+On your local machine, in a new shell, run the following scp (secure copy) command in the directory containing `matrix_inverse.py`:
 
 ```
 scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
@@ -75,7 +85,9 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
+module purge
 module load anaconda3
+
 srun python matrix_inverse.py 
 ```
 
@@ -90,7 +102,30 @@ cd r_test
 pwd
 ```
 
-Use a second shell to transfer the files from your local machine to Adroit:
+Create a file called `data_analysis.R` with the following contents on your **local machine**:
+
+```
+health = read.csv("cdc.csv")
+print(summary(health))
+```
+
+And a second file called `cdc.csv`:
+
+```
+genhlth,exerany,hlthplan,smoke100,height,weight,wtdesire,age,gender
+good,0,1,0,70,175,175,77,m
+good,0,1,1,64,125,115,33,f
+good,1,1,1,60,105,105,49,f
+good,1,1,0,66,132,124,42,f
+very good,0,1,0,61,150,130,55,f
+very good,1,1,0,64,114,114,55,f
+very good,1,1,0,71,194,185,31,m
+very good,0,1,0,67,170,160,45,m
+good,0,1,1,65,150,130,27,f
+good,1,1,0,70,180,170,44,m
+```
+
+As for the Python case, use a second shell to transfer the files from your local machine to Adroit:
 
 ```
 scp data_analysis.R <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
@@ -104,7 +139,7 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 # use a text editor to modify job.slurm as follows
 
 #!/bin/bash
-#SBATCH --job-name=r-test        # create a short name for your job
+#SBATCH --job-name=R-test        # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
