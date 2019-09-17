@@ -19,4 +19,4 @@ cd serial_python
 cat README.md
 ```
 
-**IMPORTANT**: *You should run you jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide huge amounts of storage. Do not run jobs out of tigress. The tigress fileystem is very slow and should only be used for backing up the files you produce on /scratch/gpfs. You home directory on all clusters is small and disk access is slow.
+**IMPORTANT**: *You should run your jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of tigress. The tigress fileystem is slow and should only be used for backing up the files you produce on the /scratch filesystems. Your home directory on all clusters is small and disk access is slow. It should only be used for storing source code and executables*.

@@ -211,10 +211,20 @@ hostname
 echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
 echo " Random number : " $RANDOM
 
-srun python mice.py
+srun python myscript.py $SLURM_ARRAY_TASK_ID
 ```
 
-This will produce outputs with the job id and the individual task id that
+The first few lines of `myscript.py` might look like this:
+
+```python
+import sys
+idx = int(sys.argv[-1]) # get the value of SLURM_ARRAY_TASK_ID
+parameters = [2.5, 5.0, 7.5, 10.0, 12.5]
+myparam = parameters[idx]
+# execute the rest of the script using myparam
+```
+
+Job arrays produce outputs with the job id and the individual task id that
 echo their subtask number. You can set the array numbers to any arbitrary set
 of numbers, so that you can subset processing a larger list by grabbing the
 value of `$SLURM_ARRAY_TASK_ID`. For example:

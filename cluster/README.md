@@ -134,6 +134,7 @@ lscpu                     # info about the CPUs on head node
 snodes                    # info about the compute nodes
 squeue                    # which jobs are running or waiting to run
 who                       # list users on the head node
+checkquota                # view your quota and request more space
 ```
 
 Here is example output from the commands above:
@@ -268,3 +269,21 @@ lclingan pts/12       2019-09-14 14:34 (myadroit)
 jdh4     pts/14       2019-09-14 15:02 (vpn10-client-128-112-70-165.princeton.edu)
 tcyr     pts/15       2019-09-14 15:05 (nat-oitwireless-inside-vapornet100-10-9-77-247.princeton.edu)
 ```
+
+
+[jdh4@adroit4 ~]$ checkquota
+          Storage/size quota filesystem report for user: jdh4
+Filesystem               Mount                 Used   Limit  MaxLim Comment
+Adroit home              /home                2.8GB   9.3GB    10GB 
+Adroit scratch           /scratch                 0       0       0 
+Adroit scratch network   /scratch/network         0       0       0 
+
+          Storage number of files used report for user: jdh4
+Filesystem               Mount                 Used   Limit  MaxLim Comment
+Adroit home              /home                17.2K    975K    1.0M 
+Adroit scratch           /scratch                 2       0       0 
+Adroit scratch network   /scratch/network         1       0       0 
+
+For quota increase requests please use this website:
+
+         https://forms.rc.princeton.edu/quota

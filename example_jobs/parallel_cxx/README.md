@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
   MPI_Finalize();
   return 0;
 }
+```
 
 Run the following two commands to compile the code:
 
@@ -38,6 +39,7 @@ mpicxx -Wall -o hello_world_mpi hello_world_mpi.cpp
 
 Below is the Slurm script:
 
+```
 #!/bin/bash
 #SBATCH --job-name=cxx_mpi       # create a short name for your job
 #SBATCH --nodes=2                # node count
@@ -51,7 +53,7 @@ Below is the Slurm script:
 #SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
 
 module load intel intel-mpi
-srun ./hw_mpi
+srun ./hello_world_mpi
 ```
 
 To submit the job to the cluster:

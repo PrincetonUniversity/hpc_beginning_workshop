@@ -8,8 +8,9 @@ You can find the page, presentation and examples either in the [src/](src/) fold
 or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginning_workshop/](https://princetonuniversity.github.io/hpc_beginning_workshop/)
 -->
 
-## Google Survey
+<!-- ## Google Survey
 [Click here](https://forms.gle/aP9UaX7iuTuLCHrs7)
+-->
 
 ## Useful links
 [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)  
