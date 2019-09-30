@@ -62,7 +62,7 @@ To submit the job to the cluster:
 sbatch job.slurm
 ```
 
-The output of the code should be:
+The output of the code should be something like:
 
 ```
 Process 17 of 32 says hello from adroit-03
