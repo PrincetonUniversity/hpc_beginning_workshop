@@ -65,36 +65,36 @@ sbatch job.slurm
 The output of the code should be:
 
 ```
-adroit-02 says hello from 0 of 32
-adroit-03 says hello from 18 of 32
-adroit-02 says hello from 1 of 32
-adroit-02 says hello from 2 of 32
-adroit-02 says hello from 3 of 32
-adroit-02 says hello from 4 of 32
-adroit-02 says hello from 6 of 32
-adroit-02 says hello from 7 of 32
-adroit-02 says hello from 8 of 32
-adroit-02 says hello from 9 of 32
-adroit-02 says hello from 10 of 32
-adroit-02 says hello from 11 of 32
-adroit-03 says hello from 19 of 32
-adroit-02 says hello from 12 of 32
-adroit-03 says hello from 21 of 32
-adroit-02 says hello from 13 of 32
-adroit-03 says hello from 23 of 32
-adroit-02 says hello from 14 of 32
-adroit-03 says hello from 24 of 32
-adroit-02 says hello from 15 of 32
-adroit-03 says hello from 25 of 32
-adroit-02 says hello from 5 of 32
-adroit-03 says hello from 26 of 32
-adroit-03 says hello from 28 of 32
-adroit-03 says hello from 29 of 32
-adroit-03 says hello from 30 of 32
-adroit-03 says hello from 31 of 32
-adroit-03 says hello from 17 of 32
-adroit-03 says hello from 20 of 32
-adroit-03 says hello from 22 of 32
-adroit-03 says hello from 27 of 32
-adroit-03 says hello from 16 of 32
+Process 17 of 32 says hello from adroit-03
+Process 1 of 32 says hello from adroit-02
+Process 4 of 32 says hello from adroit-02
+Process 5 of 32 says hello from adroit-02
+Process 6 of 32 says hello from adroit-02
+Process 7 of 32 says hello from adroit-02
+Process 8 of 32 says hello from adroit-02
+Process 9 of 32 says hello from adroit-02
+Process 12 of 32 says hello from adroit-02
+Process 14 of 32 says hello from adroit-02
+Process 0 of 32 says hello from adroit-02
+Process 2 of 32 says hello from adroit-02
+Process 18 of 32 says hello from adroit-03
+Process 3 of 32 says hello from adroit-02
+Process 19 of 32 says hello from adroit-03
+Process 10 of 32 says hello from adroit-02
+Process 21 of 32 says hello from adroit-03
+Process 11 of 32 says hello from adroit-02
+Process 22 of 32 says hello from adroit-03
+Process 13 of 32 says hello from adroit-02
+Process 23 of 32 says hello from adroit-03
+Process 15 of 32 says hello from adroit-02
+Process 24 of 32 says hello from adroit-03
+Process 25 of 32 says hello from adroit-03
+Process 26 of 32 says hello from adroit-03
+Process 27 of 32 says hello from adroit-03
+Process 28 of 32 says hello from adroit-03
+Process 29 of 32 says hello from adroit-03
+Process 30 of 32 says hello from adroit-03
+Process 31 of 32 says hello from adroit-03
+Process 16 of 32 says hello from adroit-03
+Process 20 of 32 says hello from adroit-03
 ```
