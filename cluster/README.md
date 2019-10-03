@@ -67,12 +67,15 @@ On your local machine, **in a new shell**, run the following scp (secure copy) c
 scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
 ```
 
-Return to your original session on Adroit:
+Return to your original session on Adroit and run this command:
 
 ```
 wget https://tigress-web.princeton.edu/~jdh4/job.slurm
-# use a text editor to modify job.slurm as follows
+```
 
+Use a text editor (e.g., nano, micro, vim, emacs or myadroit) to modify job.slurm as follows:
+
+```
 #!/bin/bash
 #SBATCH --job-name=py-test       # create a short name for your job
 #SBATCH --nodes=1                # node count
