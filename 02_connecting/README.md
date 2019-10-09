@@ -116,8 +116,9 @@ A simple use case would be
 
 ```
 tmux
-(hit ctrl-b + d to detach the session)
+(press ctrl-b then release both keys then press d to detach the session)
 tmux attach
+# exit tmux press ctrl+b then release both keys and then : and type kill-session
 ```
 
 You would then be attached back to the session you created by default when you called tmux.
