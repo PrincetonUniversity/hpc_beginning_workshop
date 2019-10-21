@@ -28,7 +28,7 @@ For more detail, see:
   university community can request access for their work. Two nodes (Davisson and Compton), no distinction between login/compute.
 
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
-  Also available generally to members of the university community. It is composed of 9 Skylake nodes, 7 Ivybridge nodes for MyAdroit and 2 GPU nodes consisting with either Tesla K40c or v100 GPUs.
+  Also available generally to members of the university community. It is composed of 9 Skylake nodes, 7 Ivybridge nodes for MyAdroit and 2 GPU nodes consisting of either Tesla K40c or v100 GPUs.
 
 ### Other Clusters
   These other clusters such as Perseus, Tiger, Della and Traverse are research
