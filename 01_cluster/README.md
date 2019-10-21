@@ -60,7 +60,7 @@ cd python_test
 pwd
 ```
 
-Create a file called `matrix_inverse.py` with the following contents on your **local machine**:
+Create a file called `matrix_inverse.py` with the following contents on your **local machine** by copying and the pasting or by cloning this GitHub repo:
 
 ```
 import numpy as np
@@ -68,6 +68,14 @@ N = 3
 X = np.random.randn(N, N)
 print("X =\n", X)
 print("Inverse(X) =\n", np.linalg.inv(X))
+```
+
+Or clone the repo:
+
+```
+git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
+cd hpc_beginning_workshop/01_cluster
+ls -l
 ```
 
 On your local machine, **in a new shell**, run the following scp (secure copy) command in the directory containing `matrix_inverse.py`:
