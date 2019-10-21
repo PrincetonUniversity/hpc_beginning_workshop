@@ -86,7 +86,7 @@ Use a text editor (e.g., nano, micro, vim, emacs or myadroit) to modify job.slur
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
 module load anaconda3
@@ -151,7 +151,7 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=jdh4@princeton.edu
-#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 srun Rscript data_analysis.R
 ```
