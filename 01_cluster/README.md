@@ -92,7 +92,7 @@ wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 
 Use a text editor (e.g., nano, micro, vim, emacs or myadroit) to modify job.slurm as follows:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=py-test       # create a short name for your job
 #SBATCH --nodes=1                # node count
@@ -152,12 +152,15 @@ scp data_analysis.R <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
 scp cdc.csv <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
 ```
 
-Return to your session on Adroit:
+Return to your session on Adroit and obtain a Slurm script:
 
 ```
 wget https://tigress-web.princeton.edu/~jdh4/job.slurm
-# use a text editor to modify job.slurm as follows
+```
 
+Edit the Slurm as follows:
+
+```bash
 #!/bin/bash
 #SBATCH --job-name=R-test        # create a short name for your job
 #SBATCH --nodes=1                # node count
