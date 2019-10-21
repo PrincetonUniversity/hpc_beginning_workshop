@@ -158,7 +158,7 @@ Return to your session on Adroit and obtain a Slurm script:
 wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 ```
 
-Edit the Slurm as follows:
+Edit the Slurm scrip as follows (use a text editor like nano, micro, vim, emacs or myadroit):
 
 ```bash
 #!/bin/bash
