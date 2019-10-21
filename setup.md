@@ -10,7 +10,7 @@
 
 + SSH to Adroit in the terminal: `ssh <NetID>@adroit.princeton.edu`
 
-+ Load this site in a web browser: `https://myadroit.princeton.edu`
++ Load this site in a web browser: [https://myadroit.princeton.edu](https://myadroit.princeton.edu)
 <!--
 + Clone this repo to your local machine:
 
