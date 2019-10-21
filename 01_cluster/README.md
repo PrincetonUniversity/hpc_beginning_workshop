@@ -169,8 +169,9 @@ date                      # get the current date and time
 pwd                       # print working directory
 cat /etc/os-release       # info about operating system
 lscpu                     # info about the CPUs on head node
-snodes                    # info about the compute nodes
+snodes                    # info about the compute nodes (7 nodes for myadroit)
 squeue                    # which jobs are running or waiting to run
+slurmtop                  # shows a map of cluster usage
 who                       # list users on the head node
 checkquota                # view your quota and request more space
 ```
