@@ -12,6 +12,8 @@
 
 + Load this site in a web browser: `https://myadroit.princeton.edu`
 
-+ Clone this repo to your local machine: `git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop`
++ Clone this repo to your local machine:
+
+   `git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop`
 
 + For the live workshop, to get priority access on Adroit, add this line to your Slurm script: `#SBATCH -p hpc`
