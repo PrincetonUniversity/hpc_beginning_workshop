@@ -19,7 +19,7 @@ Below is the Slurm script:
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p class                 # DELETE THIS LINE AFTER WORKSHOP
+#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
 module load julia
