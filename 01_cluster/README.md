@@ -31,7 +31,7 @@ For more detail, see:
   Also available generally to members of the university community. It is composed of 9 Skylake nodes, 7 Ivybridge nodes for MyAdroit and 2 GPU nodes consisting of either Tesla K40c or v100 GPUs.
 
 ### Other Clusters
-  These other clusters such as Perseus, Tiger, Della and Traverse are research
+  These <a href="https://researchcomputing.princeton.edu/systems-and-services/available-systems" target="_blank">other clusters</a> such as Perseus, Tiger, Della and Traverse are research
   clusters with many more nodes and GPFS networked storage between clusters.
 
   See [https://www.princeton.edu/researchcomputing/access/](https://www.princeton.edu/researchcomputing/access/)
