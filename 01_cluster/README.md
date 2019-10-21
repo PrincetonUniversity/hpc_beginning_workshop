@@ -39,6 +39,16 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
+## The filesystems
+
+![Tigress](https://tigress-web.princeton.edu/~jdh4/tigress_is_slow.png)
+
++ `/home/<YourNetID>`: source code and executables
++ `/scratch/gpgs/<YourNetID>`: job output and intermediate results
++ `/tigress/<YourNetID>`: final results for the long term
+
+*IMPORTANT*: Tigress is for non-volatile files only. Do not store your job output here.
+
 ## HPC Quick Start Overview
 
 Connect to Adroit and make a new directory:
