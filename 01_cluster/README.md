@@ -47,7 +47,7 @@ For more detail, see:
 + `/scratch/gpgs/<YourNetID>`: job output and intermediate results
 + `/tigress/<YourNetID>`: final results for the long term
 
-*IMPORTANT*: Tigress is for non-volatile files only. Do not store your job output here.
+*IMPORTANT*: Tigress is for non-volatile files only. Do not make the mistake of writing your job output here. Users are tempted to do this because tigress is backed-up while /scratch/gpfs is not. However, this is a mistake and you may adversely affect other users by writing or reading job files from /tigress for your production runs.
 
 ## HPC Quick Start Overview
 
