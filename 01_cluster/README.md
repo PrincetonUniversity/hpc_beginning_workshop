@@ -90,7 +90,7 @@ Return to your original session on Adroit and run this command:
 wget https://tigress-web.princeton.edu/~jdh4/job.slurm
 ```
 
-Use a text editor (e.g., nano, micro, vim, emacs or myadroit) to modify job.slurm as follows:
+This will download the following file (`job.slurm`):
 
 ```bash
 #!/bin/bash
