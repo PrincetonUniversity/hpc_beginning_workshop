@@ -3,7 +3,8 @@
 Here is a trivial one-line Matlab script (hello_world.m):
 
 ```
-print("Hello world.")
+fprintf('Hello world.\n');
+quit
 ```
 
 Below is the Slurm script:
