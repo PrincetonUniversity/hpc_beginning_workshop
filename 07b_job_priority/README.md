@@ -1,4 +1,4 @@
-Job Priority
+# Job Priority
 
 The Slurm scheduler works much like many other schedulers by simply applying a priority number to a job. To see all jobs with associated priorities one can use
 
@@ -27,3 +27,11 @@ Using the command (all on one line)
 watch -n 30 -d 'squeue --start --format="%.7i %.7Q %.7q %.15j %.12u %.10a %.20S %.6D %.5C %R" --sort=S --states=PENDING | egrep -v "N/A" | head -20'
 
 one can then watch the top jobs waiting to run and begin to see how this works. In many instances you will find lower priority jobs which will run before higher priority ones. This is all due to the requested resources, when they will free, and the decisions the scheduler is making in this regard. This is also why having an accurate representation of timelimit is so important. better fitting of jobs and more accurate scheduling can happen as the actual time specified becomes more accurate for all jobs.
+
+```
+sshare
+```
+
+Fairshare
+
+Only request what you use
