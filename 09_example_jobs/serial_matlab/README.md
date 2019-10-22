@@ -37,6 +37,7 @@ $ sbatch job.slurm
 After the job completes, view the output with `cat slurm-*`:
 
 ```
+...
 Hello world.
 ```
 
