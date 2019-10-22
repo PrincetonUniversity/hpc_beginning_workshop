@@ -21,8 +21,8 @@ end program
 Run the following two commands to compile the code:
 
 ```
-module load intel intel-mpi
-mpif90 -O3 -o hello_world_mpi hello_world_mpi.f90
+$ module load intel intel-mpi
+$ mpif90 -O3 -o hello_world_mpi hello_world_mpi.f90
 ```
 
 Below is the Slurm script:
