@@ -6,7 +6,7 @@ First obtain a simple Python script that uses Spark by running the following com
 wget https://raw.githubusercontent.com/apache/spark/master/examples/src/main/python/pi.py
 ```
 
-Below is the Slurm script:
+Below is the Slurm script (`job.slurm`):
 
 ```bash
 #!/bin/bash
