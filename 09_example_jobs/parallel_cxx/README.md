@@ -3,7 +3,7 @@
 Follow the directions below to compile and run a parallel C++ code. Here
 is the source code:
 
-```
+```c++
 #include <iostream>
 #include <mpi.h>
 
@@ -39,7 +39,7 @@ mpicxx -Wall -o hello_world_mpi hello_world_mpi.cpp
 
 Below is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=cxx_mpi       # create a short name for your job
 #SBATCH --nodes=2                # node count
@@ -59,7 +59,7 @@ srun ./hello_world_mpi
 To submit the job to the cluster:
 
 ```
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 The output of the code should be something like:
