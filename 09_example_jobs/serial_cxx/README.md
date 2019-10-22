@@ -42,7 +42,7 @@ srun ./hello_world
 To submit the job to the cluster:
 
 ```
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 After the job completes, view the output with `cat slurm-*`:
