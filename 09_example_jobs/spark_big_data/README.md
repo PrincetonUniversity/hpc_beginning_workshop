@@ -27,10 +27,10 @@ spark-start
 spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
 ```
 
-To run the Python script, simply submit the job to the cluster:
+To run the Python script, simply submit the job to the cluster by running the following command:
 
 ```
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 The output of the code (minus the INFO statements) should be:
