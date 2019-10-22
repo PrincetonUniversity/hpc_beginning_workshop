@@ -94,24 +94,29 @@ This will download the following file (`job.slurm`):
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=py-test       # create a short name for your job
+#SBATCH --job-name=matinv        # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
 module load anaconda3
 
-srun python matrix_inverse.py 
+srun python matrix_inverse.py
 ```
 
-Submit the job with `sbatch job.slurm`. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished. You can also run use this command: `squeue -u <YourNetID>`. If this command doesn't list the job then it has finished.
+Submit the job by running the following command:
+
+```
+sbatch job.slurm
+```
+
+After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished. You can also run use this command: `squeue -u <YourNetID>`. If this command doesn't list the job then it has finished.
 
 A similar procedure can be used to run an R script. To do this, first make a directory on Adroit for the job:
 
