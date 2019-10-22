@@ -37,7 +37,7 @@ sbatch job.slurm
 After the job completes, view the output with `cat slurm-*`:
 
 ```
-Hello, world.
+Hello world.
 ```
 
 Use `squeue -u $USER` to monitor queued jobs. For more on submitting Matlab jobs see [this post](https://oncomputingwell.princeton.edu/2017/03/your-first-slurm-script-to-run-matlab/).
