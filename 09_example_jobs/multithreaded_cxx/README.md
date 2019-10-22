@@ -2,7 +2,7 @@
 
 Here is the source code for a simple multi-threaded C++ program:
 
-```
+```c++
 #include <iostream>
 #include <omp.h>
 
@@ -28,7 +28,7 @@ icpc -qopenmp -o hello_world_omp hello_world_omp.cpp
 
 Below is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=cxx_omp       # create a short name for your job
 #SBATCH --nodes=1                # node count
@@ -39,7 +39,6 @@ Below is the Slurm script:
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
