@@ -122,6 +122,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
 module load intel intel-mkl
+
 LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
 ```
 
