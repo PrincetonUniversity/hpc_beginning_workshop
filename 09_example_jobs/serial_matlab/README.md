@@ -8,7 +8,7 @@ fprintf('Hello world.\n')
 
 Below is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=matlab        # create a short name for your job
 #SBATCH --nodes=1                # node count
