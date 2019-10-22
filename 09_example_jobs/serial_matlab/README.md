@@ -28,10 +28,10 @@ module list
 srun matlab -singleCompThread -nodisplay -nosplash -nojvm -r hello_world
 ```
 
-To run the Matlab script, simply submit the job to the cluster:
+To run the Matlab script, simply submit the job to the cluster with the following command:
 
 ```
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 After the job completes, view the output with `cat slurm-*`:
