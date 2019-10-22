@@ -3,7 +3,7 @@
 Follow the directions below to compile and run a simple C program on the Princeton HPC clusters.
 Here is the source code:
 
-```
+```c
 #include <stdio.h>
 
 int main() {
@@ -21,7 +21,7 @@ icc -o hello_world hello_world.c
 
 Here is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=serial_c      # create a short name for your job
 #SBATCH --nodes=1                # node count
@@ -32,7 +32,6 @@ Here is the Slurm script:
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
 module load intel
