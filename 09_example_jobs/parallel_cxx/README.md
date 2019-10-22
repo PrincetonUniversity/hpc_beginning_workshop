@@ -53,6 +53,7 @@ Below is the Slurm script:
 
 module purge
 module load intel intel-mpi
+
 srun ./hello_world_mpi
 ```
 
