@@ -148,6 +148,7 @@ very good,1,1,0,71,194,185,31,m
 very good,0,1,0,67,170,160,45,m
 good,0,1,1,65,150,130,27,f
 good,1,1,0,70,180,170,44,m
+...
 ```
 
 As for the Python case, use a second shell to transfer the files from your local machine to Adroit:
