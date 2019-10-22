@@ -60,7 +60,7 @@ cd python_test
 pwd
 ```
 
-Create a file called `matrix_inverse.py` with the following contents on your **local machine** by copying and the pasting or by cloning this GitHub repo:
+On your **local machine**, create a file called `matrix_inverse.py` with the contents below by either copying and the pasting or by cloning this GitHub repo:
 
 ```python
 import numpy as np
