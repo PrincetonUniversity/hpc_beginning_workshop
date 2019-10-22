@@ -62,7 +62,7 @@ pwd
 
 Create a file called `matrix_inverse.py` with the following contents on your **local machine** by copying and the pasting or by cloning this GitHub repo:
 
-```
+```python
 import numpy as np
 N = 3
 X = np.random.randn(N, N)
@@ -129,7 +129,7 @@ pwd
 
 Create a file called `data_analysis.R` with the following contents on your **local machine**:
 
-```
+```R
 health = read.csv("cdc.csv")
 print(summary(health))
 ```
