@@ -31,10 +31,10 @@ For detailed examples of these scripts, you can look at: [Introduction Slurm](ht
 #SBATCH --job-name=slurm-test    # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
@@ -111,15 +111,16 @@ will not let me use more than one node--for that you need MPI!)
 #SBATCH --job-name=multicore     # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:15:00          # maximum time needed (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
+module purge
 module load intel intel-mkl
 LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
 ```
@@ -141,14 +142,16 @@ For example, the script below uses 32 cpu-cores over two nodes:
 #SBATCH --job-name=multinode     # create a short name for your job
 #SBATCH --nodes=2                # node count
 #SBATCH --ntasks=16              # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=2G         # memory per cpu-core
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=2G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
+module purge
 module load intel intel-mpi
+
 srun ./a.out
 ```
 
@@ -170,16 +173,18 @@ In this case we combined multithreading with multinode parallelism:
 #SBATCH --job-name=hybrid        # create a short name for your job
 #SBATCH --nodes=2                # node count
 #SBATCH --ntasks=8               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=2        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --cpus-per-task=2        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
+module purge
 module load intel intel-mpi
+
 srun ./a.out
 ```
 
@@ -195,8 +200,9 @@ set of variables that Slurm will set for you in the job.
 #SBATCH --error=slurm-%N.%j.err  # STDERR file
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --t=00:01:00             # total run time limit (HH:MM:SS)
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --array=0-4              # array job will submit 5 jobs (0, 1, 2, 3, 4)
 #SBATCH --mail-type=all          # send email on job start, end and fault
 #SBATCH --mail-user=<YourNetID>@princeton.edu
@@ -249,14 +255,15 @@ following script that wraps a Python job in tensorflow-gpu.
 #SBATCH --job-name=poisson       # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
+module purge
 module load anaconda3
 conda activate tf-gpu
 
