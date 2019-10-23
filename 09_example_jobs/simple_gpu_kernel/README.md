@@ -1,6 +1,6 @@
-# CUDA C Kernel
+# Hello World on a GPU
 
-Below is the simplest GPU code:
+Below is the simplest CUDA C Kernel:
 
 ```C
 #include <stdio.h>
