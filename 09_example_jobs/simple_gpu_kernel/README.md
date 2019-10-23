@@ -32,7 +32,7 @@ module load cudatoolkit
 nvcc -o hello_world_gpu hello_world_gpu.cu
 ```
 
-This can be run with: `srun --gres=gpu:1 -t 1 ./hello_world_gpu`
+Below is the corresponding Slurm script (`job.slurm`):
 
 ```
 #!/bin/bash
@@ -51,6 +51,12 @@ module purge
 module load cudatoolkit
 
 srun ./hello_world_gpu
+```
+
+The job can be submitted with:
+
+```
+$ sbatch job.slurm
 ```
 
 The output should be:
