@@ -34,7 +34,7 @@ nvcc -o hello_world_gpu hello_world_gpu.cu
 
 Below is the corresponding Slurm script (`job.slurm`):
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=cuda_c        # create a short name for your job
 #SBATCH --nodes=1                # node count
