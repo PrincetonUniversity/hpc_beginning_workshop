@@ -176,8 +176,7 @@ Edit the Slurm scrip as follows (use a text editor like nano, micro, vim, emacs 
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-user=jdh4@princeton.edu
-#SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 srun Rscript data_analysis.R
 ```
