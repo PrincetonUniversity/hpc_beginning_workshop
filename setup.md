@@ -16,4 +16,4 @@
 
    `git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop`
 
-+ For the live workshop, to get priority access on Adroit, add this line to your Slurm scripts: `#SBATCH -p hpc`
++ For the live workshop, to get priority access on Adroit, add this line to your Slurm scripts: `#SBATCH -p introhpc`
