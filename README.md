@@ -3,13 +3,8 @@
 ## About
 This is the Github Repo for the PiCSciE workshop **Getting Started with the HPC Clusters** at Princeton. This workshop builds on the lessons presented in the **Intro to the Linux Command Line** workshop.
 
-<!--
-You can find the page, presentation and examples either in the [src/](src/) folder
-or hosted via Github Pages at [https://princetonuniversity.github.io/hpc_beginning_workshop/](https://princetonuniversity.github.io/hpc_beginning_workshop/)
--->
-
 ## Google Survey
-[Click here](https://forms.gle/Jv4TtTK3vDJfopYo8)
+[Click here](https://forms.gle/TRjdBYDNsYjXHZ9q8)
 
 ## Useful links
 [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)  
