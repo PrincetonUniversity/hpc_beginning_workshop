@@ -49,7 +49,7 @@ module load anaconda3
 srun python matrix_inverse.py
 ```
 
-Next, while still on your laptop, run the following ssh command to create a directory on Adroit (you need to replace `<YourNetID>`):
+Next, while still on your laptop, run the following ssh command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
 ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
@@ -160,7 +160,7 @@ good,1,1,0,70,180,170,44,m
 ...
 ```
 
-Next, while still on your laptop, run the following ssh command to create a directory on Adroit:
+Next, while still on your laptop, run the following ssh command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
 ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
