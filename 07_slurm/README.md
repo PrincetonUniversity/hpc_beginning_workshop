@@ -278,6 +278,25 @@ more granularly too, `--gres=gpu:tesla_v100:2` would ask for two Tesla v100s.
 Note that only codes that have been written to use a gpu will be able to
 do so.
 
+## Efficiency Reports
+
+You will receive an email after each job finished, for example:
+
+```
+Job ID: 670018
+Cluster: adroit
+User/Group: ceisgrub/pres
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 00:00:05
+CPU Efficiency: 22.73% of 00:00:22 core-walltime
+Job Wall-clock time: 00:00:22
+Memory Utilized: 1.41 MB
+Memory Efficiency: 0.14% of 1.00 GB
+```
+
+The report provides information about run time, CPU usage, memory usage, etc. You should inspect these values to determine if you are using the resources properly. Your queue time is in part determined by the amount of resources your are requesting. Your fairshare value, which in part determines the priority of your next job, is decreased in proportion to the resources you request.
+
 ## module load?
 
 You may have seen the `module load` commands in the previous scripts. Now that
