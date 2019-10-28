@@ -1,5 +1,7 @@
 # Installing Software
 
+## Pre-install Software with Environment Modules
+
 Lots of software is already available on each cluster. To see the modules that are available run this commond:
 
 ```
@@ -59,6 +61,34 @@ append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-9.2/include
 ```
 
 If you need software that is not install, your will mostly likely have to do it yourself.
+
+## A Word on Python
+
+When you first log in to the cluster, the system Python is used by default:
+
+```
+$ python --version
+Python 2.7.5
+
+$ which python
+/usr/bin/python
+```
+
+To load the Anaconda Python you must load the module:
+
+```
+$ module load anaconda3
+$ python --version
+Python 3.7.3
+$ which python
+/usr/licensed/anaconda3/2019.3/bin/python
+```
+
+To see all the packages that are included in Anaconda Python run this command:
+
+```
+$ conda list
+```
 
 ## Where to install software
 
