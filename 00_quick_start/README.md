@@ -62,7 +62,7 @@ scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/py
 scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
 ```
 
-Everything is in place on Adroit. Let's connect to that machine and submit the job.
+Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
 
 ### Connect to Adroit
 
@@ -72,7 +72,7 @@ SSH to Adroit:
 ssh <YourNetID>@adroit.princeton.edu
 ```
 
-Change the working directory:
+Change the working directory ($USER does not need to be replaced):
 
 ```
 cd /scratch/network/$USER/python_test
@@ -84,7 +84,13 @@ Submit the job by running the following command:
 sbatch job.slurm
 ```
 
-You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is `PD` then your job is waiting for other jobs to finish before it can be run. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your NetID in the Slurm script.
+This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is `PD` (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your NetID in the Slurm script.
+
+Here is the expected output:
+
+```
+
+```
 
 ## R Script Example
 
