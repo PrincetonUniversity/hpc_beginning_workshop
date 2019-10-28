@@ -103,9 +103,24 @@ Note that RStudio is available through the [MyAdroit](https://myadroit.princeton
 
 ## Where to install software
 
-We recommend that your create a directory such as `/home/<YourNetID>/software` to store and build software. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
+We recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
 
 ## Installing Python Packages on the HPC Clusters
+
+Simple Python packages can be installed using Pip:
+
+```
+$ module load anaconda3
+$ pip install --user <package name>
+```
+
+For more complicated packages such as FEniCS, you may consider using Conda:
+
+```
+module load anaconda3
+conda create --name fenics-env -c conda-forge fenics
+conda activate fenics-env
+```
 
 See [this guide](https://github.com/PrincetonUniversity/installing_python_packages) for installing Python packages.
 
