@@ -126,20 +126,26 @@ See [this guide](https://github.com/PrincetonUniversity/installing_python_packag
 
 ## Installing R Packages on the HPC Clusters
 
-Most packages you should be 
-able to install as is, with no special modules. Some modules require a 
-newer version of C++ compiler and therefore require
+The HPC clusters use an old version of the GNU C/C++ compilers to provide stability. To install many R packages you will need a newer compiler. This can be accomplished by loading the `rh` module:
 
 ```
-module load rh
+$ g++ --version
+g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
+...
+
+[jdh4@adroit4 ~]$ module load rh/devtoolset/7
+
+[jdh4@adroit4 ~]$ g++ --version
+g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+...
 ```
 
-for a newer gcc/g++.  Some require a newer gsl
+After loading the `rh` module you can start R and install your packages, for example:
 
 ```
-module load gsl
+$ module load rh/devtoolset/7
+$ R
+> install.packages("argparse")
+# answer yes to the two questions and then choose 66 as the CRAN mirror
+> q()
 ```
-
-(if you require gsl you will need to load the same module also for jobs, 
-rh does not need to be loaded in jobs).  Also, any R module installs 
-have to be performed on the login node.
