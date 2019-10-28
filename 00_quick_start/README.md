@@ -78,6 +78,12 @@ Change the working directory ($USER does not need to be replaced):
 cd /scratch/network/$USER/python_test
 ```
 
+List the files in the current directory:
+
+```
+ls -l
+```
+
 Submit the job by running the following command:
 
 ```
@@ -181,6 +187,12 @@ Change the working directory ($USER does not need to be replaced):
 cd /scratch/network/$USER/R_test
 ```
 
+List the files in the current directory:
+
+```
+ls -l
+```
+
 Submit the job by running the following command:
 
 ```
@@ -190,3 +202,20 @@ sbatch job.slurm
 This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is PD (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your NetID in the Slurm script.
 
 Here is the expected output:
+
+```
+      genhlth        exerany          hlthplan         smoke100     
+ excellent:4657   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ fair     :2019   1st Qu.:0.0000   1st Qu.:1.0000   1st Qu.:0.0000  
+ good     :5675   Median :1.0000   Median :1.0000   Median :0.0000  
+ poor     : 677   Mean   :0.7457   Mean   :0.8738   Mean   :0.4721  
+ very good:6972   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.0000  
+                  Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+     height          weight         wtdesire          age        gender   
+ Min.   :48.00   Min.   : 68.0   Min.   : 68.0   Min.   :18.00   f:10431  
+ 1st Qu.:64.00   1st Qu.:140.0   1st Qu.:130.0   1st Qu.:31.00   m: 9569  
+ Median :67.00   Median :165.0   Median :150.0   Median :43.00            
+ Mean   :67.18   Mean   :169.7   Mean   :155.1   Mean   :45.07            
+ 3rd Qu.:70.00   3rd Qu.:190.0   3rd Qu.:175.0   3rd Qu.:57.00            
+ Max.   :93.00   Max.   :500.0   Max.   :680.0   Max.   :99.00
+```
