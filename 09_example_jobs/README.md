@@ -8,8 +8,8 @@ is a much faster filesystem with more space than /home.
 ```
 ssh <YourNetID>@adroit.princeton.edu
 cd /scratch/network/<YourNetID>
-git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
-cd hpc_beginning_workshop/job_examples
+git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
+cd hpc_beginning_workshop/09_example_jobs
 ```
 
 Then choose an example and follow the directions. For instance:
