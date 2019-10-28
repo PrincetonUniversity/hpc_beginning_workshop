@@ -14,7 +14,7 @@ $ git clone https://github.com/PrincetonUniversity/gpu_programming_intro
 In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-$ cd hpc_beginning_workshop/00_quick_start
+$ cd hpc_beginning_workshop/00_quick_start/python_example
 $ cat matrix_inversion.py
 $ cat job.slurm
 ```
@@ -52,14 +52,14 @@ srun python matrix_inverse.py
 Next, while still on your laptop, run the following ssh command to create a directory on Adroit (`$USER` does not need to be changed but you need to replace `<YourNetID>`):
 
 ```
-ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/$USER/python_test"
+ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
 ```
 
 Transfer the Python and Slurm scripts to Adroit using the scp (secure copy) command:
 
 ```
-scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
-scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
+scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
+scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
 ```
 
 Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
@@ -89,28 +89,54 @@ This will place your job in the queue. You can monitor the status of your job wi
 Here is the expected output:
 
 ```
-
+X =
+ [[-0.70101861  0.20261191  0.10836766]
+ [ 0.86684552 -0.75347296 -0.52716024]
+ [-0.02477092  0.21738458 -0.11216934]]
+Inverse(X) =
+ [[-2.01455049 -0.46828701  0.25452735]
+ [-1.11588991 -0.82273617  2.78852862]
+ [-1.71771528 -1.49105147 -3.56712226]]
 ```
 
 ## R Script Example
 
-A similar procedure can be used to run an R script. To do this, first make a directory on Adroit for the job:
+### On Your Local Machine
+
+In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-cd ~
-mkdir r_test
-cd r_test
-pwd
+cd hpc_beginning_workshop/00_quick_start/R_example
+$ cat data_analysis.R
+$ cat job.slurm
+$ head cdc.csv
 ```
 
-Create a file called `data_analysis.R` with the following contents on your **local machine**:
+Here is the R script:
 
 ```R
 health = read.csv("cdc.csv")
 print(summary(health))
 ```
 
-And create a second file on your **local machine** called `cdc.csv`:
+Below is the Slurm script:
+
+```
+#!/bin/bash
+#SBATCH --job-name=R-test        # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
+#SBATCH --mem-per-cpu=1G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+srun Rscript data_analysis.R
+```
+
+Here are the first few lines of the data file (`cdc.csv`):
 
 ```
 genhlth,exerany,hlthplan,smoke100,height,weight,wtdesire,age,gender
@@ -127,37 +153,44 @@ good,1,1,0,70,180,170,44,m
 ...
 ```
 
-As for the Python case, use a second shell to transfer the files from your local machine to Adroit:
+Next, while still on your laptop, run the following ssh command to create a directory on Adroit:
 
 ```
-scp data_analysis.R <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
-scp cdc.csv <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/r_test
+ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
 ```
 
-Return to your session on Adroit and obtain a Slurm script:
+Transfer the R script, Slurm script and data file to Adroit using the scp (secure copy) command:
 
 ```
-wget https://tigress-web.princeton.edu/~jdh4/job.slurm
+scp data_analysis.R <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
+scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
+scp cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
 ```
 
-Edit the Slurm scrip as follows (use a text editor like nano, micro, vim, emacs or myadroit):
+### Connect to Adroit
 
-```bash
-#!/bin/bash
-#SBATCH --job-name=R-test        # create a short name for your job
-#SBATCH --nodes=1                # node count
-#SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
-#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
-#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
-#SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-user=<YourNetID>@princeton.edu
+SSH to Adroit:
 
-srun Rscript data_analysis.R
+```
+ssh <YourNetID>@adroit.princeton.edu
 ```
 
-Submit the job with `sbatch job.slurm`. You will receive an email when the job is finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`.
+Change the working directory ($USER does not need to be replaced):
+
+```
+cd /scratch/network/$USER/R_test
+```
+
+Submit the job by running the following command:
+
+```
+sbatch job.slurm
+```
+
+This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is PD (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your NetID in the Slurm script.
+
+Here is the expected output:
+
 
 ## Learn More About Adroit by Running Commands
 
