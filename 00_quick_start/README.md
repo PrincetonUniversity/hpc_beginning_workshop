@@ -9,9 +9,9 @@ $ git clone https://github.com/PrincetonUniversity/gpu_programming_intro
 
 ## Python Script Example
 
-### On Your Local Machine (e.g., laptop)
+### On Your Local Machine
 
-Open a terminal. Change the working directory and examine the script:
+In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
 $ cd hpc_beginning_workshop/00_quick_start
@@ -29,7 +29,7 @@ print("X =\n", X)
 print("Inverse(X) =\n", np.linalg.inv(X))
 ```
 
-Below is the Slurm script which prescribes the resource requirements for the Python scripts:
+Below is the Slurm script which prescribes the resource requirements for the Python script:
 
 ```bash
 #!/bin/bash
@@ -49,22 +49,24 @@ module load anaconda3
 srun python matrix_inverse.py
 ```
 
-Next, while still on your laptop, create a directory on Adroit using the SSH command:
+Next, while still on your laptop, run the following ssh command to create a directory on Adroit (`$USER` does not need to be changed but you need to replace <YourNetID>):
 
 ```
 ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/$USER/python_test"
 ```
 
-Transfer the files to Adroit using the scp (secure copy) command:
+Transfer the Python and Slurm scripts to Adroit using the scp (secure copy) command:
 
 ```
 scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
 scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
 ```
 
+Everything is in place on Adroit. Let's connect to that machine and submit the job.
+
 ### Connect to Adroit
 
-To submit the job to the Slurm job scheduler, SSH to Adroit:
+SSH to Adroit:
 
 ```
 ssh <YourNetID>@adroit.princeton.edu
@@ -73,7 +75,7 @@ ssh <YourNetID>@adroit.princeton.edu
 Change the working directory:
 
 ```
-cd python_test
+cd /scratch/network/$USER/python_test
 ```
 
 Submit the job by running the following command:
