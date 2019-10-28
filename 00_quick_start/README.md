@@ -1,7 +1,6 @@
-# HPC Quick Start Overview
+# HPC Quick Start
 
-Here we show how to transfer your files to Adroit and submit a job to the Slurm scheduler. To obtain the example
-materials, run this command:
+This quick start guide provides a demonstration of how to transfer your files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R scripts. To obtain the example materials, run this command in a terminal on your local machine:
 
 ```
 $ git clone https://github.com/PrincetonUniversity/gpu_programming_intro
@@ -64,7 +63,7 @@ scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/pyth
 
 Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
 
-### Connect to Adroit
+### On Adroit
 
 SSH to Adroit:
 
@@ -173,7 +172,7 @@ scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_te
 scp cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
 ```
 
-### Connect to Adroit
+### On Adroit
 
 SSH to Adroit:
 
