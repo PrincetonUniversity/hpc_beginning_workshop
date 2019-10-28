@@ -74,7 +74,7 @@ $ which python
 /usr/bin/python
 ```
 
-To load the Anaconda Python you must load the module:
+To load Anaconda Python you must load the module:
 
 ```
 $ module load anaconda3
@@ -89,6 +89,10 @@ To see all the packages that are included in Anaconda Python run this command:
 ```
 $ conda list
 ```
+
+## A Word on R
+
+
 
 ## Where to install software
 
