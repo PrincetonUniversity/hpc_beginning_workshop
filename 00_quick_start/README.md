@@ -156,7 +156,7 @@ good,1,1,0,70,180,170,44,m
 Next, while still on your laptop, run the following ssh command to create a directory on Adroit:
 
 ```
-ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
+ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
 ```
 
 Transfer the R script, Slurm script and data file to Adroit using the scp (secure copy) command:
