@@ -1,5 +1,7 @@
 # Job Priority
 
+Here is an explanation from Bill Wichser of Research Computing taken from [here](https://askrc.princeton.edu/question/238/what-determines-my-jobs-priority-under-slurm/):
+
 The Slurm scheduler works much like many other schedulers by simply applying a priority number to a job. To see all jobs with associated priorities one can use
 
 squeue -o "%.18i %Q %.9q %.8j %.8u %.10a %.2t %.10M %.10L %.6C %R" | more
@@ -28,10 +30,10 @@ watch -n 30 -d 'squeue --start --format="%.7i %.7Q %.7q %.15j %.12u %.10a %.20S 
 
 one can then watch the top jobs waiting to run and begin to see how this works. In many instances you will find lower priority jobs which will run before higher priority ones. This is all due to the requested resources, when they will free, and the decisions the scheduler is making in this regard. This is also why having an accurate representation of timelimit is so important. better fitting of jobs and more accurate scheduling can happen as the actual time specified becomes more accurate for all jobs.
 
+Run the following command to see how many shares your group has as well as your fairshare value: 
+
 ```
 sshare
 ```
 
-Fairshare
-
-Only request what you use
+When running jobs remember to only request what you need.
