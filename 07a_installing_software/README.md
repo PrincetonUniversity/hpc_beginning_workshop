@@ -60,7 +60,9 @@ append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-9.2/include
 -------------------------------------------------------------------
 ```
 
-If you need software that is not install, your will mostly likely have to do it yourself.
+To see all the options run `module help` or see [this page](https://researchcomputing.princeton.edu/faq/using-environment-modules).
+
+If you need software that is not installed, your will mostly likely have to do it yourself.
 
 ## A Word on Python
 
