@@ -3,7 +3,7 @@
 This quick start guide provides a demonstration of how to transfer your files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R scripts. To obtain the example materials, run this command in a terminal on your local machine:
 
 ```
-$ git clone https://github.com/PrincetonUniversity/gpu_programming_intro
+$ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 ```
 
 ## Python Script Example
