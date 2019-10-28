@@ -280,7 +280,7 @@ do so.
 
 ## Efficiency Reports
 
-You will receive an email after each job finished, for example:
+You will receive an email after each job finishes, for example:
 
 ```
 Job ID: 670018
