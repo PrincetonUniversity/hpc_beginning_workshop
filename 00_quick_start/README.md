@@ -41,6 +41,7 @@ Below is the Slurm script which prescribes the resource requirements for the Pyt
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
 module purge
 module load anaconda3
@@ -137,6 +138,7 @@ Below is the Slurm script:
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
 srun Rscript data_analysis.R
 ```
