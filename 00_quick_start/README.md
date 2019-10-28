@@ -14,7 +14,7 @@ In a terminal on your laptop, change the working directory and examine the scrip
 
 ```
 $ cd hpc_beginning_workshop/00_quick_start/python_example
-$ cat matrix_inversion.py
+$ cat matrix_inverse.py
 $ cat job.slurm
 ```
 
