@@ -1,4 +1,4 @@
-# Getting Started with the HPC Systems
+# Intro to HPC on the Princeton Clusters
 
 ## Setup for live workshop
 
