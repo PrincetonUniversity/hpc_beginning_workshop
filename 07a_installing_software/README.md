@@ -6,7 +6,24 @@ Lots of software is already available on each cluster. To see the modules that a
 $ module avail
 ```
 
-Use the `module load <module-name>` command to activate a module.
+Use the `module load <module-name>` command to activate a module. For example:
+
+```
+$ julia
+-bash: julia: command not found
+$ module load julia
+$ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.2.0 (2019-08-20)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia>
+```
 
 If you need software that is not install, your will mostly likely have to do it yourself.
 
