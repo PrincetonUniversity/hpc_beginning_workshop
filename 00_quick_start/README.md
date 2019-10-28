@@ -11,7 +11,7 @@ $ git clone https://github.com/PrincetonUniversity/gpu_programming_intro
 
 ### On Your Local Machine (e.g., laptop)
 
-Change the working directory and examine the script:
+Open a terminal. Change the working directory and examine the script:
 
 ```
 $ cd hpc_beginning_workshop/00_quick_start
@@ -52,26 +52,29 @@ srun python matrix_inverse.py
 Next, while still on your laptop, create a directory on Adroit using the SSH command:
 
 ```
-ssh <YourNetID>@adroit.princeton.edu "mkdir python_test"
+ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/$USER/python_test"
 ```
 
-On your local machine, **in a new shell**, run the following scp (secure copy) command
-in the directory containing `matrix_inverse.py`:
+Transfer the files to Adroit using the scp (secure copy) command:
 
 ```
-scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
-scp job.slurm <YourNetID>@adroit.princeton.edu:/home/<YourNetID>/python_test
+scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
+scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/$USER/python_test
 ```
 
-Return to your original session on Adroit and run this command:
+### Connect to Adroit
+
+To submit the job to the Slurm job scheduler, SSH to Adroit:
 
 ```
-wget https://tigress-web.princeton.edu/~jdh4/job.slurm
+ssh <YourNetID>@adroit.princeton.edu
 ```
 
-This will download the following file (`job.slurm`):
+Change the working directory:
 
-
+```
+cd python_test
+```
 
 Submit the job by running the following command:
 
@@ -79,7 +82,7 @@ Submit the job by running the following command:
 sbatch job.slurm
 ```
 
-After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished. You can also run use this command: `squeue -u <YourNetID>`. If this command doesn't list the job then it has finished.
+You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is `PD` then your job is waiting for other jobs to finish before it can be run. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your NetID in the Slurm script.
 
 ## R Script Example
 
