@@ -135,9 +135,9 @@ $ g++ --version
 g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 ...
 
-[jdh4@adroit4 ~]$ module load rh/devtoolset/7
+$ module load rh/devtoolset/7
 
-[jdh4@adroit4 ~]$ g++ --version
+$ g++ --version
 g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
 ...
 ```
