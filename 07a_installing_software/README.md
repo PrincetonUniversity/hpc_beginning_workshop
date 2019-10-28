@@ -1,6 +1,6 @@
-# Installing Software
+# Software
 
-## Pre-install Software with Environment Modules
+## Using Pre-Install Software with Environment Modules
 
 Lots of software is already available on each cluster. To see the modules that are available run this commond:
 
@@ -92,7 +92,14 @@ $ conda list
 
 ## A Word on R
 
+To start R and then immediately exit:
 
+```
+$ R
+> q()
+```
+
+Note that RStudio is available through the [MyAdroit](https://myadroit.princeton.edu) web portal.
 
 ## Where to install software
 
