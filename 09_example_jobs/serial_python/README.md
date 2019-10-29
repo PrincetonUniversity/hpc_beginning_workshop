@@ -4,7 +4,6 @@ Here is a simple Python script:
 
 ```python
 import numpy as np
-
 N = 3
 X = np.random.randn(N, N)
 print("X =\n", X)
