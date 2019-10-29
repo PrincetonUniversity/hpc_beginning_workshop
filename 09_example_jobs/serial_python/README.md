@@ -12,7 +12,7 @@ print("Inverse(X) =\n", np.linalg.inv(X))
 
 Below is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=matinv        # create a short name for your job
 #SBATCH --nodes=1                # node count
