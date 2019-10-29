@@ -2,7 +2,7 @@
 
 ## Using Pre-Installed Software with Environment Modules
 
-Lots of software is already available on each cluster. To see the modules that are available run this commond:
+Several applications and software libraries are already available on each cluster. To see the modules that are available, run this commond:
 
 ```
 $ module avail
