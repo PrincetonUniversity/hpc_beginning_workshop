@@ -129,7 +129,7 @@ See [this guide](https://github.com/PrincetonUniversity/installing_python_packag
 
 ## Installing R Packages on the HPC Clusters
 
-The HPC clusters use an old version of the GNU C/C++ compilers to provide stability. To install many R packages you will need a newer compiler. This can be accomplished by loading the `rh` module:
+By default the HPC clusters use an old version of the GNU C/C++ compilers to provide stability. To install certain R packages you will need a newer compiler. This can be accomplished by loading the `rh` module:
 
 ```
 $ g++ --version
