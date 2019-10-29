@@ -18,7 +18,7 @@ $ cat matrix_inverse.py
 $ cat job.slurm
 ```
 
-Here are the contents of the script file:
+Here are the contents of the Python script:
 
 ```python
 import numpy as np
