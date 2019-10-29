@@ -171,6 +171,8 @@ Transfer the R script, Slurm script and data file from your laptop to Adroit usi
 scp data_analysis.R job.slurm cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
 ```
 
+Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
+
 ### On Adroit
 
 SSH to Adroit:
