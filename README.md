@@ -1,7 +1,7 @@
 # Intro to HPC on the Princeton Clusters
 
 ## About
-This guide presents an overview of using the HPC systems at Princeton. It covers the HPC clusters as well as the storage system and visualization machine.
+This guide presents an overview of using the HPC systems at Princeton. Specificalyy, it covers the HPC clusters as well as the storage system and visualization machine.
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
@@ -14,7 +14,7 @@ This guide presents an overview of using the HPC systems at Princeton. It covers
 
 ## Getting Help
 
-If you encounter any difficulties with getting started on our HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+If you encounter any difficulties with getting started on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
 
 ## Authorship
 
