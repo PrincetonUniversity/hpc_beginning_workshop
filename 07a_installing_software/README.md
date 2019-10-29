@@ -8,7 +8,7 @@ Several applications and software libraries are already available on each cluste
 $ module avail
 ```
 
-Use the `module load <module name>` command to activate a module. For example:
+Use the `module load <module-name>` command to activate a module. For example:
 
 ```
 $ julia
@@ -36,7 +36,7 @@ icc (ICC) 19.0.3.199 20190206
 Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 ```
 
-To see exactly what a module is doing use `module show <module name>`. Modules only change the values of environment variables. They do not install or un-install software. For example:
+To see exactly what a module is doing use `module show <module-name>`. Modules only change the values of environment variables. They do not install or un-install software. For example:
 
 ```
 $ module show cudatoolkit
