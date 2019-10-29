@@ -66,7 +66,7 @@ If you need software that is not installed, you will most likely have to do it y
 
 ## A Word on Python
 
-When you first log in to the cluster, the system Python is used by default:
+When you first connect to the cluster, before loading any modules, the system Python (old) will used by default:
 
 ```
 $ python --version
@@ -76,12 +76,13 @@ $ which python
 /usr/bin/python
 ```
 
-To load Anaconda Python you must load the module:
+To get the newer Anaconda Python implementation, simply load the module:
 
 ```
 $ module load anaconda3
 $ python --version
 Python 3.7.3
+
 $ which python
 /usr/licensed/anaconda3/2019.3/bin/python
 ```
