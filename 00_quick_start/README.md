@@ -58,8 +58,7 @@ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/pyth
 Transfer the Python and Slurm scripts to Adroit using the scp (secure copy) command:
 
 ```
-scp matrix_inverse.py <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
-scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
+scp matrix_inverse.py job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
 ```
 
 Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
@@ -169,9 +168,7 @@ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_te
 Transfer the R script, Slurm script and data file to Adroit using the scp (secure copy) command:
 
 ```
-scp data_analysis.R <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
-scp job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
-scp cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
+scp data_analysis.R job.slurm cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
 ```
 
 ### On Adroit
