@@ -110,7 +110,7 @@ We recommend that your create a directory such as `/home/<YourNetID>/software` t
 
 ## Installing Python Packages on the HPC Clusters
 
-Simple Python packages can be installed using Pip:
+Simple Python packages can be installed using `pip`:
 
 ```
 $ module load anaconda3
