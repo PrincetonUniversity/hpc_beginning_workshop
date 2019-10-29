@@ -95,7 +95,7 @@ $ conda list
 
 ## A Word on R
 
-An updated version of R is ready to used without loading any modules. To start R and then immediately exit:
+An updated version of R is ready to be used without loading any modules. To start R and then immediately exit:
 
 ```
 $ R
