@@ -2,7 +2,6 @@
 
 [Table of Contents](/hpc_beginning_workshop/)
 
-
 ![Beowulf Cluster](beowulf2.png)
 
 ## Terminology
@@ -29,7 +28,7 @@ For more detail, see:
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
   Also available generally to members of the university community. It is composed of 9 Skylake nodes, 7 Ivybridge nodes for MyAdroit and 2 GPU nodes consisting of either Tesla K40c or v100 GPUs.
 
-### Tiger
+### [Tiger](https://researchcomputing.princeton.edu/systems-and-services/available-systems/tiger)
 
 ![tiger-cluster](https://researchcomputing.princeton.edu/sites/researchcomputing2/files/styles/panopoly_image_original/public/media/tiger-diagram_0.jpg?itok=NCJUQOsC)
 
