@@ -29,6 +29,10 @@ For more detail, see:
 ### [Adroit](https://www.princeton.edu/researchcomputing/computational-hardware/adroit/)
   Also available generally to members of the university community. It is composed of 9 Skylake nodes, 7 Ivybridge nodes for MyAdroit and 2 GPU nodes consisting of either Tesla K40c or v100 GPUs.
 
+### Tiger
+
+![tiger-cluster](https://researchcomputing.princeton.edu/sites/researchcomputing2/files/styles/panopoly_image_original/public/media/tiger-diagram_0.jpg?itok=NCJUQOsC)
+
 ### Other Clusters
   These <a href="https://researchcomputing.princeton.edu/systems-and-services/available-systems" target="_blank">other clusters</a> such as Perseus, Tiger, Della and Traverse are research
   clusters with many more nodes and GPFS networked storage between clusters.
@@ -37,8 +41,6 @@ For more detail, see:
   for details:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
-
-![tiger-cluster](https://researchcomputing.princeton.edu/sites/researchcomputing2/files/styles/panopoly_image_original/public/media/tiger-diagram_0.jpg?itok=NCJUQOsC)
 
 ## The filesystems
 
