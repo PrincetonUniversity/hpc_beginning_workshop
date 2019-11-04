@@ -2,7 +2,7 @@
 
 [Table of Contents](/hpc_beginning_workshop/)
 
-![Beowulf Cluster](beowulf2.png)
+![Beowulf Cluster](beowulf.png)
 
 ## Terminology
 
