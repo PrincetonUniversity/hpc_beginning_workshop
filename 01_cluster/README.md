@@ -41,7 +41,7 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
-## The filesystems
+## The Filesystems
 
 ![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
 
