@@ -3,8 +3,7 @@
 [Table of Contents](/hpc_beginning_workshop/)
 
 
-[![Beowulf Cluster](beowulf2.png)](beowulf.png)
-[*By Mukarramahmad (Own work) [Public domain], via Wikimedia Commons*](https://commons.wikimedia.org/wiki/File:Beowulf.png)
+![Beowulf Cluster](beowulf2.png)
 
 ## Terminology
 
