@@ -34,7 +34,7 @@ Run the following two commands to compile the code:
 
 ```
 module load intel intel-mpi
-mpicxx -Wall -o hello_world_mpi hello_world_mpi.cpp
+mpicxx -o hello_world_mpi hello_world_mpi.cpp
 ```
 
 Below is the Slurm script:
