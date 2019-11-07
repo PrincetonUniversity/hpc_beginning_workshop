@@ -28,7 +28,7 @@ For detailed examples of these scripts, you can look at: [Introduction Slurm](ht
 
 | Command | Description |
 :---------|:------------|
-| sbatch <slurm_script> | Submit a job (e.g., sbatch calc.cmd) |
+| sbatch <slurm_script> | Submit a job (e.g., sbatch job.slurm) |
 | squeue | Show jobs in the queue |
 | squeue -u | Show jobs in the queue for a specific user (e.g., squeue -u ceisgrub) |
 | squeue --start | Report the expected start time for pending jobs |
