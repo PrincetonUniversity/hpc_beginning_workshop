@@ -28,20 +28,20 @@ For detailed examples of these scripts, you can look at: [Introduction Slurm](ht
 
 | Command | Description |
 :---------|:------------|
-| sbatch <slurm_script> | Submit a job (e.g., `sbatch job.slurm`) |
-| squeue | Show jobs in the queue |
-| squeue -u <NetID>| Show jobs in the queue for a specific user (e.g., `squeue -u ceisgrub`) |
-| squeue -u <NetID> --start | Report the expected start time for pending jobs |
-| squeue -j <JobID> | Show the nodes allocated to a running job |
-| scancel <JobID> | Cancel a job (e.g., `scancel 2534640`) |
-| scontrol show <JobID> | See detailed info about a job |
-| snodes | Show properties of the nodes on a cluster (e.g., maximum memory) |
-| sinfo | Show how nodes are being used |
-| sshare/sprio | Show the priority assigned to jobs |
-| smap/sview | Graphical display of the queues |
-| slurmtop | Text-based view of cluster nodes |
-| scontrol show config | View default parameter settings |
-| sacct -o MaxVMSizeNode,ReqMem -j <JobID> | View details about finished jobs. Use sacct -e to view list of everything you can list in format. |
+| `sbatch <slurm_script>` | Submit a job (e.g., `sbatch job.slurm`) |
+| `squeue` | Show jobs in the queue |
+| `squeue -u <NetID>` | Show jobs in the queue for a specific user (e.g., `squeue -u ceisgrub`) |
+| `squeue -u <NetID> --start` | Report the expected start time for pending jobs |
+| `squeue -j <JobID>` | Show the nodes allocated to a running job |
+| `scancel <JobID>` | Cancel a job (e.g., `scancel 2534640`) |
+| `scontrol show <JobID>` | See detailed info about a job |
+| `snodes` | Show properties of the nodes on a cluster (e.g., maximum memory) |
+| `sinfo` | Show how nodes are being used |
+| `sshare/sprio` | Show the priority assigned to jobs |
+| `smap/sview` | Graphical display of the queues |
+| `slurmtop` | Text-based view of cluster nodes |
+| `scontrol show config` | View default parameter settings |
+| `sacct -o MaxVMSizeNode,ReqMem -j <JobID>` | View details about finished jobs. Use `sacct -e` to view list options. |
 
 ## Serial job example
 
