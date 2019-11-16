@@ -1,6 +1,6 @@
 # HPC Quick Start
 
-This quick start guide provides a demonstration of how to transfer files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R scripts. To obtain the example materials, run this command in a terminal on your **local machine**:
+This quick start guide provides a demonstration of how to transfer files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R. To obtain the example materials, run this command in a terminal on your **local machine**:
 
 ```
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
