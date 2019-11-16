@@ -126,7 +126,7 @@ print(summary(health))
 
 Below is the Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=R-test        # create a short name for your job
 #SBATCH --nodes=1                # node count
