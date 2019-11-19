@@ -39,8 +39,8 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-module load openmpi
-mpicxx -fopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
+$ module load openmpi
+$ mpicxx -fopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
 ```
 
 Below is the Slurm script:
