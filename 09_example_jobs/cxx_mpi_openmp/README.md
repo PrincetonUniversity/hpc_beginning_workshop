@@ -60,7 +60,7 @@ Below is the Slurm script:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load openmpi/gcc/4.0.1/64
+module load openmpi
 
 srun ./mpi_openmp_hello_world
 ```
