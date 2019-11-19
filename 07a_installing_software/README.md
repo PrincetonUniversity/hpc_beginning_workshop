@@ -125,7 +125,7 @@ conda create --name fenics-env -c conda-forge fenics
 conda activate fenics-env
 ```
 
-See [this guide](https://github.com/PrincetonUniversity/installing_python_packages) for installing Python packages.
+For more see this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
 
 ## Installing R Packages on the HPC Clusters
 
@@ -152,3 +152,5 @@ $ R
 # answer yes to the two questions and then choose 66 as the CRAN mirror
 > q()
 ```
+
+For more see this guide: [Installing R Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_R_packages).
