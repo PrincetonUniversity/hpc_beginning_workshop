@@ -28,8 +28,8 @@ int main() {
 This can be compiled with:
 
 ```
-module load cudatoolkit
-nvcc -o hello_world_gpu hello_world_gpu.cu
+$ module load cudatoolkit
+$ nvcc -o hello_world_gpu hello_world_gpu.cu
 ```
 
 Below is the corresponding Slurm script (`job.slurm`):
