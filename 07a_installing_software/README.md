@@ -93,6 +93,10 @@ To see all the packages that are included in Anaconda Python run this command:
 $ conda list
 ```
 
+## Installing Python Packages
+
+See this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
+
 ## A Word on R
 
 An updated version of R is ready to be used without loading any modules. To start R and then immediately exit:
@@ -104,14 +108,10 @@ $ R
 
 Note that RStudio is available through the [MyAdroit](https://myadroit.princeton.edu) web portal.
 
-## Where to install software
-
-We recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
-
-## Installing Python Packages
-
-See this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
-
 ## Installing R Packages
 
 See this guide: [Installing R Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_R_packages).
+
+## Where to install software
+
+Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software beyond Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
