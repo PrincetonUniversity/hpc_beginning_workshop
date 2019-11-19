@@ -108,49 +108,10 @@ Note that RStudio is available through the [MyAdroit](https://myadroit.princeton
 
 We recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
 
-## Installing Python Packages on the HPC Clusters
+## Installing Python Packages
 
-Simple Python packages can be installed using `pip`:
+See this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
 
-```
-$ module load anaconda3
-$ pip install --user <package name>
-```
+## Installing R Packages
 
-For more complicated packages such as FEniCS, you may consider using Conda:
-
-```
-module load anaconda3
-conda create --name fenics-env -c conda-forge fenics
-conda activate fenics-env
-```
-
-For more see this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
-
-## Installing R Packages on the HPC Clusters
-
-By default the HPC clusters provide an old version of the GNU C/C++ compilers to provide stability. To install certain R packages you will need a newer version of the GNU compilers. This can be accomplished by loading the `rh` module:
-
-```
-$ g++ --version
-g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
-...
-
-$ module load rh/devtoolset/7
-
-$ g++ --version
-g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
-...
-```
-
-After loading the `rh` module you can start R and install your packages, for example:
-
-```
-$ module load rh/devtoolset/7
-$ R
-> install.packages("argparse")
-# answer yes to the two questions and then choose 66 as the CRAN mirror
-> q()
-```
-
-For more see this guide: [Installing R Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_R_packages).
+See this guide: [Installing R Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_R_packages).
