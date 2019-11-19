@@ -3,7 +3,7 @@
 Follow the directions below to begin running simple jobs on Adroit.
 After SSHing to Adroit the first step is to `cd` (change directory)
 to your directory on `/scratch/network/<YourNetID>`. We do this because `/scratch/network`
-is a much faster filesystem with more space than $/home$.
+is a much faster filesystem with more space than `/home`.
 
 ```
 ssh <YourNetID>@adroit.princeton.edu
