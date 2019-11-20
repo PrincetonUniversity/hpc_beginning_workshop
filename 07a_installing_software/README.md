@@ -93,7 +93,7 @@ To see all the packages that are included in Anaconda Python run this command:
 $ conda list
 ```
 
-## Installing Python Packages
+## Installing Python Packages on the HPC Clusters
 
 See [this guide](https://github.com/PrincetonUniversity/installing_python_packages).
 
