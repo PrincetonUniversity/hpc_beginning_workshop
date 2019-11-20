@@ -114,4 +114,4 @@ See this guide: [Installing R Packages on the HPC Clusters](https://github.com/P
 
 ## Where to install software
 
-Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software beyond Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
+Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
