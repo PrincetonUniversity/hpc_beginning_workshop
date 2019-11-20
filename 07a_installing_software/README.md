@@ -95,7 +95,7 @@ $ conda list
 
 ## Installing Python Packages
 
-See this guide: [Installing Python Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_python_packages)
+See [this guide](https://github.com/PrincetonUniversity/installing_python_packages).
 
 ## A Word on R
 
@@ -108,9 +108,9 @@ $ R
 
 Note that RStudio is available through the [MyAdroit](https://myadroit.princeton.edu) web portal.
 
-## Installing R Packages
+## Installing R Packages on the HPC Clusters
 
-See this guide: [Installing R Packages on the HPC Clusters](https://github.com/PrincetonUniversity/installing_R_packages).
+See [this guide](https://github.com/PrincetonUniversity/installing_R_packages).
 
 ## Where to install software
 
