@@ -115,3 +115,24 @@ See [this guide](https://github.com/PrincetonUniversity/installing_R_packages).
 ## Where to install software
 
 Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
+
+## GNU GCC
+
+Software that comes in source form must be compiled before it can be installed in your `/home` directory. One popular tool suite for doing this is the GNU Compiler Collection (GCC) which is composed of compilers, a linker, libraries and tools.
+
+To provide a stable environment for building software on our HPC clusters, the default version of GCC is kept the same for years at a time. To see the current version of the GNU C++ compiler, namely g++, run the following command on one of the HPC clusters (e.g., Della):
+
+```
+$ g++ --version
+g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
+```
+
+While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
+
+```
+$ module load rh/devtoolset/7
+$ g++ --version
+g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+```
+
+Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
