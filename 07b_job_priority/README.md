@@ -1,6 +1,6 @@
 # Job Priority
 
-Here is an explanation from Bill Wichser of Research Computing taken from [here](https://askrc.princeton.edu/question/238/what-determines-my-jobs-priority-under-slurm/):
+Here is an explanation from Bill Wichser of Research Computing taken from [AskRC](https://askrc.princeton.edu/question/238/what-determines-my-jobs-priority-under-slurm/):
 
 The Slurm scheduler works much like many other schedulers by simply applying a priority number to a job. To see all jobs with associated priorities one can use
 
