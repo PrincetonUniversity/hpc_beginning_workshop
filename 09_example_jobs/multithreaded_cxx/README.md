@@ -44,6 +44,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
 module load intel
+
 ./hello_world_omp
 ```
 
