@@ -10,4 +10,4 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
-srun Rscript data_analysis.R
+Rscript data_analysis.R
