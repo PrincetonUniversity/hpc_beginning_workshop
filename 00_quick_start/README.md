@@ -46,7 +46,7 @@ Below is the Slurm script which prescribes (1) the resource requirements for the
 module purge
 module load anaconda3
 
-srun python matrix_inverse.py
+python matrix_inverse.py
 ```
 
 Next, while still on your laptop, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
@@ -139,7 +139,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 #SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
-srun Rscript data_analysis.R
+Rscript data_analysis.R
 ```
 
 Here are the first few lines of the data file (`cdc.csv`):
