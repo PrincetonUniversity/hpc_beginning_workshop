@@ -1,4 +1,4 @@
-# Intro to HPC on the Princeton Clusters
+# Getting Started with the HPC Clusters
 
 ## About
 This guide presents an overview of using the HPC systems at Princeton. Specifically, it covers the HPC clusters as well as the storage system and visualization machine. Click on 00_quick_start above to get started.
