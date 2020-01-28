@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-$ module load openmpi
+$ module load openmpi/gcc/3.1.3/64
 $ mpicxx -fopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
 ```
 
