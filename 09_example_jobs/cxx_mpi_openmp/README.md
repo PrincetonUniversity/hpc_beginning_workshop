@@ -39,8 +39,8 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-$ module load openmpi/gcc/3.1.3/64
-$ mpicxx -fopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
+$ module load intel intel-mpi
+$ mpicxx -qopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
 ```
 
 Below is the Slurm script:
@@ -60,7 +60,7 @@ Below is the Slurm script:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load openmpi
+module load intel intel-mpi
 
 srun ./mpi_openmp_hello_world
 ```
