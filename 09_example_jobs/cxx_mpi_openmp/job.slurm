@@ -12,6 +12,6 @@
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load openmpi
+module load intel intel-mpi
 
 srun ./mpi_openmp_hello_world
