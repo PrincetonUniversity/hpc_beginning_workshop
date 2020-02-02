@@ -18,4 +18,4 @@ If you encounter any difficulties with getting started on the HPC clusters then 
 
 ## Authorship
 
-This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson.
+This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson and Gabe Perez-Giz.
