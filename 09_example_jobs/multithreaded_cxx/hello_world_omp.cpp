@@ -1,4 +1,4 @@
-// export OMP_NUM_THREADS=4; g++ -Wall -fopenmp -o hw_omp hw_omp.cpp; srun -n 1 -c $OMP_NUM_THREADS -t 1:00 ./hw_omp
+// export OMP_NUM_THREADS=4; g++ -Wall -fopenmp -o hw_omp hello_world_omp.cpp; srun -n 1 -c $OMP_NUM_THREADS -t 1:00 ./hw_omp
 #include <iostream>
 #include <omp.h>
 
