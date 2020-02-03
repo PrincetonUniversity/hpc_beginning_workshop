@@ -23,7 +23,7 @@ Compile the program using the following commands:
 
 ```
 module load intel
-icpc -qopenmp -o hello_world_omp hello_world_omp.cpp
+icpc -qopenmp -o hw_omp hello_world_omp.cpp
 ```
 
 Below is the Slurm script:
@@ -45,7 +45,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 module purge
 module load intel
 
-./hello_world_omp
+./hw_omp
 ```
 
 Submit the job to the cluster:
