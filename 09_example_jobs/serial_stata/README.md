@@ -68,4 +68,4 @@ We recommend that you receive email reports by add the following lines to your S
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 ```
 
-Email reports will allow you to tune the memory and time requirements of your job. The more resources you request, the longer your job will spend in the queue.
+Email reports will allow you to tune the memory and time requirements of your future jobs. The more resources you request, the longer your job will spend in the queue.
