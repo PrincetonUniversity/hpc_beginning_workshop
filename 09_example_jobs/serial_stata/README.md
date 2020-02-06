@@ -61,9 +61,11 @@ end of do-file
 
 Use `squeue -u $USER` to monitor queued jobs.
 
-If you would like to receive emails reports then add these lines to your Slurm script:
+We recommend that you receive email reports by add the following lines to your Slurm script:
 
 ```
 #SBATCH --mail-type=all          # send email on job start, end and fault
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 ```
+
+Email reports will allow you to tune the memory and time requirements of your job. The more resources you request, the longer your job will spend in the queue.
