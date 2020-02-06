@@ -3,7 +3,7 @@
 Here is a simple Stata script (`hello_world.do`):
 
 ```stata
-disp 2+2
+disp 21+21
 ```
 
 The Slurm script (`job.slurm`) below is appropriate for serial Stata jobs:
@@ -52,8 +52,8 @@ Notes:
 
 . do "hello_world.do" 
 
-. display 2+2
-4
+. display 21+21
+42
 
 . 
 end of do-file
