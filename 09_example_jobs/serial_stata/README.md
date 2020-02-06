@@ -6,7 +6,7 @@ Here is a simple Stata script (`hello_world.do`):
 disp 2+2
 ```
 
-Below is the Slurm script (`job.slurm`):
+The Slurm script (`job.slurm`) below is appropriate for serial Stata jobs:
 
 ```bash
 #!/bin/bash
