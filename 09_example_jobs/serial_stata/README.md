@@ -29,7 +29,7 @@ To run the Stata script, simply submit the job to the cluster:
 $ sbatch job.slurm
 ```
 
-After the job completes, view the output with `cat slurm-*` or `cat hello_world.log`:
+After the job completes, view the output with `cat hello_world.log`:
 
 ```
  /__    /   ____/   /   ____/
