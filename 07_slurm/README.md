@@ -238,7 +238,7 @@ hostname
 echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
 echo " Random number : " $RANDOM
 
-srun python myscript.py $SLURM_ARRAY_TASK_ID
+python myscript.py $SLURM_ARRAY_TASK_ID
 ```
 
 The first few lines of `myscript.py` might look like this:
