@@ -210,8 +210,7 @@ srun ./a.out
 
 ## Array Jobs
 
-Array jobs are a different way to parallelize your computations. These use a
-set of variables that Slurm will set for you in the job.
+Array jobs are a different way to parallelize your computations. They are used when you need to run the same job a large number of times with only slight differences between the jobs. For instance, let's say you need to run 100 jobs, each with a different seed value for the random number generator, and average all the results together. You could submit 100 jobs manually or you could submit one array job. Below is an example Slurm script for the case where 4 runs are needed:
 
 ```bash
 #!/bin/bash
