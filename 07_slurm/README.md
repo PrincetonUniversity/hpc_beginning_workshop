@@ -210,7 +210,7 @@ srun ./a.out
 
 ## Array Jobs
 
-Array jobs are a different way to parallelize your computations. They are used when you need to run the same job a large number of times with only slight differences between the jobs. For instance, let's say you need to run 100 jobs, each with a different seed value for the random number generator, and average all the results together. You could submit 100 jobs manually or you could submit one array job. Below is an example Slurm script for the case where 4 runs are needed:
+Array jobs provide a different way to parallelize your computations. They are used when you need to run the same job a large number of times with only slight differences between the jobs. For instance, let's say you need to run 100 jobs, each with a different seed value for the random number generator, and average all the results together. You could submit 100 jobs manually or you could submit one array job. Below is an example Slurm script for the case where 4 runs are needed:
 
 ```bash
 #!/bin/bash
@@ -249,6 +249,16 @@ myparam = parameters[idx]
 # execute the rest of the script using myparam
 ```
 
+For an R script you can use:
+
+```R
+args <- commandArgs(TRUE)
+idx <- as.numeric(args[1])
+parameters <- c(2.5, 5.0, 7.5, 10.0, 12.5)
+myparam <- parameters[idx]
+# execute the rest of the script using myparam
+```
+
 Job arrays produce outputs with the job id and the individual task id that
 echo their subtask number. You can set the array numbers to any arbitrary set
 of numbers, so that you can subset processing a larger list by grabbing the
@@ -263,6 +273,12 @@ This snippet shows a six task array, that will pass increments of 100 to the
 program in question. It can then start processing a data frame, for example,
 at rows 0, 100, 200, 300, 400, etc. and stop iterating after 99 rows. Thus if these
 arrays run in parallel, you would complete 600 rows.
+
+Note that it is normal to see `(QOSMaxJobsPerUserLimit)` listed in the
+'NODELIST(REASON)' column of `squeue` output for array jobs. It indicates that you can only have
+a certain number of jobs actively queued. Just wait and all the jobs of the array will run will run.
+
+Note that each job of an array job does not need to be serial. The individual jobs can be parallel and use multiple GPUs.
 
 ## GPUs
 
