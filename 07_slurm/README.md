@@ -276,7 +276,7 @@ arrays run in parallel, you would complete 600 rows.
 
 Note that it is normal to see `(QOSMaxJobsPerUserLimit)` listed in the
 'NODELIST(REASON)' column of `squeue` output for array jobs. It indicates that you can only have
-a certain number of jobs actively queued. Just wait and all the jobs of the array will run will run.
+a certain number of jobs actively queued. Just wait and all the jobs of the array will run.
 
 Note that each job of an array job does not need to be serial. The individual jobs can be parallel and use multiple GPUs.
 
