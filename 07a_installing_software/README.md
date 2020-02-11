@@ -2,10 +2,19 @@
 
 ## Using Pre-Installed Software with Environment Modules
 
-Several applications and software libraries are already available on each cluster. To see the modules that are available, run this commond:
+Several applications and software libraries are already available on each cluster. To see the modules that are available on Della, for example, run this command:
 
 ```
 $ module avail
+```
+
+To see the module avail for a specific software, say Julia, then do:
+
+```
+$ module avail julia
+------------- /usr/licensed/Modules/modulefiles -------------
+julia/0.4.7 julia/0.5.1 julia/0.7.0 julia/1.0.3 julia/1.2.0
+julia/0.5.0 julia/0.6.0 julia/1.0.1 julia/1.1.0 julia/1.3.0
 ```
 
 Use the `module load <module-name>` command to activate a module. For example:
