@@ -1,5 +1,7 @@
 # Running Example Jobs on the HPC Clusters
 
+The sample jobs above are written for Nobel, Adroit, Perseus, Dell and Tiger in mind. You will probably need to use different environment modules on Traverse.
+
 Follow the directions below to begin running simple jobs on Adroit.
 After SSHing to Adroit the first step is to `cd` (change directory)
 to your directory on `/scratch/network/<YourNetID>`. We do this because `/scratch/network`
