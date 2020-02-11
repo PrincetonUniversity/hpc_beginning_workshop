@@ -1,6 +1,6 @@
 # Open OnDemand
 
-If you are new to high-performance computing then you will find that the simplest way to use Adroit and Della is
+If you are new to high-performance computing then you will find that the simplest way to use Adroit or Della is
 through the Open OnDemand web interface. If you have an account on Adroit or Della then browse
 to [https://myadroit.princeton.edu](https://myadroit.princeton.edu) or
 [https://mydella.princeton.edu](https://mydella.princeton.edu). If you need an account on Adroit then
