@@ -8,9 +8,11 @@ complete [this form](https://forms.rc.princeton.edu/registration/?q=adroit). Not
 
 ## Running a Terminal in Your Web Browser
 
-To run commands on the Adroit head node, for example, browse to MyAdroit then choose "Cluster" then "Adroit Cluster Shell Access".
+To run commands on the Adroit head node, for example, browse to [MyAdroit](https://myadroit.princeton.edu/) then choose "Cluster" then "Adroit Cluster Shell Access".
 
 ![jupyter](https://tigress-web.princeton.edu/~jdh4/terminal_two_frames.png)
+
+The same can be done on Della.
 
 ## Running Python, R, MATLAB and XStata in a Web Browser
 
