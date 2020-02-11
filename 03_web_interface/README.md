@@ -14,7 +14,7 @@ To run commands on the Adroit head node, for example, browse to [MyAdroit](https
 
 The same can be done on Della.
 
-## Running Python, R, MATLAB and XStata in a Web Browser
+## Python, RStuido, MATLAB and XStata in a Web Browser
 
 To begin a session, click on "Interactive Apps" and then "Jupyter". You will need to choose the "Number of hours",
 "Number of cores" and "Memory allocated". Set "Number of cores" to 1 unless you are sure that your script has been
