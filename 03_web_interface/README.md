@@ -12,7 +12,7 @@ To run commands on the Adroit head node, for example, browse to [MyAdroit](https
 
 ![jupyter](https://tigress-web.princeton.edu/~jdh4/terminal_two_frames.png)
 
-**Users must follow the 10-10 rule on the head node of any cluster.** The 10-10 rule says that you can use up to 10% of the resources of the machine for up to 10 minutes. The head node of each cluster is shared by all users so this rule prevents someone from monopolizing the machine. You may be contacted by a system administrator if you fail to observe the 10-10 rule.
+**Users must follow the 10-10 rule on the head node of any cluster.** The 10-10 rule says that you can use up to 10% of the resources of the machine for up to 10 minutes. The head node of each cluster is shared by all users so this rule prevents someone from monopolizing the machine. The head notes should only be used for light work such as installing software and doing short test runs. You may be contacted by a system administrator if you fail to observe the 10-10 rule.
 
 ## Python, RStuido, MATLAB and XStata in a Web Browser
 
