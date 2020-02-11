@@ -111,6 +111,29 @@ Some things to think about:
   * Think about file systems! Different ones are useful for different things, have different sizes, and they don't tall talk to each other. (i.e. `/scratch` is local to a specific node, `/network/scratch/username` is networked to the entire cluster. This has implication for temporary files and data).
   * `/home` has a default 10 GB quota (or 1 GB for some) and should be used mostly for small results, code, and packages needed to run tasks. On the Tigress clusters there is a shared gpfs file system and Adroit has scratch storage. You can request an increase up to 10 GB for your `/home` dir if necessary for larger packages. The form is [here](https://forms.rc.princeton.edu/quota/).
 
+## Big Memory Serial Job example
+
+One advantage of using the HPC clusters over you laptop or workstation is the large amount of RAM available per node. You can run a serial job with 100's of GB of memory, for example. This can be very useful for working with a large data set in Python or R. To find out how much memory each node has, run the `snodes` command and look at the MEMORY column which is in megabytes.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=slurm-test    # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=190G       # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send email when job begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+module purge
+module load anaconda3
+conda activate myenv
+
+python myscript.py
+```
+
 ## Multithreaded Jobs
 
 Sometimes you might want to run jobs using technologies like OpenMP or MPI. These
