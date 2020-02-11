@@ -24,4 +24,4 @@ click on "New" in the upper right and choose "Python 3.7 [anaconda3/2019.10]" fr
 
 ![jupyter](https://tigress-web.princeton.edu/~jdh4/jupyter_notebook.png)
 
-![rstudio](https://tigress-web.princeton.edu/~jdh4/two_frames.png)
+![rstudio](https://tigress-web.princeton.edu/~jdh4/rstudio_two_frames.png)
