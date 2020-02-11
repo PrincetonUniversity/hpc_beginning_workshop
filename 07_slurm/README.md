@@ -111,7 +111,7 @@ Some things to think about:
   * Think about file systems! Different ones are useful for different things, have different sizes, and they don't tall talk to each other. (i.e. `/scratch` is local to a specific node, `/network/scratch/username` is networked to the entire cluster. This has implication for temporary files and data).
   * `/home` has a default 10 GB quota (or 1 GB for some) and should be used mostly for small results, code, and packages needed to run tasks. On the Tigress clusters there is a shared gpfs file system and Adroit has scratch storage. You can request an increase up to 10 GB for your `/home` dir if necessary for larger packages. The form is [here](https://forms.rc.princeton.edu/quota/).
 
-## Multicore Jobs
+## Multithreaded Jobs
 
 Sometimes you might want to run jobs using technologies like OpenMP or MPI. These
 are both ways of using more than one core. (There are certainly others, including
