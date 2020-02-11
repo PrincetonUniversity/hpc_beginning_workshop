@@ -23,3 +23,5 @@ resources you request, the more you will have to wait for your session to become
 click on "New" in the upper right and choose "Python 3.7 [anaconda3/2019.10]" from the drop-down menu.
 
 ![jupyter](https://tigress-web.princeton.edu/~jdh4/jupyter_notebook.png)
+
+![rstudio](https://tigress-web.princeton.edu/~jdh4/rstudio_interactive.png)
