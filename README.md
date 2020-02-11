@@ -1,7 +1,11 @@
 # Getting Started with the HPC Clusters
 
 ## About
-This guide presents an overview of using the HPC systems at Princeton. Specifically, it covers the HPC clusters as well as the storage system and visualization machine. Click on 00_quick_start above to get started.
+This guide presents an overview of using the HPC systems at Princeton. Specifically, it explains how to use Nobel, Adroit, Perseus, Tiger and Traverse. The visualization machine and storage system is also covered.
+
+## Prerequisites
+
+This workshop assumes that you have some knowledge of Linux and the Bash command line. To learn these skills see [this guide](https://github.com/gabeclass/introlinux).
 
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
