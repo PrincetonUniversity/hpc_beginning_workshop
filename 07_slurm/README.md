@@ -134,6 +134,8 @@ conda activate myenv
 python myscript.py
 ```
 
+The example above runs a python script using 1 cpu-core and 190 GB of memory.
+
 ## Multithreaded Jobs
 
 Sometimes you might want to run jobs using technologies like OpenMP or MPI. These
