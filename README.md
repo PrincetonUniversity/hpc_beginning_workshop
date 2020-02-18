@@ -11,7 +11,7 @@ This workshop assumes that you have some knowledge of Linux and the Bash command
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
 
 ## Useful links
-[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)
+[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)   
 [Research Computing FAQ](https://researchcomputing.princeton.edu/faq)  
 
 ## Getting Help
