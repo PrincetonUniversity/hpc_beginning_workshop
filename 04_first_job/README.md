@@ -1,6 +1,6 @@
-# HPC Quick Start
+# Running Your First Job on the Cluster
 
-This quick start guide provides a demonstration of how to transfer files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R. To obtain the example materials, run this command in a terminal on your **local machine**:
+This page provides a demonstration of how to transfer files to Adroit and run a job using the Slurm scheduler. There are examples for both Python and R. To obtain the example materials, run this command in a terminal on your **local machine**:
 
 ```
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
@@ -13,7 +13,7 @@ $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-$ cd hpc_beginning_workshop/00_quick_start/python_example
+$ cd hpc_beginning_workshop/04_first_job/python_example
 $ cat matrix_inverse.py
 $ cat job.slurm
 ```
@@ -111,7 +111,7 @@ Inverse(X) =
 In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-cd hpc_beginning_workshop/00_quick_start/R_example
+cd hpc_beginning_workshop/04_first_job/R_example
 $ cat data_analysis.R
 $ cat job.slurm
 $ head cdc.csv
