@@ -139,9 +139,9 @@ g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
 
 ```
-$ module load rh/devtoolset/7
+$ module load rh/devtoolset/8
 $ g++ --version
-g++ (GCC) 7.3.1 20180303 (Red Hat 7.3.1-5)
+g++ (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
 
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
