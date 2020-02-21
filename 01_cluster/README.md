@@ -193,15 +193,28 @@ $ <b>squeue</b>
  
  
 $ <b>who</b>
-mlenel   pts/0        2019-09-14 10:15 (vpn10-client-128-112-69-121.princeton.edu)
-root     pts/1        2019-09-03 12:45 (delta.princeton.edu)
-mlenel   pts/2        2019-09-14 10:16 (adroit4.princeton.edu)
-mlenel   pts/8        2019-09-14 13:55 (vpn10-client-128-112-71-230.princeton.edu)
-hherman  pts/10       2019-09-14 14:06 (vpn10-client-128-112-69-8.princeton.edu)
-lclingan pts/11       2019-09-14 14:33 (myadroit)
-lclingan pts/12       2019-09-14 14:34 (myadroit)
-jdh4     pts/14       2019-09-14 15:02 (vpn10-client-128-112-70-165.princeton.edu)
-tcyr     pts/15       2019-09-14 15:05 (nat-oitwireless-inside-vapornet100-10-9-77-247.princeton.edu)
+bill     pts/0        2020-02-18 08:17 (delta.princeton.edu)
+yongickc pts/1        2020-02-20 08:11 (chm-c07y213xjyvx.princeton.edu)
+zhengshi pts/2        2020-02-10 01:59 (:pts/25:S.0)
+root     pts/3        2020-02-19 13:54 (adroit-nfs2)
+keweiz   pts/4        2020-02-21 09:01 (vpn10-client-128-112-69-24.princeton.edu)
+haonan   pts/5        2020-02-21 15:23 (myadroit)
+jdh4     pts/9        2020-02-21 16:12 (tigressgateway1.princeton.edu)
+yongickc pts/10       2020-02-17 08:14 (chm-c07y213xjyvx.princeton.edu)
+zhengy   pts/11       2020-02-21 09:26 (nat-oitwireless-inside-vapornet100-10-8-2-157.princeton.edu)
+msislam  pts/12       2020-02-21 15:36 (nat-oitwireless-inside-vapornet100-10-9-125-87.princeton.edu)
+aidanm   pts/13       2020-02-21 10:03 (pni-10h01410k2euh.princeton.edu)
+meggl    pts/15       2020-02-21 10:04 (vpn10-client-128-112-71-193.princeton.edu)
+mrasna   pts/16       2020-02-21 14:54 (nat-oitwireless-inside-vapornet100-10-8-5-193.princeton.edu)
+nmishra  pts/17       2020-02-21 15:55 (nat-oitwireless-inside-vapornet100-10-9-111-71.princeton.edu)
+cfei     pts/19       2020-02-21 13:59 (nat-oitwireless-inside-vapornet100-10-9-154-116.princeton.edu)
+jdeobald pts/21       2020-02-21 11:42 (dynamic-oit-swiftnet-128-112-127-249.princeton.edu)
+dianw    pts/22       2020-02-21 11:54 (vpn10-client-128-112-69-89.princeton.edu)
+xiaoyuel pts/23       2020-02-21 14:26 (vpn10-client-128-112-71-50.princeton.edu)
+perezgiz pts/24       2020-02-21 14:07 (josko-eth-dongle.princeton.edu)
+zhengshi pts/25       2020-02-12 14:41 (:pts/20:S.0)
+keweiz   pts/26       2020-02-21 14:30 (vpn10-client-128-112-69-24.princeton.edu)
+keweiz   pts/27       2020-02-21 16:09 (vpn10-client-128-112-69-24.princeton.edu)
 
 
 
