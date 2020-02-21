@@ -14,8 +14,12 @@
   * A shorthand way to refer to the number of
   processor cores (usually physical) of a CPU
   in a node.
-  
+
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
+
+### No Internet Access on the Compute Nodes
+
+For security reasons the compute nodes do not have internet access. You need to download all needed files before submitting the job to the batch scheduler.
 
 ## Some Clusters At Princeton
 For more detail, see:
@@ -204,15 +208,15 @@ tcyr     pts/15       2019-09-14 15:05 (nat-oitwireless-inside-vapornet100-10-9-
 $ <b>checkquota</b>
           Storage/size quota filesystem report for user: ceisgrub
 Filesystem               Mount                 Used   Limit  MaxLim Comment
-Adroit home              /home                2.8GB   9.3GB    10GB 
+Adroit home              /home                9.1GB   9.3GB    10GB 
 Adroit scratch           /scratch                 0       0       0 
-Adroit scratch network   /scratch/network         0       0       0 
+Adroit scratch network   /scratch/network     1.7GB    93GB   100GB 
 
           Storage number of files used report for user: ceisgrub
 Filesystem               Mount                 Used   Limit  MaxLim Comment
-Adroit home              /home                17.2K    975K    1.0M 
-Adroit scratch           /scratch                 2       0       0 
-Adroit scratch network   /scratch/network         1       0       0 
+Adroit home              /home                80.5K    975K    1.0M 
+Adroit scratch           /scratch                 1       0       0 
+Adroit scratch network   /scratch/network     18.9K    9.8M   10.5M 
 
 For quota increase requests please use this website:
 
