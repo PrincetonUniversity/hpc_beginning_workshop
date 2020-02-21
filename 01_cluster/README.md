@@ -15,9 +15,15 @@
   processor cores (usually physical) of a CPU
   in a node.
 
+![Nodes to Cores](https://computing.llnl.gov/tutorials/parallel_comp/images/nodesNetwork.gif)
+
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
 
-### Reasons to Use the Clusters
+### No Internet Access on the Compute Nodes
+
+For security reasons the compute nodes do not have internet access. You need to download all needed files before submitting the job to the batch scheduler.
+
+## Reasons to Use the Clusters
 
 - Lots of processing capacity (e.g., you could use 1000 CPU-cores for a single job)  
 - Nodes have 100's GB of memory  
@@ -26,10 +32,6 @@
 - Keep your laptop free of use by running the work on the clusters
 - GPUs are available in large numbers on TigerGPU and Traverse
 - There is a team of people maintaining and supporting the clusters
-
-### No Internet Access on the Compute Nodes
-
-For security reasons the compute nodes do not have internet access. You need to download all needed files before submitting the job to the batch scheduler.
 
 ## Some Clusters At Princeton
 For more detail, see:
