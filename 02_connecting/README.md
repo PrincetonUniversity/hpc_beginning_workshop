@@ -16,8 +16,9 @@ These instructions assume you are:
   here. (Note: You will need to login using your university credentials).
 
 ## SSH
+
 In order to connect to the university computing clusters, you will need an SSH
-(secure shell) client.
+(secure shell) client. If you have trouble connecting then see [this page](https://researchcomputing.princeton.edu/ssh).
 
 On MacOS and Linux, the default terminal application has such a client built-in.
 No download is necessary!
