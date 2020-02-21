@@ -147,3 +147,15 @@ g++ (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
 
 Common errors with the `rh` module not loaded include `g++: error: unrecognized command line option -std=c++17` and `'for' loop initial declarations are only allowed in C99 mode`.
+
+## Vectorization
+
+Modern CPUs can perform more than one operation per cycle in vector execution units. A common example is elementwise vector addition. [Vectorized code](https://en.wikipedia.org/wiki/Automatic_vectorization) generated for one processor will not run on (older) processors that do not support those instructions. Such an attempt will produce an `illegal instruction` error.
+
+### TigerCPU vs. TigerGPU
+
+The processor on `tigercpu` supports AVX512 instructions while those on `tigergpu` can only do `AVX2`. Be sure to compile codes for `tigercpu` by ssh-ing to `tigercpu.princeton.edu` and compile codes for `tigergpu` by ssh-ing to `tigergpu.princeton.edu`.
+
+### Della
+
+Della is composed on 5 different Intel Xeon microarchitectures: Ivybridge (AVX), Haswell (AVX2), Broadwell (AVX2), SkyLake (AVX512) and Cascade Lake (AVX512).
