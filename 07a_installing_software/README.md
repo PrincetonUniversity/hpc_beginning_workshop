@@ -48,24 +48,24 @@ Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 To see exactly what a module is doing use `module show <module-name>`. Modules only change the values of environment variables. They do not install or uninstall software. For example:
 
 ```
-$ module show cudatoolkit
+$ module show cudatoolkit/10.2
 -------------------------------------------------------------------
-/usr/local/share/Modules/modulefiles/cudatoolkit/9.2:
+/usr/local/share/Modules/modulefiles/cudatoolkit/10.2:
 
-module-whatis	 Sets up cudatoolkit92 9.2 in your environment 
-prepend-path	 PATH /usr/local/cuda-9.2/bin 
-prepend-path	 LD_LIBRARY_PATH /usr/local/cuda-9.2/lib64:/usr/lib64/nvidia 
-prepend-path	 LIBRARY_PATH /usr/local/cuda-9.2/lib64:/usr/lib64/nvidia 
-prepend-path	 MANPATH /usr/local/cuda-9.2/doc/man 
-append-path	 -d   LDFLAGS -L/usr/local/cuda-9.2/lib64 -L/usr/lib64/nvidia 
-append-path	 -d   INCLUDE -I/usr/local/cuda-9.2/include 
-append-path	 CPATH /usr/local/cuda-9.2/include 
-append-path	 -d   FFLAGS -I/usr/local/cuda-9.2/include 
-append-path	 -d   LOCAL_LDFLAGS -L/usr/local/cuda-9.2/lib64 -L/usr/lib64/nvidia 
-append-path	 -d   LOCAL_INCLUDE -I/usr/local/cuda-9.2/include 
-append-path	 -d   LOCAL_CFLAGS -I/usr/local/cuda-9.2/include 
-append-path	 -d   LOCAL_FFLAGS -I/usr/local/cuda-9.2/include 
-append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-9.2/include 
+module-whatis	 Sets up cudatoolkit102 10.2 in your environment 
+prepend-path	 PATH /usr/local/cuda-10.2/bin 
+prepend-path	 LD_LIBRARY_PATH /usr/local/cuda-10.2/lib64 
+prepend-path	 LIBRARY_PATH /usr/local/cuda-10.2/lib64 
+prepend-path	 MANPATH /usr/local/cuda-10.2/doc/man 
+append-path	 -d   LDFLAGS -L/usr/local/cuda-10.2/lib64 
+append-path	 -d   INCLUDE -I/usr/local/cuda-10.2/include 
+append-path	 CPATH /usr/local/cuda-10.2/include 
+append-path	 -d   FFLAGS -I/usr/local/cuda-10.2/include 
+append-path	 -d   LOCAL_LDFLAGS -L/usr/local/cuda-10.2/lib64 
+append-path	 -d   LOCAL_INCLUDE -I/usr/local/cuda-10.2/include 
+append-path	 -d   LOCAL_CFLAGS -I/usr/local/cuda-10.2/include 
+append-path	 -d   LOCAL_FFLAGS -I/usr/local/cuda-10.2/include 
+append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-10.2/include 
 -------------------------------------------------------------------
 ```
 
