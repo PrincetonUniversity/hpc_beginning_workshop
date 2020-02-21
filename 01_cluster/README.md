@@ -45,6 +45,8 @@ For more detail, see:
 
   > Proposals for the large  cluster systems should be submitted as PDF or MS Word documents not to exceed 3 pages. The proposal, which can be submitted through an online form . . . etc.
 
+*IMPORTANT*: The Tiger cluster is designed for large parallel jobs. In an effort to dissaude users from running small jobs on Tiger, such as serial R jobs, the scheduler has been configured to penalize these submissions by causing long queue times. Della is ideal for serial R jobs. If you only have an account on Tiger and you want to run several small R jobs then please write to cses@princeton.edu to request an account on Della. Be sure to explain the situation.
+
 ## The Filesystems
 
 ![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
