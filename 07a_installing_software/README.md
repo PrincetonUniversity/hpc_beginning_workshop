@@ -150,7 +150,7 @@ Common errors with the `rh` module not loaded include `g++: error: unrecognized 
 
 ## Vectorization
 
-Modern CPUs can perform more than one operation per cycle in vector execution units. A common example is elementwise vector addition. [Vectorized code](https://en.wikipedia.org/wiki/Automatic_vectorization) generated for one processor will not run on (older) processors that do not support those instructions. Such an attempt will produce an `illegal instruction` error.
+Modern CPUs can perform more than one operation per cycle using vector execution units. A common example is elementwise vector addition. [Vectorized code](https://en.wikipedia.org/wiki/Automatic_vectorization) generated for one processor will not run on another processor unless it supports those instructions. Such an attempt will produce an `illegal instruction` error if the instructions are not supported.
 
 ### TigerCPU vs. TigerGPU
 
