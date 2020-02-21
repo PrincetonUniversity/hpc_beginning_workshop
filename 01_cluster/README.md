@@ -55,6 +55,8 @@ For more detail, see:
 
 *IMPORTANT*: Tigress is for non-volatile files only. Do not make the mistake of writing your job output here. Users are tempted to do this because tigress is backed-up while /scratch/gpfs is not. However, this is a mistake and you may adversely affect other users by writing or reading job files from /tigress for your production runs.
 
+Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to either of them.
+
 ## Learn More About Adroit by Running Commands
 
 Type each command below and examine the output:
