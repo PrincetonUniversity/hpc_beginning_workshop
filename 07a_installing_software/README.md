@@ -154,8 +154,8 @@ Modern CPUs can perform more than one operation per cycle using vector execution
 
 ### TigerCPU vs. TigerGPU
 
-The processor on `tigercpu` supports AVX512 instructions while those on `tigergpu` can only do `AVX2`. Be sure to compile codes for `tigercpu` by ssh-ing to `tigercpu.princeton.edu` and compile codes for `tigergpu` by ssh-ing to `tigergpu.princeton.edu`.
+The processor on `tigercpu` supports AVX512 instructions while those on `tigergpu` can only do `AVX2`. Be sure to compile codes for `tigercpu` by ssh-ing to `tigercpu.princeton.edu` and compile codes for `tigergpu` by ssh-ing to `tigergpu.princeton.edu`. If you ssh to `tiger.princeton.edu` then you will land on `tigercpu.princeton.edu`.
 
 ### Della
 
-Della is composed on 5 different Intel Xeon microarchitectures: Ivybridge (AVX), Haswell (AVX2), Broadwell (AVX2), SkyLake (AVX512) and Cascade Lake (AVX512).
+Della is composed of 5 different Intel Xeon microarchitectures: Ivybridge (AVX), Haswell (AVX2), Broadwell (AVX2), Skylake (AVX-512) and Cascade Lake (AVX-512). The head node `della5` is Broadwell. If you compile a code on the head node it will not run on the Ivybridge nodes. Similarly, it will not take advantage of the AVX-512 instructions on the Skylake and Cascade Lake nodes unless you cross-compile (i.e., using `-xHost` with the Intel compiler will produce code for Broadwell).
