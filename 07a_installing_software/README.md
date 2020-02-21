@@ -125,6 +125,8 @@ See [this guide](https://github.com/PrincetonUniversity/installing_R_packages).
 
 Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
 
+Note that using commands like `sudo yum install` or `sudo apt-get intall` will not work.
+
 ## GNU GCC
 
 Software that comes in source form must be compiled before it can be installed in your `/home` directory. One popular tool suite for doing this is the GNU Compiler Collection (GCC) which is composed of compilers, a linker, libraries and tools.
