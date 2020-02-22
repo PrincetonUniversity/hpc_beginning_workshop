@@ -186,7 +186,7 @@ For example, the script below uses 32 cpu-cores over two nodes:
 #!/bin/bash
 #SBATCH --job-name=multinode     # create a short name for your job
 #SBATCH --nodes=2                # node count
-#SBATCH --ntasks=16              # total number of tasks across all nodes
+#SBATCH --ntasks-per-node=16     # number of tasks per node
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=2G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
@@ -327,9 +327,9 @@ following script that wraps a Python job in tensorflow-gpu.
 
 module purge
 module load anaconda3
-conda activate tf-gpu
+conda activate tf2-gpu
 
-srun python my-tf-script.py
+python my-tf-script.py
 ```
 
 **IMPORTANT**: *Only code that has been explicitly written to run on GPUs can take advantage of GPUs. Adding the `--gres` option to your Slurm script for a CPU code will not speed-up the execution time but you will be charged for requesting the GPU.*
