@@ -138,24 +138,14 @@ The example above runs a python script using 1 cpu-core and 190 GB of memory.
 
 ## Multithreaded Jobs
 
-Sometimes you might want to run jobs using technologies like OpenMP or MPI. These
-are both ways of using more than one core. (There are certainly others, including
-array jobs.)
-
-For these, you'll be adjusting two parameters in your SLURM script, but you
-will need to be aware of two factors--whether you want more tasks or more cores
-per task.
-
-Let's say I want to run R substituting the Intel MKL BLAS for the built-in. MKL
-is mulithreading and will let me use more than one core on a node. (Though it
-will not let me use more than one node--for that you need MPI!)
+Some software like the linear algebra routines in NumPy and MATLAB are able to use multiple CPU-cores using threading libraries like OpenMP or Intel Threading Building Blocks.
 
 ```bash
 #!/bin/bash
 #SBATCH --job-name=multicore     # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
-#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:15:00          # maximum time needed (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
@@ -165,16 +155,13 @@ will not let me use more than one node--for that you need MPI!)
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel intel-mkl
+module load anaconda3
 
-LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so /usr/bin/Rscript test.R
+srun python myscript.py
 ```
 
 Here I adjust the `--cpus-per-task` parameter to tell SLURM that I want my single task to
-be able to use three cores (since MKL will happily use the CPU power that way).
-
-(Unless you're an R user, don't worry too much about the `LD_PRELOAD`, that's
-just me forcing R to use the BLAS library that I would like, i.e. MKL)
+be able to use four cores.
 
 ## Multinode Jobs
 
