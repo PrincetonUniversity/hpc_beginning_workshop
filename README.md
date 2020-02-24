@@ -7,6 +7,8 @@ This guide presents an overview of using the HPC systems at Princeton. Specifica
 
 This workshop assumes that you have some knowledge of Linux and the Bash command line. To learn these skills see [this guide](https://github.com/gabeclass/introlinux).
 
+In particular, you should be able to edit basic files on Adroit.  A simple text editor for this purpose found on almost all Linux systems is [nano](https://www.nano-editor.org/).
+
 ## Workshop Survey
 [Click here](https://forms.gle/WhoAcb1J82XVTqq38)
 
