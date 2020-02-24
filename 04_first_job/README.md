@@ -86,6 +86,7 @@ ls -l
 Submit the job by running the following command:
 
 ```
+# use a text editor to replace <YourNetID> in job.slurm with your actual NetID
 sbatch job.slurm
 ```
 
@@ -195,6 +196,7 @@ ls -l
 Submit the job by running the following command:
 
 ```
+# use a text editor to replace <YourNetID> in job.slurm with your actual NetID
 sbatch job.slurm
 ```
 
