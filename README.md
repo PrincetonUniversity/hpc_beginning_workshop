@@ -10,7 +10,7 @@ This workshop assumes that you have some knowledge of Linux and the Bash command
 In particular, you should be able to edit basic files on Adroit.  A simple text editor for this purpose found on almost all Linux systems is [nano](https://www.nano-editor.org/).
 
 ## Workshop Survey
-[Click here](https://forms.gle/WhoAcb1J82XVTqq38)
+[Click here](https://bit.ly/hpcintro_24feb20)
 
 ## Useful links
 [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)   
