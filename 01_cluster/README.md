@@ -15,9 +15,9 @@
   processor cores (usually physical) of a CPU
   in a node.
 
-![Nodes to Cores](https://computing.llnl.gov/tutorials/parallel_comp/images/nodesNetwork.gif)
-
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
+
+![Nodes to Cores](https://computing.llnl.gov/tutorials/parallel_comp/images/nodesNetwork.gif)
 
 ### No Internet Access on the Compute Nodes
 
