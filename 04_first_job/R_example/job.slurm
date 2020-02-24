@@ -8,6 +8,5 @@
 #SBATCH --mail-type=begin        # send mail when process begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
 Rscript data_analysis.R
