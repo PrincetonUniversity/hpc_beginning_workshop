@@ -75,6 +75,14 @@ For more detail, see:
 
 Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to either of them.
 
+### Where should I put my files?
+
+* **Code** -- somewhere under your home-directory tree is ok (if these are smaller files that aren't too huge)
+* **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). One such are *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
+* **Longer term results for archiving** -- move it to `/tigress` or, if possible, to `/projects` (preferred).  These *are* backed up
+
+**WARNING: Why you shouldn't put your on-the-fly code output files on `/tigress` or `/projects` -- the curse of continual backup**
+
 ## Learn More About Adroit by Running Commands
 
 Type each command below and examine the output:
