@@ -61,36 +61,6 @@ module load anaconda3
 srun python svd_np.py
 ```
 
-Step-by-step directions:
-
-```
-$ cd /gpu_programming_intro/05_multithreaded_numpy
-
-# modify job.slurm by setting --cpus-per-task=2
-$ sbatch job.slurm
-# view the output file and note the execution time
-
-# modify job.slurm by setting --cpus-per-task=4
-$ sbatch job.slurm
-# view the output file and note the execution time
-
-# modify job.slurm by setting --cpus-per-task=8
-$ sbatch job.slurm
-# view the output file and note the execution time
-```
-<!--
-Run jobs to fill in the table below:
-
-| cpus-per-task (or threads)| execution time (s) |
-|:--------------------------:|:--------:|
-| 1                          |  4.2     |
-| 2                          |          |
-| 4                          |          |
-| 8                          |          |
-| 16                         |          |
-| 32                         |          |
--->
-
 The following data was found using one of the Skylake nodes on Adroit:
 
 | cpus-per-task (or threads)| execution time (s) | speed-up ratio |  parallel efficiency |
