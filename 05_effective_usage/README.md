@@ -73,7 +73,7 @@ The following data was found using one of the Skylake nodes on Adroit:
 | 32                         |  0.71    |   5.9     |   18%               |
 
 We see that by dividing the computation across several threads, which run on the CPU-cores, the execution time
-is dramatically reduced. The same can be done with GPUs which have 1000's of cores.
+is dramatically reduced. What is the best choice for `--cpus-per-task` for this case? Clearly, using 32 CPU-cores does not lead to optimal performance.
 
 A similar procedure can be used to find the optimal number of CPU-cores for MPI codes and the optimal number of GPUs for codes that use GPUs.
 
