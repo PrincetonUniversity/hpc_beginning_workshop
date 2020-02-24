@@ -78,6 +78,9 @@ Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to eithe
 ### Where should I put my files?
 
 * **Code** -- somewhere under your home-directory tree is ok (if these are smaller files that aren't too huge)
+* **Temp files your code generates while it runs** -- depends whether you want to handle the housekeeping of removing these files yourself or delegate the housekeeping to SLURM:
+    + Have your script remove temporary files -- save them to `/scratch` (this is a scratch area local to each cluster; not auto-purged, so send "workspace" files here if your script handles deleting them)
+    + Have SLURM remove temporary files -- save them to `/tmp` (this is an alias for the same physical disk area as `/scratch`, but if you save to `/tmp`, SLURM will automatically remove anything that got written here when your SLURM job ends
 * **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). One such are *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
 * **Longer term results for archiving** -- move it to `/tigress` or, if possible, to `/projects` (preferred).  These *are* backed up
 
