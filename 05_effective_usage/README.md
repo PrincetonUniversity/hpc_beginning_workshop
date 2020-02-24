@@ -4,7 +4,7 @@ The more resources you request, the longer your job will spend in the queue wait
 
 - Number of CPU-cores  
 - Number of GPUs  
-- Amount of time requirement to run the job  
+- Amount of time required to run the job  
 - Amount of memory (RAM) needed  
 
 See [this page](https://researchcomputing.princeton.edu/node/7121) to understand how to choose your memory requirements.
