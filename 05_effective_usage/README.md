@@ -1,7 +1,13 @@
 # Effective Usage of the Cluster Resources
 
-Here we emphasize don't run serial jobs in parallel. Don't use GPUs for non-GPU codes. Don't request excess RAM. Don't request
-excess time. Maybe cover the abuse of /tigress and /projects.
+The more resources you request, the longer your job will spend in the queue waiting for the resources to become available. Try to specifiy your minimum requirements. Here are the key pieces:
+
+- Number of CPU-cores  
+- Number of GPUs  
+- Amount of time requirement to run the job  
+- Amount of memory (RAM) needed  
+
+See [this page](https://researchcomputing.princeton.edu/node/7121) to understand how to choose your memory requirements.
 
 ## How to Find the Optimal Number of Threads for Multithreaded Codes
 
