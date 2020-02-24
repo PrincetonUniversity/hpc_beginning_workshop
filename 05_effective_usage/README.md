@@ -44,7 +44,7 @@ print("trace(s): ", s.sum())
 
 Here is an appropriate Slurm script:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=py-svd        # create a short name for your job
 #SBATCH --nodes=1                # node count
@@ -75,8 +75,5 @@ The following data was found using one of the Skylake nodes on Adroit:
 We see that by dividing the computation across several threads, which run on the CPU-cores, the execution time
 is dramatically reduced. The same can be done with GPUs which have 1000's of cores.
 
-## How to Find the Optimal Number of Processes for MPI Codes
-
-## How to Find the Optimal Number of GPUs for multi-GPU Codes
-
+A similar procedure can be used to find the optimal number of CPU-cores for MPI codes and the optimal number of GPUs for codes that use GPUs.
 
