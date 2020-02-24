@@ -102,6 +102,11 @@ SSH to copy files. I'll discuss its use at greater length when [talking about th
 command line utils](/hpc_beginning_workshop/util/).
 
 
+## SSH Keys: `ssh` and `scp` without typing passwords
+
+Typing passwords every time you want to connect to a machine or, more annoying, every time you want to copy a file to/from a remote machine gets annoying quickly.  One solution is to enable passwordless login/remote operations by generating a public/private pair of *ssh keys* and using them to negotiate the connection.  The procedure is explained in [this guide](https://github.com/PrincetonUniversity/removing_tedium/tree/master/02_passwordless_logins).
+
+
 ## <a name="tmux">Staying connected (tmux)</a>
 
 This comes up very frequently when you're connected to Nobel, where tasks are
