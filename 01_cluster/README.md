@@ -21,7 +21,11 @@
 
 ### No Internet Access on the Compute Nodes
 
-For security reasons the compute nodes do not have internet access. You need to download all needed files before submitting the job to the batch scheduler.
+For security reasons the compute nodes do not have internet access. You access the compute nodes, and run programs or *jobs* on the compute nodes, via a *scheduler* (an "uber-program" that doles out access to the cores and RAM to various other programs all competing for attention).
+
+Princeton uses a scheduler called *SLURM*.  Running a (non-trivial) program on our clusters consists of writing a "SLURM script" to request computational resources.  And then you wait your turn in a *queue* while SLURM manages all competing requests (yours + those of others on the system).
+
+**NB:** You need to make sure all needed files are present on the cluster before submitting the job to the batch scheduler.
 
 ## Reasons to Use the Clusters
 
