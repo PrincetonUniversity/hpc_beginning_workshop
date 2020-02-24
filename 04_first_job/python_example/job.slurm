@@ -8,7 +8,6 @@
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH -p introhpc              # REMOVE THIS LINE AFTER THE WORKSHOP
 
 module purge
 module load anaconda3
