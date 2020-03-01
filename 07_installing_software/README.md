@@ -148,7 +148,7 @@ g++ (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
 
-Common errors with the `rh` module not loaded include `g++: error: unrecognized command line option -std=c++17` and `'for' loop initial declarations are only allowed in C99 mode`.
+Common errors with the `rh` module not loaded include `g++: error: unrecognized command line option -std=c++17`, `gcc: error: unrecognized command line option '-std=c++14'` and `'for' loop initial declarations are only allowed in C99 mode`.
 
 ## Vectorization
 
