@@ -55,7 +55,7 @@ Next, while still on your laptop, run the following `ssh` command to create a di
 ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
 ```
 
-Note:If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
+Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
 
 Transfer the Python and Slurm scripts from your laptop to Adroit using the `scp` (secure copy) command:
 
