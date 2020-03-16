@@ -50,7 +50,7 @@ Below is the corresponding Slurm script (`job.slurm`):
 module purge
 module load cudatoolkit
 
-srun ./hello_world_gpu
+./hello_world_gpu
 ```
 
 The job can be submitted with:
