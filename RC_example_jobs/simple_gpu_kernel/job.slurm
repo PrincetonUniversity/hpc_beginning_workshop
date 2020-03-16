@@ -13,4 +13,4 @@
 module purge
 module load cudatoolkit
 
-srun ./hello_world_gpu
+./hello_world_gpu
