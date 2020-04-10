@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# this script will download and install a CPU-only version of NAMD with MPI
+# you will need "module load intel intel-mpi" in your Slurm script
+
 wget https://www.ks.uiuc.edu/Research/namd/2.13/download/412487/NAMD_2.13_Source.tar.gz
 tar xzf NAMD_2.13_Source.tar.gz
 cd NAMD_2.13_Source
