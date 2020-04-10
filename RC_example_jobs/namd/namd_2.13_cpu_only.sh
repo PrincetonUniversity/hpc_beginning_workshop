@@ -25,7 +25,7 @@ mv tcl8.5.9-linux-x86_64 tcl
 mv tcl8.5.9-linux-x86_64-threaded tcl-threaded
 
 cd arch
-https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-intel.arch
+wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-intel.arch
 cd ..
 ./config Linux-x86_64-intel --charm-arch mpi-linux-x86_64
 cd Linux-x86_64-intel
