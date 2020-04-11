@@ -222,7 +222,7 @@ srun ./a.out
 
 ## Array Jobs
 
-Array jobs provide a different way to parallelize your computations. They are used when you need to run the same job a large number of times with only slight differences between the jobs. For instance, let's say that you need to run 100 jobs, each with a different seed value for the random number generator. You could submit 100 jobs individually or by submitting just one array job.
+Array jobs provide a different way to parallelize your computations. They are used when you need to run the same job a large number of times with only slight differences between the jobs. For instance, let's say that you need to run 100 jobs, each with a different seed value for the random number generator. This can be done with a single array job.
 
 Below is an example Slurm script where there are 5 jobs in the array:
 
