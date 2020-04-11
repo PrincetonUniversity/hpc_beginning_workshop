@@ -292,7 +292,7 @@ Note that it is normal to see `(QOSMaxJobsPerUserLimit)` listed in the
 'NODELIST(REASON)' column of `squeue` output for array jobs. It indicates that you can only have
 a certain number of jobs actively queued. Just wait and all the jobs of the array will run.
 
-Each job in the array will have same values for `nodes`, `ntasks`, `cpus-per-task`, `time` and so on. This means that each of the individual jobs within the array can use multiple CPU-cores or nodes.
+Each job in the array will have the same values for `nodes`, `ntasks`, `cpus-per-task`, `time` and so on. This means that job arrays can be used to handle everything from serial jobs to large multi-node cases.
 
 ## GPUs
 
