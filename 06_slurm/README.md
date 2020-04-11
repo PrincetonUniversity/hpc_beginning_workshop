@@ -269,7 +269,7 @@ For an R script you can use:
 args <- commandArgs(TRUE)
 idx <- as.numeric(args[1])
 parameters <- c(2.5, 5.0, 7.5, 10.0, 12.5)
-myparam <- parameters[idx]
+myparam <- parameters[idx + 1]
 # execute the rest of the script using myparam
 ```
 
