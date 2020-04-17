@@ -1,7 +1,7 @@
 NAMD_ARCH = Linux-x86_64-gcc
 CHARMARCH = multicore-linux-x86_64
 
-CXX = g++
-CXXOPTS = -Ofast -march=native 
-CC = gcc
-COPTS = -Ofast -march=native
+CXX = icpc -std=c++11
+CXXOPTS = -Ofast -xHost 
+CC = icc
+COPTS = -Ofast -xHost
