@@ -9,6 +9,7 @@ cd NAMD_2.13_Source
 tar xf charm-6.8.2.tar
 cd charm-6.8.2
 
+module purge
 module load intel intel-mpi
 module list
 env MPICXX=mpicxx ./build charm++ mpi-linux-x86_64 --with-production
