@@ -1,1 +1,7 @@
-CC
+NAMD_ARCH = Linux-x86_64-gcc-cuda
+CHARMARCH = mpi-linux-x86_64-cuda
+
+CXX = g++ -std=c++11
+CXXOPTS = -Ofast -march=native 
+CC = gcc
+COPTS = -Ofast -march=native
