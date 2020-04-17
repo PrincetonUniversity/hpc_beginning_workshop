@@ -35,7 +35,13 @@ module load cudatoolkit/10.1
 
 cd arch
 wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-gcc.arch
-wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-gcc.cuda
+#wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-gcc.cuda
+#wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-gcc.arch
+#wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-gcc.cuda
+#touch Linux-x86_64-gcc.cuda
+#touch Linux-x86_64-gcc.fftw
+#touch Linux-x86_64-gcc.tcl
+#touch Linux-x86_64-gcc.base
 cd ..
 ./config Linux-x86_64-gcc --with-cuda --cuda-prefix /usr/local/cuda-10.1 \
 --cuda-gencode arch=compute_60,code=sm_60 --charm-arch multicore-linux-x86_64
