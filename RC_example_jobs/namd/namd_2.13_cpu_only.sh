@@ -12,6 +12,7 @@ cd charm-6.8.2
 module purge
 module load intel intel-mpi
 module list
+
 env MPICXX=mpicxx ./build charm++ mpi-linux-x86_64 --with-production
 cd mpi-linux-x86_64/tests/charm++/megatest
 make pgm
