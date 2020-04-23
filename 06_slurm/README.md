@@ -294,6 +294,50 @@ a certain number of jobs actively queued. Just wait and all the jobs of the arra
 
 Each job in the array will have the same values for `nodes`, `ntasks`, `cpus-per-task`, `time` and so on. This means that job arrays can be used to handle everything from serial jobs to large multi-node cases.
 
+## Running Jobs in Parallel as a Single SLURM Job
+
+If we have the for example 3 jobs and we want to run them in parallel as a single SLURM job, we can use the following Slurm script:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=poisson       # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=3               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send email when job begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+module purge
+module load anaconda3
+
+srun -N 1 -n 1 python demo.py 0 &
+srun -N 1 -n 1 python demo.py 1 &
+srun -N 1 -n 1 python demo.py 2 &
+wait
+```
+
+Since we want to run the jobs in parallel, we place the & character at the end of each srun command so that each job runs in the background. The wait command serves as a barrier until all the background jobs are complete. Since sruns cannot share nodes by default, we need to request three nodes and three tasks, one for each srun. In the execution command we then distribute the resources by giving each srun one task on one node. Notice the wait command at the end which ensures that the SLURM job does not exit until all the sruns have finished.
+
+NOTE: here the programs run in parallel, which means that we only need to request the time it takes for one program to run (e.g. the longest running program if they have different runtimes).
+
+If this sbatch script is called run.sh, we submit it to the SLURM queue with the command:
+
+sbatch run.sh
+which will put the jobs in the SLURM queue as one job. An example output is:
+
+Starting job 2 on tiger-h21c1n21.
+Finished job 2...
+
+Starting job 1 on tiger-h21c1n8.
+Finished job 1...
+
+Starting job 0 on tiger-h21c1n20.
+Finished job 0...
+Notice how the print order is not necessarily in sequence, since the jobs are being run in parallel. Also, notice that the hostnames are all different, unlike what we saw in the example with sequential execution.
+
 ## GPUs
 
 If your code can use a GPU, you might want to request one, as does the
