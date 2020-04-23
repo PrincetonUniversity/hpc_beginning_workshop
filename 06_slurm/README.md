@@ -294,9 +294,9 @@ a certain number of jobs actively queued. Just wait and all the jobs of the arra
 
 Each job in the array will have the same values for `nodes`, `ntasks`, `cpus-per-task`, `time` and so on. This means that job arrays can be used to handle everything from serial jobs to large multi-node cases.
 
-## Running Multiple Independent Jobs in Parallel as a Single SLURM Job
+## Running Multiple Jobs in Parallel as a Single SLURM Job
 
-In general one should use Job Arrays for this task but in some cases more control is needed. If we have, say, 3 jobs and we want to run them in parallel as a single SLURM job, we can use the following script:
+In general one should use Job Arrays for this task but in some cases different executables need to run simultaneously. In the example below all the executables are the same but this is not requred. If we have, say, 3 jobs and we want to run them in parallel as a single SLURM job, we can use the following script:
 
 ```bash
 #!/bin/bash
