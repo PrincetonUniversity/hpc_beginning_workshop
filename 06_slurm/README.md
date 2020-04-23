@@ -296,7 +296,7 @@ Each job in the array will have the same values for `nodes`, `ntasks`, `cpus-per
 
 ## Running Jobs in Parallel as a Single SLURM Job
 
-If we have the for example 3 jobs and we want to run them in parallel as a single SLURM job, we can use the following Slurm script:
+If we have, say, 3 jobs and we want to run them in parallel as a single SLURM job, we can use the following script:
 
 ```bash
 #!/bin/bash
@@ -321,22 +321,7 @@ wait
 
 Since we want to run the jobs in parallel, we place the & character at the end of each srun command so that each job runs in the background. The wait command serves as a barrier until all the background jobs are complete. Since sruns cannot share nodes by default, we need to request three nodes and three tasks, one for each srun. In the execution command we then distribute the resources by giving each srun one task on one node. Notice the wait command at the end which ensures that the SLURM job does not exit until all the sruns have finished.
 
-NOTE: here the programs run in parallel, which means that we only need to request the time it takes for one program to run (e.g. the longest running program if they have different runtimes).
-
-If this sbatch script is called run.sh, we submit it to the SLURM queue with the command:
-
-sbatch run.sh
-which will put the jobs in the SLURM queue as one job. An example output is:
-
-Starting job 2 on tiger-h21c1n21.
-Finished job 2...
-
-Starting job 1 on tiger-h21c1n8.
-Finished job 1...
-
-Starting job 0 on tiger-h21c1n20.
-Finished job 0...
-Notice how the print order is not necessarily in sequence, since the jobs are being run in parallel. Also, notice that the hostnames are all different, unlike what we saw in the example with sequential execution.
+The programs run in parallel, which means that we only need to request the time it takes for one program to run (e.g., the longest running program if they have different runtimes).
 
 ## GPUs
 
