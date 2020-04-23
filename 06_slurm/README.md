@@ -323,6 +323,8 @@ Since we want to run the jobs in parallel, we place the & character at the end o
 
 The programs run in parallel, which means that we only need to request the time it takes for one program to run (e.g., the longest running program if they have different runtimes).
 
+For more see "MULTIPLE PROGRAM CONFIGURATION" on [this page](https://slurm.schedmd.com/srun.html).
+
 ## GPUs
 
 If your code can use a GPU, you might want to request one, as does the
