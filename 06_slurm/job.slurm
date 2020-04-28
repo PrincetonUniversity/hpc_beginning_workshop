@@ -7,6 +7,6 @@
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-user=<eham>@princeton.edu
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 echo 'Hello world!'
