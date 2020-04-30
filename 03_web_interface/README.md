@@ -22,10 +22,14 @@ explicitly parallelized. Click "Launch" and then when your session is ready clic
 resources you request, the more you will have to wait for your session to become available. When your session starts,
 click on "New" in the upper right and choose "Python 3.7 [anaconda3/2019.10]" from the drop-down menu.
 
+### Jupyter
 ![jupyter](https://tigress-web.princeton.edu/~jdh4/jupyter_notebook.png)
 
+### RStudio
 ![rstudio](https://tigress-web.princeton.edu/~jdh4/rstudio_two_frames.png)
 
+### MATLAB
 ![matlab](https://tigress-web.princeton.edu/~jdh4/matlab_two_frames.png)
 
+### Stata
 ![stata](https://tigress-web.princeton.edu/~jdh4/stata_two_frames.png)
