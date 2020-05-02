@@ -10,7 +10,7 @@
 
 + Open a terminal (e.g., Terminal, PowerShell, PuTTY) [<a href="https://researchcomputing.princeton.edu/education/training/hardware-and-software-requirements-picscie-workshops" target="_blank">click here</a> for help]
 
-+ SSH to Adroit in the terminal: `ssh <NetID>@adroit.princeton.edu`
++ SSH to Adroit in the terminal: `ssh <YourNetID>@adroit.princeton.edu`
 
 + Clone this repo to your local machine:
 
