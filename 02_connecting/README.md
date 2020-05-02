@@ -15,6 +15,10 @@ These instructions assume you are:
   and [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
   here. (Note: You will need to login using your university credentials).
 
+## VPN
+
+If you are off-campus then you should install the [GlobalProtect VPN](https://www.princeton.edu/vpn) on your laptop. This will allow you to connect directly to the HPC clusters (e.g., Adroit) and use the web portals (MyAdroit and MyDella). My sure you connect via the GlobalProtect app on your laptop before sshing to Adroit or another cluster.
+
 ## SSH
 
 In order to connect to the university computing clusters, you will need an SSH
