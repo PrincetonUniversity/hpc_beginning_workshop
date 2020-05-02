@@ -11,7 +11,7 @@
 + SSH to Adroit in the terminal:
 
 ```
-# install GlobalProtect VPN on your laptop [https://www.princeton.edu/vpn](https://www.princeton.edu/vpn)
+# install <a href="https://www.princeton.edu/vpn">GlobalProtect VPN</a> on your laptop [https://www.princeton.edu/vpn](https://www.princeton.edu/vpn)
 ssh <NetID>@adroit.princeton.edu
 ```
 
