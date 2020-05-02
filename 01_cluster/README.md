@@ -88,7 +88,7 @@ Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to eithe
 
 ## Learn More About Adroit by Running Commands
 
-+ If off-campus then connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>). Then run this command in a terminal:
+If off-campus then connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>). Then run this command in a [terminal](https://researchcomputing.princeton.edu/education/training/hardware-and-software-requirements-picscie-workshops):
 
 ```
 ssh <YourNetID>@adroit.princeton.edu
