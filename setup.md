@@ -4,16 +4,13 @@
 
 ### Point your browser to `https://bit.ly/32xY4nq`
 
-+ Connect to the eduroam wireless network
++ If on-campus then connect to the eduroam wireless network
+
++ If off-campus then connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>)
 
 + Open a terminal (e.g., Terminal, PowerShell, PuTTY) [<a href="https://researchcomputing.princeton.edu/education/training/hardware-and-software-requirements-picscie-workshops" target="_blank">click here</a> for help]
 
-+ SSH to Adroit in the terminal:
-
-```
-# install <a href="https://www.princeton.edu/vpn">GlobalProtect VPN</a> on your laptop [https://www.princeton.edu/vpn](https://www.princeton.edu/vpn)
-ssh <NetID>@adroit.princeton.edu
-```
++ SSH to Adroit in the terminal: `ssh <NetID>@adroit.princeton.edu`
 
 + Clone this repo to your local machine:
 
