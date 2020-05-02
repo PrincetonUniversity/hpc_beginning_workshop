@@ -6,7 +6,7 @@
 
 + If on-campus then connect to the eduroam wireless network
 
-+ If off-campus then connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>)
++ If off-campus then install and connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>)
 
 + Open a terminal (e.g., Terminal, PowerShell, PuTTY) [<a href="https://researchcomputing.princeton.edu/education/training/hardware-and-software-requirements-picscie-workshops" target="_blank">click here</a> for help]
 
