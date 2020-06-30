@@ -86,6 +86,22 @@ Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to eithe
 
 **WARNING: Why you shouldn't put your on-the-fly code output files on `/tigress` or `/projects` -- the curse of continual backup**
 
+The commands below give you an idea of how to properly run a job:
+
+```
+$ ssh <YourNetID>@della.princeton.edu  # or adroit
+$ cd /scratch/gpfs/<YourNetID>  # on Adroit use /scratch/network/<YourNetId>
+$ mkdir myjob
+$ cd myjob
+# put necessary files and Slurm script in myjob
+$ sbatch job.slurm
+```
+
+If the run produces data that you want to backup then copy or move it to `/tigress`:
+```
+$ cp -r /scratch/gpfs/<YourNetID>/myjob /tigress/<YourNetID>
+```
+
 ## Learn More About Adroit by Running Commands
 
 If off-campus then connect via the GlobalProtect VPN</a> on your laptop (<a href="https://www.princeton.edu/vpn">installation directions</a>). Then run this command in a [terminal](https://researchcomputing.princeton.edu/education/training/hardware-and-software-requirements-picscie-workshops):
