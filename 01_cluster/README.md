@@ -90,7 +90,7 @@ The commands below give you an idea of how to properly run a job:
 
 ```
 $ ssh <YourNetID>@della.princeton.edu  # or adroit
-$ cd /scratch/gpfs/<YourNetID>  # on Adroit use /scratch/network/<YourNetId>
+$ cd /scratch/gpfs/<YourNetID>  # on Adroit use /scratch/network/<YourNetID>
 $ mkdir myjob
 $ cd myjob
 # put necessary files and Slurm script in myjob
