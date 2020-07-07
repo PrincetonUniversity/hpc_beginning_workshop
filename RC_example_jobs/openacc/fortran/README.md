@@ -4,7 +4,7 @@ Compile the code with the following commands:
 
 ```
 $ module load pgi
-$ pgfortran -acc -ta=tesla:cc70 -Minfo=all -o laplace2d_acc laplace2d.f90
+$ pgfortran -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
 On TigerGPU, use `-ta=tesla:cc60` instead.
