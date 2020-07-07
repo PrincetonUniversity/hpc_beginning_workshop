@@ -7,7 +7,7 @@ $ module load pgi
 $ pgcc -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.c
 ```
 
-On TigerGPU, use `-ta=tesla:cc60` instead.
+On TigerGPU, use `-ta=tesla:cc60`  and `#SBATCH --gres=gpu:1`.
 
 Submit the job with:
 
