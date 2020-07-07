@@ -18,7 +18,7 @@ $ sbatch job.slurm
 The expected output is:
 
 ```
-Jacobi relaxation Calculation: 2048 x 2048 mesh
+Jacobi relaxation Calculation: 4096 x 4096 mesh
     0, 0.250000
   100, 0.002397
   200, 0.001204
@@ -29,5 +29,5 @@ Jacobi relaxation Calculation: 2048 x 2048 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 41.560700 s
+ total: 1.080040 s
 ```
