@@ -22,8 +22,8 @@ int main(int argc, char* argv[]) {
 Compile the program using the following commands:
 
 ```
-module load intel
-icpc -qopenmp -o hw_omp hello_world_omp.cpp
+$ module load intel
+$ icpc -qopenmp -o hw_omp hello_world_omp.cpp
 ```
 
 Below is the Slurm script:
