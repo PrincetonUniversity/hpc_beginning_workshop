@@ -350,7 +350,7 @@ conda activate tf2-gpu
 python my-tf-script.py
 ```
 
-**IMPORTANT**: *Only code that has been explicitly written to run on GPUs can take advantage of GPUs. Adding the `--gres` option to your Slurm script for a CPU code will not speed-up the execution time but you will be charged for requesting the GPU.*
+**IMPORTANT**: *Only code that has been explicitly written to run on GPUs can take advantage of GPUs. Adding the `--gres` option to your Slurm script for a CPU code will not speed-up the execution time but your future fairshare value will be lowered accordingly for requesting the GPU.*
 
 This asks for a single GPU (of any type) via `--gres=gpu:1` You can specify
 more granularly too, `--gres=gpu:tesla_v100:2` would ask for two Tesla v100s.
