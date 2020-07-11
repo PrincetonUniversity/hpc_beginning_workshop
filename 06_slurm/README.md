@@ -100,7 +100,7 @@ You can't do that on a login node, so what do you do?
 
 `salloc` takes the same modifiers as follow the `#SBATCH` in your SLURM script. It will however send you in an interactive shell to the compute node once the allocation is granted! So it won't be great to ask for many hours or days, but it can get you 30 minutes pretty quickly.
 
-`salloc --nodes=1 --ntasks=1 --mem=4G --time 00:20:00` will ask for an allocation of 1 node, 1 task, and 20 minutes. Once it's granted you'll be in a shell where you can run processes directly that will be killed after the time elapses. To leave the session before it expires use the `exit` command.
+`salloc --nodes=1 --ntasks=1 --mem=4G --time=00:20:00` will ask for an allocation of 1 node, 1 task, and 20 minutes. Once it's granted you'll be in a shell where you can run processes directly that will be killed after the time elapses. To leave the session before it expires use the `exit` command.
 
 ## Considerations
 
