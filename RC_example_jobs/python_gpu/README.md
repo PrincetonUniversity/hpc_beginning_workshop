@@ -1,5 +1,6 @@
 # Running Python on GPUs
 
-View this link for an example:  
-[https://oncomputingwell.princeton.edu/2019/06/accelerating-python-scripts-using-gpus-with-cupy](https://oncomputingwell.princeton.edu/2019/06/accelerating-python-scripts-using-gpus-with-cupy)
+View these links for examples:
+[https://github.com/henryiii/pygpu-minicourse](https://github.com/henryiii/pygpu-minicourse)  
 
+[https://github.com/PrincetonUniversity/gpu_programming_intro](https://github.com/PrincetonUniversity/gpu_programming_intro)
