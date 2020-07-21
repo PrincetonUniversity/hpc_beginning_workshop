@@ -27,7 +27,7 @@ Below is the Slurm script:
 module purge
 module load anaconda3
 
-srun python matrix_inverse.py
+python matrix_inverse.py
 ```
 
 To run the Python script, simply submit the job to the cluster:
