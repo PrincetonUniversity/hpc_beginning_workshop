@@ -51,5 +51,4 @@ After the job completes, view the output with `cat slurm-*`:
 
 Use `squeue -u $USER` to monitor queued jobs.
 
-For HPC R jobs see this repo by Ben Hicks:  
-[https://github.com/PrincetonUniversity/HPC_R_Workshop](https://github.com/PrincetonUniversity/HPC_R_Workshop)
+For a guide to R on the HPC clusters see: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
