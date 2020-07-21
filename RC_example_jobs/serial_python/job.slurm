@@ -12,4 +12,4 @@
 module purge
 module load anaconda3
 
-srun python matrix_inverse.py
+python matrix_inverse.py
