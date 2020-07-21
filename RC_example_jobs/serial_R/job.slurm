@@ -9,4 +9,4 @@
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-srun Rscript data_analysis.R
+Rscript data_analysis.R
