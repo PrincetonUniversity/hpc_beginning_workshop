@@ -21,7 +21,7 @@ Below is the Slurm script:
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-srun Rscript data_analysis.R
+Rscript data_analysis.R
 ```
 
 To run the R script, simply submit the job to the cluster:
