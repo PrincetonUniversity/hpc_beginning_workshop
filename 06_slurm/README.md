@@ -102,6 +102,8 @@ You can't do that on a login node, so what do you do?
 
 `salloc --nodes=1 --ntasks=1 --mem=4G --time=00:20:00` will ask for an allocation of 1 node, 1 task, and 20 minutes. Once it's granted you'll be in a shell where you can run processes directly that will be killed after the time elapses. To leave the session before it expires use the `exit` command.
 
+To get a GPU: `salloc --nodes=1 --ntasks=1 --mem=4G --time=00:20:00 --gres=gpu:1`
+
 ## Considerations
 
 Some things to think about:
