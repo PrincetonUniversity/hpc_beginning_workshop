@@ -49,4 +49,4 @@ Inverse(X) =
  [-10.11145687   9.12202091   0.64855209]]
 ```
 
-Use `squeue -u $USER` to monitor queued jobs.
+Use `squeue -u $USER` to monitor queued jobs. For more on working with Python [this page](https://researchcomputing.princeton.edu/python).
