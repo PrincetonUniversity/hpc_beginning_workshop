@@ -69,3 +69,5 @@ We recommend that you receive email reports by adding the following lines to you
 ```
 
 Email reports allow one to tune the memory and time requirements of future, similar jobs. The more resources you request, the longer your job will spend in the queue.
+
+For more on submitting Stata jobs see [this guide](https://researchcomputing.princeton.edu/stata).
