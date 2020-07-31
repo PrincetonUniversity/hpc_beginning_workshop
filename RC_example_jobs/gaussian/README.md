@@ -8,3 +8,5 @@ After following the directions found on the page above, run the following comman
 $ cd hpc_beginning_workshop/RC_example_jobs/gaussian
 $ sbatch job.slurm
 ```
+
+This example job runs for about 25 minutes.
