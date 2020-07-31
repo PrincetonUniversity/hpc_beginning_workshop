@@ -8,7 +8,7 @@ to your directory on `/scratch/network/<YourNetID>`. We do this because `/scratc
 is a much faster filesystem with more space than `/home`.
 
 ```
-ssh <YourNetID>@adroit.princeton.edu
+ssh <YourNetID>@adroit.princeton.edu  # vpn required from off-campus
 cd /scratch/network/<YourNetID>
 git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 cd hpc_beginning_workshop/RC_example_jobs
