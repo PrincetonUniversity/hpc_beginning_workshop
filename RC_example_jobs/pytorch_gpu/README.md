@@ -1,3 +1,3 @@
 # PyTorch
 
-See [this guide](https://github.com/PrincetonUniversity/install_pytorch) for complete directions.
+See [this guide](https://researchcomputing.princeton.edu/pytorch) for complete directions.
