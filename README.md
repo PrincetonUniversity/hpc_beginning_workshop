@@ -1,7 +1,7 @@
 # Getting Started with the HPC Clusters
 
 ## About
-This guide presents an overview of using the HPC systems at Princeton. Specifically, it explains how to use Nobel, Adroit, Perseus, Tiger and Traverse. The visualization machine and storage system is also covered.
+This guide presents an overview of using the HPC systems at Princeton. Specifically, it explains how to use Nobel, Adroit, Perseus, Tiger and Traverse. The visualization machine and storage system are also covered.
 
 ## Prerequisites
 
