@@ -14,4 +14,4 @@ module purge
 module load matlab
 module list
 
-srun matlab -singleCompThread -nodisplay -nosplash -nojvm -r hello_world
+matlab -singleCompThread -nodisplay -nosplash -nojvm -r hello_world
