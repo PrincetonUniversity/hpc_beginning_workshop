@@ -1,7 +1,5 @@
 # Serial MATLAB
 
-# Serial Matlab Script
-
 Here is a trivial one-line Matlab script (`hello_world.m`):
 
 ```
