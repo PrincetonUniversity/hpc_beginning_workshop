@@ -40,4 +40,6 @@ After the job completes, view the output with `cat slurm-*`:
 Hello world.
 ```
 
-Use `squeue -u $USER` to monitor queued jobs. For more on running Matlab jobs see [this page](https://researchcomputing.princeton.edu/matlab).
+Use `squeue -u $USER` to monitor queued jobs.
+
+For more on running Matlab jobs see [this page](https://researchcomputing.princeton.edu/matlab).
