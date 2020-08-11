@@ -22,7 +22,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load matlab
+module load matlab/R2019a
 
 matlab -singleCompThread -nodisplay -nosplash -r hello_world
 ```
