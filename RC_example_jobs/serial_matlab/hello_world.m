@@ -1,1 +1,0 @@
-fprintf('Hello world.\n')
