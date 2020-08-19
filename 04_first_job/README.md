@@ -41,10 +41,11 @@ Below is the Slurm script which prescribes (1) the resource requirements for the
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=fail         # send mail if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3
+module load anaconda3/2020.7
 
 python matrix_inverse.py
 ```
