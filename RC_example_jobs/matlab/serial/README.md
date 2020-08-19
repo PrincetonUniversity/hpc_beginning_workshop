@@ -42,4 +42,6 @@ Hello world.
 
 Use `squeue -u $USER` to monitor queued jobs.
 
+# Guide
+
 For more on running Matlab jobs see [this page](https://researchcomputing.princeton.edu/matlab).

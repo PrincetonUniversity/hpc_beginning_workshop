@@ -39,4 +39,8 @@ After the job completes, view the output with `cat slurm-*`:
 Hello, world.
 ```
 
-Use `squeue -u $USER` to monitor queued jobs. For more on running Julia jobs see [this guide](https://researchcomputing.princeton.edu/julia).
+Use `squeue -u $USER` to monitor queued jobs.
+
+# Guide
+
+For more on running Julia jobs see [this guide](https://researchcomputing.princeton.edu/julia).
