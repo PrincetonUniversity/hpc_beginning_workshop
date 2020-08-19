@@ -1,4 +1,4 @@
-# Serial Stata script
+# Stata
 
 Here is a simple Stata script (`hello_world.do`):
 
@@ -64,5 +64,7 @@ end of do-file
 ```
 
 Use `squeue -u $USER` to monitor queued jobs.
+
+# Guide
 
 For more on running Stata jobs see [this guide](https://researchcomputing.princeton.edu/stata).
