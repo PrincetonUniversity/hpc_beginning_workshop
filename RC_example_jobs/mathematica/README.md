@@ -8,4 +8,6 @@ $ cd hpc_beginning_workshop/RC_example_jobs/mathematica
 $ sbatch job.slurm
 ```
 
-For more see [this page](https://researchcomputing.princeton.edu/mathematica).
+# Guide
+
+For more on running Mathematica see [this page](https://researchcomputing.princeton.edu/mathematica).

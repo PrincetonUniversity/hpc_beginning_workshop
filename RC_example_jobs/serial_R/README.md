@@ -19,6 +19,7 @@ Below is the Slurm script:
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=fail         # send mail if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 Rscript data_analysis.R
@@ -51,4 +52,6 @@ After the job completes, view the output with `cat slurm-*`:
 
 Use `squeue -u $USER` to monitor queued jobs.
 
-For a guide to R on the HPC clusters see: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
+# Guide
+
+For more on running R on the HPC clusters: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
