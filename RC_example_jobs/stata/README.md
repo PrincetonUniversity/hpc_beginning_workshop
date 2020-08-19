@@ -16,9 +16,13 @@ The Slurm script (`job.slurm`) below is appropriate for serial Stata jobs:
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send mail when job begins
+#SBATCH --mail-type=end          # send mail when job ends
+#SBATCH --mail-type=fail         # send mail if job fails
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load stata/16.0
+module load stata/16.1
 
 stata -b hello_world.do
 ```
@@ -61,13 +65,4 @@ end of do-file
 
 Use `squeue -u $USER` to monitor queued jobs.
 
-We recommend that you receive email reports by adding the following lines to your Slurm script:
-
-```
-#SBATCH --mail-type=all          # send email on job start, end and fault
-#SBATCH --mail-user=<YourNetID>@princeton.edu
-```
-
-Email reports allow one to tune the memory and time requirements of future, similar jobs. The more resources you request, the longer your job will spend in the queue.
-
-For more on submitting Stata jobs see [this guide](https://researchcomputing.princeton.edu/stata).
+For more on running Stata jobs see [this guide](https://researchcomputing.princeton.edu/stata).
