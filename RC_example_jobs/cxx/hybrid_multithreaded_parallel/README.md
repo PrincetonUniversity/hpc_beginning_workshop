@@ -55,6 +55,7 @@ Below is the Slurm script:
 #SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=fail         # send mail if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
