@@ -15,8 +15,8 @@ int main() {
 Compile the program with:
 
 ```
-module load intel
-icc -o hello_world hello_world.c
+$ module load intel
+$ icc -o hello_world hello_world.c
 ```
 
 Here is the Slurm script:
@@ -36,7 +36,7 @@ Here is the Slurm script:
 module purge
 module load intel
 
-srun ./hello_world
+./hello_world
 ```
 
 To submit the job to the cluster by running the following command:
