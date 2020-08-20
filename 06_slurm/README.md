@@ -231,8 +231,8 @@ Below is an example Slurm script where there are 5 jobs in the array:
 ```bash
 #!/bin/bash
 #SBATCH --job-name=array-job     # create a short name for your job
-#SBATCH --output=slurm-%N.%j.out # STDOUT file
-#SBATCH --error=slurm-%N.%j.err  # STDERR file
+#SBATCH --output=slurm-%N.%A.%j.out # STDOUT file
+#SBATCH --error=slurm-%N.%A.%j.err  # STDERR file
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -247,10 +247,9 @@ Below is an example Slurm script where there are 5 jobs in the array:
 echo "My SLURM_ARRAY_JOB_ID is $SLURM_ARRAY_JOB_ID."
 echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
 
-echo  -n "Executing on the machine: " 
+echo -n "Executing on the machine: "
 hostname
-echo "Array Task ID : " $SLURM_ARRAY_TASK_ID 
-echo " Random number : " $RANDOM
+echo "Array Task ID : " $SLURM_ARRAY_TASK_ID
 
 python myscript.py $SLURM_ARRAY_TASK_ID
 ```
