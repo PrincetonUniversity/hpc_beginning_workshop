@@ -54,4 +54,4 @@ Use `squeue -u $USER` to monitor queued jobs.
 
 # Guide
 
-For more on working with see Python [this page](https://researchcomputing.princeton.edu/python).
+For more on working with Python see [this page](https://researchcomputing.princeton.edu/python).
