@@ -29,7 +29,7 @@ print("X =\n", X)
 print("Inverse(X) =\n", np.linalg.inv(X))
 ```
 
-Below is the Slurm script which prescribes (1) the resource requirements for the job and (2) the work to be carried out (which in this case is to run a Python script):
+Below is the Slurm script which (1) prescribes the resource requirements for the job, (2) sets the environment and (3) specifies the work to be carried out (which in this case is to run a Python script):
 
 ```bash
 #!/bin/bash
