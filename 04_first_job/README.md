@@ -11,7 +11,7 @@ $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 
 ### On Your Local Machine
 
-In a terminal on your laptop, change the working directory and examine the scripts:
+Examine the files in a terminal on your laptop:
 
 ```
 $ cd hpc_beginning_workshop/04_first_job/python_example
