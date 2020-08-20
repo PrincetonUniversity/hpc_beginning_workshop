@@ -41,7 +41,7 @@ Below is the Slurm script which prescribes (1) the resource requirements for the
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-type=fail         # send mail if job fails
+#SBATCH --mail-type=fail         # send email if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
@@ -138,7 +138,8 @@ Below is the Slurm script:
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multithread tasks)
 #SBATCH --mem-per-cpu=1G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send mail when process begins
+#SBATCH --mail-type=begin        # send email when process begins
+#SBATCH --mail-type=fail         # send email if job fails
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
