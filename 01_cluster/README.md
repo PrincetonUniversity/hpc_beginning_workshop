@@ -29,7 +29,7 @@ Princeton uses a scheduler called *SLURM*.  Running a (non-trivial) program on o
 
 ## Reasons to Use the Clusters
 
-- Lots of processing capacity (e.g., you could use 1000 CPU-cores for a single job)  
+- Lots of processing capacity, ability to do parallel computing (e.g., you could use 1000 CPU-cores for a single job)  
 - Nodes have 100's GB of memory  
 - One can store large datasets on `/scratch/gpfs`
 - Lots of software is available and already configured (e.g., MPI, compilers, commercial software)
