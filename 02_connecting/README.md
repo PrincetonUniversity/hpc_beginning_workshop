@@ -102,8 +102,20 @@ If you're transferring a lot of files, consider
 zipping them.
 
 The default client to transfer files is `scp`. This is a copy command that uses
-SSH to copy files. I'll discuss its use at greater length when [talking about the
-command line utils](/hpc_beginning_workshop/util/).
+SSH to copy files. 
+
+The general structure of the scp command is:
+`scp [options] [user@]source-host:file/location [user@]destination-host:file/location`
+
+It's generally more straightforward to transfer files from your personal computer to the clusters, since you don't need to specify the user and host for the system you're already in. 
+
+So for example, a Princeton student with the netid jessedoe who wants to transfer a data.csv file from their personal laptop to the /scratch/network/jessedoe folder on the Adroit cluster would use the following command:
+
+`scp ~/mydatafiles/data.csv jessedoe@adroit:/scratch/network/jessedoe`
+
+Transferring a folder requires the -r option, and would therefore look like:
+
+`scp -r ~/mydatafiles jessedoe@adroit:/scratch/network/jessedoe`  
 
 
 ## SSH Keys: `ssh` and `scp` without typing passwords
