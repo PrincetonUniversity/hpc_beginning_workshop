@@ -1,1 +1,1 @@
-## This content has permanently moved here: [https://researchcomputing.princeton.edu/education/online-tutorials/getting-started/introducing-slurm](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started/introducing-slurm) 
+## This content has permanently moved here: [https://researchcomputing.princeton.edu/slurm](https://researchcomputing.princeton.edu/slurm) 
