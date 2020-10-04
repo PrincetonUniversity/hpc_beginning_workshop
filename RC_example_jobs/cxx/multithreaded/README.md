@@ -26,7 +26,7 @@ $ module load intel
 $ icpc -qopenmp -o hw_omp hello_world_omp.cpp
 ```
 
-Below is the Slurm script:
+Below is a Slurm script appropriate for an OpenMP job:
 
 ```bash
 #!/bin/bash
