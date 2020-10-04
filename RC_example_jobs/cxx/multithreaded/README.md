@@ -23,7 +23,7 @@ Compile the program using the following commands:
 
 ```
 $ module load intel
-$ icpc -qopenmp -o hw_omp hello_world_omp.cpp
+$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
