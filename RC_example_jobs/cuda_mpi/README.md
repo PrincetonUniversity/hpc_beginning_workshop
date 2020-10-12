@@ -2,7 +2,7 @@
 
 This example is based on the tutorial here: <https://www.olcf.ornl.gov/tutorials/gpudirect-mpich-enabled-cuda>.
 
-## TigerGPU and Adroit (GPU)
+### TigerGPU and Adroit (GPU)
 
 To compile:
 
@@ -13,7 +13,7 @@ mpicc -lcudart direct.c -o direct.out
 
 Then submit with the provided `submit.sbatch`.
 
-## Traverse
+### Traverse
 
 ```
 $ module load cudatoolkit/11.0 openmpi/cuda-11.0/gcc/4.0.4/64 
