@@ -6,7 +6,7 @@ This example is based on the tutorial here: <https://www.olcf.ornl.gov/tutorials
 
 To compile:
 
-```bash
+```
 $ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
 $ module load intel/19.1 cudatoolkit openmpi/cuda-10.2/intel-19.1
 $ mpicc -lcudart direct.c -o direct.out
