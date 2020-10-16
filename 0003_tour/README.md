@@ -8,9 +8,10 @@ If your job requires more nodes than there are on adroit for instance, then it i
 
 Adroit is often a good choice to get started because it is configured the same way as the larger systems like tiger and della, so the workflow you develop on adroit will be exactly replicable on the larger systems.
 
-## Princeton's Small Clusters
-For more detail, see:
+For more detail on each cluster, see:
 [Computational Hardware @ Princeton](https://researchcomputing.princeton.edu/systems-and-services/available-systems)
+
+## Princeton's Small Clusters
 
 ### [Nobel](https://researchcomputing.princeton.edu/systems-and-services/available-systems/nobel)
   This cluster is most appropriate for interactive work. Any member of the

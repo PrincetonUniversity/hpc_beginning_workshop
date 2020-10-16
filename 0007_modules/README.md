@@ -1,6 +1,6 @@
 # How to Access the Software Already Installed on the Clusters
 
-## Using Pre-Installed Software with Environment Modules
+## Use Pre-Installed Software with Environment Modules
 
 Several applications and software libraries are already available on each cluster. To see the modules that are available on Della, for example, run this command:
 

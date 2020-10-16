@@ -2,7 +2,7 @@
 
 Two of Princeton's HPC clusters–Adroit and Della–can be accessed via the web through the Open OnDemand web interface. If you are new to high-performance computing, this can be a good introductory way to start using the clusters.
 
-In addition, this web option also opens up the possibility of using GUIs (Graphic User Interfaces) for programs such as  Jupyter, RStudio, MATLAB and Stata,
+In addition, this web option also opens up the possibility of using GUIs (Graphical User Interfaces) for programs such as  Jupyter, RStudio, MATLAB and Stata,
 
 ## Open OnDemand
 
