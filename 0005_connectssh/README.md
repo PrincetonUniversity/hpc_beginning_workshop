@@ -87,6 +87,9 @@ If you use a system that respects a standard `~/.ssh/config`, you can use the
 [solution outlined on AskRC](https://askrc.princeton.edu/question/331/how-do-i-avoid-having-to-authenticate-with-duo-every-time/)
  to setup SSH Multiplexing.
 
+ ## SSH Keys: `ssh` without typing passwords
+
+ Typing passwords every time you want to connect to a machine or, more annoying, every time you want to copy a file to/from a remote machine gets annoying quickly.  One solution is to enable passwordless login/remote operations by generating a public/private pair of *ssh keys* and using them to negotiate the connection.  The procedure is explained in [this guide](https://github.com/PrincetonUniversity/removing_tedium/tree/master/02_passwordless_logins).
 
  ## <a name="tmux">Staying connected (tmux)</a>
 
