@@ -10,15 +10,15 @@
 - GPUs are available in large numbers on TigerGPU and Traverse
 - There is a team of people maintaining and supporting the clusters
 
-## Clusters Do Not Run Your Code Faster by Magic
+## Clusters Do Not Run Your Code Faster by Magic - Often Need Parallelization
 [!!! INSERT CONTENT]
-The burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer. To get your code to run faster, this often involved parallelizing your code.
+To get your code to run faster, this often involves the explicit task of parallelizing your code. The burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer. 
 
-## 4 Basic Ways to Think About Parallelizing Code
+### 4 Basic Ways to Think About Parallelizing Code
 
 Although learning how to parallelize code is outside the scope of this workshop, for our purposes it is useful to at least be familiar with the typical ways in which code can be parallelized.
 
-1. **Embarassingly parallel** - Runs serially, run a bunch of copies of the same thing, each with different input parameters (ARRAY JOBS)
+1. **'Light' Parallelization (not a technical term)** - Runs serially, run a bunch of copies of the same thing, each with different input parameters (ARRAY JOBS)
 2. **Shared memory parallelization** - single program that can access many cores; single node on a single machine, independent runs, program can access multiple cores during the run of a single program
 3. **Distributed memory parallelization** - processes you're running are not entirely independent of each other (one piece needs to wait for another to finish), divide your data up into 20 pieces, for instances, each core works on 1 of the 10 pieces, but at some point need to communicate with each other and coordinate (for example all working on one for loop) (good for GPU use too?)
 4. **Using accelerators (GPUS & FPGA)** - take the part of the code that needs speed up and send it to GPU or FPGA for processing those parts just plain faster
