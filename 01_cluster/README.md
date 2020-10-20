@@ -31,7 +31,7 @@ Princeton uses a scheduler called *SLURM*.  Running a (non-trivial) program on o
 
 - Lots of processing capacity (e.g., you could use 1000 CPU-cores for a single job)  
 - Nodes have 100's GB of memory  
-- One can store large datasets on `/scratch/gpfs`
+- One can store large datasets on `/scratch/gpfs` (or `/scratch/network` on Adroit)
 - Lots of software is available and already configured (e.g., MPI, compilers, commercial software)
 - Keep your laptop free of use by running the work on the clusters
 - GPUs are available in large numbers on TigerGPU and Traverse
