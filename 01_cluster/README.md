@@ -65,7 +65,7 @@ For more detail, see:
 
 ## The Filesystems
 
-![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
+![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png?)
 
 + `/home/<YourNetID>`: source code and executables
 + `/scratch/gpfs/<YourNetID>`: job output and intermediate results
