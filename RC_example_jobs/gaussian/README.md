@@ -6,6 +6,7 @@ After following the directions found on the page above, run the following comman
 
 ```
 $ cd hpc_beginning_workshop/RC_example_jobs/gaussian
+# edit email address in job.slurm
 $ sbatch job.slurm
 ```
 
