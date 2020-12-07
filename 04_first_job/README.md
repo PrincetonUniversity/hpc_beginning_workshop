@@ -53,7 +53,7 @@ python matrix_inverse.py
 Next, while still on your laptop, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
-ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
+$ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
 ```
 
 Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
@@ -61,7 +61,7 @@ Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/s
 Transfer the Python and Slurm scripts from your laptop to Adroit using the `scp` (secure copy) command:
 
 ```
-scp matrix_inverse.py job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
+$ scp matrix_inverse.py job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
 ```
 
 Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
@@ -71,26 +71,26 @@ Now everything is in place on Adroit. Let's connect to the head node of that clu
 SSH to Adroit:
 
 ```
-ssh <YourNetID>@adroit.princeton.edu
+$ ssh <YourNetID>@adroit.princeton.edu
 ```
 
 Change the working directory ($USER does not need to be replaced):
 
 ```
-cd /scratch/network/$USER/python_test
+$ cd /scratch/network/$USER/python_test
 ```
 
 List the files in the current directory:
 
 ```
-ls -l
+$ ls -l
 ```
 
 Submit the job by running the following command:
 
 ```
 # use a text editor to replace <YourNetID> in job.slurm with your actual NetID
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is `PD` (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your email address in the Slurm script.
@@ -115,7 +115,7 @@ Inverse(X) =
 In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-cd hpc_beginning_workshop/04_first_job/R_example
+$ cd hpc_beginning_workshop/04_first_job/R_example
 $ cat data_analysis.R
 $ cat job.slurm
 $ head cdc.csv
@@ -166,7 +166,7 @@ good,1,1,0,70,180,170,44,m
 Next, while still on your laptop, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
-ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
+$ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
 ```
 
 Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
@@ -174,7 +174,7 @@ Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/s
 Transfer the R script, Slurm script and data file from your laptop to Adroit using the `scp` (secure copy) command:
 
 ```
-scp data_analysis.R job.slurm cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
+$ scp data_analysis.R job.slurm cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
 ```
 
 Now everything is in place on Adroit. Let's connect to the head node of that cluster and submit the job.
@@ -184,26 +184,26 @@ Now everything is in place on Adroit. Let's connect to the head node of that clu
 SSH to Adroit:
 
 ```
-ssh <YourNetID>@adroit.princeton.edu
+$ ssh <YourNetID>@adroit.princeton.edu
 ```
 
 Change the working directory ($USER does not need to be replaced):
 
 ```
-cd /scratch/network/$USER/R_test
+$ cd /scratch/network/$USER/R_test
 ```
 
 List the files in the current directory:
 
 ```
-ls -l
+$ ls -l
 ```
 
 Submit the job by running the following command:
 
 ```
 # use a text editor to replace <YourNetID> in job.slurm with your actual NetID
-sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is PD (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your email address in the Slurm script.
