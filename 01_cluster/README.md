@@ -65,42 +65,7 @@ For more detail, see:
 
 ## The Filesystems
 
-![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png?)
-
-+ `/home/<YourNetID>`: source code and executables
-+ `/scratch/gpfs/<YourNetID>`: job output and intermediate results
-+ `/tigress/<YourNetID>`: final results for the long term
-
-*IMPORTANT*: Tigress is for non-volatile files only. Do not make the mistake of writing your job output here. Users are tempted to do this because /tigress is backed-up while /scratch/gpfs is not. However, this is a mistake and you may adversely affect other users by writing or reading job files from /tigress during your production runs.
-
-Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to either of them.
-
-### Where should I put my files?
-
-* **Code** -- somewhere under your home-directory tree is ok (if these are smaller files that aren't too huge)
-* **Temp files your code generates while it runs** -- depends whether you want to handle the housekeeping of removing these files yourself or delegate the housekeeping to SLURM:
-    + Have your script remove temporary files -- save them to `/scratch` (this is a scratch area local to each cluster; not auto-purged, so send "workspace" files here if your script handles deleting them)
-    + Have SLURM remove temporary files -- save them to `/tmp` (this is an alias for the same physical disk area as `/scratch`, but if you save to `/tmp`, SLURM will automatically remove anything that got written here when your SLURM job ends
-* **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). One such are *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
-* **Longer term results for archiving** -- move it to `/tigress` or, if possible, to `/projects` (preferred).  These *are* backed up
-
-**WARNING: Why you shouldn't put your on-the-fly code output files on `/tigress` or `/projects` -- the curse of continual backup**
-
-The commands below give you an idea of how to properly run a job:
-
-```
-$ ssh <YourNetID>@della.princeton.edu  # or adroit
-$ cd /scratch/gpfs/<YourNetID>  # on Adroit use /scratch/network/<YourNetID>
-$ mkdir myjob
-$ cd myjob
-# put necessary files and Slurm script in myjob
-$ sbatch job.slurm
-```
-
-If the run produces data that you want to backup then copy or move it to `/tigress`:
-```
-$ cp -r /scratch/gpfs/<YourNetID>/myjob /tigress/<YourNetID>
-```
+Redirect: [https://researchcomputing.princeton.edu/storage](https://researchcomputing.princeton.edu/storage)
 
 ## Learn More About Adroit by Running Commands
 
