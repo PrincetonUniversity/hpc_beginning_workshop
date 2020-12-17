@@ -63,9 +63,9 @@ For more detail, see:
 
 *IMPORTANT*: The Tiger cluster is designed for large parallel jobs. In an effort to dissaude users from running small jobs on Tiger, such as serial or single-node jobs, the scheduler has been configured to penalize these submissions by causing long queue times. Della is ideal for serial jobs. If you only have an account on Tiger and you want to run several small jobs then please write to cses@princeton.edu to request an account on Della. Be sure to explain the situation.
 
-## The Filesystems
+## Where to Store Your Files?
 
-Redirect: [https://researchcomputing.princeton.edu/storage](https://researchcomputing.princeton.edu/storage)
+See Storage on RC website: [https://researchcomputing.princeton.edu/storage](https://researchcomputing.princeton.edu/storage)
 
 ## Learn More About Adroit by Running Commands
 
