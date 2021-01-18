@@ -33,3 +33,7 @@ click on "New" in the upper right and choose "Python 3.7 [anaconda3/2019.10]" fr
 
 ### Stata
 ![stata](https://tigress-web.princeton.edu/~jdh4/stata_two_frames.png)
+
+### Mathematica
+
+Mathematica can now be used on MyAdroit.
