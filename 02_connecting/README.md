@@ -102,8 +102,7 @@ If you're transferring a lot of files, consider
 zipping them.
 
 The default client to transfer files is `scp`. This is a copy command that uses
-SSH to copy files. I'll discuss its use at greater length when [talking about the
-command line utils](/hpc_beginning_workshop/util/).
+SSH to copy files. More on this in the directory 04_first_job.
 
 
 ## SSH Keys: `ssh` and `scp` without typing passwords
