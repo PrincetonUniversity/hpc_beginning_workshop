@@ -226,3 +226,7 @@ Here is the expected output:
  3rd Qu.:70.00   3rd Qu.:190.0   3rd Qu.:175.0   3rd Qu.:57.00            
  Max.   :93.00   Max.   :500.0   Max.   :680.0   Max.   :99.00
 ```
+
+## Tired of Duo
+
+You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways.
