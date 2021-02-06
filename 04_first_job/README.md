@@ -227,6 +227,6 @@ Here is the expected output:
  Max.   :93.00   Max.   :500.0   Max.   :680.0   Max.   :99.00
 ```
 
-## Tired of Duo
+## Tired of Duo?
 
 You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways.
