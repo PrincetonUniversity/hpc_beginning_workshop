@@ -11,6 +11,6 @@
 #SBATCH -p hpc                   # DELETE THIS LINE AFTER WORKSHOP
 
 module purge
-module load anaconda3
+module load anaconda3/2020.11
 
-srun python matrix_inverse.py
+python matrix_inverse.py
