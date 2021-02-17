@@ -56,9 +56,9 @@ Here is an appropriate Slurm script:
 hostname
 lscpu | grep "Model name"
 
-module load anaconda3
+module load anaconda3/2020.11
 
-srun python svd_np.py
+python svd_np.py
 ```
 
 The following data was found using one of the Skylake nodes on Adroit:
