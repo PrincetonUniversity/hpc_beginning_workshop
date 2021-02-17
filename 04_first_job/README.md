@@ -45,7 +45,7 @@ Below is the Slurm script which (1) prescribes the resource requirements for the
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2020.7
+module load anaconda3/2020.11
 
 python matrix_inverse.py
 ```
