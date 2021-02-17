@@ -28,7 +28,7 @@ int main() {
 This can be compiled with:
 
 ```
-$ module load cudatoolkit
+$ module load cudatoolkit/11.1
 $ nvcc -o hello_world_gpu hello_world_gpu.cu
 ```
 
