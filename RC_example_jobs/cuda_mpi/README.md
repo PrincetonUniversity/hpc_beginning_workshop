@@ -8,7 +8,7 @@ To compile:
 
 ```
 $ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
-$ module load intel/19.1 cudatoolkit openmpi/cuda-10.2/intel-19.1
+$ module load intel/19.1/64/19.1.1.217 cudatoolkit/11.0 openmpi/cuda-10.2/intel-19.1
 $ mpicc -lcudart direct.c -o direct.out
 ```
 
