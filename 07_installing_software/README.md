@@ -17,7 +17,7 @@ julia/0.4.7 julia/0.5.1 julia/0.7.0 julia/1.0.3 julia/1.2.0
 julia/0.5.0 julia/0.6.0 julia/1.0.1 julia/1.1.0 julia/1.3.0
 ```
 
-Use the `module load <module-name>` command to activate a module. For example:
+Use the `module load <module-name/version>` command to activate a module. For example:
 
 ```
 $ julia
