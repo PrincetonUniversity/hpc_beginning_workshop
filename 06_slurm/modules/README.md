@@ -26,7 +26,7 @@ module load <name of module>
 i.e.
 
 ```
-module load anaconda3
+module load anaconda3/2020.11
 ```
 
 You can see installed modules using `module avail`
