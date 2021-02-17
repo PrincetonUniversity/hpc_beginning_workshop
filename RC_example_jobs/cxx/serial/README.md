@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 Compile the program with:
 
 ```
-$ module load intel
+$ module load intel/19.1/64/19.1.1.217
 $ icpc -o hello_world hello_world.cpp
 ```
 
@@ -35,7 +35,7 @@ Here is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel
+module load intel/19.1/64/19.1.1.217
 
 ./hello_world
 ```
