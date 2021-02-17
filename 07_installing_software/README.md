@@ -22,7 +22,7 @@ Use the `module load <module-name>` command to activate a module. For example:
 ```
 $ julia
 -bash: julia: command not found
-$ module load julia
+$ module load julia/1.3.0
 $ julia
                _
    _       _ _(_)_     |  Documentation: https://docs.julialang.org
@@ -39,10 +39,10 @@ julia>
 To compile a parallel code that uses the message-passing interface (MPI) you will need to load an MPI module. You can load the Intel compilers and Intel MPI library with:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 $ mpicc --version
-icc (ICC) 19.0.3.199 20190206
-Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
+icc (ICC) 19.1.1.217 20200306
+Copyright (C) 1985-2020 Intel Corporation.  All rights reserved.
 ```
 
 To see exactly what a module is doing use `module show <module-name>`. Modules only change the values of environment variables. They do not install or uninstall software. For example:
@@ -88,9 +88,9 @@ $ which python
 To get the newer Anaconda Python implementation, simply load the module:
 
 ```
-$ module load anaconda3
+$ module load anaconda3/2020.11
 $ python --version
-Python 3.7.3
+Python 3.8.5
 
 $ which python
 /usr/licensed/anaconda3/2019.3/bin/python
