@@ -11,6 +11,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2020.7
+module load anaconda3/2020.11
 
 python matrix_inverse.py
