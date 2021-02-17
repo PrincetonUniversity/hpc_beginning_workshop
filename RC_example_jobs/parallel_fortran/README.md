@@ -21,7 +21,7 @@ end program
 Run the following two commands to compile the code:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 $ mpif90 -O3 -o hello_world_mpi hello_world_mpi.f90
 ```
 
@@ -40,7 +40,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel intel-mpi
+module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 
 srun ./hello_world_mpi
 ```
