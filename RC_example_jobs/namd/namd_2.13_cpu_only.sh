@@ -10,7 +10,7 @@ tar xf charm-6.8.2.tar
 cd charm-6.8.2
 
 module purge
-module load intel intel-mpi
+module load intel/19.0/64/19.0.5.281 intel-mpi/intel/2019.5/64
 module list
 
 env MPICXX=mpicxx ./build charm++ mpi-linux-x86_64 --with-production
