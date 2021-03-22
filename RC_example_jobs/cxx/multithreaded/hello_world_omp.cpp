@@ -1,4 +1,3 @@
-// export OMP_NUM_THREADS=4; g++ -Wall -fopenmp -o hw_omp hello_world_omp.cpp; srun -n 1 -c $OMP_NUM_THREADS -t 1:00 ./hw_omp
 #include <iostream>
 #include <omp.h>
 
@@ -10,6 +9,8 @@ int main(int argc, char* argv[]) {
   int id = omp_get_thread_num();
   int nthrds = omp_get_num_threads();
   cout << "Hello from thread " << id << " of " << nthrds << endl;
+  // uncomment next line to make CPU-cores work (infinitely)
+  // while (true) {};
   }
   return 0;
 }
