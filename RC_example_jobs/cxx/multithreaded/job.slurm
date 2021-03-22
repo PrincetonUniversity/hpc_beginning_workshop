@@ -13,6 +13,6 @@
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel
+module load intel/19.1/64/19.1.1.217
 
 ./hw_omp
