@@ -68,7 +68,7 @@ Now everything is in place on Adroit. Let's connect to the head node of that clu
 
 ### On Adroit
 
-SSH to Adroit:
+SSH to Adroit ([VPN](https://www.princeton.edu/vpn):
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu
@@ -185,7 +185,7 @@ Now everything is in place on Adroit. Let's connect to the head node of that clu
 
 ### On Adroit
 
-SSH to Adroit:
+SSH to Adroit ([VPN](https://www.princeton.edu/vpn):
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu
