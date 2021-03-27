@@ -50,7 +50,7 @@ module load anaconda3/2020.11
 python matrix_inverse.py
 ```
 
-Next, while still on your laptop, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
+Next, while still on your laptop and using a [VPN](https://www.princeton.edu/vpn) if off-campus, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
@@ -58,7 +58,7 @@ $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/py
 
 Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
 
-Transfer the Python and Slurm scripts from your laptop to Adroit using the `scp` (secure copy) command:
+Transfer the Python and Slurm scripts from your laptop to Adroit using the `scp` (secure copy) command ([VPN](https://www.princeton.edu/vpn) required if off-campus):
 
 ```
 $ scp matrix_inverse.py job.slurm <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/python_test
@@ -167,7 +167,7 @@ good,1,1,0,70,180,170,44,m
 ...
 ```
 
-Next, while still on your laptop, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
+Next, while still on your laptop and using a [VPN](https://www.princeton.edu/vpn) if off-campus, run the following `ssh` command to create a directory on Adroit (you need to replace `<YourNetID>` twice):
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
@@ -175,7 +175,7 @@ $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_
 
 Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
 
-Transfer the R script, Slurm script and data file from your laptop to Adroit using the `scp` (secure copy) command:
+Transfer the R script, Slurm script and data file from your laptop to Adroit using the `scp` (secure copy) command ([VPN](https://www.princeton.edu/vpn) required if off-campus):
 
 ```
 $ scp data_analysis.R job.slurm cdc.csv <YourNetID>@adroit.princeton.edu:/scratch/network/<YourNetID>/R_test
