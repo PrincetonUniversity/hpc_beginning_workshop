@@ -21,7 +21,7 @@ of the software on the cluster.
 To load a module on the head node, just type:
 
 ```
-module load <name of module>
+module load <name of module/version>
 ```
 i.e.
 
@@ -34,18 +34,9 @@ You can see installed modules using `module avail`
 
 ## Using modules
 
-For example, when you `module load anaconda3`, you will load the `Anaconda`
+For example, when you `module load anaconda3/2020.11`, you will load the `Anaconda`
 distribution of Python3, which comes preloaded with data science libraries
-and its own virtual environment manager. You can load specific versions by
-supplying the full path to the module with `/` appended (i.e., `anaconda/5.3.1`)
-or just rely on the less specific version always loading the most recent.
-
-You can (in this case) use `pip install --user` to install to `~/.local` and
-then `module load anaconda3` in your submission script for slurm to have access
-to those packages. (Or you can use Conda's [excellent virtual environment management](https://conda.io/docs/user-guide/tasks/manage-environments.html))
-
-The only gotcha is remembering to add the appropriate `module load` calls to your
-submission script.
+and its own virtual environment manager.
 
 ## Getting rid of modules
 
