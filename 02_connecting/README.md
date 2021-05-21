@@ -37,7 +37,7 @@ Regardless, you'll need to know a few things:
 2. Your NetID and password
   * **N.B.** This may be different than your email if you use an alias.
 
-For Putty, use port 22. An example hostname would be `adroit.princeton.edu`.
+For Putty, use port 22. An example "Host Name" would be `adroit.princeton.edu`.
 
 ## Using Terminal as an example
 
