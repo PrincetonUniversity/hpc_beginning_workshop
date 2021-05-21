@@ -37,6 +37,8 @@ Regardless, you'll need to know a few things:
 2. Your NetID and password
   * **N.B.** This may be different than your email if you use an alias.
 
+For Putty, use port 22.
+
 ## Using Terminal as an example
 
 Once you launch an instance of Terminal, you'll be at a command prompt *on your local
