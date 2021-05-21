@@ -27,7 +27,7 @@ In order to connect to the university computing clusters, you will need an SSH
 On MacOS and Linux, the default terminal application has such a client built-in.
 No download is necessary!
 
-On Windows machines, you'll need a client. One option is [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and another is [Mobaxterm](http://mobaxterm.mobatek.net/).
+On Windows machines, you'll need a client. OIT recommends [Mobaxterm](http://mobaxterm.mobatek.net/). Another option is [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 Regardless, you'll need to know a few things:
 
