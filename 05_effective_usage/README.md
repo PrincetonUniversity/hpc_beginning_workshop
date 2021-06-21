@@ -7,7 +7,7 @@ The more resources you request, the longer your job will spend in the queue wait
 - Amount of time required to run the job  
 - Amount of memory (RAM) needed  
 
-For parallel codes, one needs to carry out a scaling analysis as described on [Choosing the Number of Nodes, CPU-cores and GPUs](https://researchcomputing.princeton.edu/support/knowledge-base/scaling-analysis). See [this page](https://researchcomputing.princeton.edu/node/7121) to understand how to choose your memory requirements.
+For parallel codes, one needs to carry out a scaling analysis as described on [Choosing the Number of Nodes, CPU-cores and GPUs](https://researchcomputing.princeton.edu/support/knowledge-base/scaling-analysis). See [Allocating Memory](https://researchcomputing.princeton.edu/node/7121) to learn how to estimate and set your memory requirements.
 
 ## Multi-threaded NumPy or How to Find the Optimal Number of Threads for Multithreaded Codes
 
