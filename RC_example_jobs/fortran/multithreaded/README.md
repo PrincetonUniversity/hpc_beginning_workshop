@@ -18,8 +18,8 @@ end program
 Compile the program using the following commands:
 
 ```
-$ module load intel/19.1/64/19.1.1.217
-$ ifort -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ module load intel/19.1/64/19.1.1.217  # or a module appropriate for your cluster
+$ ifort -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.f90
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
@@ -54,12 +54,12 @@ $ sbatch job.slurm
 The output of the code should resemble the following:
 
 ```
-Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread 3 of 826 of 0584 of 8
-Hello from thread 
-
- of  of 8
-7 of 8
- of 8
-Hello from thread 1 of 8
-8
+ Hello from process            3  of            8
+ Hello from process            5  of            8
+ Hello from process            6  of            8
+ Hello from process            7  of            8
+ Hello from process            4  of            8
+ Hello from process            0  of            8
+ Hello from process            2  of            8
+ Hello from process            1  of            8
 ```
