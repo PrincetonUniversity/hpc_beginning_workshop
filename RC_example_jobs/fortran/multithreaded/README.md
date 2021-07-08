@@ -1,4 +1,4 @@
-# Multi-threaded C++ Program
+# Multi-threaded Fortran Program
 
 Here is the source code for a simple multi-threaded C++ program:
 
