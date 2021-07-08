@@ -44,7 +44,7 @@ To submit the job to the cluster:
 $ sbatch job.slurm
 ```
 
-The output of the code should be something like:
+The output of the code should be:
 
 ```
 Hello world
