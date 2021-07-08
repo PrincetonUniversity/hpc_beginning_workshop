@@ -14,7 +14,7 @@ end program
 Run the following two commands to compile the code:
 
 ```
-$ module load intel/19.1/64/19.1.1.217
+$ module load intel/19.1/64/19.1.1.217  # or a module appropriate for your cluster
 $ ifort -Ofast -xHost -o hello_world hello_world.f90
 ```
 
