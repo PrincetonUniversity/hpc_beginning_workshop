@@ -15,7 +15,7 @@ Run the following two commands to compile the code:
 
 ```
 $ module load intel/19.1/64/19.1.1.217
-$ ifort -O3 -o hello_world hello_world.f90
+$ ifort -Ofast -xHost -o hello_world hello_world.f90
 ```
 
 Below is the Slurm script:
