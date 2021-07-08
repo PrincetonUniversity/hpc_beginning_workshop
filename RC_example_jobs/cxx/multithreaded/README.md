@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 Compile the program using the following commands:
 
 ```
-$ module load intel/19.1/64/19.1.1.217
+$ module load intel/19.1/64/19.1.1.217  # or a module appropriate for your cluster
 $ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
 ```
 
