@@ -1,4 +1,4 @@
-# CUDA aware MPI
+# CUDA-Aware MPI
 
 This example is based on the tutorial here: <https://www.olcf.ornl.gov/tutorials/gpudirect-mpich-enabled-cuda>.
 
