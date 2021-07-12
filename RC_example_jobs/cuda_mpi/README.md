@@ -2,7 +2,7 @@
 
 This example is based on the tutorial here: <https://www.olcf.ornl.gov/tutorials/gpudirect-mpich-enabled-cuda>.
 
-### TigerGPU and Adroit (GPU)
+### Adroit (GPU)
 
 To compile:
 
