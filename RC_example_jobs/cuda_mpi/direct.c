@@ -10,7 +10,6 @@ int main( int argc, char** argv ) {
 
     MPI_Init (&argc, &argv);
 
-    int direct;
     int rank, size;
     int *h_buff = NULL;
     void *d_rank = NULL;
