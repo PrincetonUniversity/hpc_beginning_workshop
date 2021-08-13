@@ -30,11 +30,13 @@ cluster is called a *node**.
 
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
 
-![Older CPUs](https://computing.llnl.gov/tutorials/parallel_comp/images/serialProblem.gif)
+![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
 
-![Modern CPUs](https://computing.llnl.gov/tutorials/parallel_comp/images/parallelProblem.gif)
+![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
 
-![Nodes to Cores](https://computing.llnl.gov/tutorials/parallel_comp/images/nodesNetwork.gif)
+![Nodes to Cores](https://hpc.llnl.gov/sites/default/files/nodesNetwork.gif)
+
+*Images sourced from Lawrence Livermore National Laboratory's Introduction to [Parallel Computing Tutorial](https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial).*
 
 ### No Internet Access on the Compute Nodes
 
@@ -166,7 +168,7 @@ $ <b>pwd</b>
 /home/ceisgrub
 
 
-$ <b>cat /etc/os-release</b> 
+$ <b>cat /etc/os-release</b>
 NAME="Springdale Linux"
 VERSION="7.7 (Verona)"
 ID="rhel"
@@ -262,9 +264,9 @@ $ <b>squeue</b>
             660113       all Phdiimin     leit  R 9-12:05:41      1 adroit-12
             661298       all job.scri vincenzi  R    6:37:12      1 adroit-13
             661391       all run_cali  hherman  R    3:59:23      1 adroit-10
- 
- 
- 
+
+
+
 $ <b>who</b>
 bill     pts/0        2020-02-18 08:17 (delta.princeton.edu)
 yongickc pts/1        2020-02-20 08:11 (chm-c07y213xjyvx.princeton.edu)
@@ -294,15 +296,15 @@ keweiz   pts/27       2020-02-21 16:09 (vpn10-client-128-112-69-24.princeton.edu
 $ <b>checkquota</b>
           Storage/size quota filesystem report for user: ceisgrub
 Filesystem               Mount                 Used   Limit  MaxLim Comment
-Adroit home              /home                9.1GB   9.3GB    10GB 
-Adroit scratch           /scratch                 0       0       0 
-Adroit scratch network   /scratch/network     1.7GB    93GB   100GB 
+Adroit home              /home                9.1GB   9.3GB    10GB
+Adroit scratch           /scratch                 0       0       0
+Adroit scratch network   /scratch/network     1.7GB    93GB   100GB
 
           Storage number of files used report for user: ceisgrub
 Filesystem               Mount                 Used   Limit  MaxLim Comment
-Adroit home              /home                80.5K    975K    1.0M 
-Adroit scratch           /scratch                 1       0       0 
-Adroit scratch network   /scratch/network     18.9K    9.8M   10.5M 
+Adroit home              /home                80.5K    975K    1.0M
+Adroit scratch           /scratch                 1       0       0
+Adroit scratch network   /scratch/network     18.9K    9.8M   10.5M
 
 For quota increase requests please use this website:
 
