@@ -2,6 +2,8 @@
 
 ## Reasons to Use the Clusters
 
+In a nutshell, our clusters are where you go once your personal computer can no longer handle your computations.
+
 - Lots of processing capacity, ability to do parallel computing (e.g., you could use 1000 CPU-cores for a single job)  
 - Nodes have 100's GB of memory  
 - One can store large datasets on `/scratch/gpfs`
@@ -12,7 +14,7 @@
 
 ## Clusters Do Not Run Your Code Faster by Magic - Often Need Parallelization
 [!!! INSERT CONTENT]
-To get your code to run faster, this often involves the explicit task of parallelizing your code. The burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer. 
+To get your code to run faster, this often involves the explicit task of parallelizing your code. The burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer.
 
 ### 4 Basic Ways to Think About Parallelizing Code
 
