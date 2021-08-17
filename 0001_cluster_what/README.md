@@ -13,20 +13,27 @@ The computational systems made available by Princeton Research
 Computing are, for the most part, *clusters*.  Each computer in the
 cluster is called a **node**.
 
-![Cluster](https://upload.wikimedia.org/wikipedia/commons/2/29/Virginia_tech_xserve_cluster.jpg)
 
-![Connections](connections_byKevinAbbey_20210519.jpg)
+<figure>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Virginia_tech_xserve_cluster.jpg" alt="Racks of computers that make up a supercomputer." width="300"/>
+  <figcaption>Racks of computers in a data center.</figcaption>
+</figure>
+
+<br/>
+
+<figure>
+  <img src="connections_byKevinAbbey_20210519_a.jpg" alt="The backend of a rack of computers with wire connectors between coming out of various places." width="300"/>
+  <figcaption>Backend of computer racks.</figcaption>
+</figure>
+
 
 ## Terminology
 
-* **Head Node**
-  * The server that connects a cluster to the an outside network.
-* **Compute Node**
-  * A server that is used for running computations, sometimes managed by a scheduler.
-* **Cores**
-  * A shorthand way to refer to the number of processor cores (usually physical) of a CPU in a node.
+* **Head Node** - The server that connects a cluster to the outside network. Essentially your point of entry into the cluster.
+* **Compute Node** - A server that is used for running computations, sometimes managed by a scheduler.
+* **Cores** - A shorthand way to refer to the number of processor cores (usually physical) of a CPU in a node.
 
-  ![Diagram with Terminology](beowulf.png)
+![Diagram with Terminology](beowulf.png)
 
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
 
