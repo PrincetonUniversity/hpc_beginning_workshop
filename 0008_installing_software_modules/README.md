@@ -1,6 +1,6 @@
 # Software
 
-## Using Pre-Installed Software with Environment Modules
+## Using Pre-Installed Software with Environment **Modules**
 
 Several applications and software libraries are already available on each cluster. To see the modules that are available on a cluster, run this command:
 
@@ -73,7 +73,7 @@ To see all the options run `module help` or see [this page](https://researchcomp
 
 If you need software that is not installed, you will most likely have to do it yourself.
 
-## A Word on Python Modules
+### A Word on Python Modules
 
 When you first connect to the cluster, before loading any modules, the system Python (old) will used by default:
 
@@ -101,12 +101,24 @@ To see all the packages that are included in Anaconda Python run this command:
 ```
 $ conda list
 ```
+## Installing Additional Software
 
-## Installing Python Packages on the HPC Clusters
+Python and R packages will be installed by default in your home directory.
 
-See [this guide](https://github.com/PrincetonUniversity/installing_python_packages).
+In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R.
 
-## A Word on R
+Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
+
+Note that using commands like `sudo yum install` or `sudo apt-get intall` will not work.
+
+### Installing Python Packages on the HPC Clusters
+
+See this [guide to installing Python packages with conda or pip](https://researchcomputing.princeton.edu/support/knowledge-base/python#managers) on Princeton Research Computing's [Python resource page](https://researchcomputing.princeton.edu/support/knowledge-base/python).
+
+### Installing R Packages on the HPC Cluster
+
+See [this guide to installing R packages](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio#install) on Princeton Research Computing's [R resource page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
+
 
 An updated version of R is ready to be used without loading any modules. To start R and then immediately exit:
 
@@ -117,17 +129,8 @@ $ R
 
 Note that RStudio is available through the [MyAdroit](https://myadroit.princeton.edu) web portal.
 
-## Installing R Packages on the HPC Clusters
 
-See [this guide](https://github.com/PrincetonUniversity/installing_R_packages).
-
-## Where to install software
-
-Python and R packages will be installed by default in your home directory. In general, we recommend that your create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. Your home directory is backed-up. Be sure to run the `checkquota` command regularly to make sure you have enough space.
-
-Note that using commands like `sudo yum install` or `sudo apt-get intall` will not work.
-
-## GNU GCC
+### GNU Compiler Collection (GCC)
 
 Software that comes in source form must be compiled before it can be installed in your `/home` directory. One popular tool suite for doing this is the GNU Compiler Collection (GCC) which is composed of compilers, a linker, libraries and tools.
 
@@ -150,14 +153,14 @@ Note that the C and Fortran compilers and related tools are also updated by this
 
 Common errors with the `rh` module not loaded include `g++: error: unrecognized command line option -std=c++17`, `gcc: error: unrecognized command line option '-std=c++14'` and `'for' loop initial declarations are only allowed in C99 mode`.
 
-## Vectorization
+### Vectorization
 
 Modern CPUs can perform more than one operation per cycle using vector execution units. A common example is elementwise vector addition. [Vectorized code](https://en.wikipedia.org/wiki/Automatic_vectorization) generated for one processor will not run on another processor unless it supports those instructions. Such an attempt will produce an `illegal instruction` error if the instructions are not supported.
 
-### TigerCPU vs. TigerGPU
-
-The processor on `tigercpu` supports AVX512 instructions while those on `tigergpu` can only do `AVX2`. Be sure to compile codes for `tigercpu` by ssh-ing to `tigercpu.princeton.edu` and compile codes for `tigergpu` by ssh-ing to `tigergpu.princeton.edu`. If you ssh to `tiger.princeton.edu` then you will land on `tigercpu.princeton.edu`.
-
-### Della
+#### Della
 
 Della is composed of 5 different Intel Xeon microarchitectures: Ivybridge (AVX), Haswell (AVX2), Broadwell (AVX2), Skylake (AVX-512) and Cascade Lake (AVX-512). The head node `della5` is Broadwell. If you compile a code on the head node it will not run on the Ivybridge nodes. Similarly, it will not take advantage of the AVX-512 instructions on the Skylake and Cascade Lake nodes unless you cross-compile (i.e., using `-xHost` with the Intel compiler will produce code for Broadwell).
+
+#### TigerCPU vs. TigerGPU
+
+The processor on `tigercpu` supports AVX512 instructions while those on `tigergpu` can only do `AVX2`. Be sure to compile codes for `tigercpu` by ssh-ing to `tigercpu.princeton.edu` and compile codes for `tigergpu` by ssh-ing to `tigergpu.princeton.edu`. If you ssh to `tiger.princeton.edu` then you will land on `tigercpu.princeton.edu`.
