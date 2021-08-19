@@ -2,13 +2,16 @@
 
 ## The Filesystems
 
-![Tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
+The main file systems on are clusters are:
 
-+ `/home/<YourNetID>`: source code and executables
-+ `/scratch/gpfs/<YourNetID>`: job output and intermediate results
-+ `/tigress/<YourNetID>`: final results for the long term
++ `/home/<YourNetID>`: where you should place source code and executables
++ `/scratch/gpfs/<YourNetID>`: where you should place job output and intermediate results
++ `/tigress/<YourNetID>`: for final results for the long term
++ `/projects/<Research Group Name>`: for group work
 
 *IMPORTANT*: Tigress is for non-volatile files only. Do not make the mistake of writing your job output here. Users are tempted to do this because /tigress is backed-up while /scratch/gpfs is not. However, this is a mistake and you may adversely affect other users by writing or reading job files from /tigress during your production runs.
+
+![Tigress](images/hpc_princeton_filesystems.png)
 
 Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to either of them.
 
@@ -16,9 +19,9 @@ Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to eithe
 
 * **Code** -- somewhere under your home-directory tree is ok (if these are smaller files that aren't too huge)
 * **Temp files your code generates while it runs** -- depends whether you want to handle the housekeeping of removing these files yourself or delegate the housekeeping to SLURM:
-    + Have your script remove temporary files -- save them to `/scratch` (this is a scratch area local to each cluster; not auto-purged, so send "workspace" files here if your script handles deleting them)
-    + Have SLURM remove temporary files -- save them to `/tmp` (this is an alias for the same physical disk area as `/scratch`, but if you save to `/tmp`, SLURM will automatically remove anything that got written here when your SLURM job ends
-* **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). One such are *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
+    + If your script remove temporary files -- save them to `/scratch` (this is a scratch area local to each cluster; not auto-purged, so send "workspace" files here if your script handles deleting them)
+    + If you want SLURM to remove temporary files -- save them to `/tmp` (this is an alias for the same physical disk area as `/scratch`, but if you save to `/tmp`, SLURM will automatically remove anything that got written here when your SLURM job ends
+* **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). Each /scratch space is *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
 * **Longer term results for archiving** -- move it to `/tigress` or, if possible, to `/projects` (preferred).  These *are* backed up
 
 **WARNING: Why you shouldn't put your on-the-fly code output files on `/tigress` or `/projects` -- the curse of continual backup**
@@ -41,11 +44,11 @@ $ cp -r /scratch/gpfs/<YourNetID>/myjob /tigress/<YourNetID>
 
 ## How do I get my files onto (or off) the cluster?
 
-One of the most frequently asked questions is how to get files to Adroit or a cluster.
-Again, Linux/MacOS has an answer out of the box, but clients like PuTTY and Mobaxterm
-OR FTP clients like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client) (paid, sadly) or [Filezilla](https://filezilla-project.org/). In both cases,
+One of the most frequently asked questions is how to get files to Adroit or any other cluster.
+Again, Linux/MacOS has an answer out of the box, but for Windows clients like PuTTY and Mobaxterm
+OR FTP clients like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client) (paid, sadly) or [Filezilla](https://filezilla-project.org/) are needed. In both cases,
 make sure you're using interactive logon. Filezilla especially can be a pain
-with Duo Authentication for Nobel, but we have some tips [here](https://askrc.princeton.edu/question/343/how-do-i-get-filezilla-to-work-around-duo/)
+with Duo Authentication for Nobel, but we have some tips [here](https://askrc.princeton.edu/question/343/how-do-i-get-filezilla-to-work-around-duo/).
 
 If you're transferring a lot of files, consider
 zipping them.
@@ -54,11 +57,13 @@ The default client to transfer files is `scp`. This is a copy command that uses
 SSH to copy files.
 
 The general structure of the scp command is:  
-`scp [options] [netid@]source-host:file/location [netid@]destination-host:file/location`
+`scp [options] [netid]@source-host:file/location [netid@]destination-host:file/location`
 
 It's generally more straightforward to transfer files from your personal computer to the clusters, since you don't need to specify the user and host for the system you're already in.
 
-So for example, a Princeton student with the netid jessedoe who wants to transfer a data.csv file from their personal laptop to the /scratch/network/jessedoe folder on the Adroit cluster would use the following command:
+### Example
+
+A Princeton student with the netid jessedoe wants to transfer a data.csv file from their personal laptop to the /scratch/network/jessedoe folder on the Adroit cluster. To do this, they would use the following command:
 
 `scp ~/mydatafiles/data.csv jessedoe@adroit:/scratch/network/jessedoe`
 

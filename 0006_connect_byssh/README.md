@@ -1,10 +1,10 @@
 # Connecting to the Clusters via SSH
 
-## A few caveats
+## A Few Caveats
 These instructions assume you:
   1. Are Princeton University faculty, student, or staff
-  2. Are connecting from the campus wireless if on campus (or through Nobel)
-  3. Are connecting with GlobalProtect VPN or a wired connection (or through Nobel).
+  2. [If on-campus] Are connecting from the campus wireless (or through Nobel)
+  3. [If off-campus] Are connecting with GlobalProtect VPN, a wired connection, or through Nobel
   4. Are connecting with Duo Authentication
   5. Have an account on the system you're looking to connect to. You can register for [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
   here. (Note: You will need to login using your university credentials).
@@ -30,7 +30,7 @@ Regardless, you'll need to know a few things:
 2. Your NetID and Password
   * **N.B.** This may be different than your email if you use an alias.
 
-## Using Terminal as an example
+### Using Terminal as an Example
 
 Once you launch an instance of Terminal, you'll be at a command prompt *on your local
 machine* that looks something like this:
