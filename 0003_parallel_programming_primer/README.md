@@ -6,11 +6,27 @@ A common misconception is that simply running your code on a cluster will result
 
 In other words, the burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer.
 
-Although learning how to parallelize code is outside the scope of this workshop, for our purposes it is useful to at least be familiar with the typical ways in which code can be parallelized.
+Although learning *how* to parallelize code is outside the scope of this workshop, for our purposes it is useful to at least be familiar with the typical ways in which code can be parallelized.
 
-This guide is intended as a very basic introduction to parallel programming concepts, with some notes on relevant [SLURM](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) script parameters. After a brief introduction to the computer parts and terms relevant for parallel computing, we provide an overview of four common methods of parallelism. Although this guide does not teach *how* to implement each type of parallelsim in your code, it does point to relevant resources for learning.
+This guide is intended as a very basic introduction to parallel programming concepts, with some notes on relevant [SLURM](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) script parameters, which will be more useful after covering the slurm section of this workshop.
+
+After a brief introduction to the computer parts and terms relevant for parallel computing, we provide an overview of four common methods of parallelism. Although this guide does not teach *how* to implement each type of parallelsim in your code, it does point to relevant resources for learning.
 
 For a more comprehensive introduction to parallel programming concepts, check [Research Computing's workshop schedule](https://researchcomputing.princeton.edu/learn/workshops-live-training) for the next *Primer on Parallel Programming* workshop, or view [materials and recordings from past workshops](https://researchcomputing.princeton.edu/learn/workshops-live-training/archives-past-workshops).
+
+## Serial versus Parallel Programming
+
+### Serial Programming
+Serial programming is the default way of running code. It involves running each section of code sequentially, and only one piece of code can be processed at a time.
+
+![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
+
+### Parallel Programming
+Parallel programming involves breaking up code into piece that can run simultaneously.
+
+![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
+
+*Images sourced from Lawrence Livermore National Laboratory's Introduction to [Parallel Computing Tutorial](https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial).*
 
 ## Brief Introduction to Relevant Vocabulary
 
