@@ -1,7 +1,7 @@
 # Getting Started with the Research Computing Clusters
 
 ## About
-This guide presents an overview of using the HPC systems at Princeton. Specifically, it explains how to use Nobel, Adroit, Perseus, Della, Tiger and Traverse. The visualization machine and storage system are also covered.
+This guide presents an overview of using the HPC systems at Princeton. Specifically, it explains how to use Nobel, Adroit, Della, Tiger, Stellar, and Traverse. The visualization machine and storage system are also covered.
 
 ## Prerequisites
 
@@ -13,12 +13,10 @@ In particular, you should be able to edit basic files on Adroit.  A simple text 
 [Click here](https://bit.ly/hpcintro_24feb20)
 
 ## Useful links
-[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/education/online-tutorials/getting-started)   
-[Research Computing FAQ](https://researchcomputing.princeton.edu/faq)-->
-
-## Getting Help
-
-If you encounter any difficulties with getting started on the HPC clusters then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) 
+[Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) 
+[Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq)
+[Research Computing Support Page](https://researchcomputing.princeton.edu/support)
 
 ## Authorship
 
