@@ -3,11 +3,11 @@
 The more resources you request, the longer your job will spend in the queue waiting for the resources to become available. Try to specifiy your minimum requirements. Here are the key pieces:
 
 - Number of CPU-cores  
-- Number of GPUs  
+- Number of GPUs (if any)
 - Amount of time required to run the job  
 - Amount of memory (RAM) needed  
 
-See [this page](https://researchcomputing.princeton.edu/node/7121) to understand how to choose your memory requirements.
+See our resource page [allocating memory](https://researchcomputing.princeton.edu/support/knowledge-base/memory) to understand how to choose your memory requirements.
 
 ## How to Find the Optimal Number of Threads for Multithreaded Codes
 
@@ -66,7 +66,7 @@ The following data was found using one of the Skylake nodes on Adroit:
 | cpus-per-task (or threads)| execution time (s) | speed-up ratio |  parallel efficiency |
 |:--------------------------:|:--------:|:---------:|:-------------------:|
 | 1                          |  4.2     |     1.0   |   100%              |
-| 2                          |  2.2     |   1.9     |   95%               | 
+| 2                          |  2.2     |   1.9     |   95%               |
 | 4                          |  1.6     |   2.6     |   66%               |
 | 8                          |  0.78    |   5.4     |   67%               |
 | 16                         |  0.65    |   6.5     |   40%               |
@@ -76,4 +76,3 @@ We see that by dividing the computation across several threads, which run on the
 is dramatically reduced. What is the best choice for `--cpus-per-task` for this case? Clearly, using 32 CPU-cores does not lead to optimal performance.
 
 A similar procedure can be used to find the optimal number of CPU-cores for MPI codes and the optimal number of GPUs for codes that use GPUs.
-
