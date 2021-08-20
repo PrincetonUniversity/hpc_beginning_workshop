@@ -58,13 +58,11 @@ julia/0.5.0 julia/0.6.0 julia/1.0.1 julia/1.1.0 julia/1.3.0
 
 Use the `module load <module-name>` command to activate a module.
 
-For example:
+For example, to use Julia:
 
 ```
-$ julia
--bash: julia: command not found
-$ module load julia/1.2.0
-$ julia
+$ module load julia/1.2.0      # loads julia module
+$ julia                        # starts julia
                _
    _       _ _(_)_     |  Documentation: https://docs.julialang.org
   (_)     | (_) (_)    |
@@ -76,6 +74,7 @@ $ julia
 
 julia>
 ```
+Note that you need to include the full path, with the version you've selected, for it to work. In the above example for using Julia, `module load julia/1.2.0` specifies the full path, while `module load julia` does not.
 
 ### How Do I Get Rid of a Module?
 
