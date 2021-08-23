@@ -22,7 +22,7 @@ Serial programming is the default way of running code. It involves running each 
 ![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
 
 ### Parallel Programming
-Parallel programming involves breaking up code into piece that can run simultaneously.
+Parallel programming involves breaking up code into pieces that can run simultaneously.
 
 ![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
 
