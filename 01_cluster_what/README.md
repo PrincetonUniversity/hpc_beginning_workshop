@@ -11,7 +11,7 @@ networked together and endowed with software to coordinate programs on
 
 The computational systems made available by Princeton Research
 Computing are, for the most part, *clusters*.  Each computer in the
-cluster is called a **node**.
+cluster is called a **node**, and we commonly talk about two types of nodes: head-nodes and compute-nodes.
 
 
 <figure>
@@ -29,8 +29,8 @@ cluster is called a **node**.
 
 ## Terminology
 
-* **Head Node** - The server that connects a cluster to the outside network. Essentially your point of entry into the cluster.
-* **Compute Node** - A server that is used for running computations, sometimes managed by a scheduler.
+* **Head-Node** - The head-node is the computer where we land when we ssh to log in to the cluster. This is where we edit scripts, compile code, and submit jobs to the scheduler. The head-nodes are shared with other users and jobs should not be run on the head-nodes themselves.
+* **Compute-Node** - The compute-nodes are the computers where jobs should be run. In order to run jobs on the compute-nodes we must go through the job scheduler. By submitting jobs to the job scheduler, the jobs will automatically be run on the compute-nodes once the requested resources are available. The Princeton clusters use SLURM as their scheduling program and we will get back to this in a later notebook.
 * **Cores** - A shorthand way to refer to the number of processor cores (usually physical) of a CPU in a node.
 
 ![Diagram with Terminology](beowulf.png)
