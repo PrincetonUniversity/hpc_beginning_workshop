@@ -1,10 +1,12 @@
 # A Brief Tour of Princeton's HPC Clusters & How to Get Access
 
-Princeton University has a range of high-performance computing resources that are available to faculty and students.
+Princeton University has a range of high-performance computing resources that are available to faculty and students. Broadly speaking, there are two types of systems, small and large. 
 
-Broadly speaking, there are two types of systems, small and large. The smaller systems (Nobel, Adroit, Tigressdata) are meant for exploration, small production runs, and visualization. Two of them (Nobel and Adroit) are available upon request to any Princeton University user. The larger systems (Della, Tiger, Stellar, Traverse) are meant for solving computationally demanding research and getting access to these systems requires a proposal or sponsorship by a faculty member that is already using it.
+The smaller systems (Nobel, Adroit, Tigressdata) are meant for exploration, small production runs, and visualization. Two of them (Nobel and Adroit) are available upon request to any Princeton University user. 
 
-**To find which system that will best suit you, we recommend exploring the Systems Overview table on Research Computing's [Systems](https://researchcomputing.princeton.edu/systems/systems-overview) page.** There is also a more technical [Hardware Overview](https://researchcomputing.princeton.edu/systems/research-computing-systems/hardware-overview) table for anyone interested. 
+The larger systems (Della, Tiger, Stellar, Traverse) are meant for solving computationally demanding research and getting access to these systems requires a proposal or sponsorship by a faculty member that is already using it.
+
+**To find which system that will best suit you, we recommend exploring the [Systems Overview table](https://researchcomputing.princeton.edu/systems/systems-overview#:~:text=Princeton%27s%20Research%20Computing-,Systems,-The%20following%20table) on the Princeton Research Computing website.** There is also a more technical [Hardware Overview](https://researchcomputing.princeton.edu/systems/research-computing-systems/hardware-overview) table for anyone interested. 
 
 Adroit is often a good choice for getting started because it is configured the same way as the larger systems like Tiger and Della. Therefore, the workflow you develop on Adroit will be exactly replicable on the larger systems. If, however, your job requires more nodes than there are on Adroit, then it is clear that you need a larger system. 
 
