@@ -10,10 +10,11 @@ This workshop assumes that you have some knowledge of Linux and the Bash command
 In particular, it's helpful to be able to edit basic files on a Linux system (such as Adroit).  A simple text editor for this purpose found on almost all Linux systems is [nano](https://www.nano-editor.org/).
 
 ## Useful links
-[Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) 
-[Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) 
-[Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq)
-[Research Computing Support Page](https://researchcomputing.princeton.edu/support)
+
+* [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) - Landing page for getting started with our systems.    
+* [Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) - Search all of our help articles for using the High Performance Computing (HPC) systems at Princeton.  
+* [Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq) - View answers to frequently asked questions.  
+* [Research Computing Support Page](https://researchcomputing.princeton.edu/support) - Where to go if you need more help. 
 
 ## Authorship
 
