@@ -11,7 +11,7 @@ The main file systems on are clusters are:
 
 *IMPORTANT*: Tigress is for non-volatile files only. Do not make the mistake of writing your job output here. Users are tempted to do this because /tigress is backed-up while /scratch/gpfs is not. However, this is a mistake and you may adversely affect other users by writing or reading job files from /tigress during your production runs.
 
-![Tigress](images/hpc_princeton_filesystems.png)
+![Princeton HPC Filesystem](images/hpc_princeton_file_system.png)
 
 Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to either of them.
 
