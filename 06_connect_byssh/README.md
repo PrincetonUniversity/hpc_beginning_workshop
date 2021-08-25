@@ -2,16 +2,16 @@
 
 ## A Few Caveats
 These instructions assume you:
-  1. Are Princeton University faculty, student, or staff
-  2. [If on-campus] Are connecting from the campus wireless (or through Nobel)
-  3. [If off-campus] Are connecting with GlobalProtect VPN, a wired connection, or through Nobel
-  4. Are connecting with Duo Authentication
-  5. Have an account on the system you're looking to connect to. You can register for [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit)
-  here. (Note: You will need to login using your university credentials).
-
-## VPN
-
-If you are off-campus then you should install the [GlobalProtect VPN](https://www.princeton.edu/vpn) on your laptop. This will allow you to connect directly to the HPC clusters (e.g., Adroit) and use the web portals (MyAdroit and MyDella). Make sure you connect via the GlobalProtect app on your laptop before sshing to Adroit or another cluster.
+1. Are Princeton University faculty, student, or staff
+2. Are connecting... 
+    * (if on-campus) from the campus wireless eduroam network, or a wired campus connection, or through Nobel
+    * (if off-campus) with **GlobalProtect VPN**, or through Nobel 
+        * You can install the [GlobalProtect VPN](https://www.princeton.edu/vpn) on your laptop. Make sure you connect via the GlobalProtect app on your laptop *before* ssh-ing to Adroit or another cluster.
+3. Are connecting with **Duo Authentication**
+    * All of the clusters from both on campus and off campus now require two-factor authentication via Duo. If you need help getting this set up, contacting the [OIT Support and Operations Center](http://www.princeton.edu/oit/) will be your best course of action. You can also see OIT's resoures for using Duo [here](https://princeton.service-now.com/snap/?id=kb_article&sys_id=692a27064f9ca20018ddd48e5210c72b).
+    * Upon connecting, you can request a push to a cell phone application, a text with a passcode, or you can enter a generated pass code with a soft key created by the Duo application on your cell phone.
+    * If you use a system that respects a standard `~/.ssh/config`, you can use the [solution outlined on AskRC](https://askrc.princeton.edu/question/331/how-do-i-avoid-having-to-authenticate-with-duo-every-time/) to setup SSH Multiplexing.
+5. Have an account on the system you're looking to connect to. You can register for [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) here. (Note: You will need to login using your university credentials).
 
 ## SSH
 
@@ -25,15 +25,15 @@ On Windows machines, you'll need a client. One option is [PuTTY](http://www.chia
 
 Regardless, you'll need to know a few things:
 
-1. Server (Host) Address
-  * For each cluster, the address typically follows the formula [cluster-name].princeton.edu'. So for Adroit, for example, the address would be adroit.princeton.edu.
-2. Your NetID and Password
-  * **N.B.** This may be different than your email if you use an alias.
+1. Server (Host) Address  
+    * For each cluster, the address typically follows the formula '[cluster-name].princeton.edu'. So for Adroit, for example, the address would be adroit.princeton.edu.
+2. Your NetID and Password  
+    * **N.B.** This may be different than your email if you use an alias.
 
 ### Using Terminal as an Example
 
 Once you launch an instance of Terminal, you'll be at a command prompt *on your local
-machine* that looks something like this:
+machine* (i.e., on your computer) that looks something like this:
 ```
 benjaminhicks ~/hpc_beginning_workshop $
 ```
@@ -71,33 +71,15 @@ I'm now remotely connected to adroit4, which is the head node of the cluster!
 The shell I used in both cases is one called [Bash](https://www.gnu.org/software/bash/).
 It's a particular command line interface that is common across Unix-alike machines.
 
-
-## Duo Authentication
-
-All of the clusters from both on campus and off campus now require two factor
-authentication via Duo. If you need help getting this set up, contacting the
-[OIT Support and Operations Center](http://www.princeton.edu/oit/)
-will be your best course of action. You can also see OIT's resoures for using
-Duo [here](https://princeton.service-now.com/snap/?id=kb_article&sys_id=692a27064f9ca20018ddd48e5210c72b).
-
-Upon connecting, you can request a push to a cell phone application, a text with
-a passcode, or you can enter a generated pass code with a soft key created by the
-Duo application on your cell phone.
-
-If you use a system that respects a standard `~/.ssh/config`, you can use the
-[solution outlined on AskRC](https://askrc.princeton.edu/question/331/how-do-i-avoid-having-to-authenticate-with-duo-every-time/)
- to setup SSH Multiplexing.
-
  ## SSH Keys: `ssh` without typing passwords
 
  Typing passwords every time you want to connect to a machine or, more annoyingly, every time you want to copy a file to/from a remote machine gets annoying quickly.  One solution is to enable passwordless login/remote operations by generating a public/private pair of *ssh keys* and using them to negotiate the connection.  The procedure is explained in [this guide](https://github.com/PrincetonUniversity/removing_tedium/tree/master/02_passwordless_logins).
 
  ## <a name="tmux">Staying connected (tmux)</a>
 
- If your
- shell is disconnected, the command you're running terminates. This comes up very frequently when you're connected to Nobel, where tasks are
+ If your shell is disconnected, the command you're running terminates. This comes up very frequently when you're connected to Nobel, where tasks are
  run directly from the command line rather than the SLURM scheduler. This is bad.
- A built in solution to most Unix-alike OSes is `nohup` but it's of limited utility.
+ A built-in solution to most Unix-alike operating systems is `nohup`, but it's of limited utility.
 
  Hence we bring in something like [tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/).
  It comes installed on all university clusters, and it lets you start a shell
