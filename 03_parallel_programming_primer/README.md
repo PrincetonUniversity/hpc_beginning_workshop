@@ -17,11 +17,13 @@ For a more comprehensive introduction to parallel programming concepts, check [R
 ## Serial versus Parallel Programming
 
 ### Serial Programming
+
 Serial programming is the default way of running code. It involves running each section of code sequentially, and only one piece of code can be processed at a time.
 
 ![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
 
 ### Parallel Programming
+
 Parallel programming involves breaking up code into pieces that can run simultaneously.
 
 ![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
@@ -52,7 +54,13 @@ When tasks run as distinct **processes**, each get their own siloed memory to ru
 
 To put it even more simply, processes have their own memory, while threads belong to a process and share memory.
 
+<!--- Current attempt for images & captions. Works, but a hack. Probably not consdiered accessible. --->
+|<img src="diagrams/comp.png" alt="One empty rectangle."/>|<img src="diagrams/comp_threads.png" alt="One rectangle, inside of which is a small circle representing one process. There are four separate lines stemming from the circle, representing four threads."/>|<img src="diagrams/comp_processes.png" alt="One rectangle, inside of which are two small circles representing two processes. There is one  line stemming from each circle, representing one thread per process."/>|
+|----|----|----|
+|If a box represents a computer,|and a task can be represented as line stemming from a spot in memory, then tasks run as threads can be represented as the above, where all threads have access to the same memory space,|and tasks run as processes can be represented as the above, where each process has its own siloed memory.|
 
+<!--- Initial attempt for images & captions. Gives a weird spacing that makes one image's caption look like it belong to another image. --->
+<!--- 
 <figure>
   <img src="diagrams/comp.png" alt="One empty rectangle." width=30%/>
   <figcaption>If a box represents a computer,</figcaption>
@@ -71,7 +79,7 @@ To put it even more simply, processes have their own memory, while threads belon
   <img src="diagrams/comp_processes.png" alt="One rectangle, inside of which are two small circles representing two processes. There is one  line stemming from each circle, representing one thread per process." width=30%/>
   <figcaption>and tasks run as processes can be represented as the above, where each process has its own siloed memory.</figcaption>
 </figure>
-
+--->
 
 ## Four Basic Types of Parallel Programming
 
