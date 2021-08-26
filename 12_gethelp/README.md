@@ -2,7 +2,9 @@
 
 ## Research Computing Website
 
-Check out Research Computing's [Knowledge Base](https://researchcomputing.princeton.edu/support/knowledge-base) articles on various cluster topics, and Research Computing's [FAQ](https://researchcomputing.princeton.edu/support/faq). If neither resource answers your question(s), Research Computing's website is optimized for search, and we recommend you [search Research Computing's website](https://researchcomputing.princeton.edu/search/node).
+We recommend first checking out Research Computing's [Knowledge Base](https://researchcomputing.princeton.edu/support/knowledge-base) articles on various cluster topics, as well as Research Computing's [FAQ](https://researchcomputing.princeton.edu/support/faq). 
+
+If neither resource answers your question(s), Research Computing's website is optimized for search, and we recommend [searching Research Computing's website](https://researchcomputing.princeton.edu/search/node).
 
 ## Submit a Support Ticket
 
