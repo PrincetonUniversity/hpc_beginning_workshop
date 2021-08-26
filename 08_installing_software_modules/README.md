@@ -8,38 +8,11 @@ The way around this is the `module` system.
 
 ## Using Pre-Installed Software with Environment **Modules**
 
-Modules work by setting various environment variables, especially your `$PATH`, to point to the appropriate, more up-to-date installations provided as part of the software on the cluster.
-
-To see exactly what a module is doing, use the command `module show <module-name>`.
-
-For example:
-
-```
-$ module show cudatoolkit/10.2
--------------------------------------------------------------------
-/usr/local/share/Modules/modulefiles/cudatoolkit/10.2:
-
-module-whatis	 Sets up cudatoolkit102 10.2 in your environment
-prepend-path	 PATH /usr/local/cuda-10.2/bin
-prepend-path	 LD_LIBRARY_PATH /usr/local/cuda-10.2/lib64
-prepend-path	 LIBRARY_PATH /usr/local/cuda-10.2/lib64
-prepend-path	 MANPATH /usr/local/cuda-10.2/doc/man
-append-path	 -d   LDFLAGS -L/usr/local/cuda-10.2/lib64
-append-path	 -d   INCLUDE -I/usr/local/cuda-10.2/include
-append-path	 CPATH /usr/local/cuda-10.2/include
-append-path	 -d   FFLAGS -I/usr/local/cuda-10.2/include
-append-path	 -d   LOCAL_LDFLAGS -L/usr/local/cuda-10.2/lib64
-append-path	 -d   LOCAL_INCLUDE -I/usr/local/cuda-10.2/include
-append-path	 -d   LOCAL_CFLAGS -I/usr/local/cuda-10.2/include
-append-path	 -d   LOCAL_FFLAGS -I/usr/local/cuda-10.2/include
-append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-10.2/include
--------------------------------------------------------------------
-```
-Again, modules only change the values of environment variables. They do not install or uninstall software.
+Several applications and software libraries are already available on each cluster, and can be accessed through modules.
 
 ### What Modules Are Available?
 
-Several applications and software libraries are already available on each cluster. To see the modules that are available on a cluster, run this command:
+To see the modules that are available on a cluster, run this command:
 
 ```
 $ module avail
@@ -74,12 +47,42 @@ $ julia                        # starts julia
 
 julia>
 ```
-Note that you need to include the full path, with the version you've selected, for it to work. In the above example for using Julia, `module load julia/1.2.0` specifies the full path, while `module load julia` does not.
+Note that you need to include the full path, with the version you've selected, for it to work. For example, if using Julia, the command `module load julia/1.2.0` specifies the full path, while the command `module load julia` does not.
 
 ### How Do I Get Rid of a Module?
 
-To unload a specific module, use `module unload <name>`. You can unload all modules by simply relogging into the cluster, or more easily via `module purge`.
+To unload a specific module, use `module unload <name>`. You can unload all modules by simply relogging into the cluster, or more easily, via the command `module purge`.
 
+### How Do Modules Work?
+
+Modules work by setting various environment variables, especially your `$PATH`, to point to the appropriate, more up-to-date installations provided as part of the software on the cluster.
+
+To see exactly what a module is doing, use the command `module show <module-name>`.
+
+For example:
+
+```
+$ module show cudatoolkit/10.2
+-------------------------------------------------------------------
+/usr/local/share/Modules/modulefiles/cudatoolkit/10.2:
+
+module-whatis	 Sets up cudatoolkit102 10.2 in your environment
+prepend-path	 PATH /usr/local/cuda-10.2/bin
+prepend-path	 LD_LIBRARY_PATH /usr/local/cuda-10.2/lib64
+prepend-path	 LIBRARY_PATH /usr/local/cuda-10.2/lib64
+prepend-path	 MANPATH /usr/local/cuda-10.2/doc/man
+append-path	 -d   LDFLAGS -L/usr/local/cuda-10.2/lib64
+append-path	 -d   INCLUDE -I/usr/local/cuda-10.2/include
+append-path	 CPATH /usr/local/cuda-10.2/include
+append-path	 -d   FFLAGS -I/usr/local/cuda-10.2/include
+append-path	 -d   LOCAL_LDFLAGS -L/usr/local/cuda-10.2/lib64
+append-path	 -d   LOCAL_INCLUDE -I/usr/local/cuda-10.2/include
+append-path	 -d   LOCAL_CFLAGS -I/usr/local/cuda-10.2/include
+append-path	 -d   LOCAL_FFLAGS -I/usr/local/cuda-10.2/include
+append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-10.2/include
+-------------------------------------------------------------------
+```
+Again, modules only change the values of environment variables. They do not install or uninstall software.
 
 ### A Word on Python Modules
 
@@ -93,7 +96,7 @@ $ which python
 /usr/bin/python
 ```
 
-To get the newer Anaconda Python implementation (recommended), simply load one of the available anaconda3/modules. For example:
+To get the newer Anaconda Python implementation (recommended), simply load one of the available anaconda3/ modules. For example:
 
 ```
 $ module load anaconda3/2020.7
@@ -150,19 +153,19 @@ Note that RStudio is available through the [MyAdroit](https://myadroit.princeton
 
 ### Final Tips on Modules
 
-To see all the options for the module command run `module help` or see [this page](https://researchcomputing.princeton.edu/faq/using-environment-modules).
-
 **Don't put module commands in your .bashrc file.** You may be tempted to put these in `.bashrc`. Don't. By all means set up an alias for your use, but `.bashrc` is not implicitly loaded for a SLURM job. You're likely to set up a situation where you have tangled modules and not quite sure why your job is failing to behave as expected.
 
 More information on modules can be found on our [Environment Module](https://researchcomputing.princeton.edu/support/knowledge-base/modules) resource page.
+
+To see all of the options for the module command you can run `module help` or see [this page](https://researchcomputing.princeton.edu/faq/using-environment-modules).
 
 If you need software that is not installed, you will most likely have to do it yourself. See Installing Software Not Available on the Clusters section below.
 
 ## Installing Software Not Available on the Clusters
 
-In general, we recommend that you create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. Your home directory is backed-up.
+In general, we recommend that you create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. As a reminder, your home directory is backed-up.
 
-Python and R packages will be installed by default in your home directory. See more about installing these types of packages below.
+Python and R packages don't require that you set up a special folder for them, as they will be installed by default in your home directory. See more about installing Python or R packages below.
 
 Two notes:
 
@@ -184,7 +187,7 @@ It's important to be aware of the need to update the compiler before installing 
 
 Software that comes in source form must be compiled before it can be installed in your `/home` directory.
 
-One popular tool suite for doing this is the GNU Compiler Collection (GCC) which is composed of compilers, a linker, libraries and tools.
+One popular tool suite for doing this is the GNU Compiler Collection (GCC) which is composed of compilers, a linker, libraries, and tools.
 
 To provide a stable environment for building software on our HPC clusters, the default version of GCC is kept the same for years at a time. To see the current version of the GNU C++ compiler, namely g++, run the following command on one of the HPC clusters (e.g., Della):
 
@@ -193,7 +196,7 @@ $ g++ --version
 g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 ```
 
-While most R packages will compile with the current long-term version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
+While most R packages will compile with the current long-term but older version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
 
 ```
 $ module load rh/devtoolset/8
