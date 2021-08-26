@@ -1,0 +1,8 @@
+NAMD_ARCH = Linux-x86_64
+CHARMARCH = mpi-linux-x86_64
+
+CXX = icpc -std=c++11
+CXXOPTS = -Ofast -xHost 
+CC = icc
+COPTS = -Ofast -xHost
+#COPTS = -Ofast -xHost -axCORE-AVX512  appropriate for della but does not work

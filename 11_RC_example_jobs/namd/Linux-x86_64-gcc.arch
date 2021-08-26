@@ -1,0 +1,7 @@
+NAMD_ARCH = Linux-x86_64
+CHARMARCH = multicore-linux-x86_64
+
+CXX = g++ -std=c++11
+CXXOPTS = -Ofast -march=native
+CC = gcc
+COPTS = -Ofast -march=native
