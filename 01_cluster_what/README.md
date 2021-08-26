@@ -13,6 +13,17 @@ The computational systems made available by Princeton Research
 Computing are, for the most part, *clusters*.  Each computer in the
 cluster is called a **node**, and we commonly talk about two types of nodes: head-nodes and compute-nodes.
 
+| <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Virginia_tech_xserve_cluster.jpg" alt="Racks of computers that make up a supercomputer." width="300"/>| 
+|:--:| 
+| *Racks of computers in a data center.* |
+
+
+| <img src="connections_byKevinAbbey_20210519_a.jpg" alt="The backend of a rack of computers with wire connectors between coming out of various places." width="300"/>| 
+|:--:| 
+| *Backend of computer racks.*|
+
+
+<!---
 
 <figure>
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Virginia_tech_xserve_cluster.jpg" alt="Racks of computers that make up a supercomputer." width="300"/>
@@ -26,6 +37,7 @@ cluster is called a **node**, and we commonly talk about two types of nodes: hea
   <figcaption>Backend of computer racks.</figcaption>
 </figure>
 
+--->
 
 ## Terminology
 
@@ -33,7 +45,9 @@ cluster is called a **node**, and we commonly talk about two types of nodes: hea
 * **Compute-Node** - The compute-nodes are the computers where jobs should be run. In order to run jobs on the compute-nodes we must go through the job scheduler. By submitting jobs to the job scheduler, the jobs will automatically be run on the compute-nodes once the requested resources are available. The Princeton clusters use SLURM as their scheduling program and we will get back to this in a later section.
 * **Cores** - A shorthand way to refer to the number of processor cores (usually physical) of a CPU in a node.
 
-![Diagram with Terminology](beowulf.png)
+|![Diagram with Terminology](beowulf.png)| 
+|:--:| 
+|*Typical architecture of a Princeton Research Computing cluster.*|
 
 **IMPORTANT**: *You may run test jobs on the head nodes that run for up to 10 minutes and use up to 10% of the CPU cores and memory. You will likely disrupt the work of others if you exceed these limits.*
 
