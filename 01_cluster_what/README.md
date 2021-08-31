@@ -1,5 +1,9 @@
 # What's an HPC cluster?
 
+| <a href="https://spectrum.ieee.org/why-cpu-frequency-stalled"><img src="https://spectrum.ieee.org/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTU2MDE3Ni9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzMDUyMjA4Nn0.HxFJ9q5nmiY4ITML52e-yQZolSnspmb3S0YDhEQzJzQ/image.jpg?quality=80&width=734" alt="Intel chip with four cores." width="300"/></a>|
+|:-----:|
+|*A computer's processing power comes from its CPU-chip, or the Central Processing Unit. These days, faster CPU's are made by sticking multiple mini-processors, or CPU-cores on one CPU-chip. The CPU-chip in this image contains 4 CPU-cores.*|
+
 HPC stands for High Performance Computing. Back in the day, "supercomputers" were monolithic standalone machines
 with specialized hardware–very different from what you would find in
 home and office computers.  Nowadays, the majority of supercomputers
@@ -7,7 +11,6 @@ are instead **computer clusters** (or just "clusters" for short) ---
 collections of (comparatively) low-cost standalone computers that are
 networked together and endowed with software to coordinate programs on
 (or across) those computers.
-
 
 The computational systems made available by Princeton Research
 Computing are, for the most part, *clusters*.  Each computer in the
