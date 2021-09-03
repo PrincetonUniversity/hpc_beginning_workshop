@@ -1,16 +1,12 @@
 # Parallel Programming Primer
 
-A common misconception is that simply running your code on a cluster will result in your code running faster.
-
-**Clusters do not run code faster by magic - often need parallelization that is explicitly set by the programmer.**
-
-In other words, the burden of modifying code to take advantage of multiple cores or nodes is on you as the programmer.
+A common misconception is that simply running your code on a cluster will result in your code running faster. **Clusters do not run code faster by magic - the code often needs parallelization that is explicitly implemented by the programmer.** In other words, the burden of modifying code to take advantage of multiple cores or nodes is on **you** as the programmer.
 
 Although learning *how* to parallelize code is outside the scope of this workshop, for our purposes it is useful to at least be familiar with the typical ways in which code can be parallelized.
 
-This guide is intended as a very basic introduction to parallel programming concepts, with some notes on relevant [SLURM](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) script parameters, which will be more useful after covering the slurm section of this workshop.
+This guide will provide a very basic introduction to parallel programming concepts, with some notes on relevant [SLURM](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) script parameters, which will be defined in more detail in the slurm section of this workshop.
 
-After a brief introduction to the computer parts and terms relevant for parallel computing, we provide an overview of four common methods of parallelism. Although this guide does not teach *how* to implement each type of parallelsim in your code, it does point to relevant resources for learning.
+We will provide a brief introduction to the hardware and terms relevant for parallel computing, along with an overview of four common methods of parallelism. This guide will not teach *how* to implement parallelism in your code but rather will point to the relevant resources for learning.
 
 For a more comprehensive introduction to parallel programming concepts, check [Research Computing's workshop schedule](https://researchcomputing.princeton.edu/learn/workshops-live-training) for the next *Primer on Parallel Programming* workshop, or view [materials and recordings from past workshops](https://researchcomputing.princeton.edu/learn/workshops-live-training/archives-past-workshops).
 
@@ -18,13 +14,13 @@ For a more comprehensive introduction to parallel programming concepts, check [R
 
 ### Serial Programming
 
-Serial programming is the default way of running code. It involves running each section of code sequentially, and only one piece of code can be processed at a time.
+Serial programming is the default method of code execution. Serial code is run sequentially; meaning, only one instruction is processed at a time.
 
 ![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
 
 ### Parallel Programming
 
-Parallel programming involves breaking up code into pieces that can run simultaneously.
+Parallel programming involves breaking up code into smaller tsks or chunks that can run simultaneously.
 
 ![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
 
@@ -34,11 +30,11 @@ Parallel programming involves breaking up code into pieces that can run simultan
 
 ### Computer Hardware (CPUs, GPUs, and Memory)
 
-**CPU-chip** – The computer's main processing unit. You can think of this as the 'brain' of the computer. This is the piece of hardware that performs calculations, moves data around, has access to the memory, etc. In systems such as [Princeton's High Performance Computing clusters](https://researchcomputing.princeton.edu/systems/systems-overview), CPU-chips are made of multiple CPU-cores.
+**CPU-chip** – CPU stands for Central Processing Unit. This is the computer's main processing unit; you can think of it as the 'brain' of the computer. This is the piece of hardware that performs calculations, moves data around, has access to the memory, etc. In systems such as [Princeton's High Performance Computing clusters](https://researchcomputing.princeton.edu/systems/systems-overview), CPU-chips are made of multiple CPU-cores.
 
 **CPU-core** – A microprocessing unit on a CPU-chip. Each CPU-core can execute an independent set of instructions from the computer.
 
-**GPU** – Stands for the Graphics Processing Unit. Originally intended to process graphics, in the context of parallel programming this unit can do a large number of simple arithmetic computations.
+**GPU** – GPU stands for the Graphics Processing Unit. Originally intended to process graphics, in the context of parallel programming this unit can do a large number of simple arithmetic computations.
 
 **Memory** – In this guide memory refers to Random-Access Memory, or RAM. The RAM unit stores the data that the CPU is actively working on.
 
@@ -46,13 +42,13 @@ Parallel programming involves breaking up code into pieces that can run simultan
 
 An understanding of **threads** and **processes** is also useful when discussing parallel programming concepts.
 
-If you consider the code you need to run as one big job, to run that code in parallel you'll want to divide that one big job into several, smaller *tasks*^[Although confusing at times, in SLURM scripts, the word tasks generally refers to processes.]. This is the general idea behind parallel programming.
+If you consider the code you need to run as one big job, to run that code in parallel you'll want to divide that one big job into several, smaller *tasks*^[Note that in SLURM scripts, the word task can be used to refer to a process.]. This is the general idea behind parallel programming.
 
 When tasks are run as **threads**, the tasks all share direct access to a common region of memory. The mulitple threads are considered to belong to one process.
 
-When tasks run as distinct **processes**, each get their own siloed memory to run within–even if run on the same computer.
+When tasks run as distinct **processes**, each process gets its own individual region of memory–even if run on the same computer.
 
-To put it even more simply, processes have their own memory, while threads belong to a process and share memory.
+To put it even more simply, processes have their own memory, while threads belong to a process and share memory with all of the other threads belonging to that process.
 
 <!--- Current attempt for images & captions. Works, but a hack. Probably not consdiered accessible. --->
 |<img src="diagrams/comp.png" alt="One empty rectangle."/>|<img src="diagrams/comp_threads.png" alt="One rectangle, inside of which is a small circle representing one process. There are four separate lines stemming from the circle, representing four threads."/>|<img src="diagrams/comp_processes.png" alt="One rectangle, inside of which are two small circles representing two processes. There is one  line stemming from each circle, representing one thread per process."/>|
@@ -60,7 +56,7 @@ To put it even more simply, processes have their own memory, while threads belon
 |If a box represents a computer,|and a task can be represented as line stemming from a spot in memory, then tasks run as threads can be represented as the above, where all threads have access to the same memory space,|and tasks run as processes can be represented as the above, where each process has its own siloed memory.|
 
 <!--- Initial attempt for images & captions. Gives a weird spacing that makes one image's caption look like it belong to another image. --->
-<!--- 
+<!---
 <figure>
   <img src="diagrams/comp.png" alt="One empty rectangle." width=30%/>
   <figcaption>If a box represents a computer,</figcaption>
@@ -83,7 +79,7 @@ To put it even more simply, processes have their own memory, while threads belon
 
 ## Four Basic Types of Parallel Programming
 
-The diagrams used in the following sections can be read according to the following key diagram.The gray text indicates the corresponding SLURM script parameters for what's shown in the diagram (this will be more useful later, once the SLURM section is covered).
+The diagrams used in the following sections can be read according to this key diagram. Gray text in the diagram indicates the corresponding SLURM script parameter for each term. (Note that SLURM will be covered in more detail later in the course. We recommend re-visiting the SLURM parameters in these diagrams after reading the SLURM section.)
 
 <figure>
   <img src="diagrams/key.png" alt="Diagram showing a rectangle as a computer, circles inside represent spaces in memory, lines coming from the circle represent threads, and different circles represent different processes that do not share memory." />
@@ -94,7 +90,7 @@ The diagrams used in the following sections can be read according to the followi
 
 This is the simplest type of parallelism to implement.
 
-A project is embarassingly parallel if each task in a job can be run completely independently of other tasks. In other words, the program runs a bunch of copies of the same thing, but each copy has different input parameters.
+A project is embarassingly parallel if each task in a job can be run completely independently of other tasks. In other words, the program runs a bunch of copies of the same task, but each copy has different input parameters.
 
 In embarassingly parallel programs, there is no communication required between tasks, which is what makes it easy to implement.
 
@@ -125,30 +121,36 @@ You've written the following program to calculate and print a y-value for each x
 
 Here, a task  is the calcuation of the y-value for one x-value.
 
-Normally, you would run your program serially, meaning you'd use only 1 core to run your program for all the x-values in your data. That one core can only run one task at a time. If, for the sake of simplicity, we say each task takes 1 second to complete, then the program should take 1,000,000 tasks x 1 second/task = 1,000,000 seconds to complete.
+Normally, you would run your program serially, meaning you'd use only 1 core to run your program for all the x-values in your data. That one core can only run one task at a time. If, for the sake of simplicity, we say each task takes 1 second to complete, then the program should take
 
-If you run the program in parallel, however, you can now use multiple cores on one computer simultaneously. If, for example, you could have access to 50 cores, then each core can work on a different value of x at the same time. This will cut down the time it takes to complete all tasks to 1,000,000 tasks x 1 second/task % 50 cores = 20,000 seconds.
+1,000,000 tasks x 1 second/task = 1,000,000 seconds
+
+to complete.
+
+If you run the program in parallel, however, you can now use multiple cores on one computer simultaneously. If, for example, you could have access to 50 cores, then each core can work on a different value of x at the same time. This will cut down the time it takes to complete all tasks to
+
+1,000,000 tasks x 1 second/task % 50 cores = 20,000 seconds
+
 
 </details>  
 
 </br>
+
 On Princeton's Research Computing clusters, you can run embarassingly parallel programs as [job arrays](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays).
 
 ### 2. Shared-Memory Parallelism (Multithreading)
 
-Shared-memory parallelism is when tasks can be run as **threads** on separate CPU-cores of the same computer. In other words, a single program can access many cores on one machine.
+Shared-memory parallelism is when tasks are run as **threads** on separate CPU-cores of the same computer. In other words, a single program can access many cores on one machine.
 
-As the name implies, because the CPU-cores are on the same computer they all have access to the same memory card, and therefore share memory.
-
-Due to the shared memory, a light level of communication is required between the cores working on each task.
+As the name "shared-memory parallelism" implies, the CPU-cores share memory because they are on the same computer and all have access to the same memory card. Due to the shared memory, a light level of communication is required between the cores working on each task.
 
 Since multiple threads are used to complete a job, shared-memory parallelism is often also refered to as **multithreading**.
 
-A common programming model for shared-memory parallelism is called fork/join. The program starts out with a 'unified' parent thread, and forks into multiple child threads, which then join together again at the end of the program in order to share results with each other.  
+A common programming model for shared-memory parallelism is called fork/join. The program starts out with a 'unified' parent thread, and *forks* into multiple child threads which then *join* together again at the end of the program in order to share results with each other.  
 
 #### Methods Associated with Shared-Memory Parallelism
 
-The most common method to implement shared-memory parallelism is **OpenMP**, but there's also POSIX Threads (pthread), SIMD or vector intrinsics (Intel MKL), C++ Parallel STL (Intel TBB), and shmem.
+The most common method to implement shared-memory parallelism is **OpenMP**, but there's also POSIX Threads (pthread), SIMD or vector intrinsics (Intel MKL), C++ Parallel STL (Intel TBB), and shmem. These are each specific libaries, and you can choose one that suits your work.
 
 
 #### Example SLURM Script  
@@ -166,9 +168,9 @@ Try running this [OpenMP example](https://github.com/PrincetonUniversity/hpc_beg
 
 ### 3. Distributed-Memory Parallelism (Multiprocessing)
 
-Distributed-memory parallelism generally refers to running tasks as multiple **processes** that do not share the same space in memory. While this can technically happen on one computer, that is a more complicated use case, and the more intuitive way to understand it is when tasks are run on different computers, as those more obviously each have their own memory.
+Distributed-memory parallelism generally refers to running tasks as multiple **processes** that do not share the same space in memory. While this can technically happen on one computer, that is a more complicated use case. The more intuitive way to understand distributed-memory parallelism is in the case that tasks are run on different computers, as those tasks more obviously have their own memory.
 
-As a quick example, distributed-memory parallelsim could be used if your program needed to work on a large matrix of data. The matrix could be divided up into 20 pieces, where each core worked on one of the 20 pieces, but at some point they'd need to communicate with each other and coordinate.
+As a quick example, distributed-memory parallelism could be used if your program needed to work on a large matrix of data. The matrix could be divided up into 20 pieces, where each core worked on one of the 20 pieces, but at some point they'd need to communicate with each other and coordinate.
 
 This is one of the more complicated types of parallelism, since it requires a high level of communication between different tasks to ensure that everything runs properly.
 
