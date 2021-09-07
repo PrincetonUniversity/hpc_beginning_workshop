@@ -6,9 +6,7 @@ In addition, this web option also opens up the possibility of using GUIs (Graphi
 
 ## Open OnDemand
 
-To use the Open OnDemand web interface, once you have an account for Adroit or Della, then browse
-to [https://myadroit.princeton.edu](https://myadroit.princeton.edu) or
-[https://mydella.princeton.edu](https://mydella.princeton.edu), respectively.
+To use the Open OnDemand web interface for Adroit or Della, you must first have an account set-up for the cluster you wish to use. (For instructions on how to gain access, navigate to the Adroit's or Della's webpage in the Systems submenu of the [Research Computing](https://researchcomputing.princeton.edu/) site.) Once you have an account, you can browse to [https://myadroit.princeton.edu](https://myadroit.princeton.edu) or [https://mydella.princeton.edu](https://mydella.princeton.edu), respectively.
 
 Note that to access these links from off-campus you will need to use a [VPN](https://princeton.service-now.com/snap?id=kb_article&sys_id=ce2a27064f9ca20018ddd48e5210c745).
 
@@ -22,7 +20,8 @@ To run commands on the Adroit head node, for example, browse to [MyAdroit](https
 
 ## Running Jupyter, RStudio, MATLAB and Stata in Your Web Browser
 
-To begin a session with Jupyter for example, click on "Interactive Apps" and then "Jupyter". You will need to choose the "Number of hours",
+To begin an interactive session with Jupyter, RStudio, MATLAB, or Stata, click on "Interactive Apps" in the top menu bar of your web browser.
+When launching Jupyter, for example, you will need to click on "Interactive Apps" and then "Jupyter". You will need to choose the "Number of hours",
 "Number of cores" and "Memory allocated". Set "Number of cores" to 1 unless you are sure that your script has been
 explicitly parallelized. Click "Launch" and then when your session is ready click "Connect to Jupyter". Note that the more
 resources you request, the more you will have to wait for your session to become available. When your session starts,

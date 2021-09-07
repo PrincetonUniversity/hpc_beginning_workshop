@@ -34,7 +34,7 @@ print("Inverse(X) =\n", np.linalg.inv(X))
 ```
 
 Below is the Slurm script which contains the following sections:
-1. prescribes the resource requirements for the job (lines that start with #)
+1. describes the resource requirements for the job (lines that start with #)
 2. sets the environment (in this case, lines that start with module)
 3. specifies the work to be carried out (which in this case is to run a Python script)
 
@@ -142,9 +142,9 @@ print(summary(health))
 ```
 
 Below is the Slurm script which contains the following sections:
-1. prescribes the resource requirements for the job (lines that start with #)
+1. describes the resource requirements for the job (lines that start with #)
 2. sets the environment (in this case, no changes to the environment are needed)
-3. specifies the work to be carried out (which in this case is to an R script)
+3. specifies the work to be carried out (which in this case is to execute an R script)
 
 ```bash
 #!/bin/bash

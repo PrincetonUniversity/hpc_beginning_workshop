@@ -3,9 +3,9 @@
 ## A Few Caveats
 These instructions assume you:
 1. Are Princeton University faculty, student, or staff
-2. Are connecting... 
+2. Are connecting...
     * (if on-campus) from the campus wireless eduroam network, or a wired campus connection, or through Nobel
-    * (if off-campus) with **GlobalProtect VPN**, or through Nobel 
+    * (if off-campus) with **GlobalProtect VPN**, or through Nobel
         * You can install the [GlobalProtect VPN](https://www.princeton.edu/vpn) on your laptop. Make sure you connect via the GlobalProtect app on your laptop *before* ssh-ing to Adroit or another cluster.
 3. Are connecting with **Duo Authentication**
     * All of the clusters from both on campus and off campus now require two-factor authentication via Duo. If you need help getting this set up, contacting the [OIT Support and Operations Center](http://www.princeton.edu/oit/) will be your best course of action. You can also see OIT's resoures for using Duo [here](https://princeton.service-now.com/snap/?id=kb_article&sys_id=692a27064f9ca20018ddd48e5210c72b).
@@ -25,10 +25,10 @@ On Windows machines, you'll need a client. One option is [PuTTY](http://www.chia
 
 Regardless, you'll need to know a few things:
 
-1. Server (Host) Address  
+1. Server (Host) Address of the cluster
     * For each cluster, the address typically follows the formula '[cluster-name].princeton.edu'. So for Adroit, for example, the address would be adroit.princeton.edu.
 2. Your NetID and Password  
-    * **N.B.** This may be different than your email if you use an alias.
+    * **Note:** This may be different than your email if you use an alias.
 
 ### Using Terminal as an Example
 
@@ -39,7 +39,14 @@ benjaminhicks ~/hpc_beginning_workshop $
 ```
 The `$` is an indication that you're ready to enter a command.
 
-To connect to adroit, I'd type something like this
+To connect to a cluster, the general address looks like this, where you replace the <>'s with the needed content:
+
+```
+ssh <netID>@<hostname>.princeton.edu
+```
+
+To connect to Adroit, as a user with the netid bhicks, I'd type something like this
+
 ```
 benjaminhicks ~/hpc_beginning_workshop $ ssh bhicks@adroit.princeton.edu
 ```
@@ -83,15 +90,20 @@ It's a particular command line interface that is common across Unix-alike machin
 
  Hence we bring in something like [tmux](https://www.ocf.berkeley.edu/~ckuehl/tmux/).
  It comes installed on all university clusters, and it lets you start a shell
- session that rather than being remote via SSH, lives on the server.
+ session that, rather than being remote via SSH, lives on the server.
 
  A simple use case would be
 
  ```
+ # To launch tmux
  tmux
- (press ctrl-b then release both keys then press d to detach the session)
  tmux attach
- # to exit tmux press ctrl+b then release both keys and then : and type kill-session
+
+ # To detach from your session
+ # Press ctrl-b, then d
+
+ # To kill your session
+ # Press ctrl-d during the tmux session
  ```
 
  You would then be attached back to the session you created by default when you called tmux.
@@ -99,6 +111,12 @@ It's a particular command line interface that is common across Unix-alike machin
  just `exit` or `ctrl+d`. These sessions will remain until the server is rebooted or you
  close them. Anything you run while attached to the session runs in that session,
  and therefore it is safe from a disconnect.
+
+ Note: Nobel has two hosts, `compton`
+ and `davisson`, and the session will live on one or the other. You can find the host by looking in the lower right corner of your tmux session window. To find your session again after
+ a disconnect, you'll need to login directly to that host rather than just nobel, i.e.
+ `ssh compton.princeton.edu`. Otherwise you'll do tmux attach and not find your
+ session.
 
  On Nobel, you'll want to look in the lower left. Nobel has two hosts, `compton`
  and `davisson`, and the session will live on one or the other. To find it again after

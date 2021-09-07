@@ -1,14 +1,14 @@
 # A Brief Tour of Princeton's HPC Clusters & How to Get Access
 
-Princeton University has a range of high-performance computing resources that are available to faculty and students. Broadly speaking, there are two types of systems, small and large. 
+Princeton University has a range of high-performance computing resources that are available to faculty and students. Broadly speaking, there are two types of systems, small and large.
 
-The smaller systems (Nobel, Adroit, Tigressdata) are meant for exploration, small production runs, and visualization. Two of them (Nobel and Adroit) are available upon request to any Princeton University user. 
+The smaller systems (Nobel, Adroit, Tigressdata) are meant for exploration, small production runs, and visualization. Two of them (Nobel and Adroit) are available upon request to any Princeton University user. Access to Tigressdata is automatically granted with access to the larger systems, such as Della or Tiger.
 
 The larger systems (Della, Tiger, Stellar, Traverse) are meant for solving computationally demanding research and getting access to these systems requires a proposal or sponsorship by a faculty member that is already using it.
 
-**To find which system that will best suit you, we recommend exploring the [Systems Overview table](https://researchcomputing.princeton.edu/systems/systems-overview#:~:text=Princeton%27s%20Research%20Computing-,Systems,-The%20following%20table) on the Princeton Research Computing website.** There is also a more technical [Hardware Overview](https://researchcomputing.princeton.edu/systems/research-computing-systems/hardware-overview) table for anyone interested. 
+**To find which system that will best suit you, we recommend exploring the [Systems Overview table](https://researchcomputing.princeton.edu/systems/systems-overview#:~:text=Princeton%27s%20Research%20Computing-,Systems,-The%20following%20table) on the Princeton Research Computing website.** There is also a more technical [Hardware Overview](https://researchcomputing.princeton.edu/systems/research-computing-systems/hardware-overview) table for anyone interested.
 
-Adroit is often a good choice for getting started because it is configured the same way as the larger systems like Tiger and Della. Therefore, the workflow you develop on Adroit will be exactly replicable on the larger systems. If, however, your job requires more nodes than there are on Adroit, then it is clear that you need a larger system. 
+Adroit is often a good choice for getting started because it is configured the same way as the larger systems like Tiger and Della. Therefore, the workflow you develop on Adroit will be exactly replicable on the larger systems. If, however, your job requires more nodes than there are on Adroit, then it is clear that you need a larger system.
 
 <!--
 ## Princeton's Small Systems and Clusters
@@ -49,4 +49,3 @@ Details on gaining access to a specific cluster can be found on that cluster's d
 All members of Princeton with a netID already have access to Nobel. Access to Adroit is available upon request to any Princeton University user. Access to the larger systems requires a proposal or sponsorship by a faculty member that is already using it.
 
 An important note is that the Stellar and Traverse clusters are largely dedicated to astrophysics, plasma physics research, chemical and biological engineering and atmospheric and oceanic sciences. Researchers outside those fields who need larger clusters are encouraged to use Della or Tiger.
-

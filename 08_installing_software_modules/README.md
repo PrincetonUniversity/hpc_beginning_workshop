@@ -49,6 +49,8 @@ julia>
 ```
 Note that you need to include the full path, with the version you've selected, for it to work. For example, if using Julia, the command `module load julia/1.2.0` specifies the full path, while the command `module load julia` does not.
 
+To see all of the options for the module command you can run `module help` or see [this page](https://researchcomputing.princeton.edu/faq/using-environment-modules).
+
 ### How Do I Get Rid of a Module?
 
 To unload a specific module, use `module unload <name>`. You can unload all modules by simply relogging into the cluster, or more easily, via the command `module purge`.
@@ -86,7 +88,7 @@ Again, modules only change the values of environment variables. They do not inst
 
 ### A Word on Python Modules
 
-When you first connect to the cluster, before loading any modules, the system Python–which is old–will be used by default:
+When you first connect to the cluster, none of the module are loaded, and the system Python–which is old–will be used by default:
 
 ```
 $ python --version
@@ -112,13 +114,20 @@ To see all the packages that are included in Anaconda Python run this command:
 ```
 $ conda list
 ```
+Additional resources on [using Python on the clusters](https://researchcomputing.princeton.edu/support/knowledge-base/python) can be found on the Research Computing website.
 
 ### A Word on R Modules
 
-An updated version of R is ready to be used without loading any modules. To start R and then immediately exit:
+An updated version of R is ready to be used without loading any modules.
+
+To start R, simply type:
 
 ```
-$ R
+$ R       # this starts R on the clusters
+```
+
+You can expect to see output that looks something like this:
+```
 R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
 Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-redhat-linux-gnu (64-bit)
@@ -137,6 +146,10 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+```
+
+To quit R, simply type:
+```
 > q()
 ```
 There are older versions of R available though, which you can see through the `module avail R` command.
@@ -151,21 +164,23 @@ R/3.6.3
 
 Note that RStudio is available through the [MyAdroit](https://myadroit.princeton.edu) or [MyDella](https://della.princeton.edu) web portals.
 
+Additional resources on [using R on the clusters](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio) can be found on the Research Computing website.
+
 ### Final Tips on Modules
+
+Remember that no modules are loaded upon connecting to a cluster. Best practice is to load them each time.
 
 **Don't put module commands in your .bashrc file.** You may be tempted to put these in `.bashrc`. Don't. By all means set up an alias for your use, but `.bashrc` is not implicitly loaded for a SLURM job. You're likely to set up a situation where you have tangled modules and not quite sure why your job is failing to behave as expected.
 
 More information on modules can be found on our [Environment Module](https://researchcomputing.princeton.edu/support/knowledge-base/modules) resource page.
 
-To see all of the options for the module command you can run `module help` or see [this page](https://researchcomputing.princeton.edu/faq/using-environment-modules).
-
-If you need software that is not installed, you will most likely have to do it yourself. See Installing Software Not Available on the Clusters section below.
+If you need software that is not installed or made available through **modules**, you will most likely have to do it yourself. See Installing Software Not Available on the Clusters section below.
 
 ## Installing Software Not Available on the Clusters
 
-In general, we recommend that you create a directory such as `/home/<YourNetID>/software` to build and store software other than Python and R. As a reminder, your home directory is backed-up.
+In general, to install software not available as a module, we recommend that you create a directory such as `/home/<YourNetID>/software` to build and store software. (As a reminder, your home directory is backed-up.)
 
-Python and R packages don't require that you set up a special folder for them, as they will be installed by default in your home directory. See more about installing Python or R packages below.
+One exception to this general recommendation is when installing Python and R packages. Python and R packages are installed by default in your home directory, and therefore don't require that you set up a special folder for them. See more about installing Python or R packages below.
 
 Two notes:
 
@@ -180,7 +195,7 @@ See this [guide to installing Python packages with conda or pip](https://researc
 
 See this [guide to installing R packages](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio#install) on Princeton Research Computing's [R resource page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
 
-It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the following section, and is described in more detail in the aforementioned guide to installing R packages.
+It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the following section, and is described in more detail in the linked guide to installing R packages.
 
 
 ### Compiling Software, GNU Compiler Collection (GCC)
@@ -196,13 +211,19 @@ $ g++ --version
 g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39)
 ```
 
-While most R packages will compile with the current long-term but older version of GCC, some require a newer version. A newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
-
+While most R packages will compile with the current long-term but older version of GCC, some require a newer version. Della and Tiger both have these older versions of GCC, and a newer version is made available by loading one of the latest Red Hat Developer Toolset (rh/devtoolset) modules:
 ```
 $ module load rh/devtoolset/8
 $ g++ --version
 g++ (GCC) 8.3.1 20190311 (Red Hat 8.3.1-3)
 ```
+Common errors when the `rh` module is not loaded include:
+
++ `g++: error: unrecognized command line option -std=c++17`
++ `gcc: error: unrecognized command line option '-std=c++14'`
++ `'for' loop initial declarations are only allowed in C99 mode`.
+
+Note that Adroit has a newer version of GCC, and the rh/devtoolset module is therefore not needed on this cluster.
 
 When compiling a parallel code that uses the message-passing interface (MPI), you will need to load an MPI module. You can load the Intel compilers and Intel MPI library with:
 
@@ -215,11 +236,7 @@ Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
 
-Common errors when the `rh` module is not loaded include:
 
-+ `g++: error: unrecognized command line option -std=c++17`
-+ `gcc: error: unrecognized command line option '-std=c++14'`
-+ `'for' loop initial declarations are only allowed in C99 mode`.
 
 ### Vectorization
 

@@ -170,7 +170,7 @@ Try running this [OpenMP example](https://github.com/PrincetonUniversity/hpc_beg
 
 Distributed-memory parallelism generally refers to running tasks as multiple **processes** that do not share the same space in memory. While this can technically happen on one computer, that is a more complicated use case. The more intuitive way to understand distributed-memory parallelism is in the case that tasks are run on different computers, as those tasks more obviously have their own memory.
 
-As a quick example, distributed-memory parallelism could be used if your program needed to work on a large matrix of data. The matrix could be divided up into 20 pieces, where each core worked on one of the 20 pieces, but at some point they'd need to communicate with each other and coordinate.
+As an example, distributed-memory parallelism could be used to calculate the expected number of people commuting into each USA county per day. To calculate the number of commuters, let's say you require population data from the surrounding counties. The work to calculate commuters by county could be divided up by state, so that a different computer could handle all of the calculations for each state. The counties at the border of each state, however,  need information from the neighboring counties in another state in order to complete their calculations. The process working on New Jersey, for example, would need to communicate with the processes working on the surrounding states (Delaware, Pennsylvania, and New York) to complete its work. Therefore, at some point the process on each computer needs to communicate with the processes on other computers in order to work.
 
 This is one of the more complicated types of parallelism, since it requires a high level of communication between different tasks to ensure that everything runs properly.
 
@@ -178,7 +178,7 @@ Since multiple processes are needed to complete a job, distributed-memory parall
 
 #### Methods Associated with Distributed-Memory Parallelism
 
-The most common method to implement distrubted-memory parallelism is **MPI**.
+The most common method to implement distributed-memory parallelism is **MPI**. MPI is an Application Programming Interface (API) that stands for Message-Passing Interface, and can be used in Fortran, C, and C++/
 
 For those working with machine learning, you may also consider Spark/Hadoop, Dask, and General Multiprocessing.
 
@@ -197,7 +197,7 @@ Try running this [MPI example](https://github.com/PrincetonUniversity/hpc_beginn
 
 ### 4. Accelerator Parallelism (GPU's, and FPGA's)
 
-Accelerator Parallelism uses different types of computer hardware, such as GPU's and FPGA's, to simply do computations faster than any CPU chip is able to.
+Accelerator Parallelism uses different types of computer hardware, such as GPU's and FPGA's, to simply do computations faster than any CPU chip is able to. A CPU can have tens of processing cores, but a GPU has thousands.
 
 To learn more about GPU's, see the [01_what_is_a_gpu](https://github.com/PrincetonUniversity/gpu_programming_intro/tree/master/01_what_is_a_gpu) repository in Research Computing's [*Introduction to GPU Programming* workshop](https://github.com/PrincetonUniversity/gpu_programming_intro).
 
