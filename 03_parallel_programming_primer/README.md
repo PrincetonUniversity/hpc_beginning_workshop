@@ -38,6 +38,10 @@ Parallel programming involves breaking up code into smaller tsks or chunks that 
 
 **Memory** – In this guide memory refers to Random-Access Memory, or RAM. The RAM unit stores the data that the CPU is actively working on.
 
+| <a href="https://spectrum.ieee.org/why-cpu-frequency-stalled"><img src="https://spectrum.ieee.org/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTU2MDE3Ni9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzMDUyMjA4Nn0.HxFJ9q5nmiY4ITML52e-yQZolSnspmb3S0YDhEQzJzQ/image.jpg?quality=80&width=734" alt="Intel chip with four cores." width="300"/></a><p>Source: https://spectrum.ieee.org/why-cpu-frequency-stalled</p>|
+|:-----:|
+|*A computer's processing power comes from its CPU-chip, or the Central Processing Unit. These days, faster CPU's are made by placing multiple mini-processors (also known as CPU-cores) on one CPU-chip. The CPU-chip in this image contains 4 CPU-cores. Princeton's Research Computing clusters use multi-core computers, with 32-128 cores per compute node.*|
+
 ### Additional Parallelism Terminology
 
 An understanding of **threads** and **processes** is also useful when discussing parallel programming concepts.
