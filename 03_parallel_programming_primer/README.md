@@ -16,13 +16,17 @@ For a more comprehensive introduction to parallel programming concepts, check [R
 
 Serial programming is the default method of code execution. Serial code is run sequentially; meaning, only one instruction is processed at a time.
 
-![Older CPUs](https://hpc.llnl.gov/sites/default/files/serialProblem.gif)
+<figure>
+  <img src="https://hpc.llnl.gov/sites/default/files/serialProblem.gif" alt="One problem block that is worked on in smaller pieces, one at a time." width=50%/>
+</figure>
 
 ### Parallel Programming
 
 Parallel programming involves breaking up code into smaller tsks or chunks that can run simultaneously.
 
-![Modern CPUs](https://hpc.llnl.gov/sites/default/files/parallelProblem.gif)
+<figure>
+  <img src="https://hpc.llnl.gov/sites/default/files/parallelProblem.gif" alt="One big problem block is split into four medium blocks, and each medium block is worked on in smaller pieces, but at the same time." width=50%/>
+</figure>
 
 *Images sourced from Lawrence Livermore National Laboratory's Introduction to [Parallel Computing Tutorial](https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial).*
 
@@ -86,7 +90,7 @@ To put it even more simply, processes have their own memory, while threads belon
 The diagrams used in the following sections can be read according to this key diagram. Gray text in the diagram indicates the corresponding SLURM script parameter for each term. (Note that SLURM will be covered in more detail later in the course. We recommend re-visiting the SLURM parameters in these diagrams after reading the SLURM section.)
 
 <figure>
-  <img src="diagrams/key.png" alt="Diagram showing a rectangle as a computer, circles inside represent spaces in memory, lines coming from the circle represent threads, and different circles represent different processes that do not share memory." />
+  <img src="diagrams/key.png" alt="Diagram showing a rectangle as a computer, circles inside represent spaces in memory, lines coming from the circle represent threads, and different circles represent different processes that do not share memory." width=50%/>
 </figure>
 
 
@@ -106,7 +110,7 @@ In embarassingly parallel programs, there is no communication required between t
 
 #### Example Diagram   
 <figure>
-  <img src="diagrams/array.png" alt="One rectangle, inside of which is a small circle representing one process. The rectangle is then repeated 50 times." width=100%/>
+  <img src="diagrams/array.png" alt="One rectangle, inside of which is a small circle representing one process. The rectangle is then repeated 50 times." width=50%/>
 </figure>
 
 #### Example Code
@@ -164,7 +168,7 @@ The most common method to implement shared-memory parallelism is **OpenMP**, but
 `
 #### Example Diagram  
 <figure>
-  <img src="diagrams/sharedmem.png" alt="One rectangle, inside of which is a small circle representing one process. There are four separate lines stemming from the circle, representing four threads." width=100%/>
+  <img src="diagrams/sharedmem.png" alt="One rectangle, inside of which is a small circle representing one process. There are four separate lines stemming from the circle, representing four threads." width=50%/>
 </figure>
 
 #### Example Code
@@ -193,7 +197,7 @@ For those working with machine learning, you may also consider Spark/Hadoop, Das
 
 #### Example Diagram  
 <figure>
-  <img src="diagrams/distmem.png" alt="Three rectangles, representing three computers. Inside of each rectangle are two small circles representing two processes. There's one line stemming from each circle, representing one thread per process.'" width=100%/>
+  <img src="diagrams/distmem.png" alt="Three rectangles, representing three computers. Inside of each rectangle are two small circles representing two processes. There's one line stemming from each circle, representing one thread per process.'" width=70%/>
 </figure>
 
 #### Example Code
