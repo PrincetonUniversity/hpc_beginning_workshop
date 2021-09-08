@@ -205,11 +205,11 @@ Try running this [MPI example](https://github.com/PrincetonUniversity/hpc_beginn
 
 ### 4. Accelerator Parallelism (GPU's, and FPGA's)
 
-Accelerator Parallelism uses different types of computer hardware, such as GPU's and FPGA's, to simply do computations faster than any CPU chip is able to. A CPU can have tens of processing cores, but a GPU has thousands.
+Accelerator Parallelism uses different types of computer hardware, such as Graphical Processing Units (GPUs) and Field-Programmable Gate Arrays (FPGAs), to simply do computations faster than any CPU chip is able to. A CPU, for example, can have tens of processing cores, but a GPU has thousands.
 
-To learn more about GPU's, see the [01_what_is_a_gpu](https://github.com/PrincetonUniversity/gpu_programming_intro/tree/master/01_what_is_a_gpu) repository in Research Computing's [*Introduction to GPU Programming* workshop](https://github.com/PrincetonUniversity/gpu_programming_intro).
+To learn more about GPU's, see the [01_what_is_a_gpu](https://github.com/PrincetonUniversity/gpu_programming_intro/tree/master/01_what_is_a_gpu) repository in Research Computing's [*Introduction to GPU Programming* workshop](https://github.com/PrincetonUniversity/gpu_programming_intro) material. You can also check out [Research Computing's Workshops & Live Training](https://researchcomputing.princeton.edu/learn/workshops-live-training) page to see upcoming in-person trainings on GPU topics.
 
-To learn more about FPGA's, view the recording of [Intel's workshop on FPGA's](https://researchcomputing.princeton.edu/learn/workshops-live-training/archives-past-workshops/spring-2021-workshop-materials) from Spring 2021. (Search for 'FPGA' on the page.)
+To learn more about FPGA's, check out [Research Computing's Workshops & Live Training](https://researchcomputing.princeton.edu/learn/workshops-live-training) page for upcoming in-person trainings, or search the page for material from past workshops. For example, you can access a recording of [Intel's workshop on FPGAs](https://researchcomputing.princeton.edu/learn/workshops-live-training/archives-past-workshops/spring-2021-workshop-materials) from Spring 2021, or the content from the *Intro to Field-Programmable Gate Arrays (FPGAs)* workshop from Fall 2021.
 
 #### Example Code
 Try running several [GPU examples](https://github.com/PrincetonUniversity/gpu_programming_intro/tree/master/03_your_first_gpu_job) from Research Computing's *Introduction to GPU Programming* workshop.
