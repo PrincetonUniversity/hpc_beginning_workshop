@@ -22,7 +22,7 @@ Serial programming is the default method of code execution. Serial code is run s
 
 ### Parallel Programming
 
-Parallel programming involves breaking up code into smaller tsks or chunks that can run simultaneously.
+Parallel programming involves breaking up code into smaller tasks or chunks that can run simultaneously.
 
 <figure>
   <img src="https://hpc.llnl.gov/sites/default/files/parallelProblem.gif" alt="One big problem block is split into four medium blocks, and each medium block is worked on in smaller pieces, but at the same time." width=50%/>
