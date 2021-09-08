@@ -50,7 +50,7 @@ Parallel programming involves breaking up code into smaller tsks or chunks that 
 
 An understanding of **threads** and **processes** is also useful when discussing parallel programming concepts.
 
-If you consider the code you need to run as one big job, to run that code in parallel you'll want to divide that one big job into several, smaller *tasks*^[Note that in SLURM scripts, the word task can be used to refer to a process.]. This is the general idea behind parallel programming.
+If you consider the code you need to run as one big job, to run that code in parallel you'll want to divide that one big job into several, smaller *tasks*^[Note that in SLURM scripts, the word task can be used to refer to a process.] that can be run at the same time. This is the general idea behind parallel programming.
 
 When tasks are run as **threads**, the tasks all share direct access to a common region of memory. The mulitple threads are considered to belong to one process.
 
