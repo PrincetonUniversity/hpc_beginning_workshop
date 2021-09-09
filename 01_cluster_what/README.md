@@ -44,16 +44,16 @@ cluster is called a **node**, and we commonly talk about two types of nodes: **h
 
 ## How Do Princeton's HPC Clusters Work?
 
-To have your program run on the clusters, you can start a **job** on the head-node. A job consists of the the following files:
+To have your program run on the clusters, you can start a **job** on the head node. A job consists of the the following files:
 1. your code that runs your program
 2. a separate script, known as a SLURM script, that will request the resources your job requires in terms of the amount of memory, the number of cores, number of nodes, etc. As mentioned previously, Princeton uses a scheduler called **SLURM**, which is why this script is referred to as your SLURM script.
 
-Once your files are submitted, the **scheduler** takes care of figuring out when the resources you requested will become available on the compute-nodes. Once resources become available, the scheduler runs your program on the compute-nodes.
+Once your files are submitted, the **scheduler** takes care of figuring out when the resources you requested will become available on the compute nodes. Once resources become available, the scheduler runs your program on the compute nodes.
 
 ### Important Notes on Using Princeton's HPC Clusters
 
 1. **The 10-10 Rule.**  
-First, it's important to know that you may run test jobs on the head-nodes that run for up to **10 minutes** and use up to **10% of the CPU cores and memory**. You will likely disrupt the work of others if you exceed these limits, and you may be contaced by our system administrators if you exceed these rules.
+First, it's important to know that you may run test jobs on the head nodes that run for up to **10 minutes** and use up to **10% of the CPU cores and memory**. You will likely disrupt the work of others if you exceed these limits, and you may be contaced by our system administrators if you exceed these rules.
 
 2. **No Internet Access on the Compute Nodes**  
-Second, it's important to know that there is no internet access on the compute nodes. This is for security reasons. This means that when you submit your job (your program + your slurm script) to be run on the cluster, those jobs cannot involve any steps that require an internet connection to work. For example, downloading data from a site, scraping websites, downloading packages, etc., will not work on the compute-nodes. **You need to make sure all needed files are present on the cluster before submitting the job to the scheduler.**
+Second, it's important to know that there is no internet access on the compute nodes. This is for security reasons. This means that when you submit your job (your program + your slurm script) to be run on the cluster, those jobs cannot involve any steps that require an internet connection to work. For example, downloading data from a site, scraping websites, downloading packages, etc., will not work on the compute nodes. **You need to make sure all needed files are present on the cluster before submitting the job to the scheduler.**
