@@ -53,8 +53,7 @@ Once your files are submitted, the **scheduler** takes care of figuring out when
 ### Important Notes on Using Princeton's HPC Clusters
 
 1. **The 10-10 Rule.**  
-First, it's important to know that *you may run test jobs on the head-nodes that run for up to **10 minutes** and use up to **10% of the CPU cores and memory**. You will likely disrupt the work of others if you exceed these limits, and you may be contaced by our system administrators if you exceed these rules.*
+First, it's important to know that you may run test jobs on the head-nodes that run for up to **10 minutes** and use up to **10% of the CPU cores and memory**. You will likely disrupt the work of others if you exceed these limits, and you may be contaced by our system administrators if you exceed these rules.
 
 2. **No Internet Access on the Compute Nodes**  
-Second, it's important to know that there is no internet access on the compute nodes. This is for security reasons. This means that when you submit your job (your program + your slurm script) to be run on the cluster, those jobs cannot involve any steps that require an internet connection to work. For example, downloading data from a site, scraping websites, downloading packages, etc., will not work on the compute-nodes.
-**Note:** You need to make sure all needed files are present on the cluster before submitting the job to the scheduler.
+Second, it's important to know that there is no internet access on the compute nodes. This is for security reasons. This means that when you submit your job (your program + your slurm script) to be run on the cluster, those jobs cannot involve any steps that require an internet connection to work. For example, downloading data from a site, scraping websites, downloading packages, etc., will not work on the compute-nodes. **You need to make sure all needed files are present on the cluster before submitting the job to the scheduler.**
