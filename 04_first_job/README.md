@@ -56,7 +56,7 @@ Next, while still on your laptop and using a [VPN](https://www.princeton.edu/vpn
 $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/python_test"
 ```
 
-Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
+Note: If you are doing this exercise on Tiger, Della, Stellar or Traverse then replace `/scratch/network/` with `/scratch/gpfs/`.
 
 Transfer the Python and Slurm scripts from your laptop to Adroit using the `scp` (secure copy) command ([VPN](https://www.princeton.edu/vpn) required if off-campus):
 
@@ -95,7 +95,7 @@ $ sbatch job.slurm
 
 This will place your job in the queue. You can monitor the status of your job with `squeue -u <YourNetID>`. If the `ST` field is `PD` (pending) then your job is waiting for other jobs to finish. If you do not see it in the list then it has finished. After the job runs you can view the output with `cat slurm-<XXXXXX>.out`. You will receive an email when the job is finished if you entered your email address in the Slurm script.
 
-Here is the expected output:
+Here is an example of the expected output:
 
 ```
 X =
@@ -110,7 +110,7 @@ Inverse(X) =
 
 ### Tired of Duo?
 
-You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways.
+You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways. You should not try to do this during an in-person workshop.
 
 ## R Script Example
 
@@ -173,7 +173,7 @@ Next, while still on your laptop and using a [VPN](https://www.princeton.edu/vpn
 $ ssh <YourNetID>@adroit.princeton.edu "mkdir -p /scratch/network/<YourNetID>/R_test"
 ```
 
-Note: If you are doing this exercise on Tiger, Della or Perseus then replace `/scratch/network/` with `/scratch/gpfs/`.
+Note: If you are doing this exercise on Tiger, Della, Stellar or Traverse then replace `/scratch/network/` with `/scratch/gpfs/`.
 
 Transfer the R script, Slurm script and data file from your laptop to Adroit using the `scp` (secure copy) command ([VPN](https://www.princeton.edu/vpn) required if off-campus):
 
@@ -233,4 +233,4 @@ Here is the expected output:
 
 ### Tired of Duo?
 
-You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways.
+You can [suppress Duo](https://github.com/PrincetonUniversity/removing_tedium) in a variety of ways. You should not try to do this during an in-person workshop.
