@@ -1,6 +1,6 @@
 # Connecting to the Clusters via a Web Browser
 
-Two of Princeton's HPC clusters–Adroit and Della–can be accessed via the web through the Open OnDemand web interface. If you are new to high-performance computing, this can be a good introductory way to start using the clusters.
+Three of Princeton's HPC clusters–Adroit, Della and Stellar–can be accessed via the web through the Open OnDemand web interface. If you are new to high-performance computing, this can be a good introductory way to start using the clusters.
 
 In addition, this web option also opens up the possibility of using GUIs (Graphical User Interfaces) for programs such as  Jupyter, RStudio, MATLAB and Stata.
 
@@ -16,7 +16,7 @@ To run commands on the Adroit head node, for example, browse to [MyAdroit](https
 
 ![jupyter](images/terminal_two_frames.png)
 
-**Users must follow the 10-10 rule on the head node of any cluster.** The 10-10 rule says that you can use up to 10% of the resources of the machine for up to 10 minutes. The head node of each cluster is shared by all users so this rule prevents someone from monopolizing the machine. The head nodes should only be used for light work such as installing software and doing short test runs. You may be contacted by a system administrator if you fail to observe the 10-10 rule.
+**Users must follow the 10-10 rule on the head node of any cluster.** The 10-10 rule says that you can use up to 10% of the resources of the machine for up to 10 minutes. The head node of each cluster is shared by all users so this rule prevents someone from monopolizing the machine. The head nodes should only be used for light work such as installing software, transferring files and doing short test runs. You may be contacted by a system administrator if you fail to observe the 10-10 rule.
 
 ## Running Jupyter, RStudio, MATLAB and Stata in Your Web Browser
 
@@ -38,3 +38,5 @@ click on "New" in the upper right and choose "Python 3.7 [anaconda3/2019.10]" fr
 
 ### Stata
 ![stata](images/stata_two_frames.png)
+
+Mathematica can also be used via OnDemand. If you only need a single CPU-core then consider using the [Princeton Virtual Desktop](https://princeton.service-now.com/service?id=kb_article&sys_id=KB0012822) which is maintained by central OIT.
