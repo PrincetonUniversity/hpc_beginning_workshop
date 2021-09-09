@@ -8,9 +8,9 @@ collections of (comparatively) low-cost standalone computers that are
 networked together and endowed with software to coordinate programs on
 (or across) those computers.
 
-| <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Virginia_tech_xserve_cluster.jpg" alt="Racks of computers that make up a supercomputer." width="300"/>|<img src="images/connections_byKevinAbbey_20210519_a.jpg" alt="The backend of a rack of computers with wire connectors between coming out of various places." width="300"/>|
-|----|----|
-| *Racks of computers in a data center.* | *Backend of computer racks, networked together.*|
+| <img src="images/hpcrc_openhouse_20111129_fac_2475.jpg" alt="Racks of computers that make up a supercomputer." width="400"/>| <img src="images/hpcrc_nodes.jpg" alt="The backend of a rack of computers with wire connectors between coming out of various places." width="400"/> | <img src="images/connections_byKevinAbbey_20210519_a.jpg" alt="The backend of a rack of computers with wire connectors between coming out of various places." width="325"/>|
+|----|----|----|
+| *Racks of computers in a data center.* | *Multiple computers stacked in a rack.* | *Backend of computer racks, networked together.*|
 
 <!---
 
