@@ -5,7 +5,7 @@ This guide presents an overview of using the High Performance Computing (HPC) sy
 
 ## Prerequisites
 
-For this workshop, users must have an account on the Adroit cluster, and they should confirm that they can SSH into Adroit *at least 48 hours beforehand*. Details on set-up can be found in [this guide](https://researchcomputing.princeton.edu/learn/workshops-live-training/hardware-and-software-requirements-picscie-workshops).
+For this workshop, users must have an account on the Adroit cluster, and they should confirm that they can SSH into Adroit **at least 48 hours beforehand**. Details on set-up can be found in [this guide](https://researchcomputing.princeton.edu/learn/workshops-live-training/hardware-and-software-requirements-picscie-workshops).
 
 This workshop assumes that you have some knowledge of Linux and the Bash command line. To learn these skills see [this guide](https://github.com/gabeclass/introlinux).
 
