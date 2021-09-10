@@ -16,6 +16,10 @@ In particular, it's helpful to be able to edit basic files on a Linux system (su
 * [Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq) - View answers to frequently asked questions.  
 * [Research Computing Support Page](https://researchcomputing.princeton.edu/support) - Where to go if you need more help. 
 
+## Survey Link
+
+Please fill out our [survey for the Fall 2021 workshop](https://docs.google.com/forms/d/e/1FAIpQLSfBLpW9f5VEPikTR9MCPrw4hSKX2eCrFr1Ri0hiqDokR8qXNg/viewform).
+
 ## Authorship
 
 This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson, Gabe Perez-Giz, and Carolina Roe-Raymond. Some of the content was originally written by Uno Vaaland.
