@@ -244,10 +244,14 @@ Note that Adroit has a newer version of GCC, and the rh/devtoolset module is the
 When compiling a parallel code that uses the message-passing interface (MPI), you will need to load an MPI module. You can load the Intel compilers and Intel MPI library with:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1.1.217 intel-mpi/intel/2019.7 
+Loading intel/19.1.1.217
+  Loading requirement: intel-mkl/2020.1
+
+Loading intel-mpi/intel/2019.7
+  Loading requirement: ucx/1.9.0
 $ mpicc --version
-icc (ICC) 19.0.3.199 20190206
-Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
+icc (ICC) 19.1.1.217 20200306
 ```
 
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
