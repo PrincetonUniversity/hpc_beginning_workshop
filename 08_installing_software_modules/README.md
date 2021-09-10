@@ -198,6 +198,22 @@ See this [guide to installing R packages](https://researchcomputing.princeton.ed
 It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the following section, and is described in more detail in the linked guide to installing R packages.
 
 
+### Using Software Containers
+
+We do not allow [Docker](https://www.docker.com) but [Singularity](https://researchcomputing.princeton.edu/support/knowledge-base/singularity) can be used:
+
+```
+$ singularity pull docker://hello-world
+$ singularity run hello-world_latest.sif
+...
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+```
+
+For more information see [Containers on the HPC Clusters](https://researchcomputing.princeton.edu/support/knowledge-base/singularity).
+
+
 ### Compiling Software, GNU Compiler Collection (GCC)
 
 Software that comes in source form must be compiled before it can be installed in your `/home` directory.
