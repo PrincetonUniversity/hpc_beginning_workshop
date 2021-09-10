@@ -47,7 +47,7 @@ $ cp -r /scratch/gpfs/<YourNetID>/myjob /tigress/<YourNetID>
 One of the most frequently asked questions is how to get files to Adroit or any other cluster.
 Again, Linux/MacOS has an answer out of the box: the `scp` command. For Windows, clients like PuTTY and Mobaxterm
 or FTP clients (like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client)–paid, sadly–or [Filezilla](https://filezilla-project.org/)) are needed. In both cases,
-make sure you're using interactive logon. Filezilla especially can be a pain
+make sure you're using interactive mode. Filezilla especially can be a pain
 with Duo Authentication for Nobel, but we have some tips [here](https://askrc.princeton.edu/question/343/how-do-i-get-filezilla-to-work-around-duo/).
 
 If you're transferring a lot of files, consider
