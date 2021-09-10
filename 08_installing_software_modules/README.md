@@ -262,15 +262,13 @@ Modern CPUs can perform more than one operation per cycle using vector execution
 
 #### Della
 
-Della is composed of 5 different Intel Xeon microarchitectures:
+Della is composed of three different Intel Xeon microarchitectures:
 
-+ Ivybridge (AVX)
-+ Haswell (AVX2)
 + Broadwell (AVX2)
 + Skylake (AVX-512)
-+  Cascade Lake (AVX-512)
++ Cascade Lake (AVX-512)
 
-The head node `della5` is Broadwell. If you compile a code on the head node it will not run on the Ivybridge nodes. Similarly, it will not take advantage of the AVX-512 instructions on the Skylake and Cascade Lake nodes unless you cross-compile (i.e., using `-xHost` with the Intel compiler will produce code for Broadwell).
+The head node `della5` is Broadwell. If you compile a code on the head node it will not take advantage of the AVX-512 instructions available on the Skylake and Cascade Lake nodes unless you add the appropriate flags (i.e., -xCORE-AVX2 -axCORE-AVX512).
 
 #### TigerCPU vs. TigerGPU
 
