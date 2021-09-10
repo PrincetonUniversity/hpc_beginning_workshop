@@ -8,7 +8,7 @@ The way around this is the `module` system.
 
 ## Using Pre-Installed Software with Environment **Modules**
 
-Several applications and software libraries are already available on each cluster, and can be accessed through modules.
+Several applications and software libraries are already available on each cluster, and can be accessed through [environment modules](https://researchcomputing.princeton.edu/support/knowledge-base/modules).
 
 ### What Modules Are Available?
 
