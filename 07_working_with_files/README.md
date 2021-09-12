@@ -24,8 +24,6 @@ Note that `/tigress` and `/projects` are file systems. You cannot `ssh` to eithe
 * **Output files after code runs** -- `/scratch/gpfs` (or, on Adroit, `/scratch/network`); these folders are *fast access*.  Not backed up, but also not purged (you should do this yourself -- more on this later). Each `/scratch` space is *per cluster*, so you aren't competing with I/O requests across the entire set of Princeton resources.
 * **Longer term results for archiving** -- move it to `/tigress` or, if possible, to `/projects` (preferred).  These *are* backed up
 
-**WARNING: Why you shouldn't put your on-the-fly code output files on `/tigress` or `/projects` -- the curse of continual backup**
-
 Additional information using the file system can be found in Research Computing's [Data Storage KnowledgeBase article](https://researchcomputing.princeton.edu/support/knowledge-base/data-storage).
 
 The commands below give you an idea of how to properly run a job in terms of suitable locations for file output:
@@ -49,7 +47,7 @@ $ cp -r /scratch/gpfs/<YourNetID>/myjob /tigress/<YourNetID>
 One of the most frequently asked questions is how to get files to Adroit or any other cluster.
 Again, Linux/MacOS has an answer out of the box: the `scp` command. For Windows, clients like PuTTY and Mobaxterm
 or FTP clients (like [WS_FTP](https://www.ipswitch.com/secure-information-and-file-transfer/wsftp-client)–paid, sadly–or [Filezilla](https://filezilla-project.org/)) are needed. In both cases,
-make sure you're using interactive logon. Filezilla especially can be a pain
+make sure you're using interactive mode. Filezilla especially can be a pain
 with Duo Authentication for Nobel, but we have some tips [here](https://askrc.princeton.edu/question/343/how-do-i-get-filezilla-to-work-around-duo/).
 
 If you're transferring a lot of files, consider

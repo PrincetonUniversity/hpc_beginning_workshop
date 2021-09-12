@@ -7,9 +7,9 @@ In a nutshell, our clusters are here for the moment your personal computer can n
 Some advantages of using the clusters are:
 
 - Lots of processing capacity, ability to do parallel computing (e.g., you could use 1000 CPU-cores for a single job)  
-- Lots of memory, nodes have 100's GB of memory  
+- Lots of memory (i.e., nodes have 100's GB of memory and in one case greater than 6 TB)
 - Ability to work with large datasets (on `/scratch/gpfs`, see working_with_files directory)
 - Lots of software is available and already configured (e.g., MPI, compilers, commercial software)
 - Keep your laptop free to use by running your work on the clusters
-- GPUs are available in all clusters (just not in the Nobel system)
+- GPUs are available on all of the clusters (except Nobel)
 - There is a team of people maintaining and supporting the clusters

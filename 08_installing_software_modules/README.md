@@ -8,7 +8,7 @@ The way around this is the `module` system.
 
 ## Using Pre-Installed Software with Environment **Modules**
 
-Several applications and software libraries are already available on each cluster, and can be accessed through modules.
+Several applications and software libraries are already available on each cluster, and can be accessed through [environment modules](https://researchcomputing.princeton.edu/support/knowledge-base/modules).
 
 ### What Modules Are Available?
 
@@ -198,6 +198,22 @@ See this [guide to installing R packages](https://researchcomputing.princeton.ed
 It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the following section, and is described in more detail in the linked guide to installing R packages.
 
 
+### Using Software Containers
+
+We do not allow [Docker](https://www.docker.com) but [Singularity](https://researchcomputing.princeton.edu/support/knowledge-base/singularity) can be used:
+
+```
+$ singularity pull docker://hello-world
+$ singularity run hello-world_latest.sif
+...
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+```
+
+For more information see [Containers on the HPC Clusters](https://researchcomputing.princeton.edu/support/knowledge-base/singularity).
+
+
 ### Compiling Software, GNU Compiler Collection (GCC)
 
 Software that comes in source form must be compiled before it can be installed in your `/home` directory.
@@ -228,10 +244,14 @@ Note that Adroit has a newer version of GCC, and the rh/devtoolset module is the
 When compiling a parallel code that uses the message-passing interface (MPI), you will need to load an MPI module. You can load the Intel compilers and Intel MPI library with:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1.1.217 intel-mpi/intel/2019.7 
+Loading intel/19.1.1.217
+  Loading requirement: intel-mkl/2020.1
+
+Loading intel-mpi/intel/2019.7
+  Loading requirement: ucx/1.9.0
 $ mpicc --version
-icc (ICC) 19.0.3.199 20190206
-Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
+icc (ICC) 19.1.1.217 20200306
 ```
 
 Note that the C and Fortran compilers and related tools are also updated by this method which is important for some software. The relevant tools are `gcc`, `g++`, `gfortran`, `make`, `ld`, `ar`, `as`, `gdb`, `gprof`, `gcov` and more.
@@ -246,15 +266,13 @@ Modern CPUs can perform more than one operation per cycle using vector execution
 
 #### Della
 
-Della is composed of 5 different Intel Xeon microarchitectures:
+Della is composed of three different Intel Xeon microarchitectures:
 
-+ Ivybridge (AVX)
-+ Haswell (AVX2)
 + Broadwell (AVX2)
 + Skylake (AVX-512)
-+  Cascade Lake (AVX-512)
++ Cascade Lake (AVX-512)
 
-The head node `della5` is Broadwell. If you compile a code on the head node it will not run on the Ivybridge nodes. Similarly, it will not take advantage of the AVX-512 instructions on the Skylake and Cascade Lake nodes unless you cross-compile (i.e., using `-xHost` with the Intel compiler will produce code for Broadwell).
+The head node `della5` is Broadwell. If you compile a code on the head node it will not take advantage of the AVX-512 instructions available on the Skylake and Cascade Lake nodes unless you add the appropriate flags (i.e., -xCORE-AVX2 -axCORE-AVX512).
 
 #### TigerCPU vs. TigerGPU
 

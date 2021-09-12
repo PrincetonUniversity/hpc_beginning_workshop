@@ -1,6 +1,6 @@
 # Parallel Programming Primer
 
-A common misconception is that simply running your code on a cluster will result in your code running faster. **Clusters do not run code faster by magic - the code often needs parallelization that is explicitly implemented by the programmer.** In other words, the burden of modifying code to take advantage of multiple cores or nodes is on **you** as the programmer.
+A common misconception is that simply running your code on a cluster will result in your code running faster. **Clusters do not run code faster by magic - for improved performance the code must be modified to run in parallel and that is explicitly done by the programmer.** In other words, the burden of modifying code to take advantage of multiple cores or nodes is on **you** as the programmer.
 
 Although learning *how* to parallelize code is outside the scope of this workshop, for our purposes it is useful to at least be familiar with the typical ways in which code can be parallelized.
 

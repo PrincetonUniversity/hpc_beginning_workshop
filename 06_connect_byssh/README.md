@@ -10,7 +10,7 @@ These instructions assume you:
 3. Are connecting with **Duo Authentication**
     * All of the clusters from both on campus and off campus now require two-factor authentication via Duo. If you need help getting this set up, contacting the [OIT Support and Operations Center](http://www.princeton.edu/oit/) will be your best course of action. You can also see OIT's resoures for using Duo [here](https://princeton.service-now.com/snap/?id=kb_article&sys_id=692a27064f9ca20018ddd48e5210c72b).
     * Upon connecting, you can request a push to a cell phone application, a text with a passcode, or you can enter a generated pass code with a soft key created by the Duo application on your cell phone.
-    * If you use a system that respects a standard `~/.ssh/config`, you can use the [solution outlined on AskRC](https://askrc.princeton.edu/question/331/how-do-i-avoid-having-to-authenticate-with-duo-every-time/) to setup SSH Multiplexing.
+    * If you use a system that respects a standard `~/.ssh/config`, you can use a [multiplexing solution](https://github.com/PrincetonUniversity/removing_tedium/tree/master/01_suppressing_duo#ii-multiplexing-approach-vpn-free).
 5. Have an account on the system you're looking to connect to. You can register for [Adroit](https://forms.rc.princeton.edu/registration/?q=adroit) here. (Note: You will need to login using your university credentials).
 
 ## SSH
