@@ -23,7 +23,7 @@ cat README.md
 
 ## Where to store your files
 
-![tigress](https://tigress-web.princeton.edu/~jdh4/hpc_princeton_filesystems.png)
+![Chart of all four clusters showcasing how they are connected to /scratch/gpfs, which is fast, and /tigress or /projects, which are slow.](hpc_princeton_file_system.png)
 
 **IMPORTANT**: *You should run your jobs out of `/scratch/network` on Adroit and `/scratch/gpfs` on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of `/tigress`. The `/tigress` filesystem is slow and should only be used for backing up the files you produce on the `/scratch/gpfs` or `/scratch/network` filesystems. Your home directory on all clusters is small and disk access is slow. It should only be used for storing source code and executables*.
 
