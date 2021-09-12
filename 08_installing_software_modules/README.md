@@ -87,7 +87,7 @@ append-path	 -d   LOCAL_CXXFLAGS -I/usr/local/cuda-10.2/include
 Again, modules only change the values of environment variables. They do not install or uninstall software.
 
 ### A Word on Python Modules
-
+<!--
 When you first connect to the cluster, none of the module are loaded, and the system Python–which is old–will be used by default:
 
 ```
@@ -97,8 +97,9 @@ Python 2.7.5
 $ which python
 /usr/bin/python
 ```
+-->
 
-To get the newer Anaconda Python implementation (recommended), simply load one of the available anaconda3/ modules. For example:
+To get an Anaconda Python implementation (the recommended way to use Python), simply load one of the available anaconda3/ modules. For example:
 
 ```
 $ module load anaconda3/2020.7
@@ -174,7 +175,7 @@ Remember that no modules are loaded upon connecting to a cluster. Best practice 
 
 More information on modules can be found on our [Environment Module](https://researchcomputing.princeton.edu/support/knowledge-base/modules) resource page.
 
-If you need software that is not installed or made available through **modules**, you will most likely have to do it yourself. See Installing Software Not Available on the Clusters section below.
+If you need software that is not installed or made available through **modules**, you will most likely have to install the software yourself. The following section provides the needed guidelines.
 
 ## Installing Software Not Available on the Clusters
 
@@ -195,7 +196,7 @@ See this [guide to installing Python packages with conda or pip](https://researc
 
 See this [guide to installing R packages](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio#install) on Princeton Research Computing's [R resource page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
 
-It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the following section, and is described in more detail in the linked guide to installing R packages.
+It's important to be aware of the need to update the compiler before installing certain R packages. This is mentioned in the *Compiling Software, GNU Compiler Collection (GCC)* section, and is described in more detail in the linked guide to installing R packages.
 
 
 ### Using Software Containers
