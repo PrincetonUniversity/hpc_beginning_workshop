@@ -144,7 +144,7 @@ It's a particular command line interface that is common across Unix-alike machin
  pwd                       # print working directory
  cat /etc/os-release       # info about operating system
  lscpu                     # info about the CPUs on head node
- snodes                    # info about the compute nodes (7 nodes for myadroit)
+ shownodes                    # info about the compute nodes (7 nodes for myadroit)
  squeue                    # which jobs are running or waiting to run
  qos                       # quality of service (job partitions and limits)
  slurmtop                  # shows a map of cluster usage
@@ -220,26 +220,27 @@ It's a particular command line interface that is common across Unix-alike machin
 
 
 
- $ <b>snodes</b>
- HOSTNAMES     STATE    CPUS S:C:T    CPUS(A/I/O/T)   CPU_LOAD MEMORY   GRES     PARTITION          AVAIL_FEATURES
- adroit-01     idle     20   2:10:1   0/20/0/20       0.01     128000   (null)   class              ivy
- adroit-02     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-03     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-04     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-05     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-06     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-07     idle     20   2:10:1   0/20/0/20       0.01     64000    (null)   class              ivy
- adroit-08     mix      32   2:16:1   31/1/0/32       19.93    384000   (null)   all*               skylake
- adroit-09     idle     32   2:16:1   0/32/0/32       0.01     384000   (null)   all*               skylake
- adroit-10     mix      32   2:16:1   25/7/0/32       16.58    384000   (null)   all*               skylake
- adroit-11     mix      32   2:16:1   30/2/0/32       11.01    384000   (null)   all*               skylake
- adroit-12     mix      32   2:16:1   30/2/0/32       10.98    384000   (null)   all*               skylake
- adroit-13     mix      32   2:16:1   24/8/0/32       4.20     384000   (null)   all*               skylake
- adroit-14     mix      32   2:16:1   20/12/0/32      20.01    384000   (null)   all*               skylake
- adroit-15     idle     32   2:16:1   0/32/0/32       0.01     384000   (null)   all*               skylake
- adroit-16     mix      32   2:16:1   5/27/0/32       3.01     384000   (null)   all*               skylake
- adroit-h11g1  idle     40   2:20:1   0/40/0/40       0.04     770000   gpu:tesl gpu                (null)
- adroit-h11g4  idle     16   2:8:1    0/16/0/16       0.61     64000    gpu:tesl gpu                (null)
+ $ <b>shownodes</b>
+ NODELIST      PART   STATE        FREE/TOTAL CPUs  CPU_LOAD  FREE/TOTAL MEMORY  FREE/TOTAL GPUs   FEATURES
+adroit-01     class  idle                   28/28      0.02    120739/128000Mb                   broadwell
+adroit-02     class  idle                   28/28      0.00    120754/128000Mb                   broadwell
+adroit-03     class  idle                   28/28      0.01    120811/128000Mb                   broadwell
+adroit-04     class  idle                   28/28      0.00    120808/128000Mb                   broadwell
+adroit-05     class  idle                   28/28      0.00    120823/128000Mb                   broadwell
+adroit-06     class  idle                   28/28      0.00    120815/128000Mb                   broadwell
+adroit-07     class  idle                   28/28      0.00    120811/128000Mb                   broadwell
+adroit-08     all    mixed                   3/32     24.85    366279/384000Mb                     skylake
+adroit-09     all    allocated               0/32     17.02    371481/384000Mb                     skylake
+adroit-10     all    allocated               0/32     32.04    357999/384000Mb                     skylake
+adroit-11     all    mixed                  24/32      7.94    373102/384000Mb                     skylake
+adroit-12     all    mixed                   7/32     19.48    366613/384000Mb                     skylake
+adroit-13     all    mixed                   1/32     23.45    353454/384000Mb                     skylake
+adroit-14     all    idle                   32/32      0.00    377183/384000Mb                     skylake
+adroit-15     all    mixed                  16/32      0.00    370577/384000Mb                     skylake
+adroit-16     all    mixed                  17/32      7.50    369325/384000Mb                     skylake
+adroit-h11g1  gpu    idle                   40/40      0.07    763765/770000Mb   4/4 tesla_v100       v100
+adroit-h11g2  gpu    idle                   48/48      0.00  1019578/1000000Mb  4/4 nvidia_a100       a100
+adroit-h11n1  class  mixed                126/128      0.00    244004/256000Mb                    amd,rome
 
 
 
