@@ -24,7 +24,7 @@ Please fill out our [survey for the Fall 2021 workshop](https://docs.google.com/
 
 ## Authorship
 
-This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson, Gabe Perez-Giz, and Carolina Roe-Raymond. Some of the content was originally written by Uno Vaaland.
+This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson, Gabe Perez-Giz,  Carolina Roe-Raymond, and Calla Chennault. Some of the content was originally written by Uno Vaaland.
 
 <!--## Workshop Survey
 [Click here](https://bit.ly/hpcintro_24feb20)
