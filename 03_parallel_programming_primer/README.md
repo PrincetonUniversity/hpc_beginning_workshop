@@ -127,7 +127,7 @@ You've written the following program to calculate and print a y-value for each x
 `y = (x * 0.3) + 4.21`
 `print(y)`
 
-Here, a task  is the calcuation of the y-value for one x-value.
+Here, a task is the calcuation of the y-value for one x-value.
 
 Normally, you would run your program serially, meaning you'd use only 1 core to run your program for all the x-values in your data. That one core can only run one task at a time. If, for the sake of simplicity, we say each task takes 1 second to complete, then the program should take
 
@@ -176,7 +176,7 @@ Try running this [OpenMP example](https://github.com/PrincetonUniversity/hpc_beg
 
 ### 3. Distributed-Memory Parallelism (Multiprocessing)
 
-Distributed-memory parallelism generally refers to running tasks as multiple **processes** that do not share the same space in memory. While this can technically happen on one computer, that is a more complicated use case. The more intuitive way to understand distributed-memory parallelism is in the case that tasks are run on different computers, as those tasks more obviously have their own memory.
+Distributed-memory parallelism generally refers to running tasks as multiple **processes** that do not share the same space in memory. While this can technically happen on one computer, that is a more complicated use case. The more intuitive way to understand distributed-memory parallelism is in the case where tasks are run on different computers, as those tasks more obviously have their own memory.
 
 As an example, distributed-memory parallelism could be used to calculate the expected number of people commuting into each USA county per day. To calculate the number of commuters, let's say you require population data from the surrounding counties. The work to calculate commuters by county could be divided up by state, so that a different computer could handle all of the calculations for each state. The counties at the border of each state, however,  need information from the neighboring counties in another state in order to complete their calculations. The process working on New Jersey, for example, would need to communicate with the processes working on the surrounding states (Delaware, Pennsylvania, and New York) to complete its work. In other words, at some point the process on one computer needs to communicate with the processes on other computers in order to finish its tasks.
 
@@ -226,7 +226,7 @@ Resource lists by topic, compiled by staff in Princeton's Research Computing and
 * [MPI](https://researchcomputing.princeton.edu/education/external-online-resources/mpi)
 * [OpenMP](https://researchcomputing.princeton.edu/education/external-online-resources/openmp)
 
-Check Research Computing's upcoming [workshop schedule](https://researchcomputing.princeton.edu/learn/workshops-live-training) for deeper training on Parallel Programming topics. (Workshops are on parallel computing are typically held in the Fall semester).
+Check Research Computing's upcoming [workshop schedule](https://researchcomputing.princeton.edu/learn/workshops-live-training) for deeper training on Parallel Programming topics. (Workshops on parallel computing are typically held in the Fall semester).
 
 ## Online Resources Used to Write This Guide
 
