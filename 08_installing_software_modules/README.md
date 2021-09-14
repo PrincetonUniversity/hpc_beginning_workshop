@@ -201,7 +201,9 @@ It's important to be aware of the need to update the compiler before installing 
 
 ### Using Software Containers
 
-We do not allow [Docker](https://www.docker.com) but [Singularity](https://researchcomputing.princeton.edu/support/knowledge-base/singularity) can be used:
+Software containers can be really useful when you need software that may have tricky dependencies. You can pull and run an image (essentially a large file) that contains the software and everything it needs. 
+
+We do not allow [Docker](https://www.docker.com) but [Singularity](https://researchcomputing.princeton.edu/support/knowledge-base/singularity) can be used. You can still [search for and use images from Docker](https://hub.docker.com/), you just need to use Singularity commands. For example:
 
 ```
 $ singularity pull docker://hello-world
