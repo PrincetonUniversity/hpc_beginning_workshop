@@ -18,7 +18,7 @@ $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop
 Examine the files in a terminal on your laptop:
 
 ```
-$ cd hpc_beginning_workshop/04_first_job/python_example
+$ cd hpc_beginning_workshop/09_slurm/python_example
 $ cat matrix_inverse.py
 $ cat job.slurm
 ```
@@ -128,7 +128,7 @@ Inverse(X) =
 In a terminal on your laptop, change the working directory and examine the scripts:
 
 ```
-cd hpc_beginning_workshop/04_first_job/R_example
+cd hpc_beginning_workshop/09_slurm/R_example
 $ cat data_analysis.R
 $ cat job.slurm
 $ head cdc.csv
