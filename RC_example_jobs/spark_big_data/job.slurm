@@ -10,7 +10,7 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3 spark
+module load anaconda3/2018.12 spark/hadoop2.7/2.4.6
 
 spark-start
 spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100

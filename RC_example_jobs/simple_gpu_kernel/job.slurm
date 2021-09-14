@@ -11,6 +11,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load cudatoolkit
+module load cudatoolkit/11.1
 
 ./hello_world_gpu

@@ -3,7 +3,7 @@
 Compile the code with the following commands:
 
 ```
-$ module load pgi
+$ module load pgi/19.5/64
 $ pgcc -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.c
 ```
 

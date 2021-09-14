@@ -1,36 +1,32 @@
-# Multi-threaded C++ Program
+# Multi-threaded Fortran Program
 
 Here is the source code for a simple multi-threaded C++ program:
 
-```c++
-#include <iostream>
-#include <omp.h>
+```fortran
+program hello_world_multithreaded
+use omp_lib
 
-int main(int argc, char* argv[]) {
-  using namespace std;
- 
-  #pragma omp parallel
-  {
-  int id = omp_get_thread_num();
-  int nthrds = omp_get_num_threads();
-  cout << "Hello from thread " << id << " of " << nthrds << endl;
-  }
-  return 0;
-}
+!$omp parallel
+
+    write(*,*) "Hello from process ", omp_get_thread_num(), " of ", omp_get_num_threads()
+
+!$omp end parallel
+
+end program
 ```
 
 Compile the program using the following commands:
 
 ```
 $ module load intel/19.1/64/19.1.1.217  # or a module appropriate for your cluster
-$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ ifort -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.f90
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=cxx_omp       # create a short name for your job
+#SBATCH --job-name=fortran_omp   # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=8        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -58,12 +54,12 @@ $ sbatch job.slurm
 The output of the code should resemble the following:
 
 ```
-Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread 3 of 826 of 0584 of 8
-Hello from thread 
-
- of  of 8
-7 of 8
- of 8
-Hello from thread 1 of 8
-8
+ Hello from process            3  of            8
+ Hello from process            5  of            8
+ Hello from process            6  of            8
+ Hello from process            7  of            8
+ Hello from process            4  of            8
+ Hello from process            0  of            8
+ Hello from process            2  of            8
+ Hello from process            1  of            8
 ```

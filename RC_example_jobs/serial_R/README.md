@@ -54,4 +54,4 @@ Use `squeue -u $USER` to monitor queued jobs.
 
 # Guide
 
-For more on running R on the HPC clusters: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
+For more on running R on the HPC clusters: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)

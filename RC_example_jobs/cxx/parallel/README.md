@@ -24,6 +24,9 @@ int main(int argc, char** argv) {
   // Print off a hello world message
   cout << "Process " << world_rank << " of " << world_size
        << " says hello from " << processor_name << endl;
+  
+  // uncomment next line to make CPU-cores work (infinitely)
+  // while (true) {};
 
   MPI_Finalize();
   return 0;
@@ -33,7 +36,7 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64  # or modules appropriate for your cluster
 $ mpicxx -o hello_world_mpi hello_world_mpi.cpp
 ```
 
@@ -53,7 +56,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel intel-mpi
+module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 
 srun ./hello_world_mpi
 ```

@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-$ module load intel intel-mpi
+$ module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 $ mpicxx -qopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
 ```
 
@@ -61,7 +61,7 @@ Below is the Slurm script:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel intel-mpi
+module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
 
 srun ./mpi_openmp_hello_world
 ```
@@ -72,7 +72,7 @@ To submit the job to the cluster:
 $ sbatch job.slurm
 ```
 
-The output of the code should be a messy version of that below:
+The output of the code should be an unordered version of that below:
 
 ```
 Hello from thread 0 of 5 on MPI process 0 of 6 on node traverse-k02g4

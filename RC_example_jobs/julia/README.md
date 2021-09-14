@@ -24,7 +24,7 @@ Below is the Slurm script:
 module purge
 module load julia/1.5.0
 
-srun julia hello_world.jl
+julia hello_world.jl
 ```
 
 To run the Julia script, simply submit the job to the cluster:
