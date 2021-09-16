@@ -68,3 +68,5 @@ Hello from thread
 Hello from thread 1 of 8
 8
 ```
+
+See a list of [learning resources](https://researchcomputing.princeton.edu/education/external-online-resources/openmp) for OpenMP.
