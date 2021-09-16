@@ -52,7 +52,7 @@ module load intel/19.1.1.217
 Submit the job to the cluster:
 
 ```
-# use a text editor replace <YourNetID> with your NetID in job.slurm
+# use a text editor to replace <YourNetID> with your NetID in job.slurm
 $ sbatch job.slurm
 ```
 
