@@ -52,6 +52,7 @@ module load intel/19.1.1.217
 Submit the job to the cluster:
 
 ```
+# use a text editor to add your email address to job.slurm
 $ sbatch job.slurm
 ```
 
