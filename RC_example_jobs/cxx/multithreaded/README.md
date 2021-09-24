@@ -105,8 +105,6 @@ Hello from thread 1 of 8
 8
 ```
 
-See a list of [learning resources](https://researchcomputing.princeton.edu/education/external-online-resources/openmp) for OpenMP.
-
 ## Performance Tips
 
 The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the addition flags below. For Intel:
@@ -120,3 +118,7 @@ For GCC:
 ```
 $ g++ -fopenmp -Ofast -march=native -o hw_omp hello_world_omp.cpp
 ```
+
+## Learn More
+
+See a list of [learning resources](https://researchcomputing.princeton.edu/education/external-online-resources/openmp) for OpenMP.
