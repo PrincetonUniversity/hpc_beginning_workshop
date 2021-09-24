@@ -19,6 +19,10 @@ int main(int argc, char* argv[]) {
 }
 ```
 
+Next, choose which compiler toolchain to use: Intel or GCC.
+
+## Intel
+
 Compile the program using the following commands:
 
 ```
@@ -49,6 +53,38 @@ module load intel/19.1.1.217
 ./hw_omp
 ```
 
+## GCC
+
+Compile the program using the following commands:
+
+```
+$ g++ -fopenmp -o hw_omp hello_world_omp.cpp
+```
+
+Below is a Slurm script appropriate for an OpenMP job:
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=cxx_omp       # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=8        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per CPU-core is default)
+#SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send email when job begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=fail         # send mail if job fails
+#SBATCH --mail-user=<YourNetID>@princeton.edu
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+module purge
+
+./hw_omp
+```
+
+## Submit the Job
+
 Submit the job to the cluster:
 
 ```
@@ -70,3 +106,17 @@ Hello from thread 1 of 8
 ```
 
 See a list of [learning resources](https://researchcomputing.princeton.edu/education/external-online-resources/openmp) for OpenMP.
+
+## Performance Tips
+
+The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the addition flags below. For Intel:
+
+```
+$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+```
+
+For GCC:
+
+```
+$ g++ -fopenmp -Ofast -march=native -o hw_omp hello_world_omp.cpp
+```
