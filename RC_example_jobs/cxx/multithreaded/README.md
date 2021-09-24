@@ -107,7 +107,9 @@ Hello from thread 1 of 8
 
 ## Performance Tips
 
-The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the addition flags below. For Intel:
+The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the addition flags below.
+
+For Intel:
 
 ```
 $ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
