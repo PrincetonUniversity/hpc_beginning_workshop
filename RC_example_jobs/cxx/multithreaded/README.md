@@ -107,7 +107,7 @@ Hello from thread 1 of 8
 
 ## Performance Tips
 
-The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the addition flags below.
+The example code above is simple and for teaching purposes only. For a real world code, try turning on compiler optimizations and vectorization by adding the flags below.
 
 For Intel:
 
