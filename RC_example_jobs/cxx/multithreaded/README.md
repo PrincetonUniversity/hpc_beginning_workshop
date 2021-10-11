@@ -21,6 +21,14 @@ int main(int argc, char* argv[]) {
 
 Next, choose which compiler toolchain to use: Intel or GCC.
 
+## Intel OpenMP Workshop (10/19/2021)
+
+Add the line below to your Slurm script to use reserved nodes:
+
+```
+#SBATCH --reservation=openmp-workshop
+```
+
 ## Intel
 
 Compile the program using the following commands:
