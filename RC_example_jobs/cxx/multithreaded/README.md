@@ -53,6 +53,12 @@ module load intel/19.1.1.217
 ./hw_omp
 ```
 
+For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
+
+```
+$ ./hw_omp
+```
+
 ## GCC
 
 Compile the program using the following commands:
@@ -81,6 +87,12 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 module purge
 
 ./hw_omp
+```
+
+For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
+
+```
+$ ./hw_omp
 ```
 
 ## Intel OpenMP Workshop (10/19/2021)
