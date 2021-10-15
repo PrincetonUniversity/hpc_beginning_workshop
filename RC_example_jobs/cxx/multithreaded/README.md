@@ -88,7 +88,7 @@ module purge
 Add the line below to your Slurm script to use reserved nodes:
 
 ```
-#SBATCH --reservation=openmp-workshop
+#SBATCH --reservation=openmp-workshop  # only valid on 10/19 from 8 AM to 6 PM
 ```
 
 ## Submit the Job
