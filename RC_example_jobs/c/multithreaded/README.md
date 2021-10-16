@@ -23,6 +23,7 @@ int main(int argc, char* argv[]) {
 Compile the program using the following commands:
 
 ```
+$ https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/2021fall/RC_example_jobs/c/multithreaded/hello_world_omp.c
 $ gcc -fopenmp -o hw_omp hello_world_omp.c
 ```
 
