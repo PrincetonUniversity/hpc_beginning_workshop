@@ -40,9 +40,8 @@ Below is a Slurm script appropriate for an OpenMP job:
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-
 module purge
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 ./hw_omp
 ```
