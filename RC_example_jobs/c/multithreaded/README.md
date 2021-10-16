@@ -38,7 +38,6 @@ Below is a Slurm script appropriate for an OpenMP job:
 #SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-type=fail         # send mail if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -90,14 +89,14 @@ Instead of using GCC, you could compile the program using the Intel compiler:
 
 ```
 $ module load intel/19.1.1.217  # or a module appropriate for your cluster
-$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ icc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.c
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
 
 ```bash
 #!/bin/bash
-#SBATCH --job-name=cxx_omp       # create a short name for your job
+#SBATCH --job-name=c_omp         # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=8        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -105,7 +104,6 @@ Below is a Slurm script appropriate for an OpenMP job:
 #SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
-#SBATCH --mail-type=fail         # send mail if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -129,13 +127,13 @@ The example code above is simple and for teaching purposes only. For a real worl
 For Intel:
 
 ```
-$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ icc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.c
 ```
 
 For GCC:
 
 ```
-$ g++ -fopenmp -Ofast -march=native -o hw_omp hello_world_omp.cpp
+$ gcc -fopenmp -Ofast -march=native -o hw_omp hello_world_omp.c
 ```
 
 ## Learn More
