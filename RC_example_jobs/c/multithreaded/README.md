@@ -72,14 +72,14 @@ $ sbatch job.slurm
 The output of the code should resemble the following:
 
 ```
-Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread Hello from thread 3 of 826 of 0584 of 8
-Hello from thread 
-
- of  of 8
-7 of 8
- of 8
+Hello from thread 0 of 8
+Hello from thread 4 of 8
+Hello from thread 6 of 8
+Hello from thread 7 of 8
+Hello from thread 5 of 8
+Hello from thread 2 of 8
 Hello from thread 1 of 8
-8
+Hello from thread 3 of 8
 ```
 
 ## Intel Compiler
