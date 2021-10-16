@@ -24,6 +24,8 @@ int main(int argc, char* argv[]) {
 Compile the program using the following commands:
 
 ```
+$ ssh <YourNetID>@adroit.princeton.edu
+$ wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/2021fall/RC_example_jobs/cxx/multithreaded/hello_world_omp.cpp
 $ g++ -fopenmp -o hw_omp hello_world_omp.cpp
 ```
 
