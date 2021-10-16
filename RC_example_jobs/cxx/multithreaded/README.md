@@ -52,7 +52,7 @@ module purge
 For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
 
 ```
-$ ./hw_omp
+$ OMP_NUM_THREADS=8 ./hw_omp
 ```
 
 ## Intel OpenMP Workshop (10/19/2021)
@@ -120,7 +120,7 @@ module load intel/19.1.1.217
 For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
 
 ```
-$ ./hw_omp
+$ OMP_NUM_THREADS=8 ./hw_omp
 ```
 
 ## Performance Tips
