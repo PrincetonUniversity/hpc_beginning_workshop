@@ -49,6 +49,12 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 ./hw_omp
 ```
 
+Sumbit the job with:
+
+```
+$ sbatch job.slurm
+```
+
 For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
 
 ```
@@ -115,6 +121,12 @@ module purge
 module load intel/19.1.1.217
 
 ./hw_omp
+```
+
+Sumbit the job with:
+
+```
+$ sbatch job.slurm
 ```
 
 For a simple test code like that above, one could also ignore Slurm and run directly on the login node:
