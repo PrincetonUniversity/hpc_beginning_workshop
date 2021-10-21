@@ -88,7 +88,7 @@ Instead of using GCC, you could compile the program using the Intel compiler:
 
 ```
 $ module load intel/19.1.1.217  # or a module appropriate for your cluster
-$ icc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.c
+$ icc -qopenmp -o hw_omp hello_world_omp.c
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
