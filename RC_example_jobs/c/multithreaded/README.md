@@ -60,14 +60,6 @@ For a simple test code like that above, one could also ignore Slurm and run dire
 $ OMP_NUM_THREADS=8 ./hw_omp
 ```
 
-## Intel OpenMP Workshop (10/19/2021)
-
-Add the line below to your Slurm script to use reserved nodes:
-
-```
-#SBATCH --reservation=openmp-workshop  # only valid on 10/19 from 8 AM to 6 PM
-```
-
 ## Submit the Job
 
 Submit the job to the cluster:
