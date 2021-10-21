@@ -41,7 +41,6 @@ Below is a Slurm script appropriate for an OpenMP job:
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH --reservation=openmp-workshop  # ONLY VALID DURING LIVE WORKSHOP
 
 module purge
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -113,7 +112,6 @@ Below is a Slurm script appropriate for an OpenMP job:
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH --reservation=openmp-workshop  # ONLY VALID DURING LIVE WORKSHOP
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
