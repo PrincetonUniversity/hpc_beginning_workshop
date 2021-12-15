@@ -10,5 +10,6 @@ $ gcc -o hello hello.c -lOpenCL
 Run the executable:
 
 ```
+# use a text editor to enter your email address in job.slurm
 $ sbatch job.slurm
 ```
