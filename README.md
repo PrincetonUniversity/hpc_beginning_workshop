@@ -1,12 +1,14 @@
-# Getting Started with the Research Computing Clusters
+# Getting Started with the Research Computing Clusters - Example Jobs
 
 ## About
-This site provides example codes for running jobs on Princeton University's Research Computing clusters. This content is used in the Princeton Institute for Computational Science and Engineering's (PICSciE) workshop, "Getting Started with Research Computing Clusters."  
+This site provides example codes for running jobs on Princeton University's Research Computing clusters. 
+
+This content is used in the Princeton Institute for Computational Science and Engineering (PICSciE) workshop, "Getting Started with Research Computing Clusters."  
 
 ## Useful links
 
-* [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) - Landing page for getting started with our systems.    
-* [Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) - Search all of our help articles for using the High Performance Computing (HPC) systems at Princeton.  
+* [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) - Landing page for getting started with our clusters.    
+* [Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) - Search all of our help articles for using the clusters at Princeton.  
 * [Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq) - View answers to frequently asked questions.  
 * [Research Computing Support Page](https://researchcomputing.princeton.edu/support) - Where to go if you need more help. 
 
