@@ -1,0 +1,80 @@
+Alternative Text and Captions used for RC Website
+by - Carolina Roe-Raymond
+date - Nov 2 2021
+
+SERIAL
+************
+AltText - 
+One problem block that is worked on in smaller pieces, one at a time.
+Source - 
+https://hpc.llnl.gov/sites/default/files/serialProblem.gif
+Source: https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial
+
+PARALLEL
+************
+AltText - 
+One big problem block is split into four medium blocks, and each medium block is worked on in smaller pieces, but at the same time.
+Source - 
+https://hpc.llnl.gov/sites/default/files/parallelProblem.gif
+Source: https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial
+
+CHIP
+************
+AltText - 
+Intel chip with four cores.
+Source - 
+https://spectrum.ieee.org/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTU2MDE3Ni9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzMDUyMjA4Nn0.HxFJ9q5nmiY4ITML52e-yQZolSnspmb3S0YDhEQzJzQ/image.jpg?quality=80&width=734 
+
+ARRAY
+************
+AltText - 
+One rectangle (a computer), with one circle inside it (a spot in memory) and one arrow extending out from the circle (one task to be run on one CPU-core). This whole entity is multiplied by 50. 
+Caption - 
+This schematic diagram represents an array job which runs 50 identical tasks of one process on one node.
+
+
+COMP_PROCESSES
+************
+AltText - 
+One rectangle (a computer), with two circles inside it (two spots in memory, each running a separate process) and one arrow extending out from each circle (one task to be run on one CPU-core per process).
+Caption - 
+This schematic diagram represents a job which runs on one node, with two different processes, each process with one thread.
+
+COMP_THREAD
+************
+AltText - 
+One rectangle (a computer), with one circle inside it (one spot in memory) and four arrows extending out from each circle (four tasks to be run, with each task on one CPU-core).
+Caption - 
+This schematic diagram represents a job which runs on one node, with one process that consists of four threads.
+
+COMP
+************
+AltText - 
+One rectangle (a computer).
+Caption - 
+This schematic diagram represents one computer, referred to as a node.
+
+DISTMEM
+************
+AltText -
+Three rectangles (three computers), with two circles inside each rectangle (two spots in memory per node, each spot running a separate process) and one arrow extending out from each circle (one task to be run on one CPU-core per process).
+Caption -
+This schematic diagram represents a job which runs on three nodes, each node with two different processes, and each process with one thread.
+
+KEY 
+************
+AltText - 
+A rectangle represents a computer (or node). Circles inside a rectangle represent one spot in memory, which correspond to a process running on that node. Arrows extending out from each circle represent tasks, with each task on one CPU-core).
+Caption -
+This schematic diagram lays out how nodes, processes, and threads will be represented in subsequent sections.
+
+
+SHAREDMEM 
+************
+AltText - 
+One rectangle (a computer), with one circle inside it (one spot in memory) and four arrows extending out from each circle (four tasks to be run, with each task on one CPU-core).
+Caption -
+This schematic diagram represents a shared memory job which runs on one node, with one process that consists of four threads.
+
+
+ 
