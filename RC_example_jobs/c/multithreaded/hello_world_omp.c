@@ -1,14 +1,13 @@
-#include <iostream>
+#include <stdio.h>
 #include <omp.h>
 
 int main(int argc, char* argv[]) {
-  using namespace std;
  
   #pragma omp parallel
   {
   int id = omp_get_thread_num();
   int nthrds = omp_get_num_threads();
-  cout << "Hello from thread " << id << " of " << nthrds << endl;
+  printf("Hello from thread %d of %d\n", id, nthrds);
   }
   return 0;
 }
