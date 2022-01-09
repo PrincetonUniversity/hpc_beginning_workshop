@@ -42,7 +42,7 @@ cd hpc_beginning_workshop
 Then choose an example and follow the directions. For instance:
 
 ```
-cd serial_python
+cd python/cpu
 cat README.md
 ```
 
