@@ -1,7 +1,7 @@
 # Getting Started with the Research Computing Clusters
 
 ## About
-This site provides example codes for running jobs on Princeton University's Research Computing clusters. This content is used in the Princeton Institue for Computational Science and Engineering's (PICSciE) workshop, "Getting Started with Research Computing Clusters."  
+This site provides example codes for running jobs on Princeton University's Research Computing clusters. This content is used in the Princeton Institute for Computational Science and Engineering's (PICSciE) workshop, "Getting Started with Research Computing Clusters."  
 
 ## Useful links
 
