@@ -48,5 +48,7 @@ cat README.md
 
 ## Where to store your files
 
+To familiarize yourself with the cluster's file systems and where to store to your files, review our [Data Storage](https://researchcomputing.princeton.edu/support/knowledge-base/data-storage) page.
+
 **IMPORTANT**: *You should run your jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of /tigress or /projects. These filesystems are slow and should only be used for backing-up the files that you produce on /scratch/gpfs or /scratch/network. Your /home directory on all clusters is small should only be used for storing source code, executables, Conda environments and small data sets*.
 
