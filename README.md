@@ -5,8 +5,8 @@ This resource provides example jobs that can be run on Princeton University's Re
 
 ## Useful links
 
-* [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) - Landing page for getting started with our systems.    
-* [Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) - Search all of our help articles for using the High Performance Computing (HPC) systems at Princeton.  
+* [Getting Started with HPC at Princeton](https://researchcomputing.princeton.edu/getting-started) - Landing page for getting started with our clusters.    
+* [Research Computing KnowledgeBase](https://researchcomputing.princeton.edu/support/knowledge-base) - Search all of our help articles for using the clusters at Princeton.  
 * [Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq) - View answers to frequently asked questions.  
 * [Research Computing Support Page](https://researchcomputing.princeton.edu/support) - Where to go if you need more help. 
 
