@@ -25,7 +25,7 @@ This guide was created by Ben Hicks. It has been extended and modified by Jonath
 
 # Running Example Jobs on the HPC Clusters
 
-The sample jobs above are written for Nobel, Adroit, Della, Stellar, and Tiger in mind. You will probably need to use different environment modules on Traverse.
+The sample jobs above are written with Nobel, Adroit, Della, Stellar, and Tiger in mind. You will probably need to use different environment modules on Traverse.
 
 Follow the directions below to begin running simple jobs on Adroit.
 After SSHing to Adroit the first step is to `cd` (change directory)
@@ -45,6 +45,8 @@ Then choose an example and follow the directions. For instance:
 cd python/cpu
 cat README.md
 ```
+
+For more detailed instructions on running an example Python or R job, see the [First Slurm Job](https://researchcomputing.princeton.edu/get-started/guide-princeton-clusters/3-first-slurm-job) section of the [Guide to the Princeton Clusters](https://researchcomputing.princeton.edu/get-started/guide-princeton-clusters).
 
 ## Where to store your files
 
