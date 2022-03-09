@@ -14,7 +14,7 @@ $ module load nvhpc/21.11
 $ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
-Submit the job with:
+Submit the job (make sure the correct `nvhpc` module is loaded in `job.slurm`):
 
 ```
 $ sbatch job.slurm
