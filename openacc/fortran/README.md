@@ -3,8 +3,15 @@
 Compile the code with the following commands:
 
 ```
-$ module load pgi/19.5/64
-$ pgfortran -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.f90
+# tigergpu
+$ module load nvhpc/21.5
+$ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
+```
+
+```
+# della (gpu)
+$ module load nvhpc/21.11
+$ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
 On TigerGPU, use `-ta=tesla:cc60` and `#SBATCH --gres=gpu:1`.
