@@ -5,7 +5,7 @@ Read [this page](https://researchcomputing.princeton.edu/gaussian) before trying
 After following the directions found on the page above, run the following commands to launch a Gaussian 16 job:
 
 ```
-$ cd hpc_beginning_workshop/RC_example_jobs/gaussian
+$ cd hpc_beginning_workshop/gaussian
 # edit email address in job.slurm
 $ sbatch job.slurm
 ```
