@@ -14,8 +14,6 @@ $ module load nvhpc/21.11
 $ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
-On TigerGPU, use `-ta=tesla:cc60` and `#SBATCH --gres=gpu:1`.
-
 Submit the job with:
 
 ```
