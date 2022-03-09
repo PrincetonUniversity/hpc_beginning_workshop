@@ -26,7 +26,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2020.11
+module load anaconda3/2021.11
 
 python matrix_inverse.py
 ```
