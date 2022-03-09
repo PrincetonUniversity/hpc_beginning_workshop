@@ -3,11 +3,13 @@
 Compile the code with the following commands:
 
 ```
-$ module load pgi/19.5/64
-$ pgcc -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.c
+# tigergpu
+$ module load nvhpc/21.5
+$ module load cudatoolkit/10.2
+$ nvc -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.c
 ```
 
-On TigerGPU, use `-ta=tesla:cc60`  and `#SBATCH --gres=gpu:1`.
+On Della (GPU), use `-ta=tesla:cc80`  and `#SBATCH --gres=gpu:1`.
 
 Submit the job with:
 
