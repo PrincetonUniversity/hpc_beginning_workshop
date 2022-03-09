@@ -11,6 +11,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load matlab/R2019a
+module load matlab/R2021b
 
 matlab -nodisplay -nosplash -r for_loop
