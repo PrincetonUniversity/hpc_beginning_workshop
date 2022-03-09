@@ -1,3 +1,3 @@
 # PyTorch
 
-See [this guide](https://researchcomputing.princeton.edu/pytorch) for complete directions.
+See [this webpage](https://researchcomputing.princeton.edu/support/knowledge-base/pytorch) for complete directions.
