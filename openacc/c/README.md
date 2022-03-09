@@ -9,9 +9,13 @@ $ module load cudatoolkit/10.2
 $ nvc -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.c
 ```
 
-On Della (GPU), use `-ta=tesla:cc80`  and `#SBATCH --gres=gpu:1`.
+```
+# della (gpu)
+$ module load nvhpc/21.11
+$ nvc -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.c
+```
 
-Submit the job with:
+Submit the job (make sure the correct `nvhpc` module is loaded in `job.slurm`):
 
 ```
 $ sbatch job.slurm
