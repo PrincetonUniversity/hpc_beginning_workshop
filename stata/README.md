@@ -67,4 +67,4 @@ Use `squeue -u $USER` to monitor queued jobs.
 
 # Guide
 
-For more on running Stata jobs see [this guide](https://researchcomputing.princeton.edu/stata).
+For more on running Stata jobs see [this guide](https://researchcomputing.princeton.edu/support/knowledge-base/stata).
