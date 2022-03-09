@@ -12,6 +12,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load pgi/19.5/64
+module load nvhpc/21.11
 
 ./laplace2d_acc
