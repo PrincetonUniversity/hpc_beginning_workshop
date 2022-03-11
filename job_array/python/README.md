@@ -44,21 +44,56 @@ $ cd hpc_beginning_workshop/job_array/python
 $ sbatch job.slurm
 ```
 
-The Slurm output files contain the following:
-
-```
-$ cat slurm-*
-```
-
-
-The will produce three files:
+The will produce the following files:
 
 ```bash
 $ ls -l
+total 36K
+-rw-r--r--. 1 jdh4 cses 1.5K Mar 11 09:50 README.md
+-rw-r--r--. 1 jdh4 cses  803 Mar 11 09:50 job.slurm
+-rw-r--r--. 1 jdh4 cses  329 Mar 11 10:12 myscript.py
+-rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.0.err
+-rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.1.err
+-rw-r--r--. 1 jdh4 cses   41 Mar 11 10:13 output_taskid_0_myparam_0.out
+-rw-r--r--. 1 jdh4 cses  148 Mar 11 10:13 slurm-1308787.0.out
+-rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.2.err
+-rw-r--r--. 1 jdh4 cses   42 Mar 11 10:13 output_taskid_1_myparam_10.out
+-rw-r--r--. 1 jdh4 cses  149 Mar 11 10:13 slurm-1308787.1.out
+-rw-r--r--. 1 jdh4 cses   42 Mar 11 10:13 output_taskid_2_myparam_20.out
+-rw-r--r--. 1 jdh4 cses  149 Mar 11 10:13 slurm-1308787.2.out
 ```
 
-Here are the contents of the files:
+Here are the contents of the Slurm output files:
+
+```
+$ cat slurm-1308787.0.out
+My SLURM_ARRAY_JOB_ID is 1308787.
+My SLURM_ARRAY_TASK_ID is 0
+Executing on the machine: adroit-14
+INFO: Job with array task id 0 is using myparam=0
+
+$ cat slurm-1308787.1.out
+My SLURM_ARRAY_JOB_ID is 1308787.
+My SLURM_ARRAY_TASK_ID is 1
+Executing on the machine: adroit-12
+INFO: Job with array task id 1 is using myparam=10
+
+$ cat slurm-1308787.2.out
+My SLURM_ARRAY_JOB_ID is 1308787.
+My SLURM_ARRAY_TASK_ID is 2
+Executing on the machine: adroit-12
+INFO: Job with array task id 2 is using myparam=20
+```
+
+Here are the contents of the output files:
 
 ```bash
-$ cat
+$ cat output_taskid_0_myparam_0.out
+Output file for task id 0 using myparam=0
+
+$ cat output_taskid_1_myparam_10.out
+Output file for task id 1 using myparam=10
+
+$ cat output_taskid_2_myparam_20.out
+Output file for task id 2 using myparam=20
 ```
