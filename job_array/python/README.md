@@ -2,7 +2,7 @@
 
 Consider the case of running 3 jobs within the array:
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=array-job     # create a short name for your job
 #SBATCH --output=slurm-%A.%a.out # stdout file
@@ -26,7 +26,7 @@ python myscript.py
 
 Below is the contents of `myscript.py`:
 
-```
+```python
 import os
 idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
 parameters = [0, 10, 20]
@@ -44,17 +44,21 @@ $ cd hpc_beginning_workshop/job_array/python
 $ sbatch job.slurm
 ```
 
-The Slurm out
+The Slurm output files contain the following:
+
+```
+$ cat slurm-*
+```
 
 
 The will produce three files:
 
-```
+```bash
 $ ls -l
 ```
 
 Here are the contents of the files:
 
-```
+```bash
 $ cat
 ```
