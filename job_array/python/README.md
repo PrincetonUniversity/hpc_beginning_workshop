@@ -31,9 +31,10 @@ import os
 idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
 parameters = [0, 10, 20]
 myparam = parameters[idx]
-print(f"Job with array task id {idx} is using myparam={myparam}")
+print(f"INFO: Job with array task id {idx} is using myparam={myparam}")
 with open(f"output_taskid_{idx}_myparam_{myparam}.out", "w") as f:
-    f.write(myparam)
+    msg = f"Output file for task id {idx} using myparam={myparam}\n"
+    f.write(msg)
 ```
 
 Run the job by executing these commands:
@@ -44,23 +45,23 @@ $ cd hpc_beginning_workshop/job_array/python
 $ sbatch job.slurm
 ```
 
-The will produce the following files:
+This will produce the following files:
 
 ```bash
 $ ls -l
 total 36K
--rw-r--r--. 1 jdh4 cses 1.5K Mar 11 09:50 README.md
--rw-r--r--. 1 jdh4 cses  803 Mar 11 09:50 job.slurm
--rw-r--r--. 1 jdh4 cses  329 Mar 11 10:12 myscript.py
--rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.0.err
--rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.1.err
--rw-r--r--. 1 jdh4 cses   41 Mar 11 10:13 output_taskid_0_myparam_0.out
--rw-r--r--. 1 jdh4 cses  148 Mar 11 10:13 slurm-1308787.0.out
--rw-r--r--. 1 jdh4 cses    0 Mar 11 10:13 slurm-1308787.2.err
--rw-r--r--. 1 jdh4 cses   42 Mar 11 10:13 output_taskid_1_myparam_10.out
--rw-r--r--. 1 jdh4 cses  149 Mar 11 10:13 slurm-1308787.1.out
--rw-r--r--. 1 jdh4 cses   42 Mar 11 10:13 output_taskid_2_myparam_20.out
--rw-r--r--. 1 jdh4 cses  149 Mar 11 10:13 slurm-1308787.2.out
+-rw-r--r--. 1 aturing cses 1.5K Mar 11 09:50 README.md
+-rw-r--r--. 1 aturing cses  803 Mar 11 09:50 job.slurm
+-rw-r--r--. 1 aturing cses  329 Mar 11 10:12 myscript.py
+-rw-r--r--. 1 aturing cses    0 Mar 11 10:13 slurm-1308787.0.err
+-rw-r--r--. 1 aturing cses    0 Mar 11 10:13 slurm-1308787.1.err
+-rw-r--r--. 1 aturing cses   41 Mar 11 10:13 output_taskid_0_myparam_0.out
+-rw-r--r--. 1 aturing cses  148 Mar 11 10:13 slurm-1308787.0.out
+-rw-r--r--. 1 aturing cses    0 Mar 11 10:13 slurm-1308787.2.err
+-rw-r--r--. 1 aturing cses   42 Mar 11 10:13 output_taskid_1_myparam_10.out
+-rw-r--r--. 1 aturing cses  149 Mar 11 10:13 slurm-1308787.1.out
+-rw-r--r--. 1 aturing cses   42 Mar 11 10:13 output_taskid_2_myparam_20.out
+-rw-r--r--. 1 aturing cses  149 Mar 11 10:13 slurm-1308787.2.out
 ```
 
 Here are the contents of the Slurm output files:
