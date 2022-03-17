@@ -22,9 +22,9 @@ int main(int argc, char* argv[]) {
 One can compile the code with the following commands:
 
 ```bash
-$ ssh <YourNetID>@tigergpu.princeton.edu
+$ ssh <YourNetID>@della-gpu.princeton.edu
 $ module load cudatoolkit/11.3 nvhpc/21.5
-$ nvc -mp=gpu -gpu=cc60 -Minfo=mp -o hw_omp_gpu hello_world_omp.c
+$ nvc -mp=gpu -gpu=cc80 -Minfo=mp -o hw_omp_gpu hello_world_omp.c
 main:
       8, #omp target parallel
           8, Generating "nvkernel_main_F1L8_1" GPU kernel
