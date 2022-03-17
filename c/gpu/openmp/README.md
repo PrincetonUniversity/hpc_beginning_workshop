@@ -23,7 +23,7 @@ One can compile the code with the following commands:
 
 ```bash
 $ ssh <YourNetID>@tigergpu.princeton.edu
-$ module load nvhpc/21.5
+$ module load cudatoolkit/11.3 nvhpc/21.5
 $ nvc -mp=gpu -gpu=cc60 -Minfo=mp -o hw_omp_gpu hello_world_omp.c
 main:
       8, #omp target parallel
