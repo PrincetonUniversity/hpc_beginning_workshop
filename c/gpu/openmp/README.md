@@ -14,7 +14,6 @@ int main(int argc, char* argv[]) {
   int id = omp_get_thread_num();
   int nthrds = omp_get_num_threads();
   printf("Hello from thread %d of %d\n", id, nthrds);
-  //while (1) {};
   }
   return 0;
 }
