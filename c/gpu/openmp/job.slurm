@@ -11,6 +11,7 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
+module load cudatoolkit/11.3
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 ./hw_omp_gpu
