@@ -1,4 +1,4 @@
-# Compiling a C code to use OpenMP on a GPU
+# Running an OpenMP C code on a GPU
 
 Below is a simple code example:
 
