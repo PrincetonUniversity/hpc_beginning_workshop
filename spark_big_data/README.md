@@ -42,4 +42,4 @@ Pi is roughly 3.141376
 ```
 
 Here is a getting started guide with Spark at Princeton:  
-[https://researchcomputing.princeton.edu/faq/spark-via-slurm](https://researchcomputing.princeton.edu/faq/spark-via-slurm)
+[https://researchcomputing.princeton.edu/support/knowledge-base/spark](https://researchcomputing.princeton.edu/support/knowledge-base/spark)
