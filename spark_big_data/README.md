@@ -21,7 +21,8 @@ Below is the Slurm script (`job.slurm`):
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2021.11 spark/hadoop3.2/3.2.0
+module load anaconda3/2021.11
+module load spark/hadoop3.2/3.2.0
 
 spark-start
 spark-submit --total-executor-cores 24 --executor-memory 4G pi.py 100
