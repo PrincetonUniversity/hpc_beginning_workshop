@@ -28,7 +28,7 @@ int main() {
 This can be compiled with:
 
 ```
-$ module load cudatoolkit/11.1
+$ module load cudatoolkit/11.7
 $ nvcc -o hello_world_gpu hello_world_gpu.cu
 ```
 
@@ -48,7 +48,7 @@ Below is the corresponding Slurm script (`job.slurm`):
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load cudatoolkit/11.1
+module load cudatoolkit/11.7
 
 ./hello_world_gpu
 ```
