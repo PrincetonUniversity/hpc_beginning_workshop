@@ -10,6 +10,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel/19.1/64/19.1.1.217
+module load intel/19.1.1.217
 
 ./hello_world
