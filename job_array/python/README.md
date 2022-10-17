@@ -98,3 +98,5 @@ Output file for task id 1 using myparam=10
 $ cat output_taskid_2_myparam_20.out
 Output file for task id 2 using myparam=20
 ```
+
+For more on job arrays, see the [RC Slurm page](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays).
