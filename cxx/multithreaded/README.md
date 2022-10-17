@@ -25,7 +25,7 @@ Compile the program using the following commands:
 
 ```
 $ ssh <YourNetID>@adroit.princeton.edu
-$ wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/2021fall/RC_example_jobs/cxx/multithreaded/hello_world_omp.cpp
+$ wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/main/cxx/multithreaded/hello_world_omp.cpp
 $ g++ -fopenmp -o hw_omp hello_world_omp.cpp
 ```
 
@@ -57,12 +57,12 @@ For a simple test code like that above, one could also ignore Slurm and run dire
 $ OMP_NUM_THREADS=8 ./hw_omp
 ```
 
-## Intel OpenMP Workshop (10/19/2021)
+## Intel OpenMP Workshop (10/18/2022)
 
 Add the line below to your Slurm script to use reserved nodes:
 
 ```
-#SBATCH --reservation=openmp-workshop  # only valid on 10/19 from 8 AM to 6 PM
+#SBATCH --reservation=openmp-workshop  # only valid on 10/18 from 9:30 AM to 5:00 PM
 ```
 
 ## Submit the Job
