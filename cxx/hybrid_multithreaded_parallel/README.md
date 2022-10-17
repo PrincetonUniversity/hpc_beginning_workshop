@@ -75,36 +75,36 @@ $ sbatch job.slurm
 The output of the code should be an unordered version of that below:
 
 ```
-Hello from thread 0 of 5 on MPI process 0 of 6 on node traverse-k02g4
-Hello from thread 1 of 5 on MPI process 0 of 6 on node traverse-k02g4
-Hello from thread 2 of 5 on MPI process 0 of 6 on node traverse-k02g4
-Hello from thread 3 of 5 on MPI process 0 of 6 on node traverse-k02g4
-Hello from thread 4 of 5 on MPI process 0 of 6 on node traverse-k02g4
-Hello from thread 0 of 5 on MPI process 1 of 6 on node traverse-k02g4
-Hello from thread 1 of 5 on MPI process 1 of 6 on node traverse-k02g4
-Hello from thread 2 of 5 on MPI process 1 of 6 on node traverse-k02g4
-Hello from thread 3 of 5 on MPI process 1 of 6 on node traverse-k02g4
-Hello from thread 4 of 5 on MPI process 1 of 6 on node traverse-k02g4
+Hello from thread 0 of 5 on MPI process 0 of 6 on node adroit-14
+Hello from thread 1 of 5 on MPI process 0 of 6 on node adroit-14
+Hello from thread 2 of 5 on MPI process 0 of 6 on node adroit-14
+Hello from thread 3 of 5 on MPI process 0 of 6 on node adroit-14
+Hello from thread 4 of 5 on MPI process 0 of 6 on node adroit-14
+Hello from thread 0 of 5 on MPI process 1 of 6 on node adroit-14
+Hello from thread 1 of 5 on MPI process 1 of 6 on node adroit-14
+Hello from thread 2 of 5 on MPI process 1 of 6 on node adroit-14
+Hello from thread 3 of 5 on MPI process 1 of 6 on node adroit-14
+Hello from thread 4 of 5 on MPI process 1 of 6 on node adroit-14
 
-Hello from thread 0 of 5 on MPI process 2 of 6 on node traverse-k02g5
-Hello from thread 1 of 5 on MPI process 2 of 6 on node traverse-k02g5
-Hello from thread 2 of 5 on MPI process 2 of 6 on node traverse-k02g5
-Hello from thread 3 of 5 on MPI process 2 of 6 on node traverse-k02g5
-Hello from thread 4 of 5 on MPI process 2 of 6 on node traverse-k02g5
-Hello from thread 0 of 5 on MPI process 3 of 6 on node traverse-k02g5
-Hello from thread 1 of 5 on MPI process 3 of 6 on node traverse-k02g5
-Hello from thread 2 of 5 on MPI process 3 of 6 on node traverse-k02g5
-Hello from thread 3 of 5 on MPI process 3 of 6 on node traverse-k02g5
-Hello from thread 4 of 5 on MPI process 3 of 6 on node traverse-k02g5
+Hello from thread 0 of 5 on MPI process 2 of 6 on node adroit-15
+Hello from thread 1 of 5 on MPI process 2 of 6 on node adroit-15
+Hello from thread 2 of 5 on MPI process 2 of 6 on node adroit-15
+Hello from thread 3 of 5 on MPI process 2 of 6 on node adroit-15
+Hello from thread 4 of 5 on MPI process 2 of 6 on node adroit-15
+Hello from thread 0 of 5 on MPI process 3 of 6 on node adroit-15
+Hello from thread 1 of 5 on MPI process 3 of 6 on node adroit-15
+Hello from thread 2 of 5 on MPI process 3 of 6 on node adroit-15
+Hello from thread 3 of 5 on MPI process 3 of 6 on node adroit-15
+Hello from thread 4 of 5 on MPI process 3 of 6 on node adroit-15
 
-Hello from thread 0 of 5 on MPI process 4 of 6 on node traverse-k02g6
-Hello from thread 1 of 5 on MPI process 4 of 6 on node traverse-k02g6
-Hello from thread 2 of 5 on MPI process 4 of 6 on node traverse-k02g6
-Hello from thread 3 of 5 on MPI process 4 of 6 on node traverse-k02g6
-Hello from thread 4 of 5 on MPI process 4 of 6 on node traverse-k02g6
-Hello from thread 0 of 5 on MPI process 5 of 6 on node traverse-k02g6
-Hello from thread 1 of 5 on MPI process 5 of 6 on node traverse-k02g6
-Hello from thread 2 of 5 on MPI process 5 of 6 on node traverse-k02g6
-Hello from thread 3 of 5 on MPI process 5 of 6 on node traverse-k02g6
-Hello from thread 4 of 5 on MPI process 5 of 6 on node traverse-k02g6
+Hello from thread 0 of 5 on MPI process 4 of 6 on node adroit-16
+Hello from thread 1 of 5 on MPI process 4 of 6 on node adroit-16
+Hello from thread 2 of 5 on MPI process 4 of 6 on node adroit-16
+Hello from thread 3 of 5 on MPI process 4 of 6 on node adroit-16
+Hello from thread 4 of 5 on MPI process 4 of 6 on node adroit-16
+Hello from thread 0 of 5 on MPI process 5 of 6 on node adroit-16
+Hello from thread 1 of 5 on MPI process 5 of 6 on node adroit-16
+Hello from thread 2 of 5 on MPI process 5 of 6 on node adroit-16
+Hello from thread 3 of 5 on MPI process 5 of 6 on node adroit-16
+Hello from thread 4 of 5 on MPI process 5 of 6 on node adroit-16
 ```
