@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 Run the following two commands to compile the code:
 
 ```
-$ module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
+$ module load intel/19.1.1.217 intel-mpi/intel/2019.7
 $ mpicxx -qopenmp -o mpi_openmp_hello_world mpi_openmp_hello_world.cpp
 ```
 
@@ -61,7 +61,7 @@ Below is the Slurm script:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel/19.1/64/19.1.1.217 intel-mpi/intel/2019.7/64
+module load intel/19.1.1.217 intel-mpi/intel/2019.7
 
 srun ./mpi_openmp_hello_world
 ```
