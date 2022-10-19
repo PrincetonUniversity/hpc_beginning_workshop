@@ -17,4 +17,4 @@ Did you encounter `mca_base_component_repository_open: unable to open mca_op_avx
 
 ## Challenge
 
-Write a Python code using `mpi4py` using 2 processes where process 0 sends the number 42 to process 1 which then prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
+Write a Python code using `mpi4py` using 2 processes where process 0 sends the number "42" to process 1 which prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
