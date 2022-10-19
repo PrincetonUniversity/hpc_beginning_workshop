@@ -9,3 +9,5 @@ $ cat myscript.py
 # use a text editor to enter your email address in job.slurm
 $ sbatch job.slurm
 ```
+
+For more info see [this page](https://researchcomputing.princeton.edu/support/knowledge-base/python#multiprocessing).
