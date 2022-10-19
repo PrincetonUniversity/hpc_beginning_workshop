@@ -1,6 +1,6 @@
 # Python Multiprocessing
 
-The multiprocessing module provides a way to run multiple Python processes to solve a problem in parallel.
+The [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) module provides a way to run multiple Python processes to solve a problem in parallel.
 
 Here is a sample Python script that uses `multiprocessing`. The list of elements passed to the pmap function is divided across the CPU-cores and execute  in parallel.
 
