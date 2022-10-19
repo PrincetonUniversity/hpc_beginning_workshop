@@ -42,8 +42,10 @@ $ cat myscript.py
 $ sbatch job.slurm
 ```
 
-One advantage to Python `multiprocessing` over [job arrays](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays) is that the output of the different parallel operations can be reduce within the Python script. When job arrays are used the reduction must be done in a separate step.
+One advantage to Python `multiprocessing` over [job arrays](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays) is that the output of the different parallel operations can be reduced within the Python script. When job arrays are used the reduction must be done in a separate step.
 
-In the example above the function `f(x)` is trivial. Python `multiprocessing` becomes useful when `f(x)` is expensive.
+Python has a global interpreter lock (GIL) which means that it cannot use multiple threads. Python `multiprocessing` runs a different Python process on each CPU-core. Typically `--cpus-per-task` implies multiple threads but that is not the case here. The choice of `--cpus-per-task=4` leads to 4 Python processes.
+
+In the example above, the function `f(x)` is trivial. Python `multiprocessing` becomes useful when `f(x)` is expensive.
 
 For more info see [this page](https://researchcomputing.princeton.edu/support/knowledge-base/python#multiprocessing).
