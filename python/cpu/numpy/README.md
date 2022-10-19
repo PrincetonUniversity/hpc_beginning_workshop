@@ -89,9 +89,10 @@ Here is an appropriate Slurm script:
 hostname
 lscpu | grep "Model name"
 
+module purge
 module load anaconda3/2022.5
 
-srun python svd_np.py
+python svd_np.py
 ```
 
 Step-by-step directions:
