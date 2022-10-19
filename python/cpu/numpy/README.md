@@ -39,7 +39,7 @@ Load the `mkl` module to determine the maximum number of threads:
 ```
 >>> import mkl
 >>> mkl.get_max_threads()
-32
+28
 ```
 
 This is on the head node.
