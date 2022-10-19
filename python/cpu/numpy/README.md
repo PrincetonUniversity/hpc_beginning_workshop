@@ -1,39 +1,37 @@
 # Multi-threaded NumPy
 
-Before writing code to harness the power of 1000's of GPU cores, let's look at what is possible with NumPy on a CPU with 10's of cores. NumPy on our HPC clusters is built against the Intel Math Kernel library (MKL). This means that several [common numerical routines](https://numpy.org/devdocs/reference/routines.linalg.html?highlight=multithreading) can take advantage of multi-threading.
+Let's look at what is possible with NumPy on a CPU with 10's of cores. NumPy on our HPC clusters is built against the Intel Math Kernel library (MKL). This means that several [common numerical routines](https://numpy.org/devdocs/reference/routines.linalg.html?highlight=multithreading) can take advantage of multi-threading.
 
 To see how NumPy was built, run the following commands:
 
 ```
 $ module load anaconda3/2022.5
-$ python
->>> import numpy as np
->>> np.show_config()
-mkl_info:
-    libraries = ['mkl_rt', 'pthread']
-    library_dirs = ['/usr/licensed/anaconda3/2019.3/lib']
-    define_macros = [('SCIPY_MKL_H', None), ('HAVE_CBLAS', None)]
-    include_dirs = ['/usr/licensed/anaconda3/2019.3/include']
+$ python -c "import numpy; print(numpy.show_config())"
 blas_mkl_info:
     libraries = ['mkl_rt', 'pthread']
-    library_dirs = ['/usr/licensed/anaconda3/2019.3/lib']
+    library_dirs = ['/usr/licensed/anaconda3/2022.5/lib']
     define_macros = [('SCIPY_MKL_H', None), ('HAVE_CBLAS', None)]
-    include_dirs = ['/usr/licensed/anaconda3/2019.3/include']
+    include_dirs = ['/usr/licensed/anaconda3/2022.5/include']
 blas_opt_info:
     libraries = ['mkl_rt', 'pthread']
-    library_dirs = ['/usr/licensed/anaconda3/2019.3/lib']
+    library_dirs = ['/usr/licensed/anaconda3/2022.5/lib']
     define_macros = [('SCIPY_MKL_H', None), ('HAVE_CBLAS', None)]
-    include_dirs = ['/usr/licensed/anaconda3/2019.3/include']
+    include_dirs = ['/usr/licensed/anaconda3/2022.5/include']
 lapack_mkl_info:
     libraries = ['mkl_rt', 'pthread']
-    library_dirs = ['/usr/licensed/anaconda3/2019.3/lib']
+    library_dirs = ['/usr/licensed/anaconda3/2022.5/lib']
     define_macros = [('SCIPY_MKL_H', None), ('HAVE_CBLAS', None)]
-    include_dirs = ['/usr/licensed/anaconda3/2019.3/include']
+    include_dirs = ['/usr/licensed/anaconda3/2022.5/include']
 lapack_opt_info:
     libraries = ['mkl_rt', 'pthread']
-    library_dirs = ['/usr/licensed/anaconda3/2019.3/lib']
+    library_dirs = ['/usr/licensed/anaconda3/2022.5/lib']
     define_macros = [('SCIPY_MKL_H', None), ('HAVE_CBLAS', None)]
-    include_dirs = ['/usr/licensed/anaconda3/2019.3/include']
+    include_dirs = ['/usr/licensed/anaconda3/2022.5/include']
+Supported SIMD extensions in this NumPy install:
+    baseline = SSE,SSE2,SSE3
+    found = SSSE3,SSE41,POPCNT,SSE42,AVX,F16C,FMA3,AVX2
+    not found = AVX512F,AVX512CD,AVX512_KNL,AVX512_KNM,AVX512_SKX,AVX512_CNL
+None
 ```
 
 Load the `mkl` module to determine the maximum number of threads:
