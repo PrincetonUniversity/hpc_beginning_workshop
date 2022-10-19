@@ -4,7 +4,7 @@ num_threads = int(os.environ['SLURM_CPUS_PER_TASK'])
 import mkl
 mkl.set_num_threads(num_threads)
 
-N = 2000
+N = 3000
 num_runs = 5
 
 import numpy as np
