@@ -99,6 +99,9 @@ python svd_np.py
 Step-by-step directions:
 
 ```
+$ ssh <YourNetID>@adroit.princeton.edu
+$ cd /scratch/network/<YourNetID>
+$ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd /hpc_beginning_workshop/python/cpu/numpy
 
 # modify job.slurm by setting --cpus-per-task=2
