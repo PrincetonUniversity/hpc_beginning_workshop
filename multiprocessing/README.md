@@ -4,7 +4,7 @@ The multiprocessing module provides a way to run multiple Python processes to so
 
 Here is a sample Python script that uses `multiprocessing`. The list of elements passed to the pmap function is divided across the CPU-cores and execute  in parallel.
 
-```
+```python
 import os
 from multiprocessing import Pool
 
@@ -41,5 +41,9 @@ $ cat myscript.py
 # use a text editor to enter your email address in job.slurm
 $ sbatch job.slurm
 ```
+
+One advantage to Python `multiprocessing` over [job arrays](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays) is that the output of the different parallel operations can be reduce within the Python script. When job arrays are used the reduction must be done in a separate step.
+
+In the example above the function `f(x)` is trivial. Python `multiprocessing` becomes useful when `f(x)` is expensive.
 
 For more info see [this page](https://researchcomputing.princeton.edu/support/knowledge-base/python#multiprocessing).
