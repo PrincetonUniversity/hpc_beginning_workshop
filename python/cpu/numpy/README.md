@@ -113,18 +113,15 @@ $ sbatch job.slurm
 $ sbatch job.slurm
 # view the output file and note the execution time
 ```
-<!--
+
 Run jobs to fill in the table below:
 
 | cpus-per-task (or threads)| execution time (s) |
 |:--------------------------:|:--------:|
-| 1                          |  4.2     |
-| 2                          |          |
-| 4                          |          |
-| 8                          |          |
-| 16                         |          |
-| 32                         |          |
--->
+| 1                          |       |
+| 7                          |          |
+| 14                         |          |
+| 28                         |          |
 
 The following data was found using one of the Skylake nodes on Adroit:
 
