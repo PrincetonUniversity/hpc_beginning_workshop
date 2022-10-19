@@ -56,7 +56,7 @@ num_threads = int(os.environ['SLURM_CPUS_PER_TASK'])
 import mkl
 mkl.set_num_threads(num_threads)
 
-N = 2000
+N = 3000
 num_runs = 5
 
 import numpy as np
@@ -117,16 +117,25 @@ $ sbatch job.slurm
 # view the output file and note the execution time
 ```
 
+You can also run on the login node:
+
+```
+(base) $ env OMP_NUM_THREADS=1 /usr/bin/time -f %e python -c "import numpy as np; np.linalg.svd(np.random.randn(3000, 3000))"
+12.27
+(base) $ env OMP_NUM_THREADS=2 /usr/bin/time -f %e python -c "import numpy as np; np.linalg.svd(np.random.randn(3000, 3000))"
+6.87
+```
+
 Run jobs to fill in the table below:
 
 | cpus-per-task (or threads)| execution time (s) |
 |:--------------------------:|:--------:|
-| 1                          |       |
+| 1                          |   5.2    |
 | 7                          |          |
 | 14                         |          |
 | 28                         |          |
 
-The following data was found using one of the Skylake nodes on Adroit:
+The following data was found using one of the older Skylake nodes on Adroit with N=2000:
 
 | cpus-per-task (or threads)| execution time (s) | speed-up ratio |  parallel efficiency |
 |:--------------------------:|:--------:|:---------:|:-------------------:|
