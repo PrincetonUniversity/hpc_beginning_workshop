@@ -37,6 +37,7 @@ None
 Load the `mkl` module to determine the maximum number of threads:
 
 ```
+(base) $ python
 >>> import mkl
 >>> mkl.get_max_threads()
 28
