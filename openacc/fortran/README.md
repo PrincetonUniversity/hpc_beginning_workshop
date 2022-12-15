@@ -5,7 +5,7 @@ Compile the code with the following commands:
 ```
 # tigergpu
 $ module load nvhpc/21.5
-$ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
+$ nvfortran -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
 ```
