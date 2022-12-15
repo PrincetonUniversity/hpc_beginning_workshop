@@ -3,12 +3,6 @@
 Compile the code with the following commands:
 
 ```
-# tigergpu
-$ module load nvhpc/21.5
-$ nvfortran -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.f90
-```
-
-```
 # della-gpu
 $ module load nvhpc/22.5
 $ module load cudatoolkit/11.7
