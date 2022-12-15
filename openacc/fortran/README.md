@@ -9,9 +9,17 @@ $ nvfortran -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
 ```
-# della (gpu)
-$ module load nvhpc/21.11
+# della-gpu
+$ module load nvhpc/22.5
+$ module load cudatoolkit/11.7
 $ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
+```
+
+```
+# traverse
+$ module load nvhpc/22.5
+$ module load cudatoolkit/11.7
+$ nvfortran -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.f90
 ```
 
 Submit the job (make sure the correct `nvhpc` module is loaded in `job.slurm`):
