@@ -21,7 +21,7 @@ Below is the Slurm script (`job.slurm`):
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2021.11
+module load anaconda3/2022.10
 module load spark/hadoop3.2/3.2.0
 
 spark-start
