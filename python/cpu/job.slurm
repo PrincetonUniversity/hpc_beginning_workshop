@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=matinv        # create a short name for your job
+#SBATCH --job-name=testpython        # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -8,9 +8,9 @@
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-type=fail         # send email if job fails
-#SBATCH --mail-user=<YourNetID>@princeton.edu
+#SBATCH --mail-user=rdpwpzocx@liger.ec-nantes.fr
 
 module purge
-module load anaconda3/2022.10
+module load anaconda/3-2022.05
 
 python matrix_inverse.py
