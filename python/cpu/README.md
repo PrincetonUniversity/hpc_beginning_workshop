@@ -52,6 +52,16 @@ Inverse(X) =
 
 Use `squeue -u $USER` to monitor queued jobs.
 
+# Introduction to Errors
+ 
+Getting used to the types of errors you may encounter while submitting jobs is important. Here's how to force some of them to occur:
+ 
+- In the slurm script, introduce a typo by changing `python` to `pythn` and observe the syntax error
+- Undo the above, and next change N to 15000 in `matrix_inverse.py` and you'll encounter an error for running out of time
+- Then update time in the slurm script to `00:05:00` and you'll encounter an error for running out of memory
+- Finally, change `mem-per-cpu` to 8G and you'll have a successful run with some interesting stats
+
+
 # Guide
 
 For more on working with Python see [this page](https://researchcomputing.princeton.edu/python).
