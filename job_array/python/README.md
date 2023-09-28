@@ -64,6 +64,8 @@ total 36K
 -rw-r--r--. 1 aturing cses  149 Mar 11 10:13 slurm-1308787.2.out
 ```
 
+(**Note:** .err files will be generated even if nothing is written to them - this does not mean you had errors!)
+
 Here are the contents of the Slurm output files:
 
 ```
