@@ -64,4 +64,4 @@ Getting used to the types of errors you may encounter while submitting jobs is i
 
 # Guide
 
-For more on working with Python see [this page](https://researchcomputing.princeton.edu/python).
+For more on working with Python see [this page](https://researchcomputing.princeton.edu/support/knowledge-base/python).
