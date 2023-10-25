@@ -23,6 +23,8 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
+module load R/4.3.0  # use 4.3.1 on della
+
 Rscript data_analysis.R
 ```
 
