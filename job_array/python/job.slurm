@@ -14,6 +14,6 @@ echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
 echo "Executing on the machine:" $(hostname)
 
 module purge
-module load anaconda3/2021.11
+module load anaconda3/2023.9
 
 python myscript.py
