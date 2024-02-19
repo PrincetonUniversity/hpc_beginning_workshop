@@ -10,6 +10,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load R/4.3.0
+module load R/4.3.1
 
 Rscript data_analysis.R
