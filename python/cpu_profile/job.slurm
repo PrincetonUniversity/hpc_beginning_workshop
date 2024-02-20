@@ -12,6 +12,5 @@
 
 module purge
 module load anaconda3/2023.9
-conda activate 2024_02_workshop  # replace this with your environment containing line_profiler, or remove if in base
 
 kernprof -l matrix_inverse.py
