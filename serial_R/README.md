@@ -22,6 +22,9 @@ Below is the Slurm script:
 #SBATCH --mail-type=fail         # send email if job fails
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
+module purge
+module load R/4.3.1  # or another R module
+
 Rscript data_analysis.R
 ```
 

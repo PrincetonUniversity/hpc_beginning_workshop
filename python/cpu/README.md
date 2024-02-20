@@ -26,7 +26,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2022.10
+module load anaconda3/2023.9
 
 python matrix_inverse.py
 ```
@@ -64,4 +64,4 @@ Getting used to the types of errors you may encounter while submitting jobs is i
 
 # Guide
 
-For more on working with Python see [this page](https://researchcomputing.princeton.edu/python).
+For more on working with Python see [this page](https://researchcomputing.princeton.edu/support/knowledge-base/python).
