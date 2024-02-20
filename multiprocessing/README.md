@@ -29,7 +29,7 @@ Below is the Slurm script:
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 
 module purge
-module load anaconda3/2022.5
+module load anaconda3/2023.9
 
 srun python myscript.py
 ```
