@@ -91,7 +91,7 @@ hostname
 lscpu | grep "Model name"
 
 module purge
-module load anaconda3/2022.5
+module load anaconda3/2023.9
 
 python svd_np.py
 ```
