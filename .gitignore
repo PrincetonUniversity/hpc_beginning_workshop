@@ -1,3 +1,4 @@
 main_*
 .idea
 *.out
+*.lprof
