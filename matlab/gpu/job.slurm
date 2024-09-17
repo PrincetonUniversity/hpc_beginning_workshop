@@ -12,6 +12,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load matlab/R2021b
+module load matlab/R2023b
 
 matlab -singleCompThread -nodisplay -nosplash -r svd
