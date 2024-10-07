@@ -23,7 +23,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load R/4.3.1  # or another R module
+module load R/4.4.1  # R/4.4.1 on della (R/4.4.0 on adroit)
 
 Rscript data_analysis.R
 ```
@@ -57,4 +57,4 @@ Use `squeue -u $USER` to monitor queued jobs.
 
 # Guide
 
-For more on running R on the HPC clusters: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)
+For more on running R on the Research Computing clusters: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)
