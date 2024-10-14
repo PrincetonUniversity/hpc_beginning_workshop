@@ -207,10 +207,10 @@ Run jobs to fill in the table below:
 
 | cpus-per-task (or threads)| execution time (s) |
 |:--------------------------:|:--------:|
-| 1                          |   5.2    |
-| 7                          |          |
-| 14                         |          |
-| 28                         |          |
+| 1                          |   11.9   |
+| 2                          |    6.8   |
+| 4                         |          |
+| 8                         |          |
 
 The following data was found using one of the older Skylake nodes on Adroit with N=2000:
 
