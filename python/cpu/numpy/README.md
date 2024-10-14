@@ -182,15 +182,15 @@ $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd /hpc_beginning_workshop/python/cpu/numpy
 
 # modify job.slurm by setting --cpus-per-task=2
-$ sbatch job.slurm
+$ sbatch --reservation=bootcamp1 job.slurm
 # view the output file and note the execution time
 
 # modify job.slurm by setting --cpus-per-task=4
-$ sbatch job.slurm
+$ sbatch --reservation=bootcamp1 job.slurm
 # view the output file and note the execution time
 
 # modify job.slurm by setting --cpus-per-task=8
-$ sbatch job.slurm
+$ sbatch --reservation=bootcamp1 job.slurm
 # view the output file and note the execution time
 ```
 
