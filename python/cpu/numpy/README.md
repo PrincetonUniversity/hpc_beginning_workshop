@@ -207,8 +207,8 @@ Run jobs to fill in the table below:
 
 | cpus-per-task (or threads)| execution time (s) |
 |:--------------------------:|:--------:|
-| 1                          |   11.9   |
-| 2                          |    6.8   |
+| 1                          |   12.2   |
+| 2                          |    6.9   |
 | 4                         |          |
 | 8                         |          |
 
