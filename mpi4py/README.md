@@ -17,7 +17,8 @@ If you want to run across 2 nodes (and 64 CPU-cores) then use:
 
 ```
 #SBATCH --nodes=2
-#SBATCH --ntasks=64
+#SBATCH --ntasks-per-node=32
+#SBATCH --cpus-per-task=1
 ```
 
 Then sumbit the job with:
