@@ -12,6 +12,6 @@
 module purge
 module load anaconda3/2024.6
 module load openmpi/gcc/<x.y.z>  # REPLACE <x.y.z>
-conda activate fast-mpi4py
+conda activate /home/jdh4/.conda/envs/fast-mpi4py
 
 srun python hello_mpi.py
