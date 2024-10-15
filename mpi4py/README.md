@@ -13,6 +13,20 @@ $ cd hpc_beginning_workshop/mpi4py
 $ sbatch job.slurm
 ```
 
+If you want to run across 3 nodes (and 96 CPU-cores) then use:
+
+```
+#SBATCH --nodes=3
+#SBATCH --ntasks=96
+```
+
+Then sumbit the job with:
+
+```
+$ sbatch --reservation=bootcamp2 job.slurm
+```
+
+
 Did you encounter `mca_base_component_repository_open: unable to open mca_op_avx`? This is a [known issue](https://github.com/open-mpi/ompi/issues/8323) with Open MPI 4.1.0.
 
 ## Challenge
