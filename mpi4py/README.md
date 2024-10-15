@@ -13,11 +13,11 @@ $ cd hpc_beginning_workshop/mpi4py
 $ sbatch job.slurm
 ```
 
-If you want to run across 3 nodes (and 96 CPU-cores) then use:
+If you want to run across 2 nodes (and 64 CPU-cores) then use:
 
 ```
-#SBATCH --nodes=3
-#SBATCH --ntasks=96
+#SBATCH --nodes=2
+#SBATCH --ntasks=64
 ```
 
 Then sumbit the job with:
