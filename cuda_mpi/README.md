@@ -28,21 +28,3 @@ $ module load cudatoolkit/11.1 openmpi/cuda-11.1/gcc/4.1.1
 $ mpicc -lcudart direct.c -o direct.out
 $ sbatch job.slurm  # be sure to load the correct modules in job.slurm
 ```
-
-### Traverse
-
-```
-$ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
-$ module load cudatoolkit/11.0 openmpi/cuda-11.0/gcc/4.0.4/64 
-$ mpicc -lcudart direct.c -o direct.out
-$ sbatch job.slurm  # be sure to load the correct modules in job.slurm
-```
-
-Or using nvhpc:
-
-```
-$ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
-$ module load nvhpc/20.7 cudatoolkit/11.0 openmpi/cuda-11.0/nvhpc-20.7/4.0.4/64
-$ mpicc -L/usr/local/cuda-11.0/targets/ppc64le-linux/lib -lcudart direct.c -o direct.out
-$ sbatch job.slurm  # be sure to load the correct modules in job.slurm
-```
