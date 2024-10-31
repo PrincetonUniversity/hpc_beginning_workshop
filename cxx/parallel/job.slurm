@@ -11,6 +11,9 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel/19.1.1.217 intel-mpi/intel/2019.7
+#module load intel/19.1.1.217
+#module load intel-mpi/intel/2019.7
+module load intel-oneapi/2024.2
+module load intel-mpi/oneapi/2021.13
 
 srun ./hello_world_mpi
