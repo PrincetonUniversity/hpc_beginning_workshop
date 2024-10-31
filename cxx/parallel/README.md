@@ -38,6 +38,14 @@ Run the following two commands to compile the code:
 ```
 $ module load intel-oneapi/2024.2
 $ module load intel-mpi/oneapi/2021.13
+$ mpiicxx -o hello_world_mpi hello_world_mpi.cpp
+```
+
+If using older modules:
+
+```
+$ module load intel/19.1.1.217
+$ module load intel-mpi/intel/2019.7
 $ mpicxx -o hello_world_mpi hello_world_mpi.cpp
 ```
 
