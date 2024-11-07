@@ -83,7 +83,7 @@ View the profile using the command listed above:
 ```
 Timer unit: 1e-06 s
 
-Total time: 0.201183 s
+Total time: 1.50471 s
 File: matrix_inverse.py
 Function: main at line 3
 
@@ -91,12 +91,10 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
      3                                           @profile
      4                                           def main():
-     5         1          1.1      1.1      0.0      N = 2500
-     6         1     200148.6 200148.6     99.5      X = np.random.randn(N, N)
-     7         1       1033.6   1033.6      0.5      print("X =\n", X)
-     8                                               print("Inverse(X) =\n", np.linalg.inv(X))
-
-  0.20 seconds - matrix_inverse.py:3 - main
+     5         1          1.5      1.5      0.0      N = 2500
+     6         1     279205.6 279205.6     18.6      X = np.random.randn(N, N)
+     7         1       1124.5   1124.5      0.1      print("X =\n", X)
+     8         1    1224377.0    1e+06     81.4      print("Inverse(X) =\n", np.linalg.inv(X))
 ```
 
 Use `squeue -u $USER` to monitor queued jobs.
