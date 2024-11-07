@@ -2,3 +2,4 @@ main_*
 .idea
 *.out
 *.lprof
+memray-*.bin
