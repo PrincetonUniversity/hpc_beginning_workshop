@@ -24,7 +24,7 @@ If you want to run across 2 nodes (and 64 CPU-cores) then use:
 Then sumbit the job with:
 
 ```
-$ sbatch --reservation=bootcamp2 job.slurm
+$ sbatch job.slurm
 ```
 
 
