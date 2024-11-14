@@ -9,7 +9,7 @@ Follow the webpage above to install `mpi4py` and then return here to run the cod
 ```
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd hpc_beginning_workshop/mpi4py
-# use text editor to modify job.slurm with your email address
+# use text editor to modify job.slurm with your email address and the Open MPI version (e.g., 4.1.2)
 $ sbatch job.slurm
 ```
 
