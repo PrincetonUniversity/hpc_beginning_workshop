@@ -36,34 +36,36 @@ $ sbatch job.slurm
 After the job completes, view the output with `cat hello_world.log`:
 
 ```
- /__    /   ____/   /   ____/
-___/   /   /___/   /   /___/   16.0   Copyright 1985-2019 StataCorp LLC
-  Statistics/Data Analysis            StataCorp
-                                      4905 Lakeway Drive
-                                      College Station, Texas 77845 USA
-                                      800-STATA-PC        http://www.stata.com
-                                      979-696-4600        stata@stata.com
-                                      979-696-4601 (fax)
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      18.0
+___/   /   /___/   /   /___/       BE—Basic Edition
 
-100-user Stata network perpetual license:
-       Serial number:  401606267559
-         Licensed to:  Stata/SE 16
-                       100-user Network
+ Statistics and Data Science       Copyright 1985-2023 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-STATA-PC        https://www.stata.com
+                                   979-696-4600        stata@stata.com
+
+Stata license: 100-user network perpetual
+Serial number: 401806202805
+  Licensed to: Princeton University
+               Princeton, NJ
 
 Notes:
-      1.  Stata is running in batch mode.
-      2.  Unicode is supported; see help unicode_advice.
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
 
 . do "hello_world.do" 
 
-. display 21+21
+. disp 21+21
 42
 
 . 
 end of do-file
 ```
 
-Use `squeue -u $USER` to monitor queued jobs.
+Use `squeue --me` to monitor queued jobs.
 
 # Guide
 
