@@ -11,6 +11,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load julia/1.5.0
+module load julia/1.11.1
 
 julia hello_world.jl
