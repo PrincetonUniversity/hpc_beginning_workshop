@@ -22,7 +22,7 @@ The Slurm script (`job.slurm`) below is appropriate for serial Stata jobs:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load stata/16.1
+module load stata/18.0
 
 stata -b hello_world.do
 ```
