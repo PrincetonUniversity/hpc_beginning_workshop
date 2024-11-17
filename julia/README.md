@@ -22,7 +22,7 @@ Below is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load julia/1.5.0
+module load julia/1.11.1
 
 julia hello_world.jl
 ```
@@ -39,8 +39,8 @@ After the job completes, view the output with `cat slurm-*`:
 Hello, world.
 ```
 
-Use `squeue -u $USER` to monitor queued jobs.
+Use `squeue --me` to monitor queued jobs.
 
 # Guide
 
-For more on running Julia jobs see [this guide](https://researchcomputing.princeton.edu/julia).
+For more on running Julia jobs see [this guide](https://researchcomputing.princeton.edu/support/knowledge-base/julia).
