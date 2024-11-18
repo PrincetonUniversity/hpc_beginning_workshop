@@ -10,6 +10,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load mathematica/12.1.1
+module load mathematica/14.1.0
 
 math -run < hello_world.m
