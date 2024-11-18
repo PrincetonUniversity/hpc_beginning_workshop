@@ -3,16 +3,10 @@
 Compile the code with the following commands:
 
 ```
-# tigergpu
-$ module load nvhpc/21.5
-$ module load cudatoolkit/10.2
-$ nvc -acc -ta=tesla:cc60 -Minfo=accel -o laplace2d_acc laplace2d.c
-```
-
-```
-# della (gpu)
-$ module load nvhpc/21.11
-$ nvc -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.c
+$ ssh <YourNetID>@della-gpu.princeton.edu
+$ module load nvhpc/24.5
+$ nvc -acc -gpu=cc80 -Minfo=accel -o laplace2d_acc laplace2d.c   # A100
+$ nvc -acc -gpu=cc90 -Minfo=accel -o laplace2d_acc laplace2d.c   # H100
 ```
 
 Submit the job (make sure the correct `nvhpc` module is loaded in `job.slurm`):
