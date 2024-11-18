@@ -3,17 +3,10 @@
 Compile the code with the following commands:
 
 ```
-# della-gpu
-$ module load nvhpc/22.5
-$ module load cudatoolkit/11.7
-$ nvfortran -acc -ta=tesla:cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90
-```
-
-```
-# traverse
-$ module load nvhpc/22.5
-$ module load cudatoolkit/11.7
-$ nvfortran -acc -ta=tesla:cc70 -Minfo=accel -o laplace2d_acc laplace2d.f90
+$ ssh <YourNetID>@della-gpu.princeton.edu
+$ module load nvhpc/24.5
+$ nvfortran -acc -gpu=cc80 -Minfo=accel -o laplace2d_acc laplace2d.f90   # A100 GPU
+$ nvfortran -acc -gpu=cc90 -Minfo=accel -o laplace2d_acc laplace2d.f90   # H100 GPU
 ```
 
 Submit the job (make sure the correct `nvhpc` module is loaded in `job.slurm`):
