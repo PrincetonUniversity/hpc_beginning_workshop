@@ -10,19 +10,6 @@ This resource provides example jobs that can be run on Princeton University's Re
 * [Research Computing FAQ](https://researchcomputing.princeton.edu/support/faq) - View answers to frequently asked questions.  
 * [Research Computing Support Page](https://researchcomputing.princeton.edu/support) - Where to go if you need more help. 
 
-<!--
-## Survey Link
-
-Please fill out our [survey for the Fall 2021 workshop](https://docs.google.com/forms/d/e/1FAIpQLSfBLpW9f5VEPikTR9MCPrw4hSKX2eCrFr1Ri0hiqDokR8qXNg/viewform).
-
-## Authorship
-
-This guide was created by Ben Hicks. It has been extended and modified by Jonathan Halverson, Gabe Perez-Giz,  Carolina Roe-Raymond, and Calla Chennault. Some of the content was originally written by Uno Vaaland.
-
-## Workshop Survey
-[Click here](https://bit.ly/hpcintro_24feb20)
--->
-
 # Running Example Jobs on the HPC Clusters
 
 The sample jobs above are written with Nobel, Adroit, Della, Stellar, and Tiger in mind. You will probably need to use different environment modules on Traverse.
@@ -52,5 +39,5 @@ For more detailed instructions on running an example Python or R job, see the [F
 
 To familiarize yourself with the cluster's file systems and where to store to your files, review our [Data Storage](https://researchcomputing.princeton.edu/support/knowledge-base/data-storage) page.
 
-**IMPORTANT**: *You should run your jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of /tigress or /projects. These filesystems are slow and should only be used for backing-up the files that you produce on /scratch/gpfs or /scratch/network. Your /home directory on all clusters is small should only be used for storing source code, executables, Conda environments and small data sets*.
+**IMPORTANT**: *You should run your jobs out of /scratch/network on Adroit and /scratch/gpfs on the other clusters. These filesystems are very fast and provide vast amounts of storage. Do not run jobs out of /projects. This storage system is slow and should only be used for backing-up the files that you produce on /scratch/gpfs or /scratch/network. Your /home directory on all clusters is small should only be used for storing source code, executables, Conda environments and small data sets*.
 
