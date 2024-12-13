@@ -12,7 +12,7 @@ This resource provides example jobs that can be run on Princeton University's Re
 
 # Running Example Jobs on the HPC Clusters
 
-The sample jobs above are written with Nobel, Adroit, Della, Stellar, and Tiger in mind. You will probably need to use different environment modules on Traverse.
+The sample jobs above are written with Adroit, Della, Stellar, and Tiger in mind.
 
 Follow the directions below to begin running simple jobs on Adroit.
 After SSHing to Adroit the first step is to `cd` (change directory)
