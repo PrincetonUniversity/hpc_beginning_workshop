@@ -10,4 +10,10 @@ $ cd hpc_beginning_workshop/gaussian
 $ sbatch job.slurm
 ```
 
+On Della, include this line in your Slurm script:
+
+```
+#SBATCH --constraint=cascade     # avoid the old broadwell CPUs
+```
+
 This example job runs for about 25 minutes.
