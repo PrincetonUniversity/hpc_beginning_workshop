@@ -24,9 +24,6 @@ int main(int argc, char** argv) {
   // Print off a hello world message
   cout << "Process " << world_rank << " of " << world_size
        << " says hello from " << processor_name << endl;
-  
-  // uncomment next line to make CPU-cores work (infinitely)
-  // while (true) {};
 
   MPI_Finalize();
   return 0;
