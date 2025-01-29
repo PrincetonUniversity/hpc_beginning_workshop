@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
   // while (true) {};
 
   // finite loop (adjust N to set execution time)
-  int N = 1000;
+  int N = 5000;
   slow_function(N);
 
   MPI_Finalize();
