@@ -11,5 +11,6 @@
 
 module purge
 module load gaussian/g16
+export PGI_FASTMATH_CPU=haswell
 
 g16 < I16_S1_M1_W_Freq_LS.com > output.log
