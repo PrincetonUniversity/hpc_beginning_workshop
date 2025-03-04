@@ -53,7 +53,7 @@ After the job completes, view the output with `cat slurm-*`:
  Max.   :93.00   Max.   :500.0   Max.   :680.0   Max.   :99.00
 ```
 
-Use `squeue -u $USER` to monitor queued jobs.
+Use `squeue --me` to monitor queued jobs.
 
 # Guide
 
