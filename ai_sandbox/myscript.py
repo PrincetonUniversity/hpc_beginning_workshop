@@ -10,21 +10,20 @@ from openai import AzureOpenAI
 # Linux BASH example: export AI_SANDBOX_KEY=
  
 # Import API key from OS environment variables
-sandbox_api_key=os.environ['AI_SANDBOX_KEY']
+sandbox_api_key = os.environ['AI_SANDBOX_KEY']
  
 # Set the URL of the AI Sandbox API
-sandbox_endpoint="https://api-ai-sandbox.princeton.edu/"
-sandbox_api_version="2024-02-01"
+sandbox_endpoint = "https://api-ai-sandbox.princeton.edu/"
+sandbox_api_version = "2025-03-01-preview"
  
 # Set the model deployment name that the prompt should be sent to
-available_models = [
+available_models = ["o3-mini",
+                    "gpt-4o-mini",
                     "gpt-4o",
                     "gpt-35-turbo-16k",
                     "Meta-Llama-3-1-70B-Instruct-htzs",
                     "Meta-Llama-3-1-8B-Instruct-nwxcg",
-                    "Mistral-small-zgjes",
-                    "Mistral-large-ygkys"
-                   ]
+                    "Mistral-small-zgjes"]
  
 # Base 64 encode local image and return text to be included in JSON request
 def local_image_to_data_url(image_path):
