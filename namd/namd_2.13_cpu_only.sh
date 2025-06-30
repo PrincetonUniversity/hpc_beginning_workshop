@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # this script will download and install a CPU-only version of NAMD with MPI
-# you will need "module load intel intel-mpi" in your Slurm script
 
 wget https://www.ks.uiuc.edu/Research/namd/2.13/download/412487/NAMD_2.13_Source.tar.gz
 tar xzf NAMD_2.13_Source.tar.gz
@@ -10,7 +9,7 @@ tar xf charm-6.8.2.tar
 cd charm-6.8.2
 
 module purge
-module load intel/19.0/64/19.0.5.281 intel-mpi/intel/2019.5/64
+module load intel-oneapi/2024.2 intel-mpi/oneapi/2021.13
 module list
 
 env MPICXX=mpicxx ./build charm++ mpi-linux-x86_64 --with-production
@@ -32,6 +31,8 @@ mv tcl8.5.9-linux-x86_64-threaded tcl-threaded
 cd arch
 wget https://raw.githubusercontent.com/PrincetonUniversity/hpc_beginning_workshop/master/RC_example_jobs/namd/Linux-x86_64-intel.arch
 cd ..
+sed -i 's/icpc/icpx/g' arch/Linux-x86_64-intel.arch
+sed -i 's/icc/icx -Wno-implicit-function-declaration/g' arch/Linux-x86_64-intel.arch
 ./config Linux-x86_64-intel --charm-arch mpi-linux-x86_64
 cd Linux-x86_64-intel
 make
