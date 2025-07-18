@@ -1,6 +1,6 @@
 # Multi-threaded Fortran Program
 
-Here is the source code for a simple multi-threaded C++ program:
+Here is the source code for a simple multi-threaded Fortran program:
 
 ```fortran
 program hello_world_multithreaded
