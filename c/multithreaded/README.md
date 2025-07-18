@@ -87,8 +87,8 @@ Hello from thread 3 of 8
 Instead of using GCC, you could compile the program using the Intel compiler:
 
 ```
-$ module load intel/19.1.1.217  # or a module appropriate for your cluster
-$ icc -qopenmp -o hw_omp hello_world_omp.c
+$ module load intel-oneapi/2024.2  # or a module appropriate for your cluster
+$ icx -qopenmp -o hw_omp hello_world_omp.c
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
@@ -108,7 +108,7 @@ Below is a Slurm script appropriate for an OpenMP job:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel/19.1.1.217
+module load intel-oneapi/2024.2
 
 ./hw_omp
 ```
@@ -132,7 +132,7 @@ The example code above is simple and for teaching purposes only. For a real worl
 For Intel:
 
 ```
-$ icc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.c
+$ icx -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.c
 ```
 
 For GCC:
