@@ -57,14 +57,6 @@ For a simple test code like that above, one could also ignore Slurm and run dire
 $ OMP_NUM_THREADS=8 ./hw_omp
 ```
 
-## Intel OpenMP Workshop (10/18/2022)
-
-Add the line below to your Slurm script to use reserved nodes:
-
-```
-#SBATCH --reservation=openmp-workshop  # only valid on 10/18 from 9:30 AM to 5:00 PM
-```
-
 ## Submit the Job
 
 Submit the job to the cluster:
@@ -92,8 +84,8 @@ Hello from thread 1 of 8
 Instead of using GCC, you could compile the program using the Intel compiler:
 
 ```
-$ module load intel/19.1.1.217  # or a module appropriate for your cluster
-$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ module load intel-oneapi/2024.2  # or a module appropriate for your cluster
+$ icpx -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
@@ -114,7 +106,7 @@ Below is a Slurm script appropriate for an OpenMP job:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel/19.1.1.217
+module load intel-oneapi/2024.2
 
 ./hw_omp
 ```
@@ -132,7 +124,7 @@ The example code above is simple and for teaching purposes only. For a real worl
 For Intel:
 
 ```
-$ icpc -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
+$ icpx -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.cpp
 ```
 
 For GCC:
