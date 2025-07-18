@@ -18,8 +18,8 @@ end program
 Compile the program using the following commands:
 
 ```
-$ module load intel/19.1.1.217  # or a module appropriate for your cluster
-$ ifort -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.f90
+$ module load intel-oneapi/2024.2  # or a module appropriate for your cluster
+$ ifx -qopenmp -Ofast -xHost -o hw_omp hello_world_omp.f90
 ```
 
 Below is a Slurm script appropriate for an OpenMP job:
@@ -40,7 +40,7 @@ Below is a Slurm script appropriate for an OpenMP job:
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module purge
-module load intel/19.1.1.217
+module load intel-oneapi/2024.2
 
 ./hw_omp
 ```
