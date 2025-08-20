@@ -15,7 +15,7 @@ $ sbatch job.slurm
 
 ```
 $ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
-$ module load nvhpc/24.3 openmpi/cuda-12.3/nvhpc-24.3/4.1.6 cudatoolkit/12.3
+$ module load nvhpc/25.5 openmpi/cuda-12.9/nvhpc-25.5/4.1.8 cudatoolkit/12.9
 $ mpicc direct.c -o direct.out -lcudart
 $ sbatch job.slurm  # be sure to load the correct modules in job.slurm
 ```
