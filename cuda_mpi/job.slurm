@@ -8,6 +8,6 @@
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
 
 module purge
-module load nvhpc/24.3 openmpi/cuda-12.3/nvhpc-24.3/4.1.6 cudatoolkit/12.3
+module load nvhpc/25.5 openmpi/cuda-12.9/nvhpc-25.5/4.1.8 cudatoolkit/12.9
 
 srun ./direct.out
