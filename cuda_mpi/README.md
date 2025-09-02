@@ -24,7 +24,7 @@ Or to use GCC:
 
 ```
 $ cd hpc_beginning_workshop/RC_example_jobs/cuda_mpi
-$ module load cudatoolkit/11.1 openmpi/cuda-11.1/gcc/4.1.1
+$ module load cudatoolkit/12.6 openmpi/cuda-12.6/gcc/4.1.6
 $ mpicc -lcudart direct.c -o direct.out
 $ sbatch job.slurm  # be sure to load the correct modules in job.slurm
 ```
