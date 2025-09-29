@@ -1,6 +1,6 @@
 # Serial C Program
 
-Follow the directions below to compile and run a simple C program on the Princeton HPC clusters.
+Follow the directions below to compile and run a simple C program on the Princeton Research Computing clusters.
 Here is the source code:
 
 ```c
@@ -15,8 +15,8 @@ int main() {
 Compile the program with:
 
 ```
-$ module load intel/19.1/64/19.1.1.217
-$ icc -o hello_world hello_world.c
+$ module load intel-oneapi/2024.2
+$ icx -o hello_world hello_world.c
 ```
 
 Here is the Slurm script:
@@ -33,7 +33,7 @@ Here is the Slurm script:
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel/19.1/64/19.1.1.217
+module load intel-oneapi/2024.2
 
 ./hello_world
 ```
@@ -50,4 +50,4 @@ After the job completes, view the output with `cat slurm-*`:
 Hello, world.
 ```
 
-Use `squeue -u $USER` to monitor queued jobs.
+Use `squeue --me` to monitor queued jobs.
