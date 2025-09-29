@@ -9,6 +9,6 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load intel/19.1/64/19.1.1.217
+module load intel-oneapi/2024.2
 
 ./hello_world
