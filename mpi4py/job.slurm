@@ -1,16 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=mpi4py-test   # create a name for your job
-#SBATCH --nodes=1                # node count
-#SBATCH --ntasks=4               # total number of tasks
-#SBATCH --cpus-per-task=1        # cpu-cores per task
-#SBATCH --mem-per-cpu=1G         # memory per cpu-core
-#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send email when job begins
-#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --job-name=mpi4py-test      # create a name for your job
+#SBATCH --nodes=1                   # node count
+#SBATCH --ntasks=4                  # total number of tasks
+#SBATCH --cpus-per-task=1           # cpu-cores per task
+#SBATCH --mem-per-cpu=1G            # memory per cpu-core
+#SBATCH --time=00:01:00             # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin,end,fail  # receive email notifications
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2024.6
+module load anaconda3/2025.6
 module load openmpi/gcc/<x.y.z>  # REPLACE <x.y.z>
 conda activate fast-mpi4py
 
