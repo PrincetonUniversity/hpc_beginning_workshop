@@ -20,6 +20,7 @@ $ conda activate fast-mpi4py
 Now run the example job:
 
 ```bash
+$ cd /scratch/network/$USER
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd hpc_beginning_workshop/mpi4py
 # use text editor to modify job.slurm with your email address and the Open MPI version (e.g., 4.1.6)
