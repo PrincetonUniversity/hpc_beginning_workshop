@@ -4,9 +4,22 @@ Please see our [mpi4py guide](https://researchcomputing.princeton.edu/support/kn
 
 ## Exercise
 
-Follow the webpage above to install `mpi4py` and then return here to run the code:
+Follow the webpage above to install `mpi4py`. Explicit directions for Adroit are shown below:
 
+```bash
+$ ssh <YourNetID>@adroit.princeton.edu
+$ module purge
+$ module load anaconda3/2025.6
+$ conda create --name fast-mpi4py python=3.8 -y
+$ conda activate fast-mpi4py
+(fast-mpi4py) $ module load openmpi/gcc/4.1.6
+(fast-mpi4py) $ export MPICC=$(which mpicc)
+(fast-mpi4py) $ pip install mpi4py --no-cache-dir
 ```
+
+Now run the example job:
+
+```bash
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd hpc_beginning_workshop/mpi4py
 # use text editor to modify job.slurm with your email address and the Open MPI version (e.g., 4.1.6)
