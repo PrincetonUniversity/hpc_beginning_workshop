@@ -2,6 +2,8 @@
 
 [MPI for Python](https://mpi4py.readthedocs.io/en/stable/index.html) or `mpi4py` provides a Python interface to MPI. This allows one to run a Python job across multile nodes (the GIL still applies). Please see our [mpi4py guide](https://researchcomputing.princeton.edu/support/knowledge-base/mpi4py) for installations directions and a word of warning.
 
+**Please use the system MPI modules for MPI codes. Do not use an MPI library that comes pre-built with the software that you installed. The system MPI libraries (e.g., openmpi/gcc/4.1.6 or intel-mpi/oneapi/2021.13) are optimized for our clusters with support for Slurm and the ability to use the fast network cards (InfiniBand) for transferring data between nodes.**
+
 ## Exercise
 
 Follow the webpage above to install `mpi4py`. Explicit directions for Adroit are shown below:
