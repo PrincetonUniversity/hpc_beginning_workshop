@@ -1,6 +1,6 @@
 # mpi4py
 
-Please see our [mpi4py guide](https://researchcomputing.princeton.edu/support/knowledge-base/mpi4py).
+[MPI for Python](https://mpi4py.readthedocs.io/en/stable/index.html) or `mpi4py` provides a Python interface to MPI. This allows one to run a Python job across multile nodes (the GIL still applies). Please see our [mpi4py guide](https://researchcomputing.princeton.edu/support/knowledge-base/mpi4py) for installations directions and a word of warning.
 
 ## Exercise
 
