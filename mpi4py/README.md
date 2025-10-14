@@ -29,7 +29,7 @@ $ sbatch --reservation=bootcamp2 job.slurm
 
 If you want to run across 2 nodes (and 64 CPU-cores) then use:
 
-```
+```bash
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
@@ -37,7 +37,7 @@ If you want to run across 2 nodes (and 64 CPU-cores) then use:
 
 Then sumbit the job with:
 
-```
+```bash
 $ sbatch --reservation=bootcamp2 job.slurm
 ```
 
@@ -45,9 +45,9 @@ $ sbatch --reservation=bootcamp2 job.slurm
 
 Write a Python code called `send_recv.py` using `mpi4py` with 2 processes where process 0 sends the number 42 to process 1 which prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
 
-Here is an example Slurm script (you need to create `send_recv.py`:
+Here is an example Slurm script called `job.slurm` (you need to create `send_recv.py`):
 
-```
+```bash
 #!/bin/bash
 #SBATCH --job-name=mpi4py-ex        # create a name for your job
 #SBATCH --nodes=2                   # node count
@@ -63,4 +63,10 @@ module load openmpi/gcc/4.1.6
 conda activate fast-mpi4py
 
 srun python send_recv.py
+```
+
+Then sumbit the job with:
+
+```bash
+$ sbatch --reservation=bootcamp2 job.slurm
 ```
