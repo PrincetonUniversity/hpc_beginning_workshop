@@ -4,7 +4,7 @@
 from mpi4py import MPI
 
 def print_hello(rank, size, name):
-    msg = f"Hello World! I am process {ranke} of {size} on {name}."
+    msg = f"Hello World! I am process {rank} of {size} on {name}."
     print(msg)
 
 if __name__ == "__main__":
