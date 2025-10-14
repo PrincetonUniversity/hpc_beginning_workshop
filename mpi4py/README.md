@@ -24,7 +24,7 @@ $ cd /scratch/network/$USER
 $ git clone https://github.com/PrincetonUniversity/hpc_beginning_workshop.git
 $ cd hpc_beginning_workshop/mpi4py
 # use text editor to modify job.slurm with your email address and the Open MPI version (e.g., 4.1.6)
-$ sbatch job.slurm
+$ sbatch --reservation=bootcamp2 job.slurm
 ```
 
 If you want to run across 2 nodes (and 64 CPU-cores) then use:
@@ -38,11 +38,8 @@ If you want to run across 2 nodes (and 64 CPU-cores) then use:
 Then sumbit the job with:
 
 ```
-$ sbatch job.slurm
+$ sbatch --reservation=bootcamp2 job.slurm
 ```
-
-
-Did you encounter `mca_base_component_repository_open: unable to open mca_op_avx`? This is a [known issue](https://github.com/open-mpi/ompi/issues/8323) with Open MPI 4.1.6.
 
 ## Challenge
 
