@@ -43,4 +43,4 @@ $ sbatch --reservation=bootcamp2 job.slurm
 
 ## Challenge
 
-Write a Python code using `mpi4py` using 2 processes where process 0 sends the number 42 to process 1 which prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
+Write a Python code called `send_recv.py` using `mpi4py` with 2 processes where process 0 sends the number 42 to process 1 which prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
