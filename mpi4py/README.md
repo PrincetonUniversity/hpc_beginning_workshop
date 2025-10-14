@@ -44,3 +44,23 @@ $ sbatch --reservation=bootcamp2 job.slurm
 ## Challenge
 
 Write a Python code called `send_recv.py` using `mpi4py` with 2 processes where process 0 sends the number 42 to process 1 which prints it out. Write your code based on [these examples](https://mpi4py.readthedocs.io/en/stable/tutorial.html#point-to-point-communication).
+
+Here is an example Slurm script (you need to create `send_recv.py`:
+
+```
+#!/bin/bash
+#SBATCH --job-name=mpi4py-ex        # create a name for your job
+#SBATCH --nodes=2                   # node count
+#SBATCH --ntasks-per-node=1         # number of tasks per node
+#SBATCH --cpus-per-task=1           # cpu-cores per task
+#SBATCH --mem-per-cpu=1G            # memory per cpu-core
+#SBATCH --time=00:01:00             # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin,end,fail  # receive email notifications
+
+module purge
+module load anaconda3/2025.6
+module load openmpi/gcc/4.1.6
+conda activate fast-mpi4py
+
+srun python send_recv.py
+```
