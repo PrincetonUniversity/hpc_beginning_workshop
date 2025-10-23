@@ -1,5 +1,5 @@
 %nprocshared=8
-%mem=40GB
+%mem=35GB
 #p freq b3lyp/genecp scrf=(smd,solvent=water) geom=connectivity gfprint
 integral=grid=ultrafine scf=conver=9
 
