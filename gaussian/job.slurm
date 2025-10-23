@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                   # node count
 #SBATCH --ntasks=8                  # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1           # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem=40G                   # memory per cpu-core (4G per cpu-core is default)
+#SBATCH --mem=35G                   # memory per node (4G per cpu-core is default)
 #SBATCH --time=00:45:00             # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin,end,fail  # receive email notifications
 #SBATCH --mail-user=<YourNetID>@princeton.edu
