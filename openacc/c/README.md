@@ -13,25 +13,15 @@ $ cd hpc_beginning_workshop/openacc/c
 
 ### CPU Only
 
-Compile and run the CPU-only code:
+View, compile and run the CPU-only code:
 
 ```bash
 $ cat laplace2d_cpu.c
-$ gcc -o laplace2d_cpu laplace2d_cpu.c
+$ gcc -o laplace2d_cpu laplace2d_cpu.c -lm
 $ ./laplace2d_cpu
 ```
 
-### OpenACC on GPU
-
-Compile the code with the following commands:
-
-```
-$ module load nvhpc/24.11
-$ nvc -acc -gpu=cc80,mem:managed -Minfo=accel -o laplace2d_acc laplace2d.c
-$ ./laplace2d_acc
-```
-
-The expected output is:
+The expected output is
 
 ```
 Jacobi relaxation Calculation: 4096 x 4096 mesh
@@ -45,8 +35,20 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 1.080040 s
+ total: 236.502822 s
 ```
+
+### OpenACC on GPU
+
+Compile the code with the following commands:
+
+```
+$ module load nvhpc/24.11
+$ nvc -acc -gpu=cc80,mem:managed -Minfo=accel -o laplace2d_acc laplace2d.c
+$ ./laplace2d_acc
+```
+
+Does the code run faster on the GPU? Try replacing `parallel loop` with `kernels` in the first pragma. How does the compiler report change?
 
 ## Della
 
