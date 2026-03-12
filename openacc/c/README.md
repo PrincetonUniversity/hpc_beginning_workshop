@@ -27,7 +27,7 @@ Compile the code with the following commands:
 
 ```
 $ module load nvhpc/24.11
-$ nvc -acc -gpu=cc80 -Minfo=accel -o laplace2d_acc laplace2d.c
+$ nvc -acc -gpu=cc80,mem:managed -Minfo=accel -o laplace2d_acc laplace2d.c
 $ ./laplace2d_acc
 ```
 
