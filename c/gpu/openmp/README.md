@@ -22,8 +22,8 @@ int main(int argc, char* argv[]) {
 One can compile the code with the following commands:
 
 ```bash
-$ ssh <YourNetID>@della-gpu.princeton.edu
-$ module load cudatoolkit/11.3 nvhpc/21.5
+$ ssh <YourNetID>@adroit-vis.princeton.edu
+$ module load nvhpc/24.11
 $ nvc -mp=gpu -gpu=cc80 -Minfo=mp -o hw_omp_gpu hello_world_omp.c
 main:
       8, #omp target parallel
@@ -36,4 +36,4 @@ Submit the job:
 $ sbatch job.slurm
 ```
 
-Use `-gpu=cc70` for the V100 GPU and `-gpu=cc80` for the A100 GPU.
+Use `-gpu=cc90` for H100 GPUs and `-gpu=cc80` for the A100 GPU.
