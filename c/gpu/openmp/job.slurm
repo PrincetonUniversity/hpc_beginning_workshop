@@ -6,12 +6,11 @@
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per CPU-core is default)
 #SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --time=00:00:10          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=begin        # send email when job begins
-#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=all          # receive email notifications
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load cudatoolkit/11.3
+module load nvhpc/24.11
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 ./hw_omp_gpu
