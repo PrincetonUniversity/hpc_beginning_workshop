@@ -48,7 +48,7 @@ $ nvc -acc -gpu=cc80,mem:managed -Minfo=accel -o laplace2d_acc laplace2d.c
 $ ./laplace2d_acc
 ```
 
-Does the code run faster on the GPU? Try replacing `parallel loop` with `kernels` in the first pragma. How does the compiler report change?
+Does the code run faster on the GPU? Try replacing `parallel loop` with `kernels` in the first pragma. How does the compiler report change? What happens if you comment out the `#pragma acc data`? In that case, is managed memory enough to give the same fast solution?
 
 ## Della
 
