@@ -51,4 +51,4 @@ View, compile and run the code:
 $ cat laplace2d.c
 $ nvc -mp=gpu -gpu=cc80 -Minfo=mp -o laplace2d_acc laplace2d.c
 $ ./laplace2d_acc
-``
+```
