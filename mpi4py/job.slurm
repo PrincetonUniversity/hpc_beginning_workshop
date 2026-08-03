@@ -9,7 +9,7 @@
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2025.6
+module load anaconda3/2026.7
 module load openmpi/gcc/<x.y.z>  # REPLACE <x.y.z>
 conda activate fast-mpi4py
 
