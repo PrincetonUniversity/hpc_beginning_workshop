@@ -11,7 +11,7 @@ Follow the webpage above to install `mpi4py`. Explicit directions for Adroit are
 ```bash
 $ ssh <YourNetID>@adroit.princeton.edu
 $ module purge
-$ module load anaconda3/2025.6
+$ module load anaconda3/2026.7
 $ conda create --name fast-mpi4py python=3.8 -y
 $ conda activate fast-mpi4py
 (fast-mpi4py) $ module load openmpi/gcc/4.1.6
@@ -60,7 +60,7 @@ Here is an example Slurm script called `job.slurm` (you need to create `send_rec
 #SBATCH --mail-type=begin,end,fail  # receive email notifications
 
 module purge
-module load anaconda3/2025.6
+module load anaconda3/2026.7
 module load openmpi/gcc/4.1.6
 conda activate fast-mpi4py
 
