@@ -9,6 +9,6 @@
 #SBATCH --mail-user=<netid>@princeton.edu
 
 module purge
-module load anaconda3/2025.6
+module load anaconda3/2026.7
 
 srun python value_array_lock.py
