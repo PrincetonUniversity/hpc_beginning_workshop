@@ -8,7 +8,7 @@
 #SBATCH --mail-type=begin,end,fail  # receive email notifications
 
 module purge
-module load anaconda3/2025.6
+module load anaconda3/2026.7
 module load openmpi/gcc/4.1.6
 conda activate fast-mpi4py
 
