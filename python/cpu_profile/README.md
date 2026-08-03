@@ -32,7 +32,7 @@ Below is the Slurm script; note that "python" has been replaced with "kernprof -
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
-module load anaconda3/2023.9
+module load anaconda3/2026.7
 
 kernprof -l  matrix_inverse.py
 ```
