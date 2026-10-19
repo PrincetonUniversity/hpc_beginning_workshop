@@ -12,7 +12,7 @@ Follow the webpage above to install `mpi4py`. Explicit directions for Adroit are
 $ ssh <YourNetID>@adroit.princeton.edu
 $ module purge
 $ module load anaconda3/2026.7
-$ conda create --name fast-mpi4py python=3.8 -y
+$ conda create --name fast-mpi4py python=3.13 -y
 $ conda activate fast-mpi4py
 (fast-mpi4py) $ module load openmpi/gcc/4.1.6
 (fast-mpi4py) $ export MPICC=$(which mpicc)
@@ -37,7 +37,7 @@ If you want to run across 2 nodes (and 64 CPU-cores) then use:
 #SBATCH --cpus-per-task=1
 ```
 
-Then sumbit the job with:
+Then submit the job with:
 
 ```bash
 $ sbatch job.slurm
@@ -67,7 +67,7 @@ conda activate fast-mpi4py
 srun python send_recv.py
 ```
 
-Then sumbit the job with:
+Then submit the job with:
 
 ```bash
 $ sbatch job.slurm
