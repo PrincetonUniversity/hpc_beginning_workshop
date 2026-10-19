@@ -1,9 +1,10 @@
 from multiprocessing import Process, Value, Array
 
 def increment(shared_int, shared_arr):
-    shared_int.value += 1
-    for i in range(len(shared_arr)):
-        shared_arr[i] += 1
+    for _ in range(10000):
+        shared_int.value += 1
+        for i in range(len(shared_arr)):
+            shared_arr[i] += 1
 
 if __name__ == "__main__":
     x = Value('i', 0)

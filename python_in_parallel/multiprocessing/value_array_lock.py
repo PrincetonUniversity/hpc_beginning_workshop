@@ -1,10 +1,11 @@
 from multiprocessing import Process, Value, Array, Lock
 
 def increment(shared_int, shared_arr, lock):
-    with lock:
-        shared_int.value += 1
-        for i in range(len(shared_arr)):
-            shared_arr[i] += 1
+    for _ in range(10000):
+        with lock:
+            shared_int.value += 1
+            for i in range(len(shared_arr)):
+                shared_arr[i] += 1
 
 if __name__ == "__main__":
     lock = Lock()

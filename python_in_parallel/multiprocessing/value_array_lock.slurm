@@ -6,7 +6,7 @@
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin,end    # receive email notifications
-#SBATCH --mail-user=<netid>@princeton.edu
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 module purge
 module load anaconda3/2026.7

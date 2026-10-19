@@ -44,7 +44,7 @@ $ sbatch job.slurm
 
 One advantage to Python `multiprocessing` over [job arrays](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays) is that the output of the different parallel operations can be reduced within the Python script. When job arrays are used the reduction must be done in a separate step.
 
-Python has a global interpreter lock (GIL) which means that it cannot use multiple threads. Python `multiprocessing` runs a different Python process on each CPU-core. Typically `--cpus-per-task` implies multiple threads but that is not the case here. The choice of `--cpus-per-task=4` leads to 4 Python processes.
+CPython (the standard Python interpreter) has a Global Interpreter Lock (GIL) that only lets one thread execute Python bytecode at a time. This doesn't mean Python can't use threads — it can, and threads are useful for I/O-bound work or for C extensions like NumPy that release the GIL — but it does mean threads alone won't speed up CPU-bound pure-Python code. Python `multiprocessing` sidesteps the GIL by running a separate Python process, each with its own interpreter, on each CPU-core. The choice of `--cpus-per-task=4` here leads to 4 independent Python processes rather than 4 threads sharing one. (CPython 3.13+ also ships an experimental GIL-free build per [PEP 703](https://peps.python.org/pep-0703/), but it isn't the default yet.)
 
 In the example above, the function `f(x)` is trivial. Python `multiprocessing` becomes useful when `f(x)` is expensive.
 
