@@ -16,4 +16,6 @@ for parameters in input_params.values[:10]:
     lazy_result = dask.delayed(costly_simulation)(parameters)
     lazy_results.append(lazy_result)
 
+start = time.time()
 print(dask.compute(*lazy_results))
+print(f"Elapsed time: {time.time() - start:.2f} seconds")
