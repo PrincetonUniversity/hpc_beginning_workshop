@@ -29,6 +29,18 @@ $ cd hpc_beginning_workshop/mpi4py
 $ sbatch --reservation=bootcamp2 job.slurm
 ```
 
+Make sure you replace this line with the actual version:
+
+```
+module load openmpi/gcc/<x.y.z>  # REPLACE <x.y.z>
+```
+
+For example:
+
+```
+module load openmpi/gcc/4.1.6
+```
+
 If you want to run across 2 nodes (and 64 CPU-cores) then use:
 
 ```bash
